@@ -7,73 +7,235 @@
     <link rel="icon"  type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
     <style>
         body {
-            background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por el nombre de tu imagen */
+        
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
 
         }
-       
 
-        footer {
-        text-align: center;
-        padding: 15px;
-        background: rgba(91, 92, 189, 0.9);
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+        .navegacion {
+			
+            background-color: #23398b;
+			justify-content: flex-start;
+			align-items: center;
+            padding: 10px 0px 0px 20px;
+			display: flex;
+			gap: 20px;
         }
-        .menu {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-    }
+		
+		.navegacion a:hover{
+			
+			text-decoration: underline;
+			
+		}
+		
+		/*--BUSCADOR--*/
+		
+		 fieldset{
+     		margin: 0;
+     		padding: 0;
+    		border: 0;
+     		font-size: 100%;
+     		font: inherit;
+			 
+		}
+		
+		.cajabuscar {
+     		float: none;
+    		width: 100%;
+     		max-width: 300px;
+  			margin: 20px 20px 20px 300px;
+     		display: flex;
+			align-items: center;
+     		text-align: left;
+ 		}
 
-    .menu li {
-        position: relative;
-        margin: 0 15px;
-    }
+ 		#buscarform {
+     		padding: 0;
+     		float: left;
+     		clear: both;
+     		width: 100%;
+     		position: relative;
+ 		}
+		 #buscarform fieldset { float: left }
 
-    .menu li a {
-        color: rgb(125, 165, 145);
-        text-decoration: none;
-        padding: 10px;
-        display: block;
-    }
+		 #buscarform .search {
+			 font-size: 20px;
+			 top: 0px;
+			 color: #FFF;
+			 background: #33BCF2;
+			 position: absolute;
+			 right: 0;
+			 top: 0;
+			 padding: 9px;
+			 height: 24px;
+			 width: 24px;
+			 text-align: center;
+		 }
+		 #buscarform fieldset { width: 100% }
 
+		 #s {
+			 width: 100%;
+			 background-color: #fff;
+			 float: left;
+			 padding: 8px 0;
+			 text-indent: 10px;
+			 color: #555555;
+			 border: 1px solid #fff; 
+			 box-sizing: border-box;
+			 height: 42px;
+		 }
 
+		 .button{
+			 right: 0;
+			 top: 0;
+			 padding: 9px 0;
+			 float: right;
+			 border: 0;
+			 width: 42px;
+			 height: 42px;
+			 cursor: pointer;
+			 text-align: center;
+			 padding-top: 10px;
+			 color: #a4a4a4;
+			 transition: all 0.25s linear;
+			 background: transparent;
+			 z-index: 10;
+			 position: absolute;
+			 border: 0;
+			 vertical-align: top;
+		 }	
+		
+		.boton-contacto {
+            background-color: #FF4F00; /* Color de fondo */
+            color: white; /* Color del texto */
+            padding: 12px 20px; /* Espaciado interno */
+            border: none; /* Sin bordes */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px; /* Tamaño de la fuente */
+			margin: 0px 500px 0px 0px;
+        }
 
-        nav{
-            background-color: rgba(99, 101, 192, 0.9);
-        text-align: center;
-        padding: 10px 0;
-    }
+        .boton-contacto:hover {
+            background-color: #6E2901; /* Cambia el color de fondo al pasar el mouse */
+		}
+		
+		.navegacion_principal {
+			
+			background-color: #23398b;
+            text-align: center;
+			display: flex;
+			justify-content: center;
+			
+		}
+        
+		.navegacion_principal a {
+			
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 30px 30px 20px 40px; 
+            font-size: 20px;
+			font-family: Verdana;
+        }
+	
+		.logo img {
+			
+			widht: 80px;
+			height: 80px;
+			display: flex;
+			margin-left: 0px;
+		}
+		
+		.foto-principal img {
+			
+			width:100%;
+			height: auto;
+		}
+
+	    /* nav1*/
+	     nav1{
+			background-color: white ;
+            text-align: center;
+			text-decoration: none;
+            font-family: Verdana;
+            padding: 10px 0;
+        }
+/* creacion de footer */
+	footer {
+            text-align: center;
+            padding: 15px;
+			background-color:#23398b ;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
         </style>
 </head>
 <body>
+
+    <nav>
+		
+		<div class= "navegacion">
+			
+			<div class="logo">
+			<img src="https://www.policia.es/img/_logo.png" alt="logo">
+		
+			</div>
+			
+			<div class="cajabuscar"><form method="get" id="buscarform">
+    			<fieldset>
+        		<input type="text" id="s" value="" placeholder="Buscar"  />
+        		<input class="button" type="submit" value="" />
+       			<i class="search"></i>
+   				</fieldset>
+    		</form></div>
+			
+			<button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+			
+		</div>
+		
+		<div class= "navegacion_principal">
+			
+			<a href="#"> Inicio </a>
+			<a href="#"> Trámites</a>
+			<a href="#"> Denuncias </a>
+			<a href="#"> Tu policia </a>
+			<a href="#"> Emergencias </a>
+			
+		</div>
+	
+	</nav>
+	
+	<div class="foto-principal">
+		<img src="FOTO2.png" alt="Comisaria">
+	</div>
+    
+    <footer>
+                <nav1>
+                    <ul class="menu">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="CO_Trámites.html">Tramites</a>
+                            <ul class="submenu">
+                                <li><a href="">dni</a></li>
+                                <li><a href="#">Permisos de viaje</a></li>
+                                <li><a href="#">Extranjeria</a></li>
+                                <li><a href="#">Antecedentes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="CO_Denuncias.html">Denuncias</a></li>
+                        <li><a href="Co_Tupolicia.html">Tu Policia</a></li>
+                        <li><a href="CO_admi.emergencias.html">Emergencias</a></li>
+                    </ul>
+                </nav1>
+            </footer>
+
+    
     <! h5Gestion de Policia /h5>
     <! h6Administracion de emergencias al cuerpo de policia /h6>
 
-<footer>
-    <nav1>
-        <ul class="menu">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="CO_Trámites.html">Tramites</a>
-                <ul class="submenu">
-                    <li><a href="#">dni</a></li>
-                    <li><a href="#">Permisos de viaje</a></li>
-                    <li><a href="#">Extranjeria</a></li>
-                    <li><a href="#">Antecedentes</a></li>
-                </ul>
-            </li>
-            <li><a href="CO_Denuncias.html">Denuncias</a></li>
-            <li><a href="Co_Tupolicia.html">Tu Policia</a></li>
-            <li><a href="CO_admi.emergencias.html">Emergencias</a></li>
-        </ul>
-    </nav1>
-</footer>
+
 
 </body>
 </html>
