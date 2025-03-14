@@ -13,21 +13,71 @@
             background-attachment: fixed;
 
         }
+        nav1{
+
+        }
+
+        footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(91, 92, 189, 0.9);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        }
+        .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu li {
+        position: relative;
+        margin: 0 15px;
+    }
+
+    .menu li a {
+        color: rgb(125, 165, 145);
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+
+
+
+        nav{
+            background-color: rgba(99, 101, 192, 0.9);
+        text-align: center;
+        padding: 10px 0;
+    }
         </style>
 </head>
 <body>
-
-    <h1>Emergencias</h1>
-    <h2>Denuncias</h2>
-    <h3>Tramites</h3>
-    <h4> Tu Policia</h4>
-    <h5> Noticias</h5>
-    <h6> Identificate</h6>
-
     <! h5Gestion de Policia /h5>
     <! h6Administracion de emergencias al cuerpo de policia /h6>
 
+<footer>
+    <nav1>
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="CO_Trámites.html">Tramites</a>
+                <ul class="submenu">
+                    <li><a href="#">dni</a></li>
+                    <li><a href="#">Permisos de viaje</a></li>
+                    <li><a href="#">Extranjeria</a></li>
+                    <li><a href="#">Antecedentes</a></li>
 
+
+                </ul>
+            </li>
+            <li><a href="CO_Denuncias.html">Denuncias</a></li>
+            <li><a href="Co_Tupolicia.html">Tu Policia</a></li>
+            <li><a href="CO_admi.emergencias.html">Emergencias</a></li>
+        </ul>
+    </nav1>
+</footer>
 
 </body>
 </html>
