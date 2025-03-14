@@ -161,15 +161,7 @@
             font-family: Verdana;
             padding: 10px 0;
         }
-/* creacion de footer */
-	footer {
-            text-align: center;
-            padding: 15px;
-            background: rgb(35, 57, 179);
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+
 /*inicio de redes*/
 	            .redes {
             display: grid;
@@ -230,6 +222,47 @@
 	.image-container:hover .tooltip {
     		display: block;
 	}
+
+  /* creacion de footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #23398b;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            width: 100%;
+        }
+        
+        .indicefinal{
+            display: grid;
+            background-color: #23398b;
+            padding: 0%;
+            grid-template-columns: repeat(4 , 1fr);
+            gap: 40px;
+            margin: 0 20%;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        .indicefinal ul {
+            list-style-type: none;
+            padding: 0;
+        }  
+        .indicefinal a {
+            text-decoration: none;
+            color: whitesmoke;
+            padding: block 20px;
+        }
+       
+        .cajafinal{
+            padding: 40px;
+            font-size: 20px;
+            color: white;
+        }
+        .cajafinal li{
+            padding: 10px;
+            
+        }	    
         </style>
 </head>
 <body>
@@ -270,35 +303,6 @@
 	<div class="foto-principal">
 		<img src="FOTO2.png" alt="Comisaria">
 	</div>
-    <--! menu dentro del footer-->
-    <footer>
-                <nav1>
-                    <ul class="menu">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="CO_Trámites.html">Tramites</a>
-                            <ul class="submenu">
-                                <li><a href="">dni</a></li>
-                                <li><a href="#">Permisos de viaje</a></li>
-                                <li><a href="#">Extranjeria</a></li>
-                                <li><a href="#">Antecedentes</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="CO_Denuncias.html">Denuncias</a></li>
-                        <li><a href="Co_Tupolicia.html">Tu Policia</a></li>
-                        <li><a href="CO_admi.emergencias.html">Emergencias</a></li>
-                    </ul>
-                </nav1>
-            </footer>
-
-    <h1>Emergencias</h1>
-    <h2>Denuncias</h2>
-    <h3>Tramites</h3>
-    <h4> Tu Policia</h4>
-    <h5> Noticias</h5>
-    <h6> Identificate</h6>
-
-    <! h5Gestion de Policia /h5>
-    <! h6Administracion de emergencias al cuerpo de policia /h6>
 	<div class="redes">
         <h2>¡SIGUENOS!</h2> <!--Poner enlace al dar a la foto-->
         <div class="image-grid">
@@ -333,7 +337,53 @@
         </div> 
     </div>
 
+ <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+               <b> Inicio </b>
+                <ul>
+                    <li><a href="">Dni y Pasaporte</a></li>
+                    <li><a href="#">Permisos de viaje</a></li>
+                    <li><a href="#">Extranjeria</a></li>
+                    <li><a href="#">Antecedentes</a></li>
+                </ul>
+            </div>
 
+            <div class="cajafinal">
 
+               <b> Denuncias </b> 
+                <ul>
+
+                    <li><a href="#">Informacion General</a></li>
+                    <li><a href="">Reportar</a></li>
+                    <li><a href="#">Desaparecidos</a></li>
+                    <li><a href="#">Buscados</a></li>
+                    <li><a href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+
+                <b> Tu Policia</b>
+                <ul>
+                    <li><a href="">Conocenos</a></li>
+                    <li><a href="#">Quiero ser Policia</a></li>
+                    <li><a href="#">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+               <b> Emergencias </b> 
+                <ul>
+                    <li><a href="#">Protocolos</a></li>
+                    <li><a href="">Atencion Auxilio</a></li>
+                    <li><a href="#">Guardia Civil</a></li>
+                    <li><a href="#">Samur</a></li>
+                    <li><a href="#">Antidisturbios</a></li>
+                    <li><a href="#">Bomberos</a></li>
+                    <li><a href="#">Radiopatrullas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
