@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,11 +17,12 @@
 
         .navegacion {
             background-color: #23398b;
-            justify-content: flex;
+            justify-content: space-between;
+            /* Adjust alignment */
             align-items: center;
-            padding: 10px  20px;
+            padding: 10px 20px;
             display: flex;
-             flex-wrap: wrap;
+            flex-wrap: wrap;
             gap: 20px;
         }
 
@@ -37,7 +39,7 @@
         .cajabuscar {
             float: none;
             width: 100%;
-            max-width: 300px;
+            max-width: 300px; 
             margin: 20px 20px 20px 300px;
             display: flex;
             align-items: center;
@@ -121,7 +123,8 @@
             /* Cambia el cursor al pasar sobre el botón */
             font-size: 16px;
             /* Tamaño de la fuente */
-            margin: 0px 500px 0px 0px;
+            margin: 0 25px;
+            /* Remove margin se cambio el margen para separar que se vea mejor */
         }
 
         .boton-contacto:hover {
@@ -168,7 +171,8 @@
         }
 
         .image-flex {
-            display: flex; flex-wrap: wrap;
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
             margin: 20px;
             justify-content: center;
@@ -193,7 +197,7 @@
                 top: 100%;
                 /* Ajusta la posición del tooltip */
             }
-        } 
+        }
 
         .image-container {
             position: relative;
@@ -281,6 +285,7 @@
                 <img src="https://www.policia.es/img/_logo.png" alt="logo">
             </div>
 
+
             <div class="cajabuscar">
                 <form method="get" id="buscarform">
                     <fieldset>
@@ -289,10 +294,10 @@
                         <i class="search"></i>
                     </fieldset>
                 </form>
+                    <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button> <!-- se ha movido -->
             </div>
-            
-            <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
         </div>
+
 
         <div class="navegacion_principal">
             <a href="#"> Inicio </a>
@@ -305,38 +310,38 @@
     </nav>
 
     <div class="imagen-debajo-navegacion">
-        <img src="/FOTO2.png" alt="Police Station" style="width:100%; height:auto;">
+        <img src="/imagenes/FOTO2.png" alt="Police Station" style="width:100%; height:auto;">
     </div>
 
     <div class="redes">
         <h2>¡SIGUENOS!</h2> <!--Poner enlace al dar a la foto-->
         <div class="image-flex">
             <div class="image-container">
-                <img src="x.jpg" alt="X">
+                <img src="/imagenes/x.jpg" alt="X">
                 <span class="tooltip">Ir a X</span>
             </div>
             <div class="image-container">
-                <img src="tiktok.jpg" alt="TikTok">
+                <img src="/imagenes/tiktok.jpg" alt="TikTok">
                 <span class="tooltip">Ir a Tik Tok</span>
             </div>
             <div class="image-container">
-                <img src="facebook.jpg" alt="Facebook">
+                <img src="/imagenes/facebook.jpg" alt="Facebook">
                 <span class="tooltip">Ir a Facebook</span>
             </div>
             <div class="image-container">
-                <img src="instagram.jpg" alt="Instagram">
+                <img src="/imagenes/instagram.jpg" alt="Instagram">
                 <span class="tooltip">Ir a Instagram</span>
             </div>
-            <div class="image-container">
-                <img src="whatsapp.jpg" alt="WhatsApp">
+            <div class="/imagenes/image-container">
+                <img src="/imagenes/whatsapp.jpg" alt="WhatsApp">
                 <span class="tooltip">Ir a WhatsApp</span>
             </div>
             <div class="image-container">
-                <img src="telegram.jpg" alt="Telegram">
+                <img src="/imagenes/telegram.jpg" alt="Telegram">
                 <span class="tooltip">Ir a Telegram</span>
             </div>
-            <div class="image-container">
-                <img src="youtube.jpg" alt="YouTube">
+            <div class="/imagenes/image-container">
+                <img src="/imagenes/youtube.jpg" alt="YouTube">
                 <span class="tooltip">Ir a YouTube</span>
             </div>
         </div>
@@ -388,4 +393,5 @@
         </div>
     </footer>
 </body>
+
 </html>
