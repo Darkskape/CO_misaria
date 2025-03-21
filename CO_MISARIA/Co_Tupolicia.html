@@ -218,7 +218,7 @@
             border-collapse: collapse;
             table-layout: fixed;
             background-color: rgb(235, 233, 233);
-            box-shadow: 4px 8px rgba(0, 0, 0, 0.2)
+            box-shadow: 4px 8px rgba(0, 0, 0, 0.1)
         }
 
         td {
@@ -235,6 +235,19 @@
 
         td a:hover {
             text-decoration: underline;
+        }
+
+        .celda-foto, .celda-foto2 {
+            margin: 0;
+            padding: 0;
+            border: none;
+            width: 100%;
+        }
+
+        .celda-foto img, .celda-foto2 img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
@@ -293,6 +306,11 @@
 
         <table>
             <tr>
+                <td class="celda-foto">
+                    <img src="imagenes/policia.jpg" alt="Imagen de policía">
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <h3>¿Quieres ser Policía?</h3>
                     ¿O trabajar en Seguridad Privada?
@@ -328,11 +346,15 @@
                         También buscamos hogares paras aquellos perros jóvenes que, tras ser adiestrados, no desarrollan
                         las aptitudes necesarias para el trabajo y son descartados.
                         <br><br>
-                        Si te interesa adoptar uno de nuestros héroes 
+                        Si te interesa adoptar uno de nuestros héroes
                     </p> <!-- poner un botón-->
                 </td>
             </tr>
-
+            <tr>
+                <td class="celda-foto">
+                    <img src="imagenes/k9.jpg" alt="Imagen de K-9">
+                </td>
+            </tr>
         </table>
     </main>
 
