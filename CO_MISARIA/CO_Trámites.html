@@ -1,11 +1,712 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tramites</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<title>PAGE_TRAMITES</title>
+ <style>
+         body {
+            margin: 0;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .navegacion {
+            background-color: #23398b;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px 0px 20px;
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /*--BUSCADOR--*/
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+        }
+
+        .cajabuscar {
+            width: 100%;
+            max-width: 400px; /*para ajustar el ancho del buscador cambiar aqui y en #buscarform el width */
+            margin: 0px 30px 0px 0px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-left: auto;
+        }
+
+        #buscarform {
+            padding: 0;
+            float: left;
+            clear: both;
+            width: 400px;
+            position: relative;
+        }
+
+        #buscarform fieldset {
+            float: left
+        }
+
+        #buscarform .search {
+            font-size: 20px;
+            top: 0px;
+            color: #FFF;
+            background: #33BCF2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 9px;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+        }
+
+        #buscarform fieldset {
+            width: 100%
+        }
+
+        #s {
+            width: 100%;
+            background-color: #fff;
+            float: left;
+            padding: 8px 0;
+            text-indent: 10px;
+            color: #555555;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            height: 42px;
+        }
+
+        .button {
+            right: 0;
+            top: 0;
+            padding: 9px 0;
+            float: right;
+            border: 0;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+            color: #a4a4a4;
+            transition: all 0.25s linear;
+            background: transparent;
+            z-index: 10;
+            position: absolute;
+            border: 0;
+            vertical-align: top;
+        }
+
+        .boton-contacto {
+            background-color: #FF4F00;
+            /* Color de fondo */
+            color: white;
+            /* Color del texto */
+            padding: 12px 20px;
+            /* Espaciado interno */
+            border: none;
+            /* Sin bordes */
+            border-radius: 5px;
+            /* Bordes redondeados */
+            cursor: pointer;
+            /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px;
+            /* Tamaño de la fuente */
+            margin: 0px 30px 0px 0px;
+        }
+
+        .boton-contacto:hover {
+            background-color: #6E2901;
+            /* Cambia el color de fondo al pasar el mouse */
+        }
+
+        .navegacion_principal {
+            background-color: #23398b;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: none;
+        }
+
+        .navegacion_principal a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 30px 30px 20px 40px;
+            font-size: 20px;
+            font-family: Verdana;
+        }
+
+        .navegacion_principal a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            width: auto;
+            height: 100px;
+            display: flex;
+            margin-left: 0px;
+        }
+
+        .foto-principal img {
+            width: 100%;
+            height: auto;
+        }
+		/*---PRESENTACIÓN PAGINA:TRAMITES--*/
+
+        main {
+            flex:1;
+            display: flex;
+        }
+		
+		.intro {
+			
+			background-image: url("tramite1.jpg");
+			height: 400px;
+			width: 100%;
+			padding: 0px 0px;
+		}
+		.texto_intro{
+			
+			width: 25%;
+			height: 300px;
+			margin: 40px 40px 40px 300px;
+			position: relative;
+			background-color: rgba(255,255,255,0.6);
+			padding: 50px 50px 50px 50px;
+			
+			
+			
+		}
+		.texto_intro h1{
+			
+			font-family: Arial;
+			font-size: 40px;
+			text-align: left;
+			margin-top: 20px;
+			
+		}
+		
+		.texto_intro p{
+			
+			font-family: Arial;
+			font-size: 20px;
+			text-align: left;
+			position: absolute;
+			width: 600px;
+			
+		}
+		
+		/*--CONTENIDO GENERAL--*/
+		
+		.container {
+			
+			display: flex; /* Usamos flexbox para alinear los elementos en fila */
+            justify-content: flex-start; /* Alinea a la izquierda */
+            height: 100%; /* Cambiar a 100% */
+		}
+	
+		/*--MENÚ LATERAL IZQUIERDA DE SECCIONES--*/
+		
+        aside {
+            width: 20%; /* Ancho fijo del aside */
+			height: 450px;
+            background-color: #23398b; /* Color de fondo */
+            padding: 0px; /* Espaciado interno */
+			margin-top: 30px;
+			margin-left: 50px;
+            box-sizing: border-box; /* Asegura que el padding se tenga en cuenta en el tamaño */
+			border-radius: 20px;
+			text-align: center;
+			
+			
+        }
+		
+		aside ul, li {
+			
+			list-style: none;
+			padding: 20px 0px;
+			justify-content: center;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			
+			
+		}
+		
+		aside a {
+			
+			list-style: none;
+			justify-content: center;
+			color: white;
+			text-decoration: none;
+			font-family: Verdana;
+			margin: 0 auto;
+			
+		}
+		/*--APARTADOS DE CONTENIDO--*/
+	 
+		 .apartado p{
+			 
+			 font-family: Roboto;
+			 font-size: 20px;
+		 }
+	 
+	 
+		/*---BARRAS DESPLEGABLES--*/
+		
+		.contenido-principal {
+			width: 80%;
+			flex-grow: 1; /* Hace que el contenido principal ocupe el espacio restante */
+            padding: 20px; /* Espaciado interno */
+			margin-left: 30px;
+            flex: 1;
+           
+		}
+		
+		.barra-desplegable{
+			border: 2px solid rgba(0, 14, 120, 1);
+			border-radius: 8px;
+			margin: 20px 0;
+			overflow: hidden;
+			max-width: 100%;
+		}
+		
+		/* Cabecera con flecha a la derecha */
+		.cabecera {
+			background-color: #f0f0f0;
+			padding: 15px 20px;
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 18px;
+			font-weight: bold;
+			color: rgba(0, 14, 120, 1);
+		}
+
+		/* Flecha a la derecha */
+		.flecha {
+			display: inline-block;
+			transition: transform 0.3s ease;
+		}
+
+		/* Contenido oculto al inicio */
+		.contenido {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.5s ease;
+			background-color: #F4F4F4;
+			padding: 0 20px;
+            flex: 1;
+            font-family: Roboto;
+            font-size: 18px;
+		}
+
+		.contenido li,ul {
+			margin: 15px 0;
+			color: black;
+			list-style: circle;
+			text-align: left;
+			font-family: Roboto;
+			font-size: 18px;
+		}
+
+		/* Estado ABIERTO: contenido visible y flecha abajo */
+
+		.barra-desplegable.flecha {
+			transform: rotate(90deg);
+		}
+		
+		/*--CUADRICULA DE EXTRANJERÍA--*/
+		
+		.cuadricula {
+			justify-content: center;
+            flex: 1;
+		}
+
+        
+
+		
+		.cuadricula ul {
+			
+			display: grid;
+			width: 50%;
+			justify-content: center;
+			align-content: center;
+            align-items: center;
+			grid-template-columns: 1fr 1fr 1fr;  /* 2 columnas */
+			grid-template-rows: repeat(5, auto);  /* 5 filas automáticas */
+			gap: 40px 80px;  /* Espacio entre elementos */
+			padding: 0;
+			list-style: none;  
+			margin: 0 auto;
+			
+		}
+
+		.cuadricula li {
+			
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			background-color: rgb(235, 233, 233);
+            border-left: #23398b 8px solid;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			padding: 40px 90px 40px 90px;
+			text-align: center;
+			font-family: Verdana;
+			font-size: 20px;
+			width: 250px;
+			height: 100px;
+            transition: transform 0.3s ease; /* Agrega una transición suave */
+        
+		}
+
+        .cuadricula li:hover {
+            transform: scale(1.05); /* Agranda el elemento al pasar el mouse */
+            background-color: #23398b;
+            color: white;
+            border-left: rgb(236, 9, 9) 8px solid;
+
+        }
+
+        .cuadricula a:hover {
+            color: white;
+        }
+
+        .cuadricula li img {
+            width: auto;
+            height: 50px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease; /* Agrega una transición suave */
+        }
+
+        
+		
+        .cuadricula a {
+            color: black;
+            text-decoration: none;
+            text-align: left;
+            
+        }
+
+        
+	/* creacion de footer */
+    footer {
+            text-align: center;
+            background: rgb(35, 57, 139);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto; /* Añadir esta línea */
+        }
+
+        .indicefinal {
+            display: flex;
+            text-decoration: none;
+            font-size: 30px;
+            gap: 30px;
+            margin: 40px 0px 10px 0px;
+        }
+
+        .indicefinal ul {
+            list-style-type: none;
+        }
+
+        .indicefinal a {
+            text-decoration: none;
+            color: whitesmoke;
+            padding: 0px 20px;
+        }
+
+        .cajafinal {
+            padding: 0px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .cajafinal li {
+            padding: 10px 0px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .indicefinal a:hover {
+            text-decoration: underline;
+            
+        }
+
+	</style>
+	
 </head>
+
 <body>
-    
+	
+	<nav>
+        <div class="navegacion">
+
+            <div class="logo">
+                <img src="https://www.policia.es/img/_logo.png" alt="logo">
+            </div>
+
+            <div class="cajabuscar">
+                <form method="get" id="buscarform">
+                    <fieldset>
+                        <input type="text" id="s" value="" placeholder="Buscar" />
+                        <input class="button" type="submit" value="" />
+                        <i class="search"></i>
+                    </fieldset>
+                </form>
+            </div>
+            
+            <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+        </div>
+
+        <div class="navegacion_principal">
+            <a href="#"> Inicio </a>
+            <a href="#"> Trámites</a>
+            <a href="#"> Denuncias </a>
+            <a href="#"> Tu policia </a>
+            <a href="#"> Emergencias </a>
+
+        </div>
+    </nav>
+	
+	<main>
+		
+		<div class="container">
+			<aside>
+			
+			<ul>
+				<h2> SECCIONES</h2>
+				<li> <a href="#"> DNI y Pasaporte </a></li>
+				<li> <a href="#"> Extranjería </a></li>
+				<li> <a href="#"> Permisos de viaje </a></li>
+				<li> <a href="#"> Antecedentes </a></li>
+			
+			</ul>
+		
+			</aside>
+		
+		
+			<div class="contenido-principal">
+				
+			<!--CITA PREVIA DNI PASAPORTE-->
+				<section class="apartado">
+					
+				<h2 class= "Cita-previa"> Cita previa DNI y/o Pasaporte </h2>
+				<p> Para la obtención o la renovación de su DNI y/o Pasaporte, deberá pedir cita previa a través del portal 
+					<a href="https://www.citapreviadnie.es"> www.citapreviadnie.es </a>. Recuerde acudir a su cita a tiempo y consultar la documentación necesaria para realizar dicho trámite.</p>
+					
+				<div class="barra-desplegable" >
+					 <div class="cabecera" id="toggle">
+        				<span>Documentación necesaria</span>
+        				<span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+    				 </div>
+			
+				<div class="contenido" id="contenido">
+						<ul>
+							<li>Una fotografía reciente en color del rostro de la persona solicitante, tamaño 32 por 26 milímetros, con fondo uniforme, blanco y liso, tomada de frente con la cabeza totalmente descubierta y sin gafas de cristales oscuros o cualquier otra prenda que pueda impedir o dificultar la identificación de la persona.</li>
+
+							<li>El DNI anterior (en caso de pérdida o sustracción se requerirá denuncia previa o comunicación de tal incidencia a la Unidad de Documentación).En caso de cambio de domicilio, respecto del que figure en el Documento anterior, Certificado o volante de empadronamiento del Ayuntamiento donde la persona solicitante tenga su domicilio, expedido con una antelación máxima de tres meses a la fecha de la solicitud del DNI.</li>
+							<li>Pago de la tasa de renovación </li>
+						</ul>
+					</div>
+				</div>
+					
+				<!--DNI ELECTRÓNICO-->
+					
+				<div class="barra-desplegable" >
+					 <div class="cabecera">
+        				<span>DNI electrónico</span>
+        				<span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+    				 </div>
+			
+				<div class="contenido" id="contenido1">
+						<p>Puedes obtener tu DNI electrónico en cualquier Oficina de Expedición (normalmente situadas en las Comisarías de Policía), a través del sistema de cita previa en el teléfono 902 247 364, o a través de la web www.citapreviadnie.es.</p>
+				</div>
+				</div>
+				</section>
+				
+		<!--EXTRANJERÍA + CUADRICULA-->
+				
+				<section class="apartado" id="extranjeria">
+            
+					<h2> Extranjería </h2>
+					
+					<p>En estas páginas encontrarás toda la información sobre los trámites de documentación de ciudadanos comunitarios, extranjeros, apátridas, asilo y refugio y sobre los procedimientos administrativos.</p>
+				
+					<div class="cuadricula">
+						<ul>
+							<li> <img src="iconos png/trabajoazul.png"><br> <a href="#">Renovación de residencia yo trabajo</a></li>
+							<li><img src="iconos png/estudianteazul.png"><br><a href="#">Tarjeta de estudiante</a></li>
+							<li><img src="iconos png/avionazul.png"><br><a href="#">Autorización de regreso</a></li>
+							<li><img src="iconos png/tarjetacasaazul.png"><br><a href="#">Tarjeta de residencia</a></li>
+							<li><img src="iconos png/maletaazul.png"><br><a href="#">Prórroga de estancia de corta duración</a></li>
+							<li><img src="iconos png/NIE azul.png"><br><a href="#">Asignación de NIE</a></li>
+							<li><img src="iconos png/casaazul.png"><br><a href="#">Certificado de residente</a></li>
+							<li><img src="iconos png/cartainvitacionazul.png"><br> <a href="#">Expedición de carta de invitación</a></li>
+
+                            <li class="preguntas-frecuentes">
+                                <img src="iconos png/preguntas azul.png"><br><a href="#">Preguntas frecuentes</a>
+                            </li></li>
+						</ul>
+				</div>
+				</section>
+
+        <!--PERMISOS DE VIAJE-->
+                <section class="apartado">
+
+                    <h2> Permisos de viaje</h2>
+                    <p> Solicita de manera sencilla tu permiso de viaje. Recuerda traer todos los documentos necesarios para la solicitud. </p>
+
+                    <!--CÓMO SOLICITAR PERMISO-->
+                    <div class="barra-desplegable" >
+                        <div class="cabecera">
+                           <span>Cómo solicitar permiso</span>
+                           <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido" >
+                                <p>Personalmente en la comisaría elegida
+                                    Consultar la Guía de trámite del Permiso de viaje de menores.
+                                    El permiso de viaje es exclusivamente para menores españoles residentes en España que viajen fuera del territorio nacional no acompañados de cualquiera de sus progenitores o tutores.
+                                    Únicamente es obligatoria la comparecencia de uno de los progenitores o representantes legales en dependencias policiales, pero sí es necesario el consentimiento de los dos.
+                                    NO ES NECESARIA LA AUTORIZACIÓN
+                                    Si el menor viaja en compañía de cualquiera de sus representantes legales (progenitores o tutor/es).
+                                    No procede para los menores que entren en España o para los menores españoles que residan habitualmente fuera del territorio nacional.
+                                    Los menores extranjeros que residan en España se regirán por lo dispuesto en su legislación nacional Tampoco es necesaria para los menores extranjeros que se hallen de visita o en tránsito en España.
+                                    NO ES OBJETO DE LA AUTORIZACIÓN PRESENTARLA A LAS COMPAÑÍAS DE TRANSPORTE, sino que es para presentarla en los pasos fronterizos (Reglamento UE 2016/399, anexo VII, apartado 6.3).</p>
+                        </div>
+                   </div>
+
+                   <!--DOCUMENTACIÓN NECESARIA-->
+
+                   <div class="barra-desplegable" >
+                        <div class="cabecera">
+                            <span>Documentación necesaria</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                            <div class="contenido" >
+                                    <p>Puedes obtener tu DNI electrónico en cualquier Oficina de Expedición (normalmente situadas en las Comisarías de Policía), a través del sistema de cita previa en el teléfono 902 247 364, o a través de la web www.citapreviadnie.es.</p>
+                            </div>
+                    </div>
+
+                    <!--FORMULARIOS-->
+
+                   <div class="barra-desplegable" >
+                    <div class="cabecera">
+                        <span>Formularios</span>
+                        <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                    </div>
+                        <div class="contenido" >
+                                <p>Puedes obtener tu DNI electrónico en cualquier Oficina de Expedición (normalmente situadas en las Comisarías de Policía), a través del sistema de cita previa en el teléfono 902 247 364, o a través de la web www.citapreviadnie.es.</p>
+                        </div>
+                </div>
+
+
+
+                </section>
+				
+				
+		</div>
+
+	</div>
+	</main>
+	
+<!--JAVA PARA BARRA DESPLEGABLE-->
+	<script>
+		
+		  // Selecciona todas las barras desplegables
+		  const barras = document.querySelectorAll('.barra-desplegable');
+
+		  barras.forEach(barra => {
+			const cabecera = barra.querySelector('.cabecera');
+			const contenido = barra.querySelector('.contenido');
+			const flecha = barra.querySelector('.flecha');
+
+			cabecera.addEventListener('click', () => {
+			  barra.classList.toggle('abierto');
+
+			  if (barra.classList.contains('abierto')) {
+				contenido.style.maxHeight = contenido.scrollHeight + "px";
+				flecha.style.transform = "rotate(90deg)";
+			  } else {
+				contenido.style.maxHeight = null;
+				flecha.style.transform = "rotate(0deg)";
+			  }
+			});
+		  });
+
+	</script>
+<!--ANIMACIÓN PARA LA CUADRICULA DE EXTRANJERÍA-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const imgElement = document.querySelector(".cuadricula .preguntas-frecuentes img");
+
+            imgElement.addEventListener("mouseover", function() {
+                this.src = "iconos png/preguntas.png"; // Cambia a la imagen deseada
+            });
+
+            imgElement.addEventListener("mouseout", function() {
+                this.src = "iconos png/preguntas azul.png"; // Vuelve a la imagen original
+            });
+        });
+    </script>
+	<footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <b> Inicio </b>
+                <ul>
+                    <li><a href="">Dni y Pasaporte</a></li>
+                    <li><a href="#">Permisos de viaje</a></li>
+                    <li><a href="#">Extranjeria</a></li>
+                    <li><a href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Denuncias </b>
+                <ul>
+                    <li><a href="#">Informacion General</a></li>
+                    <li><a href="">Reportar</a></li>
+                    <li><a href="#">Desaparecidos</a></li>
+                    <li><a href="#">Buscados</a></li>
+                    <li><a href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Tu Policia</b>
+                <ul>
+                    <li><a href="">Conocenos</a></li>
+                    <li><a href="#">Quiero ser Policia</a></li>
+                    <li><a href="#">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <b> Emergencias </b>
+                <ul>
+                    <li><a href="#">Protocolos</a></li>
+                    <li><a href="">Atencion Auxilio</a></li>
+                    <li><a href="#">Guardia Civil</a></li>
+                    <li><a href="#">Samur</a></li>
+                    <li><a href="#">Antidisturbios</a></li>
+                    <li><a href="#">Bomberos</a></li>
+                    <li><a href="#">Radiopatrullas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

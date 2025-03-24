@@ -1,11 +1,408 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <!--hacer diferentes css para que se adapte a diferentes dispositivos-->
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh
+        }
+
+        main {
+            display: flex;
+            margin: 50px;
+        }
+
+        .navegacion {
+            background-color: #23398b;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px 0px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /*--BUSCADOR--*/
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+        }
+
+        .cajabuscar {
+            width: 100%;
+            max-width: 400px;
+            /*para ajustar el ancho del buscador cambiar aqui y en #buscarform el width */
+            margin: 0px 30px 0px 0px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-left: auto;
+        }
+
+        #buscarform {
+            padding: 0;
+            float: left;
+            clear: both;
+            width: 400px;
+            position: relative;
+        }
+
+        #buscarform fieldset {
+            float: left
+        }
+
+        #buscarform .search {
+            font-size: 20px;
+            top: 0px;
+            color: #FFF;
+            background: #33BCF2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 9px;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+        }
+
+        #buscarform fieldset {
+            width: 100%
+        }
+
+        #s {
+            width: 100%;
+            background-color: #fff;
+            float: left;
+            padding: 8px 0;
+            text-indent: 10px;
+            color: #555555;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            height: 42px;
+        }
+
+        .button {
+            right: 0;
+            top: 0;
+            padding: 9px 0;
+            float: right;
+            border: 0;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+            color: #a4a4a4;
+            transition: all 0.25s linear;
+            background: transparent;
+            z-index: 10;
+            position: absolute;
+            border: 0;
+            vertical-align: top;
+        }
+
+        .boton-contacto {
+            background-color: #FF4F00;
+            /* Color de fondo */
+            color: white;
+            /* Color del texto */
+            padding: 12px 20px;
+            /* Espaciado interno */
+            border: none;
+            /* Sin bordes */
+            border-radius: 5px;
+            /* Bordes redondeados */
+            cursor: pointer;
+            /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px;
+            /* Tamaño de la fuente */
+            margin: 0px 0px 0px 30px;
+        }
+
+        .boton-contacto:hover {
+            background-color: #6E2901;
+            /* Cambia el color de fondo al pasar el mouse */
+        }
+
+        .navegacion_principal {
+            background-color: #23398b;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: none;
+        }
+
+        .navegacion_principal a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 30px 30px 20px 40px;
+            font-size: 20px;
+            font-family: Verdana;
+        }
+
+        .navegacion_principal a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            width: auto;
+            height: 100px;
+            display: flex;
+            margin-left: 0px;
+        }
+
+        .foto-principal img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* creacion de footer */
+        footer {
+            text-align: center;
+            background: #23398b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .indicefinal {
+            display: flex;
+            text-decoration: none;
+            font-size: 30px;
+            gap: 30px;
+            margin: 40px 0 10px 0;
+        }
+
+        .indicefinal ul {
+            list-style-type: none;
+        }
+
+        .indicefinal a {
+            text-decoration: none;
+            color: whitesmoke;
+            padding: 0 20px;
+        }
+
+        .cajafinal {
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .cajafinal li {
+            padding: 10px 0px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .indicefinal a:hover {
+            text-decoration: underline;
+            color: whitesmoke;
+        }
+
+        table {
+            width: 30%;
+            margin: 20px;
+            border-collapse: collapse;
+            table-layout: fixed;
+            background-color: rgb(235, 233, 233);
+            box-shadow: 4px 8px rgba(0, 0, 0, 0.1)
+        }
+
+        td {
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            padding: 0px 15px 0 15px;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        td a {
+            color: black;
+            text-decoration: none;
+        }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+
+        .celda-foto, .celda-foto2 {
+            margin: 0;
+            padding: 0;
+            border: none;
+            width: 100%;
+        }
+
+        .celda-foto img, .celda-foto2 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <nav>
+        <div class="navegacion">
+
+            <div class="logo">
+                <img src="https://www.policia.es/img/_logo.png" alt="logo">
+            </div>
+
+            <div class="cajabuscar">
+                <form method="get" id="buscarform">
+                    <fieldset>
+                        <input type="text" id="s" value="" placeholder="Buscar" />
+                        <input class="button" type="submit" value="" />
+                        <i class="search"></i>
+                    </fieldset>
+                </form>
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+            </div>
+
+        </div>
+
+        <div class="navegacion_principal">
+            <a href="#"> Inicio </a>
+            <a href="#"> Trámites</a>
+            <a href="#"> Denuncias </a>
+            <a href="#"> Tu policia </a>
+            <a href="#"> Emergencias </a>
+        </div>
+    </nav>
+
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <h3>Conócenos</h3>
+                    <a href="conocenos">Acércate y conócenos</a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="historia">Historia de la policia</a></td>
+            </tr>
+            <tr>
+                <td><a href="uniforme">Historia de los uniformes</a></td>
+            </tr>
+            <tr>
+                <td><a href="himno">Himno</a></td>
+            </tr>
+            <tr>
+                <td><a href="webinfantil">Web infantil</a></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="celda-foto">
+                    <img src="imagenes/policia.jpg" alt="Imagen de policía">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>¿Quieres ser Policía?</h3>
+                    ¿O trabajar en Seguridad Privada?
+                    Consulta aquí las fechas de las oposiciones para las diferentes escalas de la Policía y empleo en
+                    Seguridad Privada.
+                </td>
+            </tr>
+            <tr>
+                <td><a href="acceso_oposiciones">Acceso a oposiciones y convocatorias</a></td>
+            </tr>
+            <tr>
+                <td><a href="personal_no_policial">Personal no policial</a></td>
+            </tr>
+            <tr>
+                <td><a href="jefes_y_directores">Jefes y Directores de Seguridad</a></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <h3>Adopta un K-9</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Adopta uno de nuestros héroes de cuatro patas. La "vida laboral" de estos compañeros es de 8-9
+                        años.
+                        Dedican su juventud a prestar servicio, y cuando sus facutades merman y no pueden desempeñar sus
+                        funciones son jubilados.
+                        <br><br>
+                        También buscamos hogares paras aquellos perros jóvenes que, tras ser adiestrados, no desarrollan
+                        las aptitudes necesarias para el trabajo y son descartados.
+                        <br><br>
+                        Si te interesa adoptar uno de nuestros héroes
+                    </p> <!-- poner un botón-->
+                </td>
+            </tr>
+            <tr>
+                <td class="celda-foto">
+                    <img src="imagenes/k9.jpg" alt="Imagen de K-9">
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <b> Trámites </b>
+                <ul>
+                    <li><a href="">Dni y Pasaporte</a></li>
+                    <li><a href="#">Permisos de viaje</a></li>
+                    <li><a href="#">Extranjeria</a></li>
+                    <li><a href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Denuncias </b>
+                <ul>
+                    <li><a href="#">Informacion General</a></li>
+                    <li><a href="">Reportar</a></li>
+                    <li><a href="#">Desaparecidos</a></li>
+                    <li><a href="#">Buscados</a></li>
+                    <li><a href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Tu Policia</b>
+                <ul>
+                    <li><a href="">Conocenos</a></li>
+                    <li><a href="#">Quiero ser Policia</a></li>
+                    <li><a href="#">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <b> Emergencias </b>
+                <ul>
+                    <li><a href="#">Protocolos</a></li>
+                    <li><a href="">Atencion Auxilio</a></li>
+                    <li><a href="#">Guardia Civil</a></li>
+                    <li><a href="#">Samur</a></li>
+                    <li><a href="#">Antidisturbios</a></li>
+                    <li><a href="#">Bomberos</a></li>
+                    <li><a href="#">Radiopatrullas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
