@@ -7,9 +7,7 @@
     <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico"> <!--hacer diferentes css para que se adapte a los dispositivos-->
     <style>
         body {
-            background-image: url("imagenes/fondo\ \(1\).jpg");
-            background-size: 100%;
-            background-repeat: no-repeat;
+           
             margin: 0;
             width: 100%;
             height: 100vh;
@@ -137,7 +135,7 @@
             display: flex;
             justify-content: center;
             position: none;
-            margin-bottom: 70px;
+            margin-bottom: 0px;
         }
 
         .navegacion_principal a {
@@ -312,18 +310,125 @@ aside a:hover{
             
             
         }
-        table{
-        background-color: #fefcfc37;
-        border-radius: 30px;
+             
+
+h1{
+    
+    color: white;
+    font-size: 140px;
+    padding: 0px;
+    margin:0;
+    
+
+}
+.contenedor1{
+    background-image: url("imagenes/emergencias_0.jpg");
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 550px;
+    padding: 0px;
+    width: 900px;
+    height: 150px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.contenedornav2{
+    display: flex;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 100px 0;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.menu li {
+  position: relative;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+.menu a {
+  display: block;
+  color: #23398b;
+  padding: 35px 30px;
+  text-decoration: none;
+}
+
+.menu li:hover {
+  background: #2222225e;
+  color:white;
+}
+
+/* Estilos para el submenú (desplegable) */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #233a8bee;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  border-radius: 15px;
+  
+}
+
+.submenu li a {
+  padding: 35px;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.submenu li a:hover {
+  background-color: #f8f7f7;
+  color:#23398b
+}
+
+/* Mostrar el submenú cuando el usuario pasa el ratón sobre el menú */
+.desplegable:hover .submenu {
+  display: block;
+}
+.contenedor3{
+  display: flex;            /* Usamos Flexbox para centrar los elementos */
+  justify-content: center;  /* Centra la tabla horizontalmente */
+  align-items: center;      /* Centra la tabla verticalmente */
+  height: 100vh;  
+  background-image: url("imagenes/situacion\ emergencia.webp");   
+  background-repeat:space;
+  background-size: cover;      /* La altura será el 100% de la ventana del navegador */
+  background-position: center; /* La imagen se centrará */
+ border-radius: 15px;
 
 
-        }
+}
 
+
+
+table{
+        
+    padding: auto;
+    margin: 40px 90px 50px 90px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f46c;
+    border-radius: 15px;
+
+  }
 tr img{
-width: 300px;
-height: 240px;
-border-radius: 20px;
-margin: 70px 70px 0;
+width: 240px;
+height: 200px;
+border-radius: 40px;
+margin: 50px 70px 00px 70px;
+
 
 }
 
@@ -331,20 +436,49 @@ tr a{
  font-size:35px;
  color:#23398b;
  text-decoration:none;
- background-color:#f4f4f447;
+ background-color:#f4f4f4;
+ padding: 0px 35px;
  border-radius: 10px;
+    margin:20px
 
 }
 tr a:hover{
-font-size:40px;
+
 text-decoration:underline;
 color:white;
 background-color: #23398b;
-padding: 10px;
+padding: 0px 35px;
 border-radius: 10px;
 margin-top: 10px;
 
-}
+}    
+
+.carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+            
+        }
+
+        .carousel {
+            display: flex;
+            width: calc(12 * 420px * 2); /* Tamaño dinámico para asegurar el bucle */
+            animation: slide 30s linear infinite;
+            background:#0101ffb9;
+            padding: 20px;
+        }
+
+        .carousel img {
+            width: 420px;  /* Tamaño más pequeño */
+            height: auto;
+            margin: 0 10px;
+            border-radius: 25px;
+        }
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-8 * 420px)); }
+        }
     
     </style>
 </head>
@@ -378,45 +512,104 @@ margin-top: 10px;
             
         </div>
     </nav>
- <div class="contenido">   
-<aside>
- <a href="#">Informacion de Contacto</a>
- <a href="#">Acciones Basicas en Caso de Emergencia</a>
- <a href="#">Recursos Útiles</a>
- <a href="#">Informacion Actualizada</a>
- <a href="#">Accesibilidad</a>
- <a href="#">Formularios de Reportes</a>
-</aside>
-
-<main>
-<table>
- <tr>
-    <th><img src="imagenes/bomberos.jpg"><br><a href="#">Bomberos </a></th>
-    <th><img src="imagenes/samur.jpg"><br><a href="#">Samur </a></th>
-    <th><img src="imagenes/proteccion civil.jpg"><br><a href="#">Proteccion civil </a></th>
- </tr>
-<tr>
-    <th><img src="imagenes/servicios especiales.jpg"><br><a href="#">Servicos Especializados</a></th>
-    <th><img src="imagenes/112 emergencias.png"><a href="#">112</a></th>
-    <th><img src="imagenes/FUERZAS Y CUERPOS DE SEGURIDAD DEL ESTADO.png"><br><a href="#">Agentes del Orden</a></th>
-
-</tr>
-
-<tr>
-    <th><img src="imagenes/cruz roja.jpg"><br><a href="#">Cruz roja </a></th>
-    <th><img src="imagenes/emergencias ambientales.jpg"><br><a href="#">Emergencias Ambientales </a></th>
-    <th><img src="imagenes/apoyo psico.png"><br><a href="#">Apoyo Psicologico </a></th>
-</tr>
-</table>
+    <div class="contenedor1">
+    <h1>Emergencias</h1>
 </div>
-</main>
+<ul class="menu">
+   
+    <li class="desplegable">
+      <a href="#">Información de contacto</a>
+      <ul class="submenu">
+        <li><a href="#">Números de emergencia</a></li>
+        <li><a href="#">Enlaces a centros de asistencia médica o refugios locales.</a></li>
+        <li><a href="#">Dirección y teléfono de hospitales cercanos.</a></li>
+      </ul>
+    </li>
+    <li class="desplegable">
+        <a href="#">Acciones básicas en caso de emergencias</a>
+        <ul class="submenu">
+          <li><a href="#">Consejos para primeros auxilios</a></li>
+          <li><a href="#">Protocolos en caso de incendios, terremotos, inundaciones, etc.</a></li>
+          <li><a href="#">Cómo actuar si hay una emergencia médica.</a></li>
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Recursos útiles</a>
+        <ul class="submenu">
+          <li><a href="#">Mapas interactivos indicando hospitales, estaciones de policía y rutas de evacuación</a></li>
+          <li><a href="#">Botón de "Llamar de emergencia" o acceso rápido para usuarios móviles.</a></li>
+          <li><a href="#">Links a información oficial de emergencias</a></li>
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Información actualizada</a>
+        <ul class="submenu">
+          <li><a href="#">Alertas meteorológicas, avisos de seguridad u otras emergencias activas.</a></li>
+          <li><a href="#">Información en tiempo real de las autoridades locales. </a></li>
+          
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Accesibilidad<br></a>
+        <ul class="submenu">
+          <li><a href="#">Idiomas disponibles para usuarios internacionales</a></li>
+           
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Formularios de reporte</a>
+        <ul class="submenu">
+          <li><a href="#">Espacio donde los usuarios puedan informar emergencias o incidentes.</a></li>
+          
+        </ul>
+      </li>
+  </ul>
+</ul>
+
+
+
+<div class="contenedor3">
+    <table>
+     <tr>
+       <th><img src="imagenes/bomberos.jpg"><br><a href="#">Bomberos</a></th>
+       <th><img src="imagenes/samur.jpg"><br><a href="#">Samur</a></th>
+       <th><img src="imagenes/guardia civil.jpg"><br><br><a href="#">Guardia civil</a></th>
+     </tr>
+     <tr>
+        <th><img src="imagenes/cruz roja.jpg"><br><a href="#">Cruz Roja</a></th>
+        <th><img src="imagenes/emergencias ambientales.jpg"><br><a href="#">E. Ambientales</a></th>
+        <th><img src="imagenes/proteccion civil.jpg"><br><a href="#">Proteccion Civil</a></th>
+      </tr>
+
+
+
+    </table>
 
 </div>
-
-
-
+<div class="carousel-container">
+    <div class="carousel">
+      <img src="imagenes/emergencias1.jpeg">
+      <img src="imagenes/emergencias2.jpg">
+      <img src="imagenes/emergencias3.jpg">
+      <img src="imagenes/emergencia4.jpg">
+      <img src="imagenes/emergencia 5.jpg">
+      <img src="imagenes/emergencia6.webp">
+      <img src="imagenes/emergencia 7.jpg">
+      <img src="imagenes/emergencia8.jpg">
+      <img src="imagenes/emergencia9.jpg">
+      <img src="imagenes/emergencia10.avif">
+      <img src="imagenes/emergencias1.jpeg">
+      <img src="imagenes/emergencias2.jpg">
+      <img src="imagenes/emergencias3.jpg">
+      <img src="imagenes/emergencia4.jpg">
+      <img src="imagenes/emergencia 5.jpg">
+      <img src="imagenes/emergencia6.webp">
+      <img src="imagenes/emergencia 7.jpg">
+      <img src="imagenes/emergencia8.jpg">
+      <img src="imagenes/emergencia9.jpg">
+      <img src="imagenes/emergencia10.avif">
     
-
+</div>
     <div class="redes">
         <h2>¡SIGUENOS!</h2>
         <div class="image-flex">
