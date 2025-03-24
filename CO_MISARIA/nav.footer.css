@@ -1,0 +1,240 @@
+
+        body {
+            /*background-image: url('/CO_MISARIA/imagenes/FOTO2.png');  Cambia 'fondo.jpg' por el nombre de tu imagen */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            margin: 0%;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main{
+            display: flex;
+
+        }
+        .navegacion {
+            background-color: #23398b;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px 0px 20px;
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /*--BUSCADOR--*/
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+        }
+
+        .cajabuscar {
+            width: 100%;
+            max-width: 400px; /*para ajustar el ancho del buscador cambiar aqui y en #buscarform el width */
+            margin: 0px 30px 0px 0px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-left: auto;
+        }
+
+        #buscarform {
+            padding: 0;
+            float: left;
+            clear: both;
+            width: 400px;
+            position: relative;
+        }
+
+        #buscarform fieldset {
+            float: left
+        }
+
+        #buscarform .search {
+            font-size: 20px;
+            top: 0px;
+            color: #FFF;
+            background: #33BCF2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 9px;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+        }
+
+        #buscarform fieldset {
+            width: 100%
+        }
+
+        #s {
+            width: 100%;
+            background-color: #fff;
+            float: left;
+            padding: 8px 0;
+            text-indent: 10px;
+            color: #555555;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            height: 42px;
+        }
+
+        .button {
+            right: 0;
+            top: 0;
+            padding: 9px 0;
+            float: right;
+            border: 0;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+            color: #a4a4a4;
+            transition: all 0.25s linear;
+            background: transparent;
+            z-index: 10;
+            position: absolute;
+            border: 0;
+            vertical-align: top;
+        }
+
+        .boton-contacto {
+            background-color: #FF4F00;
+            /* Color de fondo */
+            color: white;
+            /* Color del texto */
+            padding: 12px 20px;
+            /* Espaciado interno */
+            border: none;
+            /* Sin bordes */
+            border-radius: 5px;
+            /* Bordes redondeados */
+            cursor: pointer;
+            /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px;
+            /* Tamaño de la fuente */
+            margin: 0px 0px 0px 30px;
+        }
+
+        .boton-contacto:hover {
+            background-color: #f76612;
+            /* Cambia el color de fondo al pasar el mouse */
+        }
+
+        .navegacion_principal {
+            background-color: #2220a0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: none;
+        }
+
+        .navegacion_principal a {
+            color: #ece7e7;
+            text-decoration: none;
+            margin: 30px 30px 20px 40px;
+            font-size: 20px;
+            font-family: Verdana;
+        }
+
+        .navegacion_principal a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            width: auto;
+            height: 100px;
+            display: flex;
+            margin-left: 0px;
+        }
+
+        .foto-principal img {
+            width: 100%;
+            height: auto;
+        }
+
+        .denuncias{
+            background: #d60707f3;
+            display: flex;
+            padding:5%;
+            text-align: center;
+            justify-content: center;
+            position: none;
+            color: #e2e2e2;
+            margin: 30px 30px 20px 40px;
+            font-size: 20px;
+            font-family: Verdana;
+            color:blanchedalmond
+
+        }
+        .denuncias a{
+            color:#61016e80;
+            margin: auto;
+            padding:30px;
+        }
+         
+        .denuncias a:hover {
+            text-decoration: underline;
+        } 
+        .denuncias ul{
+            text-align:center;
+                position: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                 list-style: none;/* para quitar puntos*/
+        }
+        
+            /* creacion de footer */
+            footer {
+                text-align: center;
+                background: #23398b;
+                position: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .indicefinal {
+                display: flex;
+                text-decoration: none;
+                font-size: 30px;
+                gap: 30px;
+                margin: 30px 0;
+            }
+    
+            .indicefinal ul {
+                list-style-type: none;
+            }
+    
+            .indicefinal a {
+                text-decoration: none;
+                color: whitesmoke;
+                padding: block 20px;
+            }
+    
+            .cajafinal {
+                padding: 0px;
+                font-size: 20px;
+                color: white;
+                font-weight: bold;
+            }
+    
+            .cajafinal li {
+                padding: 10px;
+                font-weight: normal;
+                text-align: left;
+            }
+    
+            .indicefinal a:hover {
+                text-decoration: underline;
+            }
