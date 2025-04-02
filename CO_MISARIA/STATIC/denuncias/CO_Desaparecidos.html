@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="style_denun.css">
+    <title>Denuncias</title>
+</head>
+<body>
+    <nav>
+        <div class="navegacion">
+            <div class="logo">
+                <img src="https://www.policia.es/img/_logo.png" alt="logo">
+            </div>
+
+            <div class="cajabuscar">
+                <form method="get" id="buscarform">
+                    <fieldset>
+                        <input type="text" id="s" value="" placeholder="Buscar" />
+                        <input class="button" type="submit" value="" />
+                        <i class="search"></i>
+                    </fieldset>
+                </form>
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+            </div>
+        </div>
+
+        <div class="navegacion_principal">
+            <a href="#"> Inicio </a>
+            <a href="#"> Trámites</a>
+            <a href="#"> Denuncias </a>
+            <a href="#"> Tu policia </a>
+            <a href="#"> Emergencias </a>
+        </div>
+        <footer>
+            <div class="indicefinal">
+                <div class="cajafinal">
+                    <b> Inicio </b>
+                    <ul>
+                        <li><a href="">Dni y Pasaporte</a></li>
+                        <li><a href="#">Permisos de viaje</a></li>
+                        <li><a href="#">Extranjeria</a></li>
+                        <li><a href="#">Antecedentes</a></li>
+                    </ul>
+                </div>
+    
+                <div class="cajafinal">
+                    <b> Denuncias </b>
+                    <ul>
+                        <li><a href="#">Informacion General</a></li>
+                        <li><a href="">Reportar</a></li>
+                        <li><a href="#">Desaparecidos</a></li>
+                        <li><a href="#">Buscados</a></li>
+                        <li><a href="#">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+    
+                <div class="cajafinal">
+                    <b> Tu Policia</b>
+                    <ul>
+                        <li><a href="">Conocenos</a></li>
+                        <li><a href="#">Quiero ser Policia</a></li>
+                        <li><a href="#">Adopta un K9</a></li>
+                    </ul>
+                </div>
+                <div class="cajafinal">
+                    <b> Emergencias </b>
+                    <ul>
+                        <li><a href="#">Protocolos</a></li>
+                        <li><a href="">Atencion Auxilio</a></li>
+                        <li><a href="#">Guardia Civil</a></li>
+                        <li><a href="#">Samur</a></li>
+                        <li><a href="#">Antidisturbios</a></li>
+                        <li><a href="#">Bomberos</a></li>
+                        <li><a href="#">Radiopatrullas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer>
+            <div class="subfooter">
+    
+                <p><b>© 2025  DIRECCION GENERAL DE COMISERIA  | Proteccion de Datos | Aviso Legal </b></p>
+               
+                <b>SIGUENOS!</b>
+                <div class="redes">
+                    <p> <b> Redes Sociales </b></p>
+                <ul class="redes">
+                    <li><a href="https://www.facebook.com/" target="_blank"><img src="/imagenes/facebook.jpg" alt="Facebook"></a></li>
+                    <li><a href="https://X.com/" target="_blank"><img src="/imagenes/x.png" alt="X"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="/imagenes/instagram.jpg" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank"><img src="/imagenes/youtube.jpg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/" target="_blank"><img src="/imagenes/tiktok.jpg" alt="TikTok"></a></li>
+                    <li><a href="https://www.whatsapp.com/" target="_blank"><img src="/imagenes/whatsapp.jpg" alt="WhatsApp"></a></li>
+                    <li><a href="https://www.telegram.com" target="_blank"><img src="/imagenes/telegram.jpg" alt="Telegram"></a></li>
+                </ul>
+                </div>
+            </div>
+        </footer>
+        <div style="position: fixed; bottom: 50px; right: 20px; z-index: 1000;">
+            <button onclick="scrollUp()" style="background:none; border:none; cursor:pointer;">
+             <img scr="/STATIC/denuncias/flecha.png" alt="subir" style="width:40px; height:40px;">
+            </button>
+        </div>
+        <script>
+             function scrollUp() {
+            // Desplazamiento suave hacia arriba
+            window.scrollBy({
+                top: -window.scrollY, // Cantidad de píxeles hacia arriba
+                behavior: 'auto' // Desplazamiento suave
+            });
+        }
+        </script>
+        <input name="animation" type="hidden">
+    </html>
