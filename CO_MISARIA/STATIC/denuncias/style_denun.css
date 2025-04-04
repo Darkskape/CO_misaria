@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> a539bdb31abf8ffab918a3d48a2eb649f87bf278
 body {
   /*background-image: url('/CO_MISARIA/imagenes/FOTO2.png');  Cambia 'fondo.jpg' por el nombre de tu imagen */
   background-size: cover;
@@ -9,7 +13,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a539bdb31abf8ffab918a3d48a2eb649f87bf278
 main{
   display: flex;
 
@@ -162,21 +169,36 @@ fieldset {
 }
 
 .denuncias{
+<<<<<<< HEAD
+  background: #373874f3;
+  display: flex;
+  padding: 5px 0px 0px 0px;
+  flex-direction: column;
+=======
   background: #d60707f3;
   display: flex;
   padding:5%;
+>>>>>>> a539bdb31abf8ffab918a3d48a2eb649f87bf278
   text-align: center;
   justify-content: center;
   position: none;
   color: #e2e2e2;
+<<<<<<< HEAD
+  margin: 30px 30px 30px 30px;
+=======
   margin: 30px 30px 20px 40px;
+>>>>>>> a539bdb31abf8ffab918a3d48a2eb649f87bf278
   font-size: 20px;
   font-family: Verdana;
   color:blanchedalmond
 
 }
 .denuncias a{
+<<<<<<< HEAD
+  color:#d6c8d880;
+=======
   color:#61016e80;
+>>>>>>> a539bdb31abf8ffab918a3d48a2eb649f87bf278
   margin: auto;
   padding:30px;
 }
@@ -194,6 +216,241 @@ fieldset {
        list-style: none;/* para quitar puntos*/
 }
 
+<<<<<<< HEAD
+.flip-card {  /* modifica los cards */
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  justify-items: center right;
+  display: flex;
+  justify-content: center;
+  align-items: center right;
+  margin: 15px 15px 15px 15px;
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 120%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.10s;
+  transform-style: preserve-3d;
+  background-color: transparent;
+  perspective: 1000px;
+  font-family: sans-serif;
+  padding: 20px 20px 20px 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column-and-row;
+  grid-template-rows: repeat(4, 2fr,2fr ,2fr ,2fr);
+  grid-template-columns: repeat(4, 2fr,2fr ,2fr ,2fr);
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  height: 100%;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgb(43, 46, 231);
+  border-radius: 1rem;
+  padding: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 20px;
+  box-sizing: border-box;
+  
+}
+
+.flip-card-front {
+  background: linear-gradient(transparent) 60%, rgb(7, 76, 122) 88%,
+     rgb(3, 126, 148) 40%, rgba(80, 127, 255, 0.603) 48%;
+  color: rgba(80, 170, 255, 0.938);
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(14,72,179) 30%, rgb(7,76,122) 88%,
+     bisque 40%, rgb(143, 134, 131) 78%);
+  color: rgb(170, 174, 184);
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.flip-card-back h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  position: relative;
+
+  /* creacion de footer */
+      footer {
+        text-align: center;
+        background: #23398b;
+        color:white;
+        padding: 20px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        font-size: 20px;
+        list-style: none;
+    }
+
+    .indicefinal {
+        display: flex;
+        text-decoration: none;
+        font-size: 30px;
+        gap: 30px;
+        margin: 30px 0;
+    }
+
+    .indicefinal ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    indicefinal li{
+      padding: 5px 0;
+    }
+
+    .indicefinal a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: block 20px;
+    }
+
+    .cajafinal {
+        padding: 0px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .cajafinal li {
+        padding: 10px;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .indicefinal a:hover {
+        text-decoration: underline;
+    }
+ 
+
+   /*--BOTON DE SCROLL UP--*/
+
+   #boton-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+}
+
+#boton-arriba img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px;
+}
+
+#boton-arriba:hover img {
+    opacity: 0.8; /* Efecto hover */
+}
+.scrollUp:hover img{
+   opacity: 0.5;}
+.redes {
+  width: 50px;
+  height: 50px;
+  position: fixed; /* Fija el contenedor en la pantalla */
+      /* Fija las redes sociales en la pantalla */
+      bottom: 10px; /* Espaciado desde la parte inferior */
+      left: 10px; /* Espaciado desde la izquierda */
+      display: flex; /* Alinea los iconos a la derecha */
+      gap: 10px; /* Espaciado entre los iconos */
+      justify-content: flex-end; /* Alinea los iconos a la derecha */
+      align-items: center;
+
+      margin: right 20px;
+      list-style: none;
+     /* Elimina los puntos de lista */
+     /* Asegura que estén por encima de otros elementos */
+     border-radius: 50%;
+      padding: 10px;
+      background-color: #1e3aa1; /* Color de fondo */
+      box-shadow: 10px 4px 8px rgba(1, 0, 0, 0.2); /* Sombra para un efecto de elevación */
+      z-index: 1000; /* Asegura que el contenedor esté sobre otros elementos */
+      transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+  }
+  
+.redes.li{
+    width:30px;
+    height: 30px;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    list-style: none;
+    text-decoration: none; /* Elimina los puntos de lista */
+  }
+
+  .redes img{
+    width: 50px;
+    height: 50px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    filter: brightness(16px);
+    transition: transform 0.3s ease;
+    cursor: pointer; 
+  }}
+  
+  .redes img:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+=======
   /* creacion de footer */
   footer {
       text-align: center;
@@ -324,3 +581,4 @@ fieldset {
     width: 100%;
     height: 50px;
   }
+>>>>>>> a539bdb31abf8ffab918a3d48a2eb649f87bf278
