@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- deacuerdo Informacion Comisaria 
+     vemos que tenemos un login que lleve los siguientes campos para iniciar sesion tanto para trabajador normal
+     y administracion interna 
+     
+     los campos para registar a cada trabajador :
+     administracion interna: formulario de registro ( dni, nombre,correo,contraseña repetir contraseña y verificacion de seguridad
+     si eres humano o robot. )-->
+
+         <h1>Formulario de Registro</h1>
+         <form id="registroForm">
+             <label for="dni">DNI:</label>
+             <input type="text" id="dni" name="dni" required><br><br>
+     
+             <label for="nombre">Nombre:</label>
+             <input type="text" id="nombre" name="nombre" required><br><br>
+     
+             <label for="correo">Correo:</label>
+             <input type="email" id="correo" name="correo" required><br><br>
+     
+             <label for="contraseña">Contraseña:</label>
+             <input type="password" id="contraseña" name="contraseña" required><br><br>
+     
+             <label for="captcha">Escribe el texto del captcha:</label>
+             <span id="captchaPregunta" style="font-weight: bold; font-size: 18px;"></span>
+             <input type="text" id="captchaRespuesta" name="captchaRespuesta" required><br><br>
+     
+             <button type="submit">Registrar</button>
+         </form>
+     
+         <script>
+             // Generar una cadena aleatoria para el captcha
+             function generarCaptcha() {
+                 const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                 let captcha = '';
+                 for (let i = 0; i < 6; i++) { // Genera una cadena de 6 caracteres
+                     captcha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+                 }
+                 return captcha;
+             }
+     
+             // Mostrar el captcha
+             const captchaPregunta = document.getElementById('captchaPregunta');
+             const captchaTexto = generarCaptcha();
+             captchaPregunta.textContent = captchaTexto;
+     
+             // Validar el captcha al enviar el formulario
+             const registroForm = document.getElementById('registroForm');
+             registroForm.addEventListener('submit', function (e) {
+                 e.preventDefault();
+                 const respuestaUsuario = document.getElementById('captchaRespuesta').value;
+                 if (respuestaUsuario === captchaTexto) {
+                     alert('Captcha correcto. Registro exitoso.');
+                     // Aquí puedes enviar el formulario o realizar otras acciones
+                 } else {
+                     alert('Captcha incorrecto. Inténtalo de nuevo.');
+                 }
+             });
+         </script>
+     </body>
+     </html>
+</body>
+</html>
