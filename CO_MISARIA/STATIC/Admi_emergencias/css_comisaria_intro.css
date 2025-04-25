@@ -1,0 +1,762 @@
+ <style>
+        body {
+           
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            
+        }
+
+        .navegacion {
+            background-color: #23398b;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0px 0px 20px;
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /*--BUSCADOR--*/
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+        }
+
+        .cajabuscar {
+            width: 100%;
+            max-width: 400px; /*para ajustar el ancho del buscador cambiar aqui y en #buscarform el width */
+            margin: 0px 30px 0px 0px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-left: auto;
+        }
+
+        #buscarform {
+            padding: 0;
+            float: left;
+            clear: both;
+            width: 400px;
+            position: relative;
+        }
+
+        #buscarform fieldset {
+            float: left
+        }
+
+        #buscarform .search {
+            font-size: 20px;
+            top: 0px;
+            color: #FFF;
+            background: #33BCF2;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 9px;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+        }
+
+        #buscarform fieldset {
+            width: 100%
+        }
+
+        #s {
+            width: 100%;
+            background-color: #fff;
+            float: left;
+            padding: 8px 0;
+            text-indent: 10px;
+            color: #555555;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            height: 42px;
+        }
+
+        .button {
+            right: 0;
+            top: 0;
+            padding: 9px 0;
+            float: right;
+            border: 0;
+            width: 42px;
+            height: 42px;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+            color: #a4a4a4;
+            transition: all 0.25s linear;
+            background: transparent;
+            z-index: 10;
+            position: absolute;
+            border: 0;
+            vertical-align: top;
+        }
+
+        .boton-contacto {
+            background-color: #FF4F00;
+            /* Color de fondo */
+            color: white;
+            /* Color del texto */
+            padding: 12px 20px;
+            /* Espaciado interno */
+            border: none;
+            /* Sin bordes */
+            border-radius: 5px;
+            /* Bordes redondeados */
+            cursor: pointer;
+            /* Cambia el cursor al pasar sobre el botón */
+            font-size: 16px;
+            /* Tamaño de la fuente */
+            margin: 0px 0px 0px 30px;
+        }
+
+        .boton-contacto:hover {
+            background-color: #6E2901;
+            /* Cambia el color de fondo al pasar el mouse */
+        }
+
+        .navegacion_principal {
+            background-color: #23398b;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            position: none;
+            margin-bottom: 0px;
+        }
+
+        .navegacion_principal a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin: 30px 30px 20px 40px;
+            font-size: 20px;
+            font-family: Verdana;
+        }
+
+        .navegacion_principal a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            width: auto;
+            height: 100px;
+            display: flex;
+            margin-left: 0px;
+
+        }
+
+        .foto-principal img {
+            width: 100%;
+            height: auto;
+        }
+
+        /*inicio de redes*/
+        .redes {
+            margin: 25px 0 10px 0;
+            justify-content: center;
+        }
+
+        .image-flex {
+            display: flex; flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px;
+            justify-content: center;
+        }
+
+        .image-flex img {
+            width: 80px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        @media (max-width: 1500px) {
+            .image-flex {
+                gap: 50px 20px;
+            }
+
+            .tooltip {
+                font-size: 14px;
+                /* Ajusta el tamaño de la fuente del tooltip */
+                padding: 10px;
+                /* Ajusta el padding del tooltip */
+                top: 100%;
+                /* Ajusta la posición del tooltip */
+            }
+        } 
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            margin: 20px;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .image-container:hover .tooltip {
+            display: block;
+        }
+
+        /* creacion de footer */
+        footer {
+            text-align: center;
+            background: #23398b;
+            position: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .indicefinal {
+            display: flex;
+            text-decoration: none;
+            font-size: 30px;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .indicefinal ul {
+            list-style-type: none;
+        }
+
+        .indicefinal a {
+            text-decoration: none;
+            color: whitesmoke;
+            padding: block 20px;
+        }
+
+        .cajafinal {
+            padding: 0px;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .cajafinal li {
+            padding: 10px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .indicefinal a:hover {
+            text-decoration: underline;
+        }
+        .contenido {
+            display: flex; /* Aplica flexbox solo a este contenedor */
+            width: 100%;
+        }
+
+        aside {
+            width: 25%;
+            background-color: #23398b;
+            flex-direction: column;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            border-radius: 15px;
+            justify-content: center;
+            
+           
+        }
+
+        aside a {
+            background-color:white;
+            color: #23398b;
+            padding: 15px 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            display: block;
+            text-decoration: none;
+            border-radius: 10px;
+            border:2px solid #030303;
+            
+        }
+aside a:hover{
+    
+    background: linear-gradient(to left, #0238fa, #fcfbfb);
+    color:rgb(250, 2, 2);
+    transition: 0.3s;
+    transform: scale(1.1);
+
+}
+button{
+    background:linear-gradient(139deg, #ff0000, #1b02fc);
+    color: rgb(238, 232, 232);
+    padding: 20px ;
+    border-radius: 10px; 
+    
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+   
+}
+.buttonalarma a:hover{
+    background:linear-gradient(139deg, #ff0000, #1b02fc); 
+    transform: scale(1.4);
+    transition: 0.5s;
+    color:#f4f4f4;
+
+ }
+.buttonalarma a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background:linear-gradient(139deg, #ff0000, #1b02fc);
+    color: rgb(238, 232, 232);
+    padding: 20px;
+    border-radius: 10px; 
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    
+    
+    
+}
+
+        main {
+            flex: 1;  /* Asegura que main ocupe el espacio restante */
+            width: 85%;
+            background-image: url("imagenes/fondo\ main\ emergencias.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top-right-radius:  15px;
+            border-bottom-right-radius: 15px;
+            padding: 1px;
+            width: 50%;  /* Puedes ajustar este ancho según sea necesario */
+            margin: 0 30px 0 0;
+                  
+            
+        }
+   main h3{
+    color: #23398b;
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+   }  
+
+h1{
+    
+    color: white;
+    font-size: 140px;
+    padding: 0px;
+    margin:0;
+    
+
+}
+.contenedorbomberos{
+    display: none; /* Oculta todos los contenedores por defecto */
+    background-color: aqua;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    margin:  0 auto;
+    border: 1px solid #ccc;
+    scroll-margin-top: 290px;
+
+}
+.contenedorsamur{
+    display: none; /* Oculta todos los contenedores por defecto */
+    background-color: aqua;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    margin:  0;
+    border: 1px solid #ccc;
+    scroll-margin-top: 290px;
+}
+.contenedorguardiacivil{
+    display: none; /* Oculta todos los contenedores por defecto */
+    background-color: aqua;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    margin:  0;
+    border: 1px solid #ccc;
+    scroll-margin-top: 290px;
+}
+.contenedorcruzroja{
+    display: none; /* Oculta todos los contenedores por defecto */
+    background-color: aqua;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    margin:  0;
+    border: 1px solid #ccc;
+    scroll-margin-top: 290px;
+}
+.contenedoremergenciasambientales{
+    display: none; /* Oculta todos los contenedores por defecto */
+    background-color: aqua;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    margin:  0;
+    border: 1px solid #ccc;
+    scroll-margin-top: 290px;
+}
+.contenedorproteccioncivil{
+    display: none; /* Oculta todos los contenedores por defecto */
+    background-color: aqua;
+    padding: 20px;
+    width: 90%;
+    height: auto;
+    margin:  0;
+    border: 1px solid #ccc;
+    scroll-margin-top: 290px;
+}
+.contenedorbomberos img, .contenedorsamur img, .contenedorcruzroja img, .contenedorguardiacivil img, .contenedoremergenciasambientales img, .contenedorproteccioncivil img {
+   border-radius: 10px;
+   display: block;
+   margin: 0 auto;
+
+}
+#contenedorbomberos:target, #contenedorsamur:target, #contenedorguardiacivil:target, #contenedorcruzroja:target, #contenedoremergenciasambientales:target, #contenedorproteccioncivil:target {
+    display: block; /* Muestra el contenedor correspondiente */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px 0px;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+}
+
+.contenedorcentral{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 50px;
+    padding: 20px;
+    margin: 0 auto;
+    
+
+
+
+}
+.contenedorfrontal{
+    display:flex;
+    width: auto;
+    justify-content: center;
+    background-color: #233a8b5e;
+    margin:0 ;
+    margin-bottom: 200px;
+    padding: 0px;
+    height:auto;
+    border-radius: 15px;
+    
+
+}
+.contenedorfrontal2{
+    display:block;
+    width:auto;
+    height: auto;
+    justify-content: center;
+    background-color: #233a8b5e;
+    margin-bottom: 100px;
+    padding: 0px;
+    height: auto;
+    
+    text-align: center;
+    
+}
+.contenedorfrontal2 a{
+    background-color: #FFF;
+    display:block;
+    color:#f80404;
+    margin:35px;
+    font-size:35px;
+    text-align: left;
+    padding: 5px;
+    border-radius: 5px;
+    border:3px solid #040404
+    
+   
+}
+.contenedorfrontal2 li{
+
+    color:#FFF;
+    list-style-type: none;
+    margin:5px;
+    text-align: left;
+}
+
+.menu2 {
+  list-style: none;
+  padding: 20px;
+  margin: 0; ;
+  display: block;
+   
+}
+.contenedor1{
+    display:flex;
+    justify-content: center;
+    background-image: url("imagenes/emergencias_0.jpg");
+    background-size: cover;
+    align-items: center;
+    margin:0 15px;
+    border-radius: 15px;
+    border: 3px solid #0206fd;
+    
+}
+.contenedornav2{
+    display: flex;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #23398b;
+  
+  
+}
+
+.menu li {
+  position: relative;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.menu a {
+  display: block;
+  color: #f7f7f8;
+  padding: 10px 30px;
+  text-decoration: none;
+  
+}
+.menu a:hover{
+    color: #f9fafb;
+    background-color:#233a8b4d;
+    transform: scale(1.1);
+    transition: 0.3s;
+    
+}
+
+.menu li:hover {
+     
+  color:white;
+  
+
+}
+
+/* Estilos para el submenú (desplegable) */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #233a8bee;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  
+  
+}
+
+.submenu li a {
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  
+}
+
+.submenu li a:hover {
+  background-color: #f8f7f7;
+  color:#23398b;
+  border-radius: 16px;
+}
+
+/* Mostrar el submenú cuando el usuario pasa el ratón sobre el menú */
+.desplegable:hover .submenu {
+  display: block;
+}
+
+
+
+
+   
+
+.carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+            
+        }
+
+        .carousel {
+            display: flex;
+            width: calc(12 * 420px * 2); /* Tamaño dinámico para asegurar el bucle */
+            animation: slide 30s linear infinite;
+            background:#0101ffb9;
+            padding: 20px;
+        }
+
+        .carousel img {
+            width: 420px;  /* Tamaño más pequeño */
+            height: auto;
+            margin: 0 10px;
+            border-radius: 25px;
+        }
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-8 * 420px)); }
+        }
+   
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            .navegacion {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .logo img {
+                height: 60px;
+                margin-bottom: 10px;
+            }
+
+            .cajabuscar {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            #buscarform {
+                width: 100%;
+            }
+
+            .boton-contacto {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .navegacion_principal {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navegacion_principal a {
+                margin: 10px 0;
+                font-size: 18px;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu li {
+                width: 100%;
+            }
+
+            .menu a {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            .contenedor1 h1 {
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .contenedorcentral {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            aside {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            main {
+                width: 100%;
+                margin: 0;
+            }
+
+            .contenedorfrontal2 a {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+
+            .carousel img {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .image-flex img {
+                width: 50px;
+            }
+
+            footer {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .indicefinal {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cajafinal {
+                font-size: 16px;
+            }
+
+            .cajafinal ul {
+                padding: 0;
+            }
+
+            .cajafinal li {
+                padding: 5px 0;
+            }
+            .carousel-container {
+                padding: 10px 0;
+            }
+
+            .carousel img {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .carousel {
+                animation: slide 20s linear infinite; /* Reduce la duración de la animación para pantallas pequeñas */
+            }
+        }

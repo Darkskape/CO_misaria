@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA numero de emergencia</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico"> <!--hacer diferentes css para que se adapte a los dispositivos-->
+    <link rel="stylesheet" href="comisaria_Pulsa_emergencias.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navegacion">
+
+            <div class="logo">
+                <img src="https://www.policia.es/img/_logo.png" alt="logo">
+            </div>
+
+            <div class="cajabuscar">
+                <form method="get" id="buscarform">
+                    <fieldset>
+                        <input type="text" id="s" value="" placeholder="Buscar" />
+                        <input class="button" type="submit" value="" />
+                        <i class="search"></i>
+                    </fieldset>
+                </form>
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+            </div>
+            
+        </div>
+
+        <div class="navegacion_principal">
+            <a href="comisaria Intro.html"> Inicio </a>
+            <a href="#"> Trámites</a>
+            <a href="#"> Denuncias </a>
+            <a href="#"> Tu policia </a>
+            
+        </div>
+    </nav>
+    
+<ul class="menu">
+   
+    <li class="desplegable">
+      <a href="#">Información de contacto</a>
+      <ul class="submenu">
+        <li><a href="#">Números de emergencia</a></li>
+        <li><a href="#">Enlaces a centros de asistencia médica o refugios locales.</a></li>
+        <li><a href="#">Dirección y teléfono de hospitales cercanos.</a></li>
+      </ul>
+    </li>
+    <li class="desplegable">
+        <a href="#">Acciones básicas en caso de emergencias</a>
+        <ul class="submenu">
+          <li><a href="#">Consejos para primeros auxilios</a></li>
+          <li><a href="#">Protocolos en caso de incendios, terremotos, inundaciones, etc.</a></li>
+          <li><a href="#">Cómo actuar si hay una emergencia médica.</a></li>
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Recursos útiles</a>
+        <ul class="submenu">
+          <li><a href="#">Mapas interactivos indicando hospitales, estaciones de policía y rutas de evacuación</a></li>
+          <li><a href="#">Botón de "Llamar de emergencia" o acceso rápido para usuarios móviles.</a></li>
+          <li><a href="#">Links a información oficial de emergencias</a></li>
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Información actualizada</a>
+        <ul class="submenu">
+          <li><a href="#">Alertas meteorológicas, avisos de seguridad u otras emergencias activas.</a></li>
+          <li><a href="#">Información en tiempo real de las autoridades locales. </a></li>
+          
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Accesibilidad<br></a>
+        <ul class="submenu">
+          <li><a href="#">Idiomas disponibles para usuarios internacionales</a></li>
+           
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Formularios de reporte</a>
+        <ul class="submenu">
+          <li><a href="#">Espacio donde los usuarios puedan informar emergencias o incidentes.</a></li>
+          
+        </ul>
+      </li>
+  </ul> 
+<!-- de aqui para abajo escribir-->
+<div class="formulario-emergencias">
+    <h2>Formulario de Aviso de Emergencias</h2>
+    <form action="procesar_emergencia.php" method="post">
+        <!-- Información personal -->
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos"         required>
+            
+            <label for="telefono">Teléfono de Contacto:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+34" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Introduce tu correo">
+        </fieldset>
+
+        <!-- Detalles de la emergencia -->
+        <fieldset>
+            <legend>Detalles de la Emergencia</legend>
+            <label for="tipo-emergencia">Tipo de Emergencia:</label>
+            <select id="tipo-emergencia" name="tipo_emergencia" required>
+                <option value="incendio">Incendio</option>
+                <option value="Robo">Robo</option>
+                <option value="accidente">Accidente</option>
+                <option value="emergencia_medica">Emergencia Médica</option>
+                <option value="desastre_natural">Desastre Natural</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+        </fieldset>
+
+        <!-- Ubicación de la emergencia -->
+        <fieldset>
+            <legend>Ubicación de la Emergencia</legend>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Calle, Numero; Piso" required>
+            
+            <label for="ciudad">Municipio:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ejemplo Madrid"   required>
+            
+            <label for="ciudad">Provincia:</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Ejemplo Madrid"   required>
+
+            
+            <label for="codigo-postal">Código Postal:</label>
+            <input type="text" id="codigo-postal" name="codigo_postal" placeholder="Ejemplo 28001" required>
+        </fieldset>
+
+        <!-- Confirmación -->
+        <fieldset>
+            <legend>Confirmación</legend>
+            <label>
+                <input type="checkbox" name="confirmacion" required>
+                Confirmo que la información proporcionada es correcta.
+            </label>
+        </fieldset>
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar Aviso</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--desde aqui se escribe cada uno -->
+</div>
+<div class="carousel-container">
+    <div class="carousel">
+      <img src="imagenes/emergencias1.jpeg">
+      <img src="imagenes/emergencias2.jpg">
+      <img src="imagenes/emergencias3.jpg">
+      <img src="imagenes/emergencia4.jpg">
+      <img src="imagenes/emergencia 5.jpg">
+      <img src="imagenes/emergencia6.webp">
+      <img src="imagenes/emergencia 7.jpg">
+      <img src="imagenes/emergencia8.jpg">
+      <img src="imagenes/emergencia9.jpg">
+      <img src="imagenes/emergencia10.avif">
+      <img src="imagenes/emergencias1.jpeg">
+      <img src="imagenes/emergencias2.jpg">
+      <img src="imagenes/emergencias3.jpg">
+      <img src="imagenes/emergencia4.jpg">
+      <img src="imagenes/emergencia 5.jpg">
+      <img src="imagenes/emergencia6.webp">
+      <img src="imagenes/emergencia 7.jpg">
+      <img src="imagenes/emergencia8.jpg">
+      <img src="imagenes/emergencia9.jpg">
+      <img src="imagenes/emergencia10.avif">
+
+
+
+
+
+
+    
+</div>
+    <div class="redes">
+        <h2>¡SIGUENOS!</h2>
+        <div class="image-flex">
+            
+            <div class="image-container">
+                <a href="https://x.com/i/flow/login">
+                    <img src="imagenes/x.png"X">
+                    <span class="tooltip">Ir a X</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.tiktok.com/explore">
+                    <img src="imagenes/tiktok.jpg" alt="TikTok">
+                    <span class="tooltip">Ir a Tik Tok</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.facebook.com/">
+                    <img src="imagenes/facebook.jpg" alt="Facebook">
+                    <span class="tooltip">Ir a Facebook</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.instagram.com/">
+                    <img src="imagenes/instagram.jpg" alt="Instagram">
+                    <span class="tooltip">Ir a Instagram</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.whatsapp.com/">
+                    <img src="imagenes/whatsapp.jpg" alt="WhatsApp">
+                    <span class="tooltip">Ir a WhatsApp</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://web.telegram.org/a/">
+                    <img src="imagenes/telegram.jpg" alt="Telegram">
+                    <span class="tooltip">Ir a Telegram</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.youtube.com/">
+                    <img src="imagenes/youtube.jpg" alt="YouTube">
+                    <span class="tooltip">Ir a YouTube</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <b> Inicio </b>
+                <ul>
+                    <li><a href="">Dni y Pasaporte</a></li>
+                    <li><a href="#">Permisos de viaje</a></li>
+                    <li><a href="#">Extranjeria</a></li>
+                    <li><a href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Denuncias </b>
+                <ul>
+                    <li><a href="#">Informacion General</a></li>
+                    <li><a href="">Reportar</a></li>
+                    <li><a href="#">Desaparecidos</a></li>
+                    <li><a href="#">Buscados</a></li>
+                    <li><a href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Tu Policia</b>
+                <ul>
+                    <li><a href="">Conocenos</a></li>
+                    <li><a href="#">Quiero ser Policia</a></li>
+                    <li><a href="#">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <b> Emergencias </b>
+                <ul>
+                    <li><a href="#">Protocolos</a></li>
+                    <li><a href="">Atencion Auxilio</a></li>
+                    <li><a href="#">Guardia Civil</a></li>
+                    <li><a href="#">Samur</a></li>
+                    <li><a href="#">Antidisturbios</a></li>
+                    <li><a href="#">Bomberos</a></li>
+                    <li><a href="#">Radiopatrullas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

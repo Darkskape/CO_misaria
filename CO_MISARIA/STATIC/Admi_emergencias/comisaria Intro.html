@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico"> <!--hacer diferentes css para que se adapte a los dispositivos-->
+    <link rel="stylesheet" href="css_comisaria_intro.css">
+
+    
+</head>
+
+<body>
+    <nav>
+        <div class="navegacion">
+
+            <div class="logo">
+                <img src="https://www.policia.es/img/_logo.png" alt="logo">
+            </div>
+
+            <div class="cajabuscar">
+                <form method="get" id="buscarform">
+                    <fieldset>
+                        <input type="text" id="s" value="" placeholder="Buscar" />
+                        <input class="button" type="submit" value="" />
+                        <i class="search"></i>
+                    </fieldset>
+                </form>
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+            </div>
+            
+        </div>
+
+        <div class="navegacion_principal">
+            <a href="#"> Inicio </a>
+            <a href="#"> Trámites</a>
+            <a href="#"> Denuncias </a>
+            <a href="#"> Tu policia </a>
+            
+        </div>
+    </nav>
+    <!-- hasta aqui el navegador general-->
+    
+<ul class="menu">
+   
+    <li class="desplegable">
+      <a href="#">Información de contacto</a>
+      <ul class="submenu">
+        <li><a href="comisaria_Numeros_de_emergencia.html">Números de emergencia</a></li>
+        <li><a href="https://www.comunidad.madrid/servicios/salud/buscador-centros-sanitarios">Enlaces a centros de asistencia médica.</a></li>
+        <li><a href="https://www.sanidad.gob.es/estadEstudios/sanidadDatos/tablas/tabla16.htm">Dirección y teléfono de hospitales cercanos.</a></li>
+      </ul>
+    </li>
+    <li class="desplegable">
+        <a href="#">Acciones básicas en caso de emergencias</a>
+        <ul class="submenu">
+          <li><a href="comisaria_Protocolos en caso de emergencias.html">Consejos para primeros auxilios</a></li>
+          <li><a href="#">Protocolos en caso de incendios, terremotos, inundaciones, etc.</a></li>
+          <li><a href="#">Cómo actuar si hay una emergencia médica.</a></li>
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Recursos útiles</a>
+        <ul class="submenu">
+          <li><a href="#">Mapas interactivos indicando hospitales, estaciones de policía y rutas de evacuación</a></li>
+          <li><a href="#">Botón de "Llamar de emergencia" o acceso rápido para usuarios móviles.</a></li>
+          <li><a href="#">Links a información oficial de emergencias</a></li>
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Información actualizada</a>
+        <ul class="submenu">
+          <li><a href="#">Alertas meteorológicas, avisos de seguridad u otras emergencias activas.</a></li>
+          <li><a href="#">Información en tiempo real de las autoridades locales. </a></li>
+          
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Accesibilidad<br></a>
+        <ul class="submenu">
+          <li><a href="#">Idiomas disponibles para usuarios internacionales</a></li>
+           
+        </ul>
+      </li>
+      <li class="desplegable">
+        <a href="#">Formularios de reporte</a>
+        <ul class="submenu">
+          <li><a href="#">Espacio donde los usuarios puedan informar emergencias o incidentes.</a></li>
+          
+        </ul>
+      </li>
+  </ul>
+</ul>
+<div class="contenedor1">
+    <h1>Emergencias</h1>
+</div>
+
+
+
+<!--lado derecho del grid-->
+
+<div class="contenedorcentral">
+ <div class="contenedorfrontal">
+    <aside>
+        <div class="buttonalarma">
+            <a href="comisaria_Pulsa_emergencias.html">PULSA PARA NOTIFICA UNA ALARMA</a>
+        </div>
+        
+        <div class="menu2">       
+<a href="#contenedorbomberos">Bomberos</a>
+<a href="#contenedorsamur">Samur</a>
+<a href="#contenedorguardiacivil">Guardia civil</a>
+<a href="#contenedorcruzroja">Cruz Roja</a>
+<a href="#contenedoremergenciasambientales">Emergencias Ambientales</a>
+<a href="#contenedorproteccioncivil">Proteccion Civil</a>
+</div>
+    </aside>
+<main>
+<div id="contenedorbomberos" class="contenedorbomberos">
+    <img src="imagenes/bomberos.jpg" alt="Bomberos" width="300px" height="200px">
+    <p>Los bomberos son los encargados de combatir incendios y rescatar personas en situaciones de emergencia. Su labor es fundamental para garantizar la seguridad de la población.</p>
+    <h3>SERVICIOS QUE OFRECEN</h3>
+    <ul>
+     <li>Extinción de incendios</li>
+     <li>Rescates en accidentes de tráfico</li>
+     <li>Rescates en altura / estructuras colapsadas</li>
+     <li>Emergencias químicas o biológicas</li>
+     <li>Inundaciones</li>
+     <li>Prevención de incendios</li>
+     <li>Inundaciones</li>
+     <li>Atención a incendios forestales</li>
+     
+    </ul>
+
+</div>
+<div id="contenedorsamur" class="contenedorsamur">
+    <img src="imagenes/samur.jpg" alt="Samur" width="300px" height="200px">
+    <p>El Samur es el servicio de emergencias médicas de Madrid, encargado de proporcionar atención médica de urgencia y traslado a hospitales en situaciones críticas.</p>
+    <h3>SERVICIOS QUE OFRECEN</h3>
+    <ul>
+     <li>Atención médica urgente en la vía pública</li>
+     <li>Soporte vital avanzado</li>
+     <li>Traslado a hospitales</li>
+     <li>Intervención en accidentes múltiples o catástrofes</li>
+     <li>Atención en eventos masivos</li>
+     <li>Coordinación con hospitales y cuerpos de seguridad</li>
+     <li>Apoyo psicológico inmediato</li>
+    
+    </ul>
+
+</div>
+<div id="contenedorguardiacivil" class="contenedorguardiacivil">
+    <img src="imagenes/guardia civil.jpg" alt="Guardia Civil" width="300px" height="200px">
+    <p>La Guardia Civil es una fuerza de seguridad del Estado encargada de la protección de la ciudadanía y el mantenimiento del orden público en áreas rurales y urbanas.</p>
+    <h3>SERVICIOS QUE OFRECEN</h3>
+    <ul>
+     <li>Seguridad ciudadana</li>
+     <li>Protección del medio ambiente (SEPRONA)</li>
+     <li>Tráfico y accidentes en carreteras</li>
+     <li>Investigación criminal y ciberdelitos</li>
+     <li>Control de armas y explosivos</li>
+     <li>Protección ante violencia de género</li>
+     <li>Antiterrorismo</li>
+          
+    </ul>
+
+</div>
+<div id="contenedorcruzroja" class="contenedorcruzroja">
+    <img src="imagenes/cruz roja.jpg" alt="Cruz Roja" width="300px" height="200px">
+    <p>Cruz Roja es una organización humanitaria que brinda asistencia en situaciones de emergencia, desastres y crisis, proporcionando ayuda a las personas más vulnerables.</p>
+    <h3>SERVICIOS QUE OFRECEN</h3>
+    <ul>
+     <li>Primeros auxilios y asistencia sanitaria</li>
+     <li>Transporte sanitario (ambulancias)</li>
+     <li>Atención en emergencias y catástrofes</li>
+     <li>Apoyo psicológico y social</li>
+     <li>Búsqueda y reunificación de personas</li>
+     <li>Apoyo a personas mayores, inmigrantes y sin hogar</li>
+     <li>Formación en primeros auxilios y socorrismo</li>
+          
+    </ul>
+</div>
+<div id="contenedoremergenciasambientales" class="contenedoremergenciasambientales">
+    <img src="imagenes/emergencias ambientales.jpg" alt="Emergencias Ambientales" width="300px" height="200px">
+    <p>Las emergencias ambientales se refieren a situaciones que afectan el medio ambiente y la salud pública, como derrames químicos, incendios forestales y desastres naturales.</p>
+    <h3>SERVICIOS QUE OFRECEN</h3>
+    <ul>
+     <li>Incendios forestales</li>
+     <li>Inundaciones y lluvias torrenciales</li>
+     <li>Deslizamientos de tierra</li>
+     <li>Derrames tóxicos o químicos</li>
+     <li>Contaminación del agua/aire</li>
+     <li>Tormentas eléctricas o fenómenos extremos (ola de calor, frío, viento)</li>
+     <li>Terremotos o erupciones </li>
+          
+    </ul>
+
+
+
+
+</div>
+<div id="contenedorproteccioncivil" class="contenedorproteccioncivil">
+    <img src="imagenes/proteccion civil.jpg" alt="Protección Civil" width="300px" height="200px">
+    <p>La Protección Civil es un servicio que se encarga de prevenir y gestionar situaciones de emergencia, así como de coordinar la respuesta ante desastres naturales o provocados por el ser humano.</p>
+    <h3>SERVICIOS QUE OFRECEN</h3>
+    <ul>
+     <li>Prevención de riesgos naturales y tecnológicos</li>
+     <li>Coordinación de evacuaciones y refugios</li>
+     <li>Gestión de emergencias y catástrofes</li>
+     <li>Colaboración con bomberos, policía, cruz roja y servicios médicos</li>
+     <li>Simulacros y formación ciudadana</li>
+     <li>Apoyo logístico en eventos masivos</li>
+               
+    </ul>
+
+</div>
+
+
+</main>
+
+<!-- lado izquierdo del grid-->
+
+</div>
+<div class="contenedorfrontal2">
+<a href="comisaria_preguntas frecuentes.html">Preguntas frecuentes:<br><p>Pulsa aqui!!</p></a>
+    <ul>
+        <li>¿Que hacer si no tengo senal telefónica?</li>
+        <li>¿Como identificar una emergencia médica?</li>
+        <li>¿Dónde encontrar refugios en caso de desastre?</li>
+    </ul>
+
+<a href="#">Noticias Ultima Hora</a>
+   <ul>
+     <li>Una sección dinámica donde se publiquen actualizaciones
+         relevantes sobre emergencias actuales 
+         (por ejemplo, clima extremo, epidemias, etc.).</li>
+   </ul>
+<a href="#">Zona Educativa:</a>
+    <ul>
+     <li>Artículos sobre prevención de riesgos</li>
+    <li>Infografías explicando cómo hacer un botiquín de emergencia o cómo actuar en caso de incendios.</li>    
+</ul>
+
+<a href="#">Testimonios</a>
+<ul>
+    <li>Historias de personas que hayan pasado por situaciones de emergencia,
+         mostrando cómo lograron superar desafíos</li>
+</ul>
+<a href="#">Mapa de refugios y recursos cercanos</a>
+<ul>
+    <li></li>
+</ul>
+<a href="#">Galería de Imágenes</a>
+<a href="#">Formulario de voluntariado</a>
+<ul>
+    <li>Permite a los visitantes registrarse como voluntarios para ayudar en emergencias</li>
+    <li>Usa un formulario simple con campos como nombre, ubicación y habilidades.</li>
+</ul>
+    </div>
+</div>
+
+<div class="carousel-container">
+    <div class="carousel">
+      <img src="imagenes/emergencias1.jpeg">
+      <img src="imagenes/emergencias2.jpg">
+      <img src="imagenes/emergencias3.jpg">
+      <img src="imagenes/emergencia4.jpg">
+      <img src="imagenes/emergencia 5.jpg">
+      <img src="imagenes/emergencia6.webp">
+      <img src="imagenes/emergencia 7.jpg">
+      <img src="imagenes/emergencia8.jpg">
+      <img src="imagenes/emergencia9.jpg">
+      <img src="imagenes/emergencia10.avif">
+      <img src="imagenes/emergencias1.jpeg">
+      <img src="imagenes/emergencias2.jpg">
+      <img src="imagenes/emergencias3.jpg">
+      <img src="imagenes/emergencia4.jpg">
+      <img src="imagenes/emergencia 5.jpg">
+      <img src="imagenes/emergencia6.webp">
+      <img src="imagenes/emergencia 7.jpg">
+      <img src="imagenes/emergencia8.jpg">
+      <img src="imagenes/emergencia9.jpg">
+      <img src="imagenes/emergencia10.avif">
+    
+</div>
+    <div class="redes">
+        <h2>¡SIGUENOS!</h2>
+        <div class="image-flex">
+            
+            <div class="image-container">
+                <a href="https://x.com/i/flow/login">
+                    <img src="imagenes/x.png"X">
+                    <span class="tooltip">Ir a X</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.tiktok.com/explore">
+                    <img src="imagenes/tiktok.jpg" alt="TikTok">
+                    <span class="tooltip">Ir a Tik Tok</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.facebook.com/">
+                    <img src="imagenes/facebook.jpg" alt="Facebook">
+                    <span class="tooltip">Ir a Facebook</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.instagram.com/">
+                    <img src="imagenes/instagram.jpg" alt="Instagram">
+                    <span class="tooltip">Ir a Instagram</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.whatsapp.com/">
+                    <img src="imagenes/whatsapp.jpg" alt="WhatsApp">
+                    <span class="tooltip">Ir a WhatsApp</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://web.telegram.org/a/">
+                    <img src="imagenes/telegram.jpg" alt="Telegram">
+                    <span class="tooltip">Ir a Telegram</span>
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="https://www.youtube.com/">
+                    <img src="imagenes/youtube.jpg" alt="YouTube">
+                    <span class="tooltip">Ir a YouTube</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <b> Inicio </b>
+                <ul>
+                    <li><a href="">Dni y Pasaporte</a></li>
+                    <li><a href="#">Permisos de viaje</a></li>
+                    <li><a href="#">Extranjeria</a></li>
+                    <li><a href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Denuncias </b>
+                <ul>
+                    <li><a href="#">Informacion General</a></li>
+                    <li><a href="">Reportar</a></li>
+                    <li><a href="#">Desaparecidos</a></li>
+                    <li><a href="#">Buscados</a></li>
+                    <li><a href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <b> Tu Policia</b>
+                <ul>
+                    <li><a href="">Conocenos</a></li>
+                    <li><a href="#">Quiero ser Policia</a></li>
+                    <li><a href="#">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <b> Emergencias </b>
+                <ul>
+                    <li><a href="#">Protocolos</a></li>
+                    <li><a href="">Atencion Auxilio</a></li>
+                    <li><a href="#">Guardia Civil</a></li>
+                    <li><a href="#">Samur</a></li>
+                    <li><a href="#">Antidisturbios</a></li>
+                    <li><a href="#">Bomberos</a></li>
+                    <li><a href="#">Radiopatrullas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
