@@ -175,8 +175,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Espacio entre los iconos */
+    gap: 20px 0 10px 0;/* Espacio entre los iconos */
+    margin: 0;
     margin-top: 10px; /* Espacio superior */
+    background-color: rgba(85,85,85,1);
+    color:white;
   }
   .subfooter li {
     display: inline-block;
