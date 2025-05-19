@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
     <link rel="stylesheet" href="style_denun.css">
-    <title>Denuncias</title>
+    <title>Desaparecidos</title>
 </head>
 <body>
     <nav>
@@ -13,7 +13,6 @@
             <div class="logo">
                 <img src="https://www.policia.es/img/_logo.png" alt="logo">
             </div>
-
             <div class="cajabuscar">
                 <form method="get" id="buscarform">
                     <fieldset>
@@ -25,7 +24,6 @@
                 <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
             </div>
         </div>
-
         <div class="navegacion_principal">
             <a href="#"> Inicio </a>
             <a href="#"> Trámites</a>
@@ -33,84 +31,313 @@
             <a href="#"> Tu policia </a>
             <a href="#"> Emergencias </a>
         </div>
-        <footer>
-            <div class="indicefinal">
-                <div class="cajafinal">
-                    <b> Inicio </b>
-                    <ul>
-                        <li><a href="">Dni y Pasaporte</a></li>
-                        <li><a href="#">Permisos de viaje</a></li>
-                        <li><a href="#">Extranjeria</a></li>
-                        <li><a href="#">Antecedentes</a></li>
-                    </ul>
-                </div>
-    
-                <div class="cajafinal">
-                    <b> Denuncias </b>
-                    <ul>
-                        <li><a href="#">Informacion General</a></li>
-                        <li><a href="">Reportar</a></li>
-                        <li><a href="#">Desaparecidos</a></li>
-                        <li><a href="#">Buscados</a></li>
-                        <li><a href="#">Ciberseguridad</a></li>
-                    </ul>
-                </div>
-    
-                <div class="cajafinal">
-                    <b> Tu Policia</b>
-                    <ul>
-                        <li><a href="">Conocenos</a></li>
-                        <li><a href="#">Quiero ser Policia</a></li>
-                        <li><a href="#">Adopta un K9</a></li>
-                    </ul>
-                </div>
-                <div class="cajafinal">
-                    <b> Emergencias </b>
-                    <ul>
-                        <li><a href="#">Protocolos</a></li>
-                        <li><a href="">Atencion Auxilio</a></li>
-                        <li><a href="#">Guardia Civil</a></li>
-                        <li><a href="#">Samur</a></li>
-                        <li><a href="#">Antidisturbios</a></li>
-                        <li><a href="#">Bomberos</a></li>
-                        <li><a href="#">Radiopatrullas</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <footer>
-            <div class="subfooter">
-    
-                <p><b>© 2025  DIRECCION GENERAL DE COMISERIA  | Proteccion de Datos | Aviso Legal </b></p>
-               
-                <b>SIGUENOS!</b>
-                <div class="redes">
-                    <p> <b> Redes Sociales </b></p>
-                <ul class="redes">
-                    <li><a href="https://www.facebook.com/" target="_blank"><img src="/imagenes/facebook.jpg" alt="Facebook"></a></li>
-                    <li><a href="https://X.com/" target="_blank"><img src="/imagenes/x.png" alt="X"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><img src="/imagenes/instagram.jpg" alt="Instagram"></a></li>
-                    <li><a href="https://www.youtube.com/" target="_blank"><img src="/imagenes/youtube.jpg" alt="YouTube"></a></li>
-                    <li><a href="https://www.tiktok.com/" target="_blank"><img src="/imagenes/tiktok.jpg" alt="TikTok"></a></li>
-                    <li><a href="https://www.whatsapp.com/" target="_blank"><img src="/imagenes/whatsapp.jpg" alt="WhatsApp"></a></li>
-                    <li><a href="https://www.telegram.com" target="_blank"><img src="/imagenes/telegram.jpg" alt="Telegram"></a></li>
-                </ul>
-                </div>
-            </div>
-        </footer>
-        <div style="position: fixed; bottom: 50px; right: 20px; z-index: 1000;">
-            <button onclick="scrollUp()" style="background:none; border:none; cursor:pointer;">
-             <img scr="/STATIC/denuncias/flecha.png" alt="subir" style="width:40px; height:40px;">
-            </button>
+        <div class="denuncias">
+            <ul>
+                <li> <a href="CO_Denuncias.html">Denuncias</a> </li>
+                <li> <a href="CO_Desaparecidos.html"> Desaparecidos</a> </li>
+                <li> <a href="CO_Buscados.html">Buscados</a> </li>
+                <li><a href="CO_Ciberseguridad.html">Ciberseguridad </a> </li>
+            </ul>
         </div>
-        <script>
-             function scrollUp() {
-            // Desplazamiento suave hacia arriba
-            window.scrollBy({
-                top: -window.scrollY, // Cantidad de píxeles hacia arriba
-                behavior: 'auto' // Desplazamiento suave
-            });
-        }
-        </script>
-        <input name="animation" type="hidden">
-    </html>
+    </nav>
+
+<!-- Agrega este aside antes del contenido principal, justo después de <body> o <nav> -->
+<aside class="aside-buscador">
+    <form class="form-buscador">
+        <h3>Búsqueda avanzada</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos">
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="0" max="100">
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <select id="nacionalidad" name="nacionalidad">
+            <option value="">Seleccione un país</option>
+            <!-- Lista de países (abreviada, puedes completarla según necesidad) -->
+            <option value="España">España</option>
+            <option value="Argentina">Argentina</option>
+            <option value="México">México</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Francia">Francia</option>
+            <option value="Alemania">Alemania</option>
+            <option value="Italia">Italia</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Perú">Perú</option>
+            <option value="Chile">Chile</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Honduras">Honduras</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Panamá">Panamá</option>
+            <option value="Cuba">Cuba</option>
+            <option value="República Dominicana">República Dominicana</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Rusia">Rusia</option>
+            <option value="China">China</option>
+            <option value="Japón">Japón</option>
+            <option value="India">India</option>
+            <option value="Reino Unido">Reino Unido</option>
+            <option value="Canadá">Canadá</option>
+            <option value="Australia">Australia</option>
+            <option value="Sudáfrica">Sudáfrica</option>
+            <!-- ...agrega todos los países que necesites... -->
+        </select>
+
+        <label for="buscado_por">Buscado por (país):</label>
+        <select id="buscado_por" name="buscado_por">
+            <option value="">Seleccione un país</option>
+            <!-- Puedes reutilizar la lista de países anterior -->
+            <option value="España">España</option>
+            <option value="Argentina">Argentina</option>
+            <option value="México">México</option>
+            <option value="Estados Unidos">Estados Unidos</option>
+            <option value="Francia">Francia</option>
+            <option value="Alemania">Alemania</option>
+            <option value="Italia">Italia</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Venezuela">Venezuela</option>
+            <option value="Perú">Perú</option>
+            <option value="Chile">Chile</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Honduras">Honduras</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="Panamá">Panamá</option>
+            <option value="Cuba">Cuba</option>
+            <option value="República Dominicana">República Dominicana</option>
+            <option value="Puerto Rico">Puerto Rico</option>
+            <option value="Rusia">Rusia</option>
+            <option value="China">China</option>
+            <option value="Japón">Japón</option>
+            <option value="India">India</option>
+            <option value="Reino Unido">Reino Unido</option>
+            <option value="Canadá">Canadá</option>
+            <option value="Australia">Australia</option>
+            <option value="Sudáfrica">Sudáfrica</option>
+            <!-- ...agrega todos los países que necesites... -->
+        </select>
+
+        <label for="palabra_clave">Palabra clave:</label>
+        <input type="text" id="palabra_clave" name="palabra_clave">
+
+        <button type="submit" class="modern-button">Buscar</button>
+    </form>
+</aside>
+<div class=" desaparecidos">
+    <div class="desaparecidos-secciones">
+    <div class="grupo-desaparecidos">
+        <div class="menores">
+            <h2>Menores</h2>
+            <ul>
+            <img src="desaparecidos/analoayza.jpg" alt="100px100" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Ana Loayza</li>
+            <li>Nacionalidad: Española</li>
+            <li>Edad: 10 años</li>
+            <li>Lugar de Desaparacion: Carpio de Tajo (EL) Toledo, Castilla La Mancha</li>
+            <p>Descripcion: Desapareció el 13/05/2025 en Carpio de Tajo (el) (Toledo)</p>
+            <li>Color de Ojos: negros</li>
+            <li>Color de Pelo: Castaño oscuro</li>
+            <li>Tipo de Pelo: Liso</li>
+            <li>Mide: 1,35</li>
+            <li>Peso: 30 kilos</li>
+            <li>Sexo: Mujer</li>
+            <li>Constitucion fisica: delgada</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/dantelightyear.jpg" alt="Dante Lightyear" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Dante Lightyear</li>
+            <li>Nacionalidad: Española</li>
+            <li>Edad: 12 años</li>
+            <li>Lugar de Desaparicion: Madrid</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/flormiranda.jpg" alt="Flor Miranda" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Flor Miranda</li>
+            <li>Nacionalidad: Argentina</li>
+            <li>Edad: 14 años</li>
+            <li>Lugar de Desaparicion: Buenos Aires</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/josefapig.jpg" alt="Josefa" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Josefa Pig</li>
+            <li>Nacionalidad: Holandesa</li>
+            <li>Edad: 11 años</li>
+            <li>Lugar de Desaparicion: Fuenlabrada,Madrid</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/luiguibros.jpg" alt="Luigui Bros" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Luigui Bros</li>
+            <li>Nacionalidad: Italiana</li>
+            <li>Edad: 13 años</li>
+            <li>Lugar de Desaparicion: Vaticano, Roma</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/melissanuñez.jpg" alt="Melissa Nuñez" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Melissa Nuñez</li>
+            <li>Nacionalidad: Mexicana</li>
+            <li>Edad: 9 años</li>
+            <li>Lugar de Desaparicion: Ciudad de Mexico</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/odethbalboa.jpg" alt="Odeth Balboa" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Odeth Balboa</li>
+            <li>Nacionalidad:Inglesa</li>
+            <li>Edad: 15 años</li>
+            <li>Lugar de Desaparicion: MArbella</li>
+            </li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/olivermanzano.jpg" alt="Oliver Manzano" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Oliver Manzano</li>
+            <li>Nacionalidad: Española</li>
+            <li>Edad: 8 años</li>
+            <li>Lugar de Desaparicion: Sevilla</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/robertomosquera.jpg" alt="Roberto Mosquera" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Roberto Mosquera</li>
+            <li>Nacionalidad: Peruana</li>
+            <li>Edad: 13 años</li>
+            <li>Lugar de Desaparicion: Tokio,Japon</li>
+            </ul>
+            <ul>
+            <img src="desaparecidos/timoteonarvaez.jpg" alt="Timoteo Narvaez" class="img-desaparecidos">
+            <li>Nombre y Apellidos: Timoteo Narvaez</li>
+            <li>Nacionalidad: Ecuatoriana</li>
+            <li>Edad: 10 años</li>
+            <li>Lugar de Desaparicion: Quito</li>
+            </ul>
+        </div>
+        <div class="adultos">
+            <h3>Adultos</h3>
+            <ul>
+                <img src="desaparecidos/Angela.jpg" alt="100px100" class="img-desaparecidos">
+                <li> Nombre y Apellidos:Angela Martinez,
+                <li>Nacionalidad:Española. </li> 
+                <li>Edad:35 años</li>
+                <li>Vista ultima vez en :Madrid.</li>
+            </ul>
+            <ul>
+                <img src="desaparecidos/Federico.jpg" alt="Federico wearing a dark turtleneck sweater standing against a plain light-colored wall, neutral expression, indoor setting" class="img-desaparecidos">
+                <li> Nombre y Apellidos:Federico Garcia.
+                <li>Nacionalidad:Española. </li> 
+                <li>Edad:45 años</li>
+                <li>visto ultima  vez en :Barcelona.</li>
+        </div>
+        <div class="mayores65">
+            <h4>Mayores</h4>
+            <ul>
+                <li>Ejemplo: Pedro Ruiz, 78 años, nacionalidad colombiana, desaparecido en Valencia.</li>
+                <!-- Agrega aquí los casos de mayores -->
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div class="cajabuscador">
+        <h3>¿Has visto a alguien?</h3>
+        <p>Si tienes información sobre alguna de estas personas, por favor contacta a la policía.</p>
+        <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+    </div>
+</body>
+<footer>
+    <div class="indicefinal">
+        <div class="cajafinal">
+            <b> Inicio </b>
+            <ul>
+                <li><a href="">Dni y Pasaporte</a></li>
+                <li><a href="#">Permisos de viaje</a></li>
+                <li><a href="#">Extranjeria</a></li>
+                <li><a href="#">Antecedentes</a></li>
+            </ul>
+        </div>
+
+        <div class="cajafinal">
+            <b> Denuncias </b>
+            <ul>
+                <li> <a href="CO_Denuncias.html">Denuncias</a> </li>
+                <li> <a href="CO_Desaparecidos.html"> Desaparecidos</a> </li>
+                <li> <a href="CO_Buscados.html">Buscados</a> </li>
+                <li><a href="CO_Ciberseguridad.html">Ciberseguridad </a> </li>
+            </ul>
+        </div>
+
+        <div class="cajafinal">
+            <b> Tu Policia</b>
+            <ul>
+                <li><a href="">Conocenos</a></li>
+                <li><a href="#">Quiero ser Policia</a></li>
+                <li><a href="#">Adopta un K9</a></li>
+            </ul>
+        </div>
+        <div class="cajafinal">
+            <b> Emergencias </b>
+            <ul>
+                <li><a href="#">Protocolos</a></li>
+                <li><a href="">Atencion Auxilio</a></li>
+                <li><a href="#">Guardia Civil</a></li>
+                <li><a href="#">Samur</a></li>
+                <li><a href="#">Antidisturbios</a></li>
+                <li><a href="#">Bomberos</a></li>
+                <li><a href="#">Radiopatrullas</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="subfooter">
+        <p><b>© 2025 DIRECCION GENERAL DE COMISERIA COLON | Proteccion de Datos | Aviso Legal </b></p>
+
+     <b>SIGUENOS!</b>
+        <div class="redes">
+            <ul class="redes">
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="/CO_MISARIA/imagenes/facebook.jpg"
+                            alt="Facebook"></a></li>
+                <li><a href="https://X.com/" target="_blank"><img src="/CO_MISARIA/imagenes/x.png" alt="X"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="/CO_MISARIA/imagenes/instagram.jpg"
+                            alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><img src="/CO_MISARIA/imagenes/youtube.jpg"
+                            alt="YouTube"></a></li>
+                <li><a href="https://www.tiktok.com/" target="_blank"><img src="/CO_MISARIA/imagenes/tiktok.jpg"
+                            alt="TikTok"></a></li>
+                <li><a href="https://www.whatsapp.com/" target="_blank"><img src="/CO_MISARIA/imagenes/whatsapp.jpg"
+                            alt="WhatsApp"></a></li>
+                <li><a href="https://www.telegram.com" target="_blank"><img src="/CO_MISARIA/imagenes/telegram.jpg"
+                            alt="Telegram"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div style="position: fixed; bottom: 50px; right: 20px; z-index: 1000;">
+    <button onclick="scrollUp()" style="background:none; border:none; cursor:pointer;">
+        <img src="/CO_MISARIA/imagenes/iconos png/scrollup.png" alt="subir" style="width:40px; height:40px;">
+    </button>
+</div>
+<script>
+    function scrollUp() {
+        // Desplazamiento suave hacia arriba
+        window.scrollBy({
+            top: -window.scrollY, // Cantidad de píxeles hacia arriba
+            behavior: 'auto' // Desplazamiento suave
+        });
+    }
+</script>
+<input name="animation" type="hidden">
+
+</html>
