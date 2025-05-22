@@ -153,64 +153,50 @@ input:not(:placeholder-shown)~.reset {
 }
 
 /*-- RESULTADOS DE BUSCADOR DESKTOP--*/
- #resultados-desktop {
+#resultados-desktop {
     display: none;
     margin-top: 10px;
     list-style: none;
     padding: 0;
     border: 1px solid #ccc;
     border-radius: 6px;
-    background-color: white;
+    background-color: #f5f5f5;
     max-height: 200px;
     overflow-y: auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     justify-content: center;
     font-family: Verdana;
-   
 
-  }
 
-  #resultados-desktop li {
-    
+}
+
+#resultados-desktop li {
+
     border-bottom: 1px solid #eee;
     width: 100%;
     height: auto;
     text-align: center;
-  }
+    padding: 10px 0px;
+}
 
-  #resultados-desktop li:last-child {
+#resultados-desktop li:last-child {
     border-bottom: none;
-  }
+}
 
-  #resultados-desktop a {
+#resultados-desktop a {
     color: #555;
     text-decoration: none;
     display: block;
     font-family: Verdana;
     padding: 20px;
-  }
+}
 
-  #resultados-desktop li:hover {
+#resultados-desktop li:hover {
     background-color: rgba(0, 14, 120, 0.7);
     color: white;
 }
 
-  #resultados-desktop a:hover {
-    color: white;
-  }
 
-  #resultados-desktop:empty {
-  display: none;
-}
-
-  #resultados-desktop li:only-child {
-  color: #555;
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border: 2px solid #555;
-  padding: 10px 0px;
-
-}
 
 
 /*--BOTON DE CONTACTO--*/
@@ -317,7 +303,7 @@ input:not(:placeholder-shown)~.reset {
     max-width: 400px;
     display: flex;
     align-items: center;
-    border: 2px solid #f5f5f5;
+    border: 1px solid #f5f5f5;
     border-radius: 30px;
     padding: 5px 15px;
 }
@@ -332,7 +318,7 @@ input:not(:placeholder-shown)~.reset {
     background: transparent;
     color: #ffffff;
     font-family: Verdana;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 400;
 }
 
@@ -384,14 +370,14 @@ input:not(:placeholder-shown)~.reset {
     padding: 0;
     border: 1px solid #ccc;
     border-radius: 6px;
-    background-color: white;
+    background-color: #f5f5f5;
     max-height: 200px;
     overflow-y: auto;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #resultados li {
-   
+
     border-bottom: 1px solid #eee;
     width: 100%;
     text-align: center;
@@ -416,29 +402,48 @@ input:not(:placeholder-shown)~.reset {
 }
 
 #resultados a:hover {
+    background-color: rgba(0, 14, 120, 0.7);
     color: white;
 }
 
 #resultados:empty {
-  display: none;
+    display: none;
 
 }
 
-  #resultados li:only-child {
-  color: #555;
-  font-weight: bold;
-  background-color: #f5f5f5;
-  border: 2px solid #555;
-  padding: 10px 0px;
 
+
+#resultados a:only-child {
+
+    color: #555;
+    border-bottom: 1px solid white;
+    width: 100%;
+    height: auto;
+    text-align: center; 
+    background-color: #f5f5f5;
 }
 
+#resultados a:only-child:hover {   
+    background-color: rgba(0, 14, 120, 0.7);
+    color: white;
+}
+
+
+
+#resultados-desktop a:hover {
+    color: white;
+}
+
+#resultados-desktop:empty {
+    display: none;
+    
+}
 
 
 
 /*--CONTENEDOR PRINCIAL REDES SOCIALES--*/
 
-.contenedor-redes{
+.contenedor-redes {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -448,38 +453,42 @@ input:not(:placeholder-shown)~.reset {
     margin: 20px 0px;
 }
 
-.contenedor-redes h2{
+.contenedor-redes h2 {
     font-family: DM Serif Text;
     font-size: 30px;
     font-weight: 200;
-    
+
 }
 
-.image-flex{
+.image-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
-.image-flex ul li{
+.image-flex ul li {
     list-style: none;
     display: inline;
-  
+
 }
 
-.image-flex img{
+.image-flex img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin: 0px 5px;
-    
+
 }
 
-.image-flex img:hover{
+.image-flex img:hover {
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
+
+
+
+
 
 
 /*-- FOOTER --*/
@@ -511,7 +520,7 @@ input:not(:placeholder-shown)~.reset {
 }
 
 /*--BlOQUE INDIVIDUAL DE SECCIÓN--*/
-.cajafinal { 
+.cajafinal {
     display: flex;
     flex-direction: column;
     justify-content: start;
