@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño NAV + FOOTER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Kimberly\Documents\COMISARÍA\CSS\estilo_navyfooter.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\iconos png\icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\iconos png\icon_menu.png" class="iconmenu"
+                        alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+                <a href="#">Denuncias</a>
+                <a href="#">Tu policía</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+            <a href="#">Denuncias</a>
+            <a href="#">Tu policía</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+    <br><br>
+
+    <!-- CONTENEDOR (PRINCIPAL) REDES SOCIALES -->
+    <!--IMPORTANTE: SOLO PONER EN PÁGINA DE INICIO -->
+    <div class="contenedor-redes">
+        <h2>¡SÍGUENOS!</h2>
+        <div class="image-flex">
+            <ul class="redes-sociales-grande">
+                <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\facebook.jpg"
+                            alt="Facebook"></a></li>
+                <li><a href="https://x.com/policia" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\x.png" alt="X"></a>
+                </li>
+                <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\instagram.jpg"
+                            alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\youtube.jpg"
+                            alt="YouTube"></a></li>
+                <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\tiktok.jpg" alt="TikTok"></a>
+                </li>
+                <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\whatsapp.jpg"
+                            alt="WhatsApp"></a></li>
+                <li><a href="https://t.me/policianacional" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\telegram.jpg"
+                            alt="Telegram"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer-container">
+            <div class="indicefinal">
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">
+                        <h2>Trámites </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Dni y Pasaporte</a></li>
+                        <li><a class="enlace-pagina" href="#">Permisos de viaje</a></li>
+                        <li><a class="enlace-pagina" href="#">Extranjeria</a></li>
+                        <li><a class="enlace-pagina" href="#">Antecedentes</a></li>
+                    </ul>
+                </div>
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="#">
+                        <h2> Denuncias </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Reportar</a></li>
+                        <li><a class="enlace-pagina" href="#">Desaparecidos</a></li>
+                        <li><a class="enlace-pagina" href="#">Buscados</a></li>
+                        <li><a class="enlace-pagina" href="#">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="#">
+                        <h2> Tu policía </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Conócenos</a></li>
+                        <li><a class="enlace-pagina" href="#">Quiero ser Policia</a></li>
+                        <li><a class="enlace-pagina" href="#">Adopta un K9</a></li>
+                    </ul>
+                </div>
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">
+                        <h2> Emergencias </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina"
+                                href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Información</a>
+                        </li>
+                        <li><a class="enlace-pagina" href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+            <div class="sub-footer">
+                <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="#">Protección
+                        de
+                        datos</a>
+                </span>
+                <div class="fila-redes">
+                    <p> Siguenos en: </p>
+                    <ul class="redes-sociales">
+                        <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\facebook.jpg"
+                                    alt="Facebook"></a></li>
+                        <li><a href="https://x.com/policia" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\x.png" alt="X"></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\instagram.jpg"
+                                    alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\youtube.jpg"
+                                    alt="YouTube"></a></li>
+                        <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\tiktok.jpg"
+                                    alt="TikTok"></a></li>
+                        <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\whatsapp.jpg"
+                                    alt="WhatsApp"></a></li>
+                        <li><a href="https://t.me/policianacional" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\telegram.jpg"
+                                    alt="Telegram"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+
+    <script>
+    // --- Menú móvil (hamburguesa) ---
+    function myFunction() {
+        const menu = document.getElementById("myLinks");
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    }
+
+    // --- Elementos DOM ---
+    const abrirBuscador = document.getElementById("abrirBuscador");
+    const cerrarBuscador = document.getElementById("cerrarBuscador");
+    const buscadorMovil = document.getElementById("buscadorMovil");
+    const input = document.getElementById('buscadorInput');
+    const resultados = document.getElementById('resultados');
+
+    const inputDesktop = document.getElementById('buscadorInputDesktop');
+    const resultadosDesktop = document.getElementById('resultados-desktop');
+    const resetDesktop = document.querySelector('.form .reset');
+
+    // --- Trámites ---
+    const tramites = [
+        { nombre: "Denuncias por robo", url: "#" },
+        { nombre: "Solicitud de pasaporte", url: "#" },
+        { nombre: "Renovación del DNI", url: "#" },
+        { nombre: "Antecedentes penales", url: "#" },
+        { nombre: "Permiso de armas", url: "#" }
+    ];
+
+    // --- Mostrar/ocultar buscador móvil al hacer clic en la lupa ---
+    abrirBuscador.addEventListener("click", () => {
+        if (buscadorMovil.style.display === "flex") {
+            buscadorMovil.style.display = "none";
+        } else {
+            buscadorMovil.style.display = "flex";
+        }
+    });
+
+    // --- Cerrar buscador móvil con botón (X) ---
+    cerrarBuscador.addEventListener("click", () => {
+        buscadorMovil.style.display = "none";
+        resultados.innerHTML = '';
+        input.value = '';
+    });
+
+    // --- Buscador funcional móvil ---
+    input.addEventListener('input', () => {
+        const texto = input.value.toLowerCase().trim();
+        const filtrados = tramites.filter(t =>
+            t.nombre.toLowerCase().includes(texto)
+        );
+
+        resultados.innerHTML = '';
+
+        if (texto === '') return;
+
+        if (filtrados.length === 0) {
+            resultados.innerHTML = '<li>No se encontraron resultados.</li>';
+        } else {
+            filtrados.forEach(t => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.textContent = t.nombre;
+                a.href = t.url;
+                li.appendChild(a);
+                resultados.appendChild(li);
+            });
+        }
+    });
+
+    // --- Buscador funcional desktop ---
+    inputDesktop.addEventListener('input', () => {
+        const texto = inputDesktop.value.toLowerCase().trim();
+        resultadosDesktop.innerHTML = '';
+
+        if (texto === '') {
+            resultadosDesktop.style.display = 'none';
+            return;
+        }
+
+        const filtrados = tramites.filter(t =>
+            t.nombre.toLowerCase().includes(texto)
+        );
+
+        if (filtrados.length === 0) {
+            resultadosDesktop.innerHTML = '<li>No se encontraron resultados.</li>';
+        } else {
+            filtrados.forEach(t => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.textContent = t.nombre;
+                a.href = t.url;
+                li.appendChild(a);
+                resultadosDesktop.appendChild(li);
+            });
+        }
+
+        resultadosDesktop.style.display = 'block';
+    });
+
+    // --- Reset buscador desktop ---
+    resetDesktop.addEventListener('click', () => {
+        resultadosDesktop.innerHTML = '';
+        resultadosDesktop.style.display = 'none';
+        inputDesktop.value = '';
+    });
+
+    // --- Ocultar menús y buscadores al cambiar tamaño de pantalla ---
+    window.addEventListener('resize', () => {
+        const menu = document.getElementById("myLinks");
+        if (window.innerWidth > 900 && menu.style.display === "flex") {
+            menu.style.display = "none";
+        }
+
+        // Oculta buscadores y limpia resultados
+        buscadorMovil.style.display = "none";
+        resultados.innerHTML = '';
+        input.value = '';
+
+        resultadosDesktop.innerHTML = '';
+        resultadosDesktop.style.display = 'none';
+        inputDesktop.value = '';
+    });
+
+    // --- Al cargar la página ---
+    document.addEventListener("DOMContentLoaded", () => {
+        // Oculta buscador móvil
+        buscadorMovil.style.display = "none";
+
+        // Color rojo para enlaces visitados del footer
+        const enlaces = document.querySelectorAll(".enlace");
+        enlaces.forEach(enlace => {
+            const href = enlace.getAttribute("href");
+            if (sessionStorage.getItem(href)) {
+                enlace.style.color = "red";
+            }
+
+            enlace.addEventListener("click", () => {
+                sessionStorage.setItem(href, "visited");
+                enlace.style.color = "red";
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
