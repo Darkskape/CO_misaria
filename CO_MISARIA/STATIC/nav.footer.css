@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
@@ -266,10 +264,10 @@ input:not(:placeholder-shown)~.reset {
 #myLinks a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
     padding: 10px;
     text-align: center;
     font-family: Verdana;
+    font-size: 18px;
 }
 
 #myLinks a:hover {
@@ -381,6 +379,7 @@ input:not(:placeholder-shown)~.reset {
     border-bottom: 1px solid #eee;
     width: 100%;
     text-align: center;
+    padding: 5;
 }
 
 #resultados li:last-child {
@@ -392,7 +391,8 @@ input:not(:placeholder-shown)~.reset {
     text-decoration: none;
     display: block;
     font-family: Verdana;
-    padding: 10px;
+    font-size: 13px;
+    padding: 15px 0px;
 }
 
 
@@ -412,7 +412,6 @@ input:not(:placeholder-shown)~.reset {
 }
 
 
-
 #resultados a:only-child {
 
     color: #555;
@@ -421,11 +420,13 @@ input:not(:placeholder-shown)~.reset {
     height: auto;
     text-align: center; 
     background-color: #f5f5f5;
+    padding: 15px 0px;
 }
 
 #resultados a:only-child:hover {   
     background-color: rgba(0, 14, 120, 0.7);
     color: white;
+    padding: 15px 0px;
 }
 
 
@@ -436,7 +437,14 @@ input:not(:placeholder-shown)~.reset {
 
 #resultados-desktop:empty {
     display: none;
+    padding: 15px 0px;
     
+}
+
+.not-found {
+    font-family: Verdana;
+    font-size: 13px;
+    padding: 10px 0px;
 }
 
 
@@ -493,14 +501,13 @@ input:not(:placeholder-shown)~.reset {
 
 /*-- FOOTER --*/
 
-.footer-container {
+.footer {
 
     width: 100%;
     display: flex;
     flex-direction: column;
     background: rgba(0, 14, 120, 1);
     color: white;
-    position: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -515,7 +522,8 @@ input:not(:placeholder-shown)~.reset {
     align-items: first baseline;
     gap: 50px;
     background-color: #000e78;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 
 }
 
@@ -526,28 +534,29 @@ input:not(:placeholder-shown)~.reset {
     justify-content: start;
     text-align: left;
     align-items: left;
-    padding-top: 20px;
+    padding: 20px;
     font-size: 20px;
     color: white;
 
 }
 
-.cajafinal h2 {
+.titulo-enlace{
     font-family: Verdana;
     font-size: 20px;
     text-align: left;
     font-weight: 200;
+    padding: 10px 0px;
 
 }
 
 .cajafinal ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .cajafinal a {
     text-decoration: none;
     color: white;
-    padding: 20px;
     font-family: Newsreader;
     font-weight: 400;
 }
@@ -555,7 +564,7 @@ input:not(:placeholder-shown)~.reset {
 
 
 .cajafinal li {
-    padding: 10px;
+    padding: 10px 0px;
     font-weight: 200;
     text-align: left;
 }
@@ -611,7 +620,7 @@ input:not(:placeholder-shown)~.reset {
     align-items: center;
     transition: transform 0.3s ease;
     margin-left: 20px;
-    /* Transición suave al pasar el mouse */
+    
 }
 
 .redes-sociales li {
