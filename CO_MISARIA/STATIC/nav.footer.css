@@ -581,7 +581,6 @@ input:not(:placeholder-shown)~.reset {
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding: 10px 0px;
     background-color: black;
 
 }
