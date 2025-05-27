@@ -1,0 +1,23 @@
+id_user,name,lastname,address,dni,telefono,email,n_support,password
+001,juan,perez,"calle falsa 123",12345678H,123456789,juan.perez@comisaria.com,SUP001,password123
+002,Maria,Gomez,"Av. siempre viva 742",234567891G,234567890,maria.gomez@comisaria.com,SUP002,clave456
+003,Carlos,Ramirez,"calle central 456",345678902T,345678901,carlos.ramirez@comisaria.com,SUP003,securepass789
+004,Laura,Fernandez,"Boulevard norte 101",456789015P,456789012,laura.fernandez@comisaria.com,SUP004,passlaura
+005,Luis,Martinez,"Ruta Provincial 33",567890123K,567890123,luis.martinez@comisaria.com,SUP005,admin321
+006,Daniel,Cejudo,"calle de las palabrotas 10",57489016L,569831704,dani.cejudo18@gmail.com,SUP006,pitufin1
+007,Sergio,Castro,"Av. Guadalajara 30",60020366A,697183465,sergio.castro.lucas@gmail.com,SUP007,scdrive3
+008,Ivan,Stone,"Boulevard Entonces 7",45890234N,916273890,livistone26@gmail.com,SUP008,entiva6
+009,Alejandro,Rey,"calle de la tranquilidad 5",10911053G,678091123,alejandroreyruiz98@gmail.com,SUP009,arr9p34
+010,Luis,Acosta,"Av. de la risa 18",29004568A,600745353,luisacostatoral@gmail.com,SUP010,jajajaja28
+011,Adolfo,Suarez,"calle del arrebato 20",80947626S,654356892,titin.aaron@hotmail.com,SUP011,iaoif34
+012,Soledad,Fernandez,"Boulevard de la niña 12",78903578H,689036535,solfe02@gmail.com,SUP012,rthjk45
+013,Geraldine,Escudero,"calle de la decepcion 41",90657382P,697832893,escuderoflores1993@gmail.com,SUP013,ave2332
+014,Maria,Dolores,"calle del miau 45",96874625Y,682465900,lolariadna@gmail.com,SUPO14,michi23
+015,Andres,Carrera,"Boulevard del rock 44",56892353A,600736781,andrescr.clase@gmail.com,SUP015,cocacola20
+016,Jhuliana,Mendez,"Av. de  la cercania 56",78939017J,623567809,jhulianameili8@gmail.com,SUP016,rubio94
+017,Kimberly,Garcia,"Av. del diseño 47",34567801K,602348934,kimberly.gracia.designer@gmail.com,SUP017,rosazul28
+018,Rosita,"Mc pato","calle del cua cua 92",48983246R,689623157,losita@gmail.com,SUP018,patocua
+019,Ana,Pastor,"calle de la elegancia 171",65145568P,65145568,anapassaporte12@gmail.com,SUP019,annie678
+020,Rosa,Manrique,"Av. de la rosa 33",45679012Z,660958475,masoru13@gmail.com,SUP020,osa33pl
+021,Elena,Padilla,"Calle de la desigualdad",46589901E,610131022,Cursosrous@gmail.com,SUP021,ele980et
+022,Mar,Moreno,"Av. de la ilustracion 20",12373510M,678980356,marmoreno@gmail.com,SUP022,marmoal55
