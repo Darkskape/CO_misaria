@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="webinfantil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="img/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="img/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='formulario_reportar.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="img/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="img/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+                <a href="#">Denuncias</a>
+                <a href="Co_Tupolicia.html">Tu policía</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+            <a href="#">Denuncias</a>
+            <a href="Co_Tupolicia.html">Tu policía</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+    <main>
+        <section>
+            <h2>MIRA ALGUNOS DE LOS DIBUJOS QUE NOS HAN ENVIADO</h2>
+            <div class="dibujos-grid">
+                <img src="img/webinfantil1.jpeg" alt="Dibujo 1">
+                <img src="img/webinfantil2.jpeg" alt="Dibujo 2">
+                <img src="img/webinfantil3.jpg" alt="Dibujo 3">
+                <img src="img/webinfantil4.jpg" alt="Dibujo 4">
+            </div>
+        </section>
+
+        <section>
+            <h2>¿QUIERES ENVIARNOS TU DIBUJO?</h2>
+            <ol>
+                <li>
+                    Haz un dibujo en tamaño A4 (210 mm × 297 mm) de un tema relacionado con la Policía Nacional. Por
+                    ejemplo, puedes hacer un dibujo en el que aparezca un perro de la Unidad de Guías Caninos, un
+                    caballo de la Unidad de Caballería, un Policía patrullando en un radio patrulla, etc... Usa tu
+                    imaginación.
+                </li>
+                <li>
+                    Escanéalo o hazle una foto, si no sabes o eres muy pequeño pídele ayuda a tus padres. Eso sí, que el
+                    fichero no supere los 300 Kb.
+                </li>
+                <li>
+                    Pídeles a tus padres que nos envíen el archivo por correo electrónico a webdgp@policia.es, indicando
+                    tu nombre, apellidos y edad, si quieres que lo pongamos en el pie de la foto. También debes incluir
+                    un teléfono de contacto.
+                </li>
+                <li>
+                    Cuando lo recibamos y comprobemos que el contenido es correcto, lo publicaremos en nuestra web y te
+                    enviaremos un correo comunicándotelo.
+                </li>
+                <li>
+                    El hecho de mandar el dibujo de la forma indicada, con el nombre y la edad, implica que tus padres
+                    aceptan que se publique en nuestra web.
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>¿QUIERES DESCARGARTE ALGUNOS DE NUESTROS JUEGOS?</h2>
+            <div class="juegos">
+                <table>
+                    <tr>
+                        <td>
+                            <h3>Pasatiempos</h3>
+                        </td> <!--descargar pdf y enlazar-->
+                    </tr>
+                    <tr>
+                        <td><a href="https://policia.es/miscelanea/web_infantil/pasatiempos_mayores.pdf">Mayores</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://policia.es/miscelanea/web_infantil/pasatiempos_ninos.pdf">Infantil</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://policia.es/miscelanea/web_infantil/pasatiempos_pc.pdf">Policía Científica
+                                Infantil</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Recortable</h3>
+                                <img src="img/recortable.jpg">
+                            </div>
+                            <div class="card-back">
+                                <a
+                                    href="https://policia.es/miscelanea/web_infantil/vehiculo_radiopatrulla_recortable.pdf">Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <h3>Colorea</h3>
+                                <img src="img/colorea.jpg">
+                            </div>
+                            <div class="card-back">
+                                <a href="https://policia.es/miscelanea/web_infantil/juega_colorea.pdf">Descargar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CONSEJOS PARA ESTAR SEGURO</h2>
+            <div class="consejos">
+                <article>
+                    <h3>En internet</h3>
+                    <ul>
+                        <li>Si eres menor de edad, antes de abrir un perfil en una red social, díselo a tus padres. Es
+                            mejor que lo sepan.</li>
+                        <li>Si ya tienes un perfil en una red social, no aceptes a todo el que quiera ser amigo tuyo.
+                            Acepta sólo a quien conoces. Detrás de un "nombre" puede haber alguien que quizás solo
+                            quiere perjudicarte.</li>
+                        <li>Estaría bien que le preguntes a tus amigos si les importa que publiques fotos en las que
+                            aparecen ellos. Y si te piden que quites sus fotos es mejor respetarlos y retirarlas.</li>
+                        <li>Publica tus fotos y contenidos sólo para tus amigos. En ocasiones pueden caer en manos de
+                            personas que las utilicen para haceros daño.</li>
+                        <li>Si alguien te amenaza o te pide cosas que a tí no te gustan, deberías expulsarlo
+                            inmediatamente de tu perfil y comentárselo a tus padres cuanto antes. Es más fácil
+                            solucionar un problema cuando acaba de empezar que cuando se ha hecho más grande.</li>
+                        <li>No uses la webcam sin pensar; enciéndela sólo cuando estés seguro de que hablas con un
+                            amigo. Como seguramente ya sepas, de la webcam se puede hacer un "pantallazo" y la persona
+                            con la que chateas guardarse tu imagen para usarla cuando quiera.</li>
+                        <li>No publiques fotos de las que luego te puedas avergonzar. Ten en cuenta que esas "imágenes"
+                            pueden llegar a mucha gente en Internet.</li>
+                        <li>Y por último, utiliza una contraseña difícil de adivinar, incluyendo algún número y signo de
+                            puntuación, pero sobre todo no la compartas con nadie. Tu perfil es tuyo y de nadie más.
+                        </li>
+                    </ul>
+                </article>
+
+                <div class="vl"></div>
+
+                <article>
+                    <h3>En tu día a día</h3>
+                    <ul>
+                        <li>Desconfía de los adultos que no conoces, sobre todo si se muestran excesivamente amables y
+                            cercanos para hacerse amigos tuyos.</li>
+                        <li>Confía en tus padres y profesores para contarles cualquier problema que tengas.</li>
+                        <li>Si ves que en los alrededores del cole se consumen drogas o alcohol, cuéntaselo a tus
+                            padres, profesores o a la Policía; todos están para ayudarte.</li>
+                        <li>De casa al cole no te entretengas por el camino, procura ir con amigos.</li>
+                        <li>No subas nunca al coche de un desconocido.</li>
+                        <li>Si tienes teléfono móvil, procura llevarlo siempre contigo aunque en el colegio lo tengas
+                            apagado. Si te pasa algo, avisa a tus padres, a los padres de tus amigos o a la Policía.
+                        </li>
+                    </ul>
+
+                    <h3 class="cole">En el cole</h3>
+                    <ul>
+                        <li>Informa a tus profesores de todo aquello que veas o hayas visto que ha pasado a otro
+                            compañero/a y que no te gustaría que te hicieran a ti, cuéntaselo a quien puede ayudarte
+                            (tus profesores, tus padres o la Policía). Los problemas no se solucionan solos.</li>
+                        <li>Si te sientes amenazado/a u ofendido/a por cualquier tipo de nota, pintada o comentario en
+                            el colegio, cuéntaselo a tus profesores.</li>
+                        <li>Si te sientes discriminado/a o ridiculizado/a por otros compañeros, díselo a tus profesores.
+                        </li>
+                        <li>Si en el recinto del colegio encuentras pintadas con expresiones violentas o amenazantes
+                            díselo a tus profesores.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="#">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="#">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="#">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="#">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_Tupolicia.html">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="acceso_oposiciones.html">Quiero ser Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="page_emergencias.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="page_emergencias.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="#">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="img/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="img/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="img/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="img/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="img/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="img/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+ <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="img/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="webinfantil.js"></script>
+
+</body>
+
+</html>

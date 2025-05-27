@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="conocenos.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="img/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="img/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='formulario_reportar.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="img/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="img/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+                <a href="#">Denuncias</a>
+                <a href="Co_Tupolicia.html">Tu policía</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+            <a href="#">Denuncias</a>
+            <a href="Co_Tupolicia.html">Tu policía</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+    <main>
+        <header>
+            <h2>
+                La Policía Nacional es un cuerpo armado de naturaleza civil, con una estructura jerarquizada, encargado
+                de velar por el orden público y la seguridad de los ciudadanos, a las órdenes de las autoridades
+                políticas, con la misión de proteger el libre ejercicio de los derechos y libertades y garantizar la
+                seguridad en todo el territorio nacional.
+            </h2>
+        </header>
+
+        <aside>
+            <aside class="izquierda">
+                <ul>
+                    <li><a href="#origen">Origen</a>
+                        <hr>
+                    </li>
+                    <li><a href="#competencias">Competencias</a>
+                        <hr>
+                    </li>
+                    <li><a href="#normativa">Normativa</a>
+                        <hr>
+                    </li>
+                    <li><a href="#estructura">Estructura</a>
+                        <hr>
+                    </li>
+                    <li><a href="#distintivos">Distintivos de cargos y divisas</a>
+                        <hr>
+                </ul>
+            </aside>
+            <aside class="derecha">
+                <table>
+                    <tr>
+                        <td>
+                            <h3>MÁS SOBRE NOSOTROS</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="historia.html">Historia de la policia</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="uniforme.html">Historia de los uniformes</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="himno.html">Himno</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="webinfantil.html">Web infantil</a>
+                        </td>
+                    </tr>
+                </table>
+            </aside>
+        </aside>
+
+        <section class="origen" id="origen">
+                <h2>ORIGEN</h2>
+                <p>
+                    Los funcionarios de carrera de la Policía Nacional reciben la denominación genérica de Policías
+                    Nacionales, un cuerpo encargado de velar por el orden público y la seguridad de los ciudadanos en
+                    todo el territorio nacional. La Policía Nacional es un instituto armado de naturaleza civil, con una
+                    estructura jerarquizada y bien definida, cuyo objetivo principal es proteger el libre ejercicio de
+                    los derechos y libertades de los ciudadanos y garantizar la seguridad pública en el marco de la
+                    legalidad. Este cuerpo de seguridad opera bajo las órdenes de las autoridades políticas, específicamente 
+                    bajo la supervisión del Ministerio del Interior.
+                </p>
+                <p>
+                    El carácter de la Policía Nacional se define principalmente por su función urbana, lo que la
+                    distingue de otros cuerpos de seguridad en España. Esta característica tiene su origen en la
+                    necesidad de crear una estructura de seguridad moderna y eficaz para las ciudades españolas. En 1824, 
+                    S.M. el Rey Fernando VII, consciente de esta necesidad, dictó la Real Cédula, mediante la cual se estableció la
+                    Policía General del Reino. Esta nueva policía fue puesta bajo las órdenes de un magistrado conocido como
+                    Superintendente General, marcando así el comienzo de una estructura que perdura hasta nuestros días.
+                </p>
+                <p>
+                    En el mismo año, se dictaron los Reglamentos de Policía, tanto para Madrid como para las provincias.
+                    Estos reglamentos organizaron la seguridad en la capital mediante la creación de Comisarías de
+                    Distrito y establecieron un sistema de Subdelegaciones en las principales localidades de cada
+                    provincia. Esta organización territorial se convirtió en el antecedente de la actual estructura de 
+                    Comisarías Provinciales y Locales, que cubren todo el territorio nacional y garantizan la eficiencia 
+                    en la prestación de los servicios de seguridad.
+                </p>
+                <p>
+                    Desde su creación, la Policía Nacional ha mantenido dos funciones fundamentales que configuran su
+                    identidad. La primera es su rol como policía judicial, encargada de velar por el ejercicio de los
+                    derechos y libertades de los ciudadanos, persiguiendo a aquellos que vulneran la ley y poniéndolos a
+                    disposición de la justicia. La segunda función, también crucial, es la de garantizar el bienestar y
+                    la seguridad pública de los ciudadanos, asegurando el orden y la tranquilidad tanto en las ciudades
+                    como en el resto del país. A lo largo de los años, la Policía Nacional ha sabido adaptarse a los
+                    nuevos desafíos sociales, manteniendo su papel esencial en la protección de los derechos
+                    fundamentales y el orden público.<br><br>
+                    Ley Orgánica 9/2015, de 28 de julio, de Régimen de Personal de la Policía Nacional.
+                </p>
+        </section>
+
+        <section id="competencias">
+            <h2>COMPETENCIAS</h2>
+            <p>Ley Orgánica 2/1986, de 13 de marzo, de Fuerzas y Cuerpos de Seguridad. «BOE» núm. 63, de 14/03/1986.</p>
+            <div class="competencias">
+                <ul class="competencia">
+                    <li>
+                        En las capitales de provincia y en otras localidades designadas por el Gobierno, las siguientes
+                        funciones generales de las Fuerzas y Cuerpos de Seguridad del Estado:<br><br>
+                    </li>
+                    <li>
+                        1.- Garantizar el cumplimiento de las Leyes y disposiciones generales, llevando a cabo las
+                        órdenes que reciban de las Autoridades dentro de sus respectivas competencias.
+                        <hr>
+                    </li>
+                    <li>
+                        2.- Auxiliar y proteger a las personas, así como velar por la conservación y custodia de los
+                        bienes que se encuentren en situación de riesgo por cualquier causa.
+                        <hr>
+                    </li>
+                    <li>
+                        3.- Vigilar y custodiar los edificios e instalaciones públicos que así lo requieran.
+                        <hr>
+                    </li>
+                    <li>
+                        4.- Proteger y garantizar la seguridad de las altas personalidades.
+                        <hr>
+                    </li>
+                    <li>
+                        5.- Mantener y restablecer, cuando sea necesario, el orden y la seguridad ciudadana.
+                        <hr>
+                    </li>
+                    <li>
+                        6.- Prevenir la comisión de actos delictivos.
+                        <hr>
+                    </li>
+                    <li>
+                        7.- Investigar los delitos para identificar y detener a los presuntos responsables, asegurar los
+                        instrumentos, efectos y pruebas del delito, poniéndolos a disposición del Juez o Tribunal
+                        competente, y elaborar los informes técnicos y periciales pertinentes.
+                        <hr>
+                    </li>
+                    <li>
+                        8.- Recoger, recibir y analizar toda la información que sea relevante para el orden y la
+                        seguridad pública, así como estudiar, planificar y ejecutar los métodos y técnicas de prevención
+                        del delito. <hr>
+                    </li>
+                    <li>
+                        9.- Colaborar con los servicios de Protección Civil en situaciones de grave riesgo, catástrofe o
+                        calamidad pública, según lo establecido en la legislación de Protección Civil.
+                        <hr>
+                    </li>
+                    <li>Sin perjuicio de lo dispuesto en el apartado anterior, los miembros del Cuerpo Nacional de
+                        Policía podrán desempeñar las funciones de investigación y coordinación de los datos mencionados
+                        en los apartados 7) y 8), en todo el territorio nacional.<hr>
+                    </li>
+                </ul>
+
+                <ul class="competencia">
+                    <li>
+                        En todo el territorio nacional, las siguientes funciones con carácter exclusivo:<br><br>
+                    </li>
+                    <li>
+                        La expedición del Documento Nacional de Identidad y de los Pasaportes.
+                        <hr>
+                    </li>
+                    <li>
+                        El control de entrada y salida del territorio nacional de españoles y extranjeros.
+                        <hr>
+                    </li>
+                    <li>
+                        Las previstas en la legislación sobre extranjería, refugio y asilo, extradición, expulsión,
+                        emigración e inmigración.
+                        <hr>
+                    </li>
+                    <li>
+                        La vigilancia e inspección del cumplimiento de la normativa en materia del Juego.
+                        <hr>
+                    </li>
+                    <li>
+                        La investigación y persecución de los delitos relacionados con la droga..
+                        <hr>
+                    </li>
+                    <li>
+                        Colaborar y prestar auxilio a las Policías de otros países, conforme a lo establecido en los
+                        Tratados o Acuerdos Internacionales sobre las Leyes, bajo la superior dirección del Ministerio
+                        del Interior..
+                        <hr>
+                    </li>
+                    <li>
+                        El control de las entidades y servicios privados de seguridad, vigilancia e investigación, de su
+                        personal, medios y actuaciones.
+                        <hr>
+                    </li>
+                    <li>
+                        Aquellas otras que le atribuya la Legislación vigente.
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="normativa" id="normativa">
+                <h2>Normativa</h2>
+                <h5>Constitución Española de 1978. artº104 Fuerzas y Cuerpos de Seguridad del Estado.</h5>
+                <ul>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/1986/03/14/pdfs/A09604-09616.pdf">Ley orgánica 2/86,</a> de
+                        13 marzo, Fuerzas y Cuerpos de Seguridad. (BOE 14/03/86).
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/2015/07/29/pdfs/BOE-A-2015-8468.pdf">Ley orgánica
+                            9/2015,</a> de 28 de julio, de Régimen de Personal de la Policía Nacional.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/1987/12/05/pdfs/A36020-36022.pdf">Real decreto
+                            1484/1987,</a>de 4 de diciembre, Naturaleza, Régimen jurídico, Dependencia, Escalas,
+                        Categorías, relaciones de Personal y administración del mismo, Uniforme, Distintivos y
+                        Armamento.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/1991/02/26/pdfs/A06536-06536.pdf">Real decreto
+                            221/1991,</a>de 22 de febrero, por el que se regula la organización de Unidades del Cuerpo
+                        Nacional de Policía adscritas a las Comunidades Autónomas y se establecen las peculiaridades del
+                        régimen estatutario de su personal.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/1995/05/18/pdfs/A14379-14384.pdf">Real decreto
+                            614/1995,</a>de 21 de abril por el que se aprueba el Reglamento de los procesos selectivos y
+                        de formación en el Cuerpo Nacional de Policía.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/2012/02/18/pdfs/BOE-A-2012-2396.pdf">Real decreto
+                            400/2012,</a> de 17 de febrero, por el que se desarrolla la estructura orgánica básica del
+                        Ministerio del Interior.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/2007/03/29/pdfs/A13614-13619.pdf">Orden interior
+                            761/2007,</a> de 20 de marzo, por la que se aprueba el nuevo modelo de carné profesional de
+                        los funcionarios del Cuerpo Nacional de Policía y otros documentos identificativos para
+                        determinado personal que presta sus servicios en el ámbito del Cuerpo Nacional de Policía en la
+                        Dirección General de la Policía y de la Guardia Civil.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/buscar/pdf/2023/BOE-A-2023-17072-consolidado.pdf">Orden interior
+                            859/2023,</a> de 21 de julio, por la que se desarrolla la estructura orgánica y funciones de
+                        los Servicios Centrales y Periféricos de la Dirección General de la Policía.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/2014/03/21/pdfs/BOE-A-2014-2997.pdf">Orden interior
+                            430/2014,</a>de 10 de marzo, por la que se regula la uniformidad en el Cuerpo Nacional de
+                        Policía.
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="https://www.boe.es/boe/dias/2020/08/05/pdfs/BOE-A-2020-9138.pdf">Real decreto
+                            734/2020,</a> de 4 de agosto, por el que se desarrolla la estructura orgánica básica del
+                        Ministerio del Interior.
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="estructura">
+            <h2>ESTRUCTURA</h2>
+            <p>
+                La estructura y funciones de la Dirección General de la Policía aparecen reguladas en el Real Decreto
+                734/2020, de 4 de agosto, por el que se desarrolla la estructura orgánica básica del Ministerio del
+                Interior.
+            </p>
+            <h3>Dirección General de la Policia</h3>
+            <img src="img/Esquema_direccion_general.png">
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span><h4>Dirección Adjunta Operativa</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <p>La Dirección Adjunta Operativa, con un nivel orgánico de subdirección general, es
+                        responsable de colaborar con la persona titular de la Dirección General en la gestión de las
+                        funciones relacionadas con el mantenimiento del orden y la seguridad ciudadana. Además,
+                        supervisa la dirección, coordinación y control de las unidades centrales, supraterritoriales
+                        y territoriales. También se encarga del seguimiento y evaluación de los resultados de los
+                        programas operativos, definiendo los recursos humanos y materiales necesarios para su
+                        ejecución, y lidera la planificación estratégica en el ámbito de la transformación digital.
+                    </p>
+
+                    <p>De acuerdo con las directrices del titular de la Dirección General, la Dirección Adjunta
+                        Operativa tiene la responsabilidad de dirigir, impulsar y coordinar las funciones policiales
+                        operativas. A nivel central, estas funciones se llevarán a cabo por las Comisarías Generales
+                        de Información, Policía Judicial, Seguridad Ciudadana, Extranjería y Fronteras, y Policía
+                        Científica, todas ellas con nivel orgánico de subdirección general. Asimismo, se incluirá la
+                        División de Operaciones y Transformación Digital, cuya estructura y nivel orgánico se
+                        determinarán según la relación de puestos de trabajo.
+                    <p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>Comisaría General Información</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <p>
+                        La captación, recepción, tratamiento y desarrollo de la información de interés para el orden y
+                        la seguridad pública en el ámbito de las funciones de la Dirección General, así como su
+                        explotación o aprovechamiento operativo, especialmente en materia antiterrorista, tanto en el ámbito
+                        nacional como en el internacional.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>Comisaría General Policía Judicial</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>
+                        En su función de apoyo y asistencia a la Comisaría General, analiza y planifica sus líneas
+                        generales de actuación, y gestiona los asuntos relativos al régimen de personal y medios
+                        adscritos a la misma. Se responsabiliza de las bases de datos propias de la Comisaría General.
+                        Elabora las metodologías de investigación criminal y lleva a cabo estudios técnicos y jurídicos
+                        para el perfeccionamiento de las actividades operativas.<br><br>
+
+                        El Secretario General, como segundo jefe de la Comisaría General, sustituye a su titular, en los
+                        casos de vacante, ausencia o enfermedad.
+                    </p>
+
+                    <h5>Unidad Central de Droga y Crimen Organizado</h5>
+                    <p>
+                        Asume la investigación y persecución de las actividades delictivas, de ámbito nacional y
+                        transnacional, en lo concerniente a delitos contra las personas; a delitos relacionados con el
+                        patrimonio, especialmente el patrimonio histórico, artístico; las relativas al derecho de autor;
+                        al consumo y medio ambiente; a las infracciones delictivas en materia de dopaje en el deporte; a
+                        la
+                        inspección del juego, así como la coordinación operativa y el apoyo técnico de las respectivas
+                        unidades territoriales. De esta Unidad dependerán:
+                    </p>
+                    <ul>
+                        <li>La Brigada Central de Investigación de la Delincuencia Especializada, encargada de la
+                            investigación
+                            y persecución de los delitos relacionados con el patrimonio, el consumo y el medio ambiente,
+                            propiedad intelectual e industrial. De esta Brigada dependerá el Servicio de Control de
+                            Juegos
+                            de
+                            Azar, con la misión de vigilancia e inspección del cumplimiento de la normativa sobre el
+                            juego e
+                            investigación de los delitos que se generen en este ámbito.</li>
+                        <li>La Brigada Central de Investigación de Delitos contra las Personas, encargada de la
+                            investigación y
+                            persecución de los delitos contra la vida, la libertad, homicidios y desaparecidos.</li>
+                        <li>La Brigada del Patrimonio histórico, encargada de la investigación y persecución de las
+                            actividades
+                            delictivas relacionadas con el patrimonio histórico artístico.</li>
+                    </ul>
+                    <p>Todo ello de conformidad con la Ord INT /2678/2015 de 11 de diciembre, por la que se modifica la
+                        Ord INT 28/2013 de 18 de enero.
+                    </p>
+
+                    <h5>Unidad Central de Inteligencia Criminal.</h5>
+                    <p>Da apoyo al titular de la Comisaría General en sus funciones de dirección, planificación y toma
+                        de decisiones. En el marco de su ámbito competencial y, como parte de la estructura nacional de
+                        inteligencia y planificación, se responsabiliza de la captación, recepción, análisis,
+                        tratamiento y desarrollo de las informaciones relativas a la criminalidad, así como la
+                        elaboración, desarrollo y seguimiento y control de planes estratégicos y operativos, y la
+                        actividad prospectiva.
+                    </p>
+
+                    <h5>Unidad Central de Delincuencia Económica y Fiscal.</h5>
+                    <p>
+                        Asume la investigación y persecución de las actividades delictivas, de ámbito nacional e
+                        internacional, en materia de delincuencia económica y fiscal, así como la coordinación operativa
+                        y el apoyo técnico a las respectivas Unidades territoriales. De esta Unidad dependerán:
+                    </p>
+                    <ul>
+                        <li>La Brigada Central de Delincuencia Económica y Fiscal, a la que le corresponde la
+                            investigación de los delitos relacionados contra las Haciendas Públicas, contra la Seguridad
+                            Social, sus Entidades Gestoras en sus distintas modalidades, y los delitos contra los
+                            derechos de los trabajadores, fraudes financieros, fraudes en los medios de pago, delitos
+                            bursátiles, espionaje industrial y estafas de especial trascendencia.
+                        </li>
+                        <li>
+                            La Brigada Central de Investigación de Blanqueo de Capitales y Anticorrupción, a la que
+                            corresponde la investigación de hechos delictivos relacionados con el blanqueo de capitales
+                            procedente de hechos delictivos, los delitos económicos relacionados con la piratería
+                            internacional, la corrupción en sus distintas modalidades y la localización y la
+                            recuperación de activos.
+                        </li>
+                        <li>
+                            La Brigada Central de Inteligencia Financiera, a la que corresponde la investigación y
+                            persecución de los hechos delictivos relacionados con las actividades y sujetos regulados
+                            por la normativa de prevención del blanqueo de capitales.
+                        </li>
+                        <li>
+                            La Brigada de Investigación del Banco de España, que asume la investigación y persecución de
+                            los delitos relacionados con la falsificación de moneda nacional y extranjera, funcionando
+                            como Oficina Central Nacional a este respecto.
+                        </li>
+                        <li>
+                            La Unidad Adscrita a la Fiscalía Especial contra la Corrupción y la Criminalidad Organizada,
+                            que desempeñará los cometidos que, como Policía Judicial, le asigne el órgano al que figura
+                            adscrita.
+                        </li>
+                    </ul>
+
+                    <h5>Unidad de Investigación Tecnológica</h5>
+                    <p>
+                        Asume la investigación y persecución de las actividades delictivas que impliquen la utilización
+                        de las tecnologías de la información y las comunicaciones (TIC) y el ciberdelito de ámbito
+                        nacional y transnacional, relacionadas con el patrimonio, el consumo, la protección al menor, la
+                        pornografía infantil, delitos contra la libertad sexual, contra el honor y la intimidad, redes
+                        sociales, fraudes, propiedad intelectual e industrial y seguridad lógica. Actuará como Centro de
+                        Prevención y Respuesta E-Crime de la Policía Nacional. De esta Unidad dependerán:
+                    </p>
+                    <ul>
+                        <li>
+                            La Brigada Central de Investigación Tecnológica, a la que corresponde la investigación de
+                            las actividades delictivas relacionadas con la protección de los menores, la intimidad, la
+                            propiedad intelectual e industrial y los fraudes en las telecomunicaciones.
+                        </li>
+                        <li>
+                            La Brigada Central de Seguridad Informática la que corresponde la investigación de las
+                            actividades delictivas que afecten a la seguridad lógica y a los fraudes.
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>Comisaría General Seguridad Ciudadana </h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>
+                        En su función de apoyo y asistencia a la Comisaría General, analiza y planifica sus líneas
+                        generales de actuación y gestiona los asuntos relativos al régimen de personal y medios
+                        adscritos a la misma. Se responsabiliza, además, de los bancos de datos propios de la Comisaría
+                        General, así como de las actividades de investigación y desarrollo. A esta Unidad está adscrita
+                        la Oficina Nacional de Deportes.
+                    </p>
+                    <p>
+                        El Secretario General, como segundo jefe de la Comisaría General, sustituye a su titular en los
+                        casos de vacante, ausencia o enfermedad.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>Comisaría General Extranjería y Fronteras </h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Unidad Central de Coordinación Operativa y Técnica</h5>
+                    <p>La Unidad Central de Coordinación Operativa y Técnica, en su función de asistencia y apoyo a la
+                        persona titular de la Comisaría General de Extranjería y Fronteras, le corresponde generar
+                        conocimiento para realizar y coordinar la planificación operativa de la Comisaría General,
+                        facilitando las líneas generales de actuación para la configuración del Plan Estratégico en su
+                        área competencial.
+
+                        Coordina la actividad operativa y presta apoyo técnico a las Unidades centrales y territoriales,
+                        asumiendo el seguimiento de la ejecución de las decisiones adoptadas.<br><br>
+
+                        Gestiona los recursos humanos y los medios materiales adscritos para el servicio, implementando
+                        las medidas necesarias para obtener un mayor nivel de eficiencia.<br><br>
+
+                        Define los procedimientos de gestión.<br><br>
+
+                        Promueve las actividades de I+D+i en colaboración con la Subdirección General
+                        competente.<br><br>
+
+                        Coordina la colaboración internacional de la Comisaría General.<br><br>
+
+                        La persona responsable de esta Unidad, denominado Jefa o Jefe Central de Operaciones, sustituye
+                        al titular de la Comisaría General en los casos de vacante, ausencia o enfermedad.<br><br>
+                    </p>
+
+                    <h5>Unidad Central de Redes de Inmigración Ilegal y Falsedades Documentales. (UCRIF)</h5>
+                    <p>
+                        A la Unidad Central de Redes de Inmigración y Falsedades Documentales, le corresponde la
+                        planificación, coordinación y control de la investigación de las actividades delictivas
+                        relacionadas con la trata de seres humanos, el tráfico de personas, la inmigración ilegal y
+                        cualquier otro delito en conexión con los anteriores, en el ámbito nacional e
+                        internacional.<br><br>
+
+                        Realiza la coordinación operativa y el apoyo técnico de las Brigadas y las Unidades
+                        territoriales.<br><br>
+
+                        Dirige y coordina la obtención, tratamiento, análisis, explotación, seguimiento y difusión,
+                        tanto a organismos nacionales como internacionales, de información e inteligencia criminal
+                        relativa a las especialidades delictivas anteriormente enumeradas.<br><br>
+
+                        De igual modo, se constituye como Oficina Nacional Central en relación con otros organismos o
+                        entidades, coordinando la cooperación policial y judicial, nacional e internacional en esta
+                        materia
+                    </p>
+
+                    <h5>Unidad Central de Fronteras</h5>
+                    <p>Realiza las funciones de gestión, coordinación y control, relativas a la entrada y salida de
+                        españoles y extranjeros del territorio nacional, y el régimen de fronteras, así como la
+                        coordinación, en los Puestos Fronterizos, de aquellas otras que la legislación vigente atribuye
+                        a la Policía Nacional, funcionando como Oficina Central Nacional a este respecto.
+                    </p>
+
+                    <h5>Unidad Central Repatriaciones</h5>
+                    <p>A la Unidad Central de Repatriaciones le corresponde la dirección y ejecución de las expulsiones,
+                        las devoluciones, el control y la coordinación de los Centros de Internamiento de Extranjeros y
+                        de los Centros de Asistencia Temporal de Extranjeros, la gestión policial en materia de menores
+                        extranjeros no acompañados.<br><br>
+
+                        Realiza las gestiones tendentes a la determinación de la nacionalidad de procedencia y la
+                        identidad de los ciudadanos extranjeros indocumentados.<br><br>
+
+                        Coordina el cauce de información con los establecimientos penitenciarios referente a la
+                        excarcelación de extranjeros.<br><br>
+
+                        Asimismo, es el Punto Nacional de Contacto en materia de asistencia en casos de tránsitos
+                        internacionales a efectos de repatriación, así como en la gestión y coordinación en la
+                        organización de vuelos conjuntos de repatriación de nacionales de terceros países en el seno de
+                        Estados miembros de la Unión Europea y países asociados a Schengen.<br><br>
+                    </p>
+
+                    <h5>Centro Nacional de Inmigración y Fronteras (CENIF)</h5>
+                    <p>Al Centro Nacional de Inmigración y Fronteras, le corresponde la actividad de inteligencia
+                        criminal en las áreas de competencia de la Comisaría General.<br><br>
+
+                        Elabora y realiza el seguimiento de la aplicación de la normativa de la Unión Europea e
+                        internacional en materias propias de la Comisaría General para cuyo cumplimiento actúa como
+                        Oficina Central Nacional.<br><br>
+
+                        Elabora los informes especializados solicitados por órganos nacionales e internacionales en
+                        materia de extranjería y fronteras, así como la coordinación estratégica y su impacto
+                        operativo.<br><br>
+
+                        Contribuye, en el ámbito de competencias de la Comisaría General, al Punto Nacional de Contacto
+                        con la citada Agencia (NFPOC, por sus siglas en inglés) y al Centro Nacional de Coordinación
+                        (NCC, por sus siglas en inglés).<br><br>
+
+                        Coordina los Puntos de Contacto Nacionales integrados en la Comisaría General para el
+                        intercambio de información y la cooperación técnica y operativa en el ámbito de la inmigración y
+                        el control de las fronteras, especialmente sobre la evaluación de vulnerabilidad de los puestos
+                        fronterizos, los flujos migratorios, la inmigración irregular y el cruce ilegal de las
+                        fronteras.<br><br>
+
+                        De esta Unidad depende la Brigada de Coordinación para asuntos relacionados con la Agencia
+                        FRONTEX en el ámbito competencial de la Comisaría General de Extranjería y Fronteras.<br><br>
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>Comisaría General De Policía Científica</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>
+                        En su función de apoyo y asistencia a la Comisaría General, analiza y planifica sus líneas
+                        generales de actuación, y gestiona los asuntos relativos al régimen de personal y medios
+                        adscritos a la misma. Se responsabiliza además de las bases de datos propias de la Comisaría 
+                        General, así como de las actividades en materia de investigación y desarrollo. Igualmente asume 
+                        la coordinación operativa y el apoyo técnico de las respectivas unidades territoriales. El 
+                        Secretario General, como segundo jefe de la Comisaría General, sustituye a su titular en los 
+                        casos de vacante, ausencia o enfermedad.
+                    </p>
+                    <p>
+                        La Secretaría General está integrada por un Servicio de Coordinación y Planificación del que
+                        dependen las secciones de: Personal; Formación; Gestión de Medios; Área de Informática y
+                        Análisis de la Información, más el Área de Seguridad y Mantenimiento.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>División de Operaciones y Transformación Digital</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Funciones</h5>
+                    <p>Coordinar, gestionar y supervisar la operatividad policial en todos sus frentes.</p>
+                    <ul>
+                        <li>Favorecer la coordinación y colaboración operativa.</li>
+                        <li>Adecuar los procedimientos de actuación operativa a los desafíos actuales.</li>
+                        <li>Fortalecer el uso de la tecnología y coordinar su aplicación en todas las facetas
+                            operativas.</li>
+                        <li>Impulsar la interoperabilidad de las bases de datos policiales.</li>
+                    </ul>
+
+                    <p>
+                        Acometer la adecuada planificación estratégica en materia de transformación digital corporativa.
+                    </p>
+                    <ul>
+                        <li>
+                            Establecer la Estrategia de Transformación Digital de la corporación que permita afrontar de
+                            la manera más eficiente los nuevos retos de seguridad.
+                        </li>
+                        <li>Fomentar el avance tecnológico de los distintos departamentos policiales.</li>
+                        <li> Promover lazos de colaboración institucional y ciudadana.</li>
+                    </ul>
+
+                    <p>Reforzar las capacidades policiales frente a las amenazas y retos de la ciberseguridad.</p>
+                    <ul>
+                        <li>
+                            Generar marcos de coordinación entre las áreas policiales con competencias en la esfera de
+                            la
+                            ciberseguridad, ciberinteligencia y lucha contra el cibercrimen.
+                        </li>
+                        <li>
+                            Impulsar la cooperación y colaboración con organismos e instituciones en este campo, tanto
+                            en el
+                            contexto nacional como internacional.
+                        </li>
+                        <li>
+                            Profundizar en las relaciones con los sectores públicos y privados, nacionales e
+                            internacionales,proveedores de tecnologías digitales habilitantes enfocadas en el ámbito de
+                            la
+                            seguridad.
+                        </li>
+                    </ul>
+                    <p>Promover la coordinación policial en el ámbito de la seguridad y protección aérea.</p>
+                    <ul>
+                        <li>Afianzar la presencia de la Policía Nacional en los organismos e instituciones res-ponsables
+                            de la
+                            Seguridad Aérea.</li>
+                        <li>Fomentar una actuación coordinada con las Administraciones Públicas.</li>
+                        <li>Desarrollar las capacidades de la Policía Nacional para la gestión de la seguridad del
+                            espacio aéreo
+                            en las demarcaciones de su competencia.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>División de Cooperación Internacional</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <p>
+                        La División de Cooperación Internacional se crea en el Real Decreto 2012/400, de 17 de febrero,
+                        por el que se desarrolla la estructura orgánica básica del Ministerio del Interior.<br><br>
+
+                        Depende del Director General de la Policía y le corresponde la dirección de la colaboración y
+                        auxilio a las policías de otros países y la coordinación de los grupos de trabajo en los que
+                        participe la Dirección General de la Policía en el ámbito de la Unión Europea y otras
+                        instituciones internacionales, así como aspectos relacionados con misiones de apoyo a terceros
+                        países y personal policial que presta servicio en el extranjero.<br><br>
+
+                        En general, mejora la eficiencia de la colaboración policial internacional tanto en el ámbito
+                        bilateral como en el ámbito multilateral.<br><br>
+
+                        En concreto, en el marco de la Unión Europea, se intenta dar respuesta adecuada a las
+                        necesidades derivadas del desarrollo del Espacio de Libertad, Seguridad y Justicia de la Unión,
+                        en aplicación de las disposiciones del Tratado de la Unión Europea y del Tratado sobre el
+                        funcionamiento de la Unión Europea.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span><h4>Subdirección General de Recursos Humanos y Formación</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>SECRETARÍA GENERAL </h5>
+                    <p>El Área de Coordinación Jurídica y Reclamaciones Administrativas, con funciones de coordinación
+                        jurídica de las actuaciones de los Órganos Centrales y Periféricos, en materias relacionadas con
+                        el régimen estatutario de los funcionarios de la Dirección General de la Policía.<br><br>
+
+                        También llevará a cabo las tareas de estudio y propuesta de resolución de recursos
+                        administrativos en materia de personal, de elaboración de informes de carácter jurídico-técnico
+                        y de
+                        coordinación de las relaciones de la Dirección General de la Policía con los Tribunales de
+                        Justicia y con la
+                        Abogacía General del Estado, en asuntos relacionados con dicha materia.<br><br>
+
+                        El Área de Asistencia Letrada, con funciones de coordinación de todos los asuntos relativos a la
+                        defensa legal de los funcionarios de la Dirección General por actuaciones derivadas de la
+                        prestación del servicio.<br><br>
+
+                        Asimismo, estarán adscritas a la Secretaría General de la Subdirección la Secretaría del Consejo
+                        de Policía y la Secretaría de la Comisión de Seguridad y Salud Laboral Policial.
+                    </p>
+
+                    <h5>UNIDAD DE PLANIFICACIÓN DE RECURSOS HUMANOS</h5>
+                    <p>
+                        Le corresponderá la función de estudio y planificación de la política de recursos
+                        humanos.<br><br>
+
+                        De esta Unidad dependerá el Área de Auditoria y Gestión de Calidad, con la función de establecer
+                        las directrices del proceso de mejora continua de los distintos servicios del Centro Directivo en
+                        materia de gestión de recursos humanos; y el Área de Planificación y Prospección Formativa con
+                        la función de estudio de las necesidades formativas en la Policía Nacional, para la planificación 
+                        de la oferta dirigida a los funcionarios de la Corporación.
+                    </p>
+
+                    <h5>UNIDAD DE PREVENCIÓN DE RIESGOS LABORALES Y ACCIÓN SOCIAL</h5>
+                    <p>
+                        Le corresponde las funciones relacionadas con la gestión del sistema de prevención de riesgos
+                        laborales de la Policía Nacional, así como la coordinación de los servicios territoriales de
+                        prevención de riesgos laborales. Igualmente estará encargada de las actuaciones de planificación, 
+                        desarrollo, gestión y ejecución del Programa de Acción Social de la Dirección General de la Policía.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>División de Personal</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>SECRETARÍA GENERAL </h5>
+                    <p>
+                        Asistencia y apoyo al titular de la División de Personal. Asistencia técnica, jurídica y
+                        administrativa a los diferentes órganos que la integran. Gestión de los recursos humanos y
+                        medios materiales. Coordinación de las funciones propias del Tribunal Médico. Se responsabiliza
+                        de las actividades I+D+I. Asume la prospección, estudios y análisis en la gestión de recursos humanos,
+                        así como la gestión, asesoramiento y apoyo, a través de la Oficina del Policía, del personal
+                        adscrito a la Dirección General de la Policía.
+                    </p>
+                    <ul>
+                        <li>Área de Retribuciones: gestiona las retribuciones correspondientes al personal de la
+                            Dirección General de la Policia. </li>
+                        <li>Area de Asuntos Jurídicos: encargada de la respuesta y tramitación de las reclamaciones y de
+                            los recursos administrativos y judiciales.</li>
+                        <li>Área de Personal no Policial: asume las funciones relacionadas con la gestión y organización
+                            de los recursos humanos no policiales.</li>
+                    </ul>
+
+                    <h5>UNIDAD DE GESTÓN DE PERSONAL POLICIAL </h5>
+                    <p>
+                        Asume las funciones de administración de los recursos humanos policiales y la gestión del
+                        catálogo de puestos de trabajo, así como la tramitación y expedición de documentos sobre los
+                        datos sobrantes en los expedientes de personal. De esta Unidad dependerán:
+                    </p>
+                    <ul>
+                        <li>Área de Puestos de Trabajo y Distribución Territorial del Personal Policial: se
+                            responsabiliza de las funciones de ejecución del Catálogo de Puestos de Trabajo de la
+                            Policía Nacional, y la
+                            organización de los destinos y puestos de trabajo de dicho personal.
+                        </li>
+                        <li>Área de Documentación y Expediente Personal: encargada de las funciones de gestión,
+                            verificación y control de los incidentes que afectan al expediente del personal policial,
+                            así como la
+                            gestión de las situaciones del mismo.
+                        </li>
+                        <li>Área de Concursos y Baremación: planificación, tramitación y ejecución de los distintos
+                            sistemas de provisión de puestos de trabajo y bremación de los participantes.
+                        </li>
+                    </ul>
+
+                    <h5>Unidad de Régimen Disciplinario</h5>
+                    <p>
+                        Asume las funciones de administrar y gestionar el régimen disciplinario de la Policía Nacional,
+                        así como las competencias que se le atribuyen respecto de los demás empleados públicos adscritos
+                        a la Dirección General de la Policía. De esta Unidad dependerá el Área de Coordinación de Régimen
+                        Disciplinario, encargada de la coordinación, seguimiento y control de la instrucción de los
+                        expedientes
+                        disciplinarios.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>División Formación y Perfeccionamiento</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>
+                        En su función de apoyo y asistencia a la División, analiza y planifica sus líneas generales de
+                        actuación, y gestiona los asuntos relativos al régimen de personal, medios adscritos, recursos y
+                        normativa. Se responsabiliza, además, de las bases de datos propias de la División, así como de
+                        las actividades en materia de investigación y desarrollo.<br><br>
+
+                        Su titular, como segundo jefe de la División, sustituye al responsable de ésta en los casos de
+                        vacante, ausencia o enfermedad. Dependerá de la Secretaría General el Área de Planificación y
+                        Psicopedagogía, que se responsabilizará de los planes y proyectos formativos, la prospectiva y 
+                        la planificación psicopedagógica.
+                    </p>
+
+                    <h5>Escuela Nacional de Policía</h5>
+                    <p>
+                        Le corresponde desarrollar e impartir los cursos y programas formativos de acceso a las Escalas
+                        Ejecutiva y Básica de la Policía Nacional, así como las acciones formativas dirigidas a alumnos
+                        de otros cuerpos policiales que se establezcan en el ámbito de la cooperación policial, tanto a nivel
+                        nacional como internacional.<br><br>
+
+                        Asimismo llevará a cabo la programación y la ejecución de los cursos relacionados con la
+                        promoción interna de los funcionarios de la Policía Nacional, con excepción de aquellos encomendados al
+                        Centro de Altos Estudios Policiales.<br><br>
+
+                        En la Escuela Nacional de Policía, se incardinará, preferentemente, la actividad docente del
+                        Centro de Actualización y Especialización.<br><br>
+
+                        La sede de la Escuela Nacional de Policía radicará en la ciudad de Ávila.<br><br>
+                    </p>
+
+                    <h5>Centro de Actualización y Especialización</h5>
+                    <p>Al que corresponde la planificación, coordinación y dirección de las actividades docentes
+                        orientadas a la formación permanente para la actualización y especialización de los funcionarios de 
+                        la Policía Nacional, y del que depende el Centro de Prácticas Operativas encargado de organizar las 
+                        actividades docentes de adiestramiento táctico-operativo de unidades policiales. El Centro de 
+                        Actualización y Especialización tendrá ede en las ciudades de Ávila, Linares (Jaén) y Madrid, de 
+                        acuerdo con la resolución que al respecto adopte la Dirección General de la Policía, en función de 
+                        la actividad docente a impartir.
+                    </p>
+
+                    <h5>Centro de Altos Estudios Policiales</h5>
+                    <p>
+                        Con las funciones de desarrollar e impulsar las acciones formativas, específicas y
+                        complementarias, de altos responsables de la Seguridad Pública, así como del conjunto de 
+                        operadores de seguridad, en el ámbito de la Dirección General de la Policía, fomentando para 
+                        ello la participación y colaboración de la Universidad y otras Instituciones públicas y privadas. 
+                        Igualmente le competen las tareas de programar, desarrollar e impartir los cursos relacionados 
+                        con la promoción interna de los funcionarios de a Policía Nacional a la Escala Superior y a 
+                        la primera categoría de la Escala Ejecutiva.
+                    </p>
+                    <p>
+                        Del Centro de Altos Estudios Policiales dependerá el Instituto de Estudios de la Policía, con
+                        las funciones de investigación, desarrollo y promoción de nuevos métodos y técnicas profesionales,
+                        la captación y análisis de necesidades sociales que afecten o puedan afectar a la seguridad
+                        ciudadana y a  la Policía Nacional, el desarrollo de programas y proyectos de colaboración con 
+                        Universidades y otras entidades relacionadas con actividades científicas para el cumplimiento de 
+                        las anteriores funciones.
+                    </p>
+
+                    <h5>Área de Procesos Selectivos</h5>
+                    <p>Con la función de administrar los procesos selectivos para el acceso y la promoción interna a las
+                        diferentes Categorías y Escalas de la Policía Nacional, la convocatoria de los cursos de
+                        actualización para la posterior promoción por antigüedad selectiva, así como la habilitación del 
+                        personal de seguridad  privada, los procesos de acceso a la profesión de vigilantes de seguridad 
+                        y especialidades, y la inspección de sus centros de formación.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span><h4>Subdivisión General de Logística e Innovación</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>Le corresponden las funciones de prestar asistencia y apoyo a la Subdirección General en el
+                        ejercicio de sus funciones y la gestión de los medios personales y materiales asignados a la
+                        Subdirección; y liderar el desarrollo tecnológico de la Policía Nacional, potenciando, fomentando 
+                        y coordinando las diferentes acciones en el ámbito tecnológico, interior y exterior de la Policía
+                        Nacional, la investigación, el desarrollo y la innovación. Se responsabiliza de las bases de datos 
+                        propias de la Subdirección, así como del régimen interior y seguridad del complejo policial de Canillas.
+                    </p>
+
+                    <h5>Unidad de de Informática y Comunicaciones</h5>
+                    <p>
+                        Le corresponde la gestión de los recursos tecnológicos en materia de las comunicaciones y
+                        los sistemas informáticos de la Policía Nacional, la adaptación de los sistemas para cumplir con lo
+                        preceptuado en los Esquemas Nacionales de Seguridad y de Interoperabilidad y en la adecuación a la
+                        Administración Electrónica. La adquisición de los sistemas TIC, su asignación, distribución y
+                        administración.<br><br>
+
+                        De la Unidad de Informática y Comunicaciones dependen:
+                    </p>
+                    <ul>
+                        <li>El Área de Telecomunicación:
+                            Le corresponde el mantenimiento de las infraestructuras comunes necesarias para el
+                            desarrollo de las aplicaciones, la definición, implantación y mantenimiento de la arquitectura de
+                            comunicaciones y de los medios audiovisuales. Igualmente realizará el mantenimiento de los equipos y la
+                            formación técnica específica del personal del Área, a nivel central y periférico.
+                        </li>
+                        <li>El Área de Informática:
+                            Le corresponde el desarrollo de las aplicaciones informáticas, diseño, implantación y
+                            gestión de la arquitectura hardware, software y bases de datos, así como la asistencia técnica a los
+                            usuarios. El Centro de Proceso de Datos del Área de Informática radicará en la localidad de El Escorial
+                            (Madrid).
+                        </li>
+                    </ul>
+
+                    <h5>Área de Control de Costes.</h5>
+                    <p>Le corresponde la elaboración de las líneas estratégicas y los planes directores en materia
+                        de costes, la definición y normalización de estándares, protocolos y homogeneización de procedimientos, de
+                        los planes  de eficiencia, las auditorias para la evaluación de su cumplimiento por las diferentes unidades
+                        policiales (centrales y periféricas) y la supervisión de la estadística nacional de la actividad
+                        logística.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>División Económica y Técnica</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>Le corresponde el apoyo y asistencia a la División, analiza y planifica sus líneas
+                        generales de actuación, y gestiona los asuntos relativos al régimen de personal y 
+                        medios adscritos a la misma; gestiona la explotación de los medios aéreos, su control 
+                        y mantenimiento, así como la coordinación, supervisión y control de las
+                        bases periféricas, sin perjuicio de la dependencia funcional de las mismas de las
+                        respectivas Jefaturas Superiores, Comisarías Provinciales o Comisarías Locales donde 
+                        tengan su sede. Se responsabiliza además de las bases de datos propias de la División, 
+                        así como del impulso de las actividades relacionadas con la investigación y desarrollo 
+                        en las áreas de competencia de la División.
+                    </p>
+                    <p>
+                        Su titular, como segundo Jefe de la División, sustituye al responsable de ésta en los
+                        casos de vacante, ausencia o enfermedad.
+                    </p>
+
+                    <h5>Jefatura de Sistemas Especiales</h5>
+                    <p>Le corresponden las funciones de desarrollo y aplicación de equipos técnicos destinados a
+                        la investigación policial.
+                    </p>
+
+                    <h5>Unidad Económica</h5>
+                    <p>Le corresponde la elaboración de la propuesta de presupuestos de la Dirección General de
+                        la Policía, la gestión administrativa de expedientes de contratación y de gasto, el análisis,
+                        seguimiento y control de la ejecución presupuestaria, así como la gestión financiera y de pagos. 
+                        Asimismo, gestionará el gasto corriente en bienes y servicios de la Dirección General.
+                    </p>
+                    <ul>
+                        <li>ÁREA DE MEDIOS MATERIALES</li>
+                        <li>ÁREA FIANCIERA Y PRESUPUESTARIA</li>
+                        <li>SERVICIO DE INDEMNIZAZIONES</li>
+                    </ul>
+
+                    <h5>Unidad Técnica</h5>
+                    <p>
+                        Asume la dirección y coordinación en la adquisición, distribución, administración y
+                        gestión de los medios necesarios para el desarrollo de las actividades de la Dirección 
+                        General. <br>
+                        De la Unidad Técnica dependen:
+                    </p>
+                    <ul>
+                        <li>ÁREA DE PATRIMONIO Y ARQUITECTURA: con las funciones de programar, proyectar y
+                            dirigir las obras de construcción, reforma y actualización de los bienes inmuebles de 
+                            la Dirección General de Policía, así como gestionar el inventario
+                            patrimonial de la misma.
+                        </li>
+
+                        <li>ÁREA DE AUTOMOCIÓN: con las funciones de programar, distribuir y gestionar los
+                            medios de automoción, la habilitación y especialización de los conductores, así como 
+                            dar apoyo técnico-operativo al resto de unidades a través del Grupo Operativo de 
+                            Intervenciones Técnicas.
+                        </li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="barra-desplegable-subcontenido">
+                <div class="subcabecera" id="toggle">
+                    <span><h4>División de Documentos</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>
+                        Le corresponde prestar asistencia y apoyo a la División, analiza y planifica sus
+                        líneas generales de actuación y gestiona los asuntos relativos al régimen de personal 
+                        y medios adscritos a la misma, asimismo será la encargada de organizar y gestionar los 
+                        servicios relacionados con la documentación de ciudadanos españoles y extranjeros. 
+                        Se responsabiliza igualmente de las bases de datos propias de la División y tendrá
+                        acceso al Registro Central de Extranjeros para el trámite de las materias de su
+                        competencia.
+                    </p>
+                    <p>
+                        Su titular, como segundo Jefe de la División, sustituye al responsable de ésta en
+                        los casos de  vacante, ausencia o enfermedad.
+                    </p>
+
+                    <h5>Área de Tratamiento Documental y Archivo</h5>
+                    <p>
+                        Le corresponde la gestión de los fondos documentales de la Dirección General de la
+                        Policía, de acuerdo con las precisiones establecidas en la Orden INT/2528/2002, de 
+                        2 de octubre, la realización de las actividades relacionadas con la gestión de los 
+                        antecedentes de las personas de interés policial, así como las requisitorias judiciales 
+                        y policiales.
+                    </p>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span><h4>Subdirección General del Gabinete Tácnico</h4></span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <h5>Secretaría General</h5>
+                    <p>Le corresponde prestar asistencia y apoyo a la persona titular del Gabinete Técnico
+                        en el ejercicio de sus funciones y ejercer la coordinación de los órganos que la componen, así
+                        como la gestión de los recursos humanos y los medios materiales asignados a la misma.
+                    </p>
+                    <p>
+                        Dirige y supervisa la confección de la Orden General de la Dirección General de la Policía.
+                        Igualmente, prepara los informes y la documentación necesarios para la participación y
+                        comparecencia de las autoridades policiales ante otras instituciones.
+                    </p>
+                    <p>
+                        En esta misma línea, coordina y elabora los proyectos de respuesta a las preguntas e
+                        interpelaciones parlamentarias, las quejas y recomendaciones del Defensor del Pueblo y las
+                        cuestiones que plantee la ciudadanía e instituciones sobre el funcionamiento de los servicios 
+                        de la Dirección General de la Policía. Asimismo, tramita los asuntos relacionados con la transparencia 
+                        y acceso a la información pública que afecten a la Dirección General de la Policía que no sean competencias 
+                        de otros centros directivos.
+                    </p>
+                    <p>
+                        Presta asistencia técnica a los órganos que la componen y se responsabiliza de las
+                        actividades de I+D+i en el ámbito de sus competencias.
+                    </p>
+                    <p>
+                        Dentro de la Secretaría se incardina la Oficina de Traducción e Interpretación de
+                        Lenguas de la Policía Nacional y la Oficina de Asistencia en Materia de Registros (OAMR).
+                    </p>
+
+                    <h5>Área de Publicaciones</h5>
+                    <p>Coordina las publicaciones de la Dirección General de la Policía, en formato papel y
+                        en versión digital, para visibilizar el trabajo y las funciones de la Policía Nacional 
+                        al tiempo que elabora las revistas oficiales y gestiona el fondo fotográfico y documental propio 
+                        de esta actividad. Desarrolla el Programa Editorial del Ministerio del Interior en el ámbito de 
+                        la Dirección General de la Policía.
+                    </p>
+                    <p>
+                        Coordina las relaciones con entidades públicas y privadas derivadas de esta función,
+                        en particular con la Fundación Policía Española.
+                    </p>
+
+                    <h5>Área Jurídica</h5>
+                    <p>Con las funciones de estudio, preparación y tramitación de los proyectos normativos
+                        relacionados con la Dirección General de la Policía y la elaboración de los propios 
+                        del Centro Directivo. Informa los proyectos de disposiciones de carácter general 
+                        sometidos a la consideración del órgano directivo.<br>
+                        Elabora informes de contenido jurídico sobre los asuntos relacionados con las competencias de la
+                        Dirección General de la Policía que le sean encomendados por el titular de la misma. 
+                        Proporciona apoyo, asesoramiento, asistencia jurídica y tramita los proyectos de convenios entre la 
+                        Dirección General de la Policía y cualesquiera otros sujetos de Derecho Público o de 
+                        Derecho Privado, así como de los instrumentos de colaboración previstos en la Ley
+                        25/2014, de 27 de noviembre, de Tratados y otros Acuerdos Internacionales. Recaba
+                        informe de la Abogacía del Estado en el Departamento.<br><br>
+
+                        En esta área se incardina la Oficina Central Nacional de Protección de Datos de la
+                        Policía Nacional dirigida por el Delegado de Protección de Datos.
+                    </p>
+
+                    <h5>Área de Derechos Humanos e Igualdad</h5>
+                    <p>Vela por el cumplimiento, en el ámbito de la Policía Nacional, de los tratados
+                        internacionales sobre derechos humanos ratificados por España, impulsando medidas 
+                        que tengan en cuenta los dictámenes de organismos nacionales e internacionales competentes 
+                        en la materia. En el ámbito de la protección de los derechos humanos, atiende los requerimientos 
+                        de instituciones u organismos relacionados con la materia y
+                        especialmente los del Defensor del Pueblo.
+                    </p>
+                    <p>
+                        Promueve la cultura del respeto por los derechos fundamentales entre el personal
+                        funcionario de la Policía Nacional. Se encarga del análisis continúo de la situación 
+                        de la mujer en la Policía Nacional, la detección de las áreas potenciales de discriminación, 
+                        el favorecimiento de la conciliación de la vida personal y laboral, y la mejora de las 
+                        condiciones de representación y empoderamiento de la mujer en la Policía Nacional.<br><br>
+
+                        Está integrada por la Oficina Nacional de Derechos Humanos y la Oficina Nacional
+                        para la Igualdad de Género en la Policía Nacional.
+                    </p>
+
+                    <h5>Área de Coordinación Institucional e Identidad Corporativa</h5>
+                    <p>
+                        Con las funciones de dirección, supervisión y ejecución en los actos de carácter
+                        público en los que participe el titular de la Dirección General, así como en aquellos actos
+                        representativos con presencia de la Policía Nacional que asuma el Gabinete Técnico.
+                    </p>
+                    <p>
+                        Asimismo, define e impulsa la identidad corporativa velando por la correcta
+                        aplicación de los criterios de uso de la misma y asume la gestión de la marca
+                        institucional.
+                    </p>
+                    <p>
+                        En esta Área se incardinan el Servicio de Protocolo, del cual depende la Banda de
+                        Música, y la Oficina de Marca de la Policía Nacional.
+                    </p>
+                </div>
+            </article>
+            
+        </section>
+
+        <section id="distintivos">
+            <h2>DISTINTIVOS DE CARGO Y DIVISAS</h2>
+            <h5>Orden INT/430/2014, de 10 de marzo. BOE núm. 69, de 21 de marzo de 2014</h5>
+            <p>
+                Los miembros de la Policía Nacional, actuarán de uniforme o sin él, en función del destino que ocupen o
+                del servicio que desempeñen.<br><br>
+
+                El carné profesional y la placa-emblema son los distintivos de identificación.<br><br>
+
+                La placa-emblema está compuesta por el Escudo Nacional, la leyenda “Cuerpo Nacional de Policía”, y el
+                número de identificación personal, troquelado en la base del conjunto.<br><br>
+
+                La identificación del personal no uniformado de las distintas categorías, se hará necesariamente,
+                mediante la exhibición de ambos distintivos, mostrando abierta la cartera porta-carné, de forma que
+                puedan ser apreciados perfectamente el anverso del carné profesional y la placa-emblema.<br><br>
+
+                Si la naturaleza de la intervención lo requiere, podrá colocarse la cartera en algún lugar de la
+                vestimenta, de forma que quede visible la placa-emblema.
+            </p>
+            <p>
+                Cuando vistan uniforme, portarán obligatoriamente la placa-emblema, con indicación del número de
+                identificación personal, en el pecho, por encima del bolsillo superior derecho de la prenda de
+                uniformidad, igualmente, llevarán las divisas de la categoría a la que pertenezcan, en las hombreras de
+                la prenda superior y en la prenda de cabeza, así como, en su caso, en el lugar específico que para otras
+                prendas se determine en la normativa de uniformidad.
+            </p>
+
+            <h3>DISTINTIVOS DEL CARGO</h3>
+            <p>
+                Los funcionarios de la Policía Nacional que componen la Junta de Gobierno y los Jefes Superiores de
+                Policía, en sustitución de las divisas correspondientes a su escala y categoría, portarán las divisas
+                distintivas del cargo correspondientes a los puestos directivos que a continuación se citan:
+            </p>
+            <ul>
+                <li>Director Adjunto Operativo.</li>
+                <li>Subdirectores Generales.</li>
+                <li>Comisarios Generales y Jefes de División.</li>
+                <li>Jefes Superiores de Policía.</li>
+            </ul>
+            <p>
+                Con carácter general, su exhibición se efectuará en las hombreras de la prenda exterior del uniforme
+                reglamentario, así como en el lugar específico que para otras prendas se determine en esta orden y en
+                las disposiciones de desarrollo, en su caso. En el uniforme de gran gala, estas divisas distintivas irán
+                situadas en la bocamanga de la guerrera.
+            </p>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="#">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="#">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="#">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="#">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_Tupolicia.html">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="acceso_oposiciones.html">Quiero ser Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="page_emergencias.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="page_emergencias.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="#">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="img/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="img/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="img/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="img/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="img/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="img/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="img/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="conocenos.js"></script>
+
+</body>
+
+</html>
