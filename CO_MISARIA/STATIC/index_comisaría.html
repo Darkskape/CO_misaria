@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio Comisaría</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Kimberly\Documents\COMISARÍA\CSS\estilo_inicio.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\iconos png\icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\iconos png\icon_menu.png" class="iconmenu"
+                        alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+                <a href="#">Denuncias</a>
+                <a href="#">Tu policía</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+            <a href="#">Denuncias</a>
+            <a href="#">Tu policía</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+
+    <main>
+        <div class="contenedor-principal">
+            <div class="imagen-comisaria">
+                <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\head_index1.jpg" alt="Comisaría">
+                <div class="nombre-oficial  animado">
+                    <div class="nombreeicono">
+                        <img class="icono" src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\logo-comisaria.png"
+                            alt="Icono Comisaria">
+                        <h2 class="nombre-comisaria">Comisaría Colón</h2>
+                    </div>
+                    <hr class="linea">
+                    <h3 class="lema">Tu seguridad es nuestra prioridad</h3>
+                </div>
+            </div>
+
+            <section class="contenedor-seccion">
+                <h3> LO MÁS DESTACADO </h3>
+                <div class="cuadricula-general">
+
+                    <article class="seccion seccion1">
+                        <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html"> Renovación de DNI y/o Pasaporte </a>
+                    </article>
+
+                    <article class="seccion seccion2">
+                        <a href="#"> Quiero denunciar </a>
+                    </article>
+
+                    <article class="seccion seccion3">
+                        <a href="#"> Adopta un K9 </a>
+                    </article>
+
+                    <article class="seccion seccion4">
+                        <a href="#"> ¿Quieres ser policía? </a>
+                    </article>
+
+                    <article class="seccion seccion5">
+                        <a href="#"> Números de emergencia </a>
+                    </article>
+
+                    <article class="seccion seccion6">
+                        <a href="#"> Renovación de NIE </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contenedor-seccion">
+                <h3> ACTUALIDAD </h3>
+
+                <div class="carrusel-container">
+                    <button class="flecha izquierda" onclick="moverIzquierda()">←</button><!--poner un icono o imagen-->
+                    <div class="carrusel" id="carrusel">
+                        <!-- Duplicados al inicio -->
+                         <!--NOTICIA 4-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">EDUCACIÓN</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia3.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">18/06/2025</h5>
+                                <h4 class="titular">La Policía Nacional se suma a la Semana de la Administración Abierta
+                                    2025 </h4>
+                                <p class="texto-noticia">
+                                    En el marco de esta iniciativa se impartirán las charlas “Acoso escolar y
+                                    ciberacoso” y “Riesgos en Internet” dirigidas a alumnos de 5º y 6º de Primaria del
+                                    CEIP Antonio Machado de Málaga. En la Jefatura Superior de Cantabria se realizará
+                                    una Jornada de Puertas Abiertas para personas mayores, donde los asistentes podrán
+                                    disfrutar de una exhibición de medios policiales que incluirá la presencia de Guías
+                                    Caninos, Unidad Aérea de la Policía y de TEDAX-NRBQ
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+                        <!--NOTICIA 5-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">POLICÍA NACIONAL</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia4.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">19/06/2025</h5>
+                                <h4 class="titular">La Policía Nacional destapa un fraude a la Seguridad Social por
+                                    valor de más de 1.300.000 euros </h4>
+                                <p class="texto-noticia">
+                                    Agentes de la Policía Nacional han destapado un fraude a la Seguridad Social por
+                                    valor de más de 1.300.000 euros que operaban desde Barcelona, Madrid y Valencia
+                                    liderado por un matrimonio. Han sido detenidas 13 personas en Madrid y Valencia que
+                                    presuntamente conformaban una trama compuesta por 17 sociedades utilizadas para
+                                    desviar fondos y simular operaciones comerciales o societarias.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+                        <!--NOTICIA 6-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">ANTITERRORISMO</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia6.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">21/06/2025</h5>
+                                <h4 class="titular">Detenidas tres personas relacionadas con el terrorismo yihadista en
+                                    Barcelona </h4>
+                                <p class="texto-noticia">
+                                    Agentes de la Policía Nacional y de los Mossos d'Esquadra han detenido a tres
+                                    personas por su presunta participación en los delitos de enaltecimiento del
+                                    terrorismo y amenazas. Los arrestos se han llevado a cabo durante la madrugada del
+                                    pasado lunes en los municipios barceloneses de Castelldefels y Montcada i Reixac.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+                        <!-- Noticias reales -->
+                         <!--Noticia 1-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">TRÁFICO</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia1.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">10/06/2025</h5>
+                                <h4 class="titular">Recuperados más de 130 vehículos sustraídos en la Unión Europea
+                                    matriculados en España</h4>
+                                <p class="texto-noticia">
+                                    Acuerdo de 24 de abril de 2025 del Tribunal Calificador por el que se hace pública
+                                    la
+                                    relación de
+                                    personas admitidas y excluidas en la convocatoria 02/2025 de pruebas de selección
+                                    para
+                                    Vigilante
+                                    de Seguridad y su especialidad de Vigilante de Explosivos y Escolta Privado.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+
+                            </div>
+                        </div>
+                        <!--NOTICIA 2-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">
+                                    ANTIDROGAS </h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia5.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">09/06/2025</h5>
+                                <h4 class="titular"> "Narco-Michi",pillado el gato que introducía droga en una cárcel de
+                                    Costa Rica</h4>
+                                <p class="texto-noticia">
+                                    La autoridades de Costa Rica se vieron sorprendidas por un curioso narcotraficante:
+                                    un gato. Los policías descubrieron al minino con dos paquetes de marihuana y cocaína
+                                    adosados pegados al cuerpo. "Algunos medios ya lo han bautizado como el 'narco
+                                    michi'", afirma Maya Pixelskaya.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+                        <!--NOTICIA 3-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">POLICÍA NACIONAL</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia2.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">12/06/2025</h5>
+                                <h4 class="titular">La Policía Nacional libera a 23 víctimas explotadas en
+                                    establecimientos de manicura</h4>
+                                <p class="texto-noticia">
+                                    Hasta el momento, se han detenido a 15 personas e intervenido 134 vehículos de alta
+                                    gama entre los que se encuentra un turismo valorado en 250.000 €
+
+                                    Además de los vehículos sustraídos en la UE, obtenían otros de financieras y
+                                    empresas de renting, que trasladaban a España para matricularlos, previa
+                                    falsificación de los elementos de identificación
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+                        <!--NOTICIA 4-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">EDUCACIÓN</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia3.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">18/06/2025</h5>
+                                <h4 class="titular">La Policía Nacional se suma a la Semana de la Administración Abierta
+                                    2025 en Málaga </h4>
+                                <p class="texto-noticia">
+                                    En el marco de esta iniciativa se impartirán las charlas “Acoso escolar y
+                                    ciberacoso” y “Riesgos en Internet” dirigidas a alumnos de 5º y 6º de Primaria del
+                                    CEIP Antonio Machado de Málaga. En la Jefatura Superior de Cantabria se realizará
+                                    una Jornada de Puertas Abiertas para personas mayores, donde los asistentes podrán
+                                    disfrutar de una exhibición de medios policiales que incluirá la presencia de Guías
+                                    Caninos, Unidad Aérea de la Policía y de TEDAX-NRBQ
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+                        <!--NOTICIA 5-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">POLICÍA NACIONAL</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia4.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">19/06/2025</h5>
+                                <h4 class="titular">La Policía Nacional destapa un fraude a la Seguridad Social por
+                                    valor de más de 1.300.000 euros </h4>
+                                <p class="texto-noticia">
+                                    Agentes de la Policía Nacional han destapado un fraude a la Seguridad Social por
+                                    valor de más de 1.300.000 euros que operaban desde Barcelona, Madrid y Valencia
+                                    liderado por un matrimonio. Han sido detenidas 13 personas en Madrid y Valencia que
+                                    presuntamente conformaban una trama compuesta por 17 sociedades utilizadas para
+                                    desviar fondos y simular operaciones comerciales o societarias.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+                        <!--NOTICIA 6-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">ANTITERRORISMO</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia6.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">21/06/2025</h5>
+                                <h4 class="titular">Detenidas tres personas relacionadas con el terrorismo yihadista en
+                                    Barcelona </h4>
+                                <p class="texto-noticia">
+                                    Agentes de la Policía Nacional y de los Mossos d'Esquadra han detenido a tres
+                                    personas por su presunta participación en los delitos de enaltecimiento del
+                                    terrorismo y amenazas. Los arrestos se han llevado a cabo durante la madrugada del
+                                    pasado lunes en los municipios barceloneses de Castelldefels y Montcada i Reixac.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+
+                        <!-- Duplicados al final -->
+
+                        <!--Noticia 1-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">TRÁFICO</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia1.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">10/06/2025</h5>
+                                <h4 class="titular">Recuperados más de 130 vehículos sustraídos en la Unión Europea
+                                    matriculados en España</h4>
+                                <p class="texto-noticia">
+                                    Acuerdo de 24 de abril de 2025 del Tribunal Calificador por el que se hace pública
+                                    la
+                                    relación de
+                                    personas admitidas y excluidas en la convocatoria 02/2025 de pruebas de selección
+                                    para
+                                    Vigilante
+                                    de Seguridad y su especialidad de Vigilante de Explosivos y Escolta Privado.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+
+                            </div>
+                        </div>
+                        <!--NOTICIA 2-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">
+                                    ANTIDROGAS </h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia5.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">09/06/2025</h5>
+                                <h4 class="titular"> "Narco-Michi",pillado el gato que introducía droga en una cárcel de
+                                    Costa Rica</h4>
+                                <p class="texto-noticia">
+                                    La autoridades de Costa Rica se vieron sorprendidas por un curioso narcotraficante:
+                                    un gato. Los policías descubrieron al minino con dos paquetes de marihuana y cocaína
+                                    adosados pegados al cuerpo. "Algunos medios ya lo han bautizado como el 'narco
+                                    michi'", afirma Maya Pixelskaya.
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+                        <!--NOTICIA 3-->
+                        <div class="noticia">
+                            <div class="color_noticia">
+                                <h4 class="titulo-noticia">POLICÍA NACIONAL</h4>
+                            </div>
+                            <img class="imagen-noticia"
+                                src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\INICIO\noticia2.jpg" alt="Noticia">
+                            <div class="contenido_noticia">
+                                <h5 class="fecha">12/06/2025</h5>
+                                <h4 class="titular">La Policía Nacional libera a 23 víctimas explotadas laboralmente en
+                                    establecimientos de manicura</h4>
+                                <p class="texto-noticia">
+                                    Hasta el momento, se han detenido a 15 personas e intervenido 134 vehículos de alta
+                                    gama entre los que se encuentra un turismo valorado en 250.000 €
+
+                                    Además de los vehículos sustraídos en la UE, obtenían otros de financieras y
+                                    empresas de renting, que trasladaban a España para matricularlos, previa
+                                    falsificación de los elementos de identificación
+                                </p>
+                                <a href="https://ejemplo.com" class="noticia_button">Saber más</a>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                    <button class="flecha derecha" onclick="moverDerecha()">→</button>
+                </div>
+
+
+
+            </section>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- CONTENEDOR (PRINCIPAL) REDES SOCIALES -->
+    <!--IMPORTANTE: SOLO PONER EN PÁGINA DE INICIO -->
+    <div class="contenedor-redes">
+        <h2>¡SÍGUENOS!</h2>
+        <div class="image-flex">
+            <ul class="redes-sociales-grande">
+                <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\facebook.jpg"
+                            alt="Facebook"></a></li>
+                <li><a href="https://x.com/policia" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\x.png" alt="X"></a>
+                </li>
+                <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\instagram.jpg"
+                            alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\youtube.jpg"
+                            alt="YouTube"></a></li>
+                <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\tiktok.jpg" alt="TikTok"></a>
+                </li>
+                <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\whatsapp.jpg"
+                            alt="WhatsApp"></a></li>
+                <li><a href="https://t.me/policianacional" target="_blank"><img
+                            src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\telegram.jpg"
+                            alt="Telegram"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer-container">
+            <div class="indicefinal">
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">
+                        <h2>Trámites </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Dni y Pasaporte</a></li>
+                        <li><a class="enlace-pagina" href="#">Permisos de viaje</a></li>
+                        <li><a class="enlace-pagina" href="#">Extranjeria</a></li>
+                        <li><a class="enlace-pagina" href="#">Antecedentes</a></li>
+                    </ul>
+                </div>
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="#">
+                        <h2> Denuncias </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Reportar</a></li>
+                        <li><a class="enlace-pagina" href="#">Desaparecidos</a></li>
+                        <li><a class="enlace-pagina" href="#">Buscados</a></li>
+                        <li><a class="enlace-pagina" href="#">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="#">
+                        <h2> Tu policía </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Conócenos</a></li>
+                        <li><a class="enlace-pagina" href="#">Quiero ser Policia</a></li>
+                        <li><a class="enlace-pagina" href="#">Adopta un K9</a></li>
+                    </ul>
+                </div>
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">
+                        <h2> Emergencias </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina"
+                                href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Información</a>
+                        </li>
+                        <li><a class="enlace-pagina" href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+            <div class="sub-footer">
+                <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="#">Protección
+                        de
+                        datos</a>
+                </span>
+                <div class="fila-redes">
+                    <p> Siguenos en: </p>
+                    <ul class="redes-sociales">
+                        <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\facebook.jpg"
+                                    alt="Facebook"></a></li>
+                        <li><a href="https://x.com/policia" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\x.png" alt="X"></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\instagram.jpg"
+                                    alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\youtube.jpg"
+                                    alt="YouTube"></a></li>
+                        <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\tiktok.jpg"
+                                    alt="TikTok"></a></li>
+                        <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\whatsapp.jpg"
+                                    alt="WhatsApp"></a></li>
+                        <li><a href="https://t.me/policianacional" target="_blank"><img
+                                    src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\REDES SOCIALES\telegram.jpg"
+                                    alt="Telegram"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="C:\Users\Kimberly\Documents\COMISARÍA\JS\Inicio.js"></script>
+</body>
+
+</html>
