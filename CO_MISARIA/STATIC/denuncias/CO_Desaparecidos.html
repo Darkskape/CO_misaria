@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
     <link rel="stylesheet" href="style_denun.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
     <title>Desaparecidos</title>
 </head>
 <body>
@@ -31,313 +37,504 @@
             <a href="#"> Tu policia </a>
             <a href="#"> Emergencias </a>
         </div>
-        <div class="denuncias">
-            <ul>
-                <li> <a href="CO_Denuncias.html">Denuncias</a> </li>
-                <li> <a href="CO_Desaparecidos.html"> Desaparecidos</a> </li>
-                <li> <a href="CO_Buscados.html">Buscados</a> </li>
-                <li><a href="CO_Ciberseguridad.html">Ciberseguridad </a> </li>
-            </ul>
-        </div>
     </nav>
-
-<!-- Agrega este aside antes del contenido principal, justo después de <body> o <nav> -->
-<aside class="aside-buscador">
-    <form class="form-buscador">
-        <h3>Búsqueda avanzada</h3>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre">
-
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos">
-
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" min="0" max="100">
-
-        <label for="nacionalidad">Nacionalidad:</label>
-        <select id="nacionalidad" name="nacionalidad">
-            <option value="">Seleccione un país</option>
-            <!-- Lista de países (abreviada, puedes completarla según necesidad) -->
-            <option value="España">España</option>
-            <option value="Argentina">Argentina</option>
-            <option value="México">México</option>
-            <option value="Estados Unidos">Estados Unidos</option>
-            <option value="Francia">Francia</option>
-            <option value="Alemania">Alemania</option>
-            <option value="Italia">Italia</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Venezuela">Venezuela</option>
-            <option value="Perú">Perú</option>
-            <option value="Chile">Chile</option>
-            <option value="Brasil">Brasil</option>
-            <option value="Uruguay">Uruguay</option>
-            <option value="Paraguay">Paraguay</option>
-            <option value="Bolivia">Bolivia</option>
-            <option value="Ecuador">Ecuador</option>
-            <option value="Guatemala">Guatemala</option>
-            <option value="Honduras">Honduras</option>
-            <option value="El Salvador">El Salvador</option>
-            <option value="Nicaragua">Nicaragua</option>
-            <option value="Costa Rica">Costa Rica</option>
-            <option value="Panamá">Panamá</option>
-            <option value="Cuba">Cuba</option>
-            <option value="República Dominicana">República Dominicana</option>
-            <option value="Puerto Rico">Puerto Rico</option>
-            <option value="Rusia">Rusia</option>
-            <option value="China">China</option>
-            <option value="Japón">Japón</option>
-            <option value="India">India</option>
-            <option value="Reino Unido">Reino Unido</option>
-            <option value="Canadá">Canadá</option>
-            <option value="Australia">Australia</option>
-            <option value="Sudáfrica">Sudáfrica</option>
-            <!-- ...agrega todos los países que necesites... -->
-        </select>
-
-        <label for="buscado_por">Buscado por (país):</label>
-        <select id="buscado_por" name="buscado_por">
-            <option value="">Seleccione un país</option>
-            <!-- Puedes reutilizar la lista de países anterior -->
-            <option value="España">España</option>
-            <option value="Argentina">Argentina</option>
-            <option value="México">México</option>
-            <option value="Estados Unidos">Estados Unidos</option>
-            <option value="Francia">Francia</option>
-            <option value="Alemania">Alemania</option>
-            <option value="Italia">Italia</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Venezuela">Venezuela</option>
-            <option value="Perú">Perú</option>
-            <option value="Chile">Chile</option>
-            <option value="Brasil">Brasil</option>
-            <option value="Uruguay">Uruguay</option>
-            <option value="Paraguay">Paraguay</option>
-            <option value="Bolivia">Bolivia</option>
-            <option value="Ecuador">Ecuador</option>
-            <option value="Guatemala">Guatemala</option>
-            <option value="Honduras">Honduras</option>
-            <option value="El Salvador">El Salvador</option>
-            <option value="Nicaragua">Nicaragua</option>
-            <option value="Costa Rica">Costa Rica</option>
-            <option value="Panamá">Panamá</option>
-            <option value="Cuba">Cuba</option>
-            <option value="República Dominicana">República Dominicana</option>
-            <option value="Puerto Rico">Puerto Rico</option>
-            <option value="Rusia">Rusia</option>
-            <option value="China">China</option>
-            <option value="Japón">Japón</option>
-            <option value="India">India</option>
-            <option value="Reino Unido">Reino Unido</option>
-            <option value="Canadá">Canadá</option>
-            <option value="Australia">Australia</option>
-            <option value="Sudáfrica">Sudáfrica</option>
-            <!-- ...agrega todos los países que necesites... -->
-        </select>
-
-        <label for="palabra_clave">Palabra clave:</label>
-        <input type="text" id="palabra_clave" name="palabra_clave">
-
-        <button type="submit" class="modern-button">Buscar</button>
-    </form>
-</aside>
-<div class=" desaparecidos">
-    <div class="desaparecidos-secciones">
-    <div class="grupo-desaparecidos">
-        <div class="menores">
-            <h2>Menores</h2>
-            <ul>
-            <img src="desaparecidos/analoayza.jpg" alt="100px100" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Ana Loayza</li>
-            <li>Nacionalidad: Española</li>
-            <li>Edad: 10 años</li>
-            <li>Lugar de Desaparacion: Carpio de Tajo (EL) Toledo, Castilla La Mancha</li>
-            <p>Descripcion: Desapareció el 13/05/2025 en Carpio de Tajo (el) (Toledo)</p>
-            <li>Color de Ojos: negros</li>
-            <li>Color de Pelo: Castaño oscuro</li>
-            <li>Tipo de Pelo: Liso</li>
-            <li>Mide: 1,35</li>
-            <li>Peso: 30 kilos</li>
-            <li>Sexo: Mujer</li>
-            <li>Constitucion fisica: delgada</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/dantelightyear.jpg" alt="Dante Lightyear" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Dante Lightyear</li>
-            <li>Nacionalidad: Española</li>
-            <li>Edad: 12 años</li>
-            <li>Lugar de Desaparicion: Madrid</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/flormiranda.jpg" alt="Flor Miranda" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Flor Miranda</li>
-            <li>Nacionalidad: Argentina</li>
-            <li>Edad: 14 años</li>
-            <li>Lugar de Desaparicion: Buenos Aires</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/josefapig.jpg" alt="Josefa" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Josefa Pig</li>
-            <li>Nacionalidad: Holandesa</li>
-            <li>Edad: 11 años</li>
-            <li>Lugar de Desaparicion: Fuenlabrada,Madrid</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/luiguibros.jpg" alt="Luigui Bros" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Luigui Bros</li>
-            <li>Nacionalidad: Italiana</li>
-            <li>Edad: 13 años</li>
-            <li>Lugar de Desaparicion: Vaticano, Roma</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/melissanuñez.jpg" alt="Melissa Nuñez" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Melissa Nuñez</li>
-            <li>Nacionalidad: Mexicana</li>
-            <li>Edad: 9 años</li>
-            <li>Lugar de Desaparicion: Ciudad de Mexico</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/odethbalboa.jpg" alt="Odeth Balboa" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Odeth Balboa</li>
-            <li>Nacionalidad:Inglesa</li>
-            <li>Edad: 15 años</li>
-            <li>Lugar de Desaparicion: MArbella</li>
-            </li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/olivermanzano.jpg" alt="Oliver Manzano" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Oliver Manzano</li>
-            <li>Nacionalidad: Española</li>
-            <li>Edad: 8 años</li>
-            <li>Lugar de Desaparicion: Sevilla</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/robertomosquera.jpg" alt="Roberto Mosquera" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Roberto Mosquera</li>
-            <li>Nacionalidad: Peruana</li>
-            <li>Edad: 13 años</li>
-            <li>Lugar de Desaparicion: Tokio,Japon</li>
-            </ul>
-            <ul>
-            <img src="desaparecidos/timoteonarvaez.jpg" alt="Timoteo Narvaez" class="img-desaparecidos">
-            <li>Nombre y Apellidos: Timoteo Narvaez</li>
-            <li>Nacionalidad: Ecuatoriana</li>
-            <li>Edad: 10 años</li>
-            <li>Lugar de Desaparicion: Quito</li>
-            </ul>
+    <main>
+        <div class="banner">
+            <h1>ULTIMAS DESAPARICIONES</h1>
         </div>
-        <div class="adultos">
-            <h3>Adultos</h3>
-            <ul>
-                <img src="desaparecidos/Angela.jpg" alt="100px100" class="img-desaparecidos">
-                <li> Nombre y Apellidos:Angela Martinez,
-                <li>Nacionalidad:Española. </li> 
-                <li>Edad:35 años</li>
-                <li>Vista ultima vez en :Madrid.</li>
-            </ul>
-            <ul>
-                <img src="desaparecidos/Federico.jpg" alt="Federico wearing a dark turtleneck sweater standing against a plain light-colored wall, neutral expression, indoor setting" class="img-desaparecidos">
-                <li> Nombre y Apellidos:Federico Garcia.
-                <li>Nacionalidad:Española. </li> 
-                <li>Edad:45 años</li>
-                <li>visto ultima  vez en :Barcelona.</li>
+    </main>
+    <div class="main-content-desaparecidos">
+      <aside class="aside-buscador">
+        <form class="form-buscador">
+            <h3>Búsqueda avanzada</h3>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos">
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0" max="100">
+
+            <label for="nacionalidad">Nacionalidad:</label>
+            <select id="nacionalidad" name="nacionalidad">
+                <option value="">Seleccione un país</option>
+                <!-- Lista de países (abreviada, puedes completarla según necesidad) -->
+                <option value="España">España</option>
+                <option value="Argentina">Argentina</option>
+                <option value="México">México</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Francia">Francia</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Italia">Italia</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Perú">Perú</option>
+                <option value="Chile">Chile</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Cuba">Cuba</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Rusia">Rusia</option>
+                <option value="China">China</option>
+                <option value="Japón">Japón</option>
+                <option value="India">India</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Australia">Australia</option>
+                <option value="Sudáfrica">Sudáfrica</option>
+                <!-- ...agrega todos los países que necesites... -->
+            </select>
+            <label for="visto ultima vez">Visto ultima vez (país):</label>
+            <select id="visto ultima vez" name="visto ultima vez">
+                <option value="">Seleccione un país</option>
+                <!-- Puedes reutilizar la lista de países anterior -->
+                <option value="España">España</option>
+                <option value="Argentina">Argentina</option>
+                <option value="México">México</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Francia">Francia</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Italia">Italia</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Perú">Perú</option>
+                <option value="Chile">Chile</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Cuba">Cuba</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Rusia">Rusia</option>
+                <option value="China">China</option>
+                <option value="Japón">Japón</option>
+                <option value="India">India</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Australia">Australia</option>
+                <option value="Sudáfrica">Sudáfrica</option>
+                <!-- ...agrega todos los países que necesites... -->
+            </select>
+            <label for="palabra_clave">Palabra clave:</label>
+            <input type="text" id="palabra_clave" name="palabra_clave">
+
+            <button type="submit" class="modern-button">Buscar</button>
+        </form>
+      </aside>
+    <div class="desaparecidos">
+        <div class="desaparecidos-secciones">
+            <div class="grupo-desaparecidos">
+                <div class="menores">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)"> Menores de edad</button>
+                        <div class="faq-answer" style="display: none;">
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/analoayza.jpg" alt="100px100" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Ana Loayza</li>
+                                <li>Nacionalidad: Española</li>
+                                <li>Edad: 10 años</li>
+                                <li>Lugar de Desaparacion: Carpio de Tajo (EL) Toledo, Castilla La Mancha</li>
+                                <li>Descripcion: Desapareció el 13/05/2025 en Carpio de Tajo (el) (Toledo)</li>
+                                <li>Color de Ojos: negros</li>
+                                <li>Color de Pelo: Castaño oscuro</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,35</li>
+                                <li>Peso: 30 kilos</li>
+                                <li>Sexo: Mujer</li>
+                                <li>Constitucion fisica: delgada</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/dantelightyear.jpg" alt="Dante Lightyear"
+                                    class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Dante Lightyear</li>
+                                <li>Nacionalidad: Española</li>
+                                <li>Edad: 12 años</li>
+                                <li>Lugar de Desaparicion: Madrid</li>
+                                <li>Color de Ojos: Marrones</li>
+                                <li>Color de Pelo: Rubio</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,40</li>
+                                <li>Peso: 35 kilos</li>
+                                <li>Sexo: Hombre</li>
+                                <li>Constitucion fisica: Normal</li>
+                            </ul>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/flormiranda.jpg" alt="Flor Miranda"
+                                    class="img-desaparecidos niños">
+                                <li>Nombre y Apellidos: Flor Miranda</li>
+                                <li>Nacionalidad: Argentina</li>
+                                <li>Edad: 14 años</li>
+                                <li>Lugar de Desaparicion: Buenos Aires</li>
+                                <li>Color de Ojos: Verdes</li>
+                                <li>Color de Pelo: Castaño claro</li>
+                                <li>Tipo de Pelo: Ondulado</li>
+                                <li>Mide: 1,50</li>
+                                <li>Peso: 40 kilos</li>
+                                <li>Sexo: Mujer</li>
+                                <li>Constitucion fisica: Delgada</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/josefapig.jpg" alt="Josefa" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Josefa Pig</li>
+                                <li>Nacionalidad: Holandesa</li>
+                                <li>Edad: 11 años</li>
+                                <li>Lugar de Desaparicion: Fuenlabrada,Madrid</li>
+                                <li>Color de Ojos: Azules</li>
+                                <li>Color de Pelo: Rubio</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,30</li>
+                                <li>Peso: 28 kilos</li>
+                                <li>Sexo: Mujer</li>
+                                <li>Constitucion fisica: Delgada</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/luiguibros.jpg" alt="Luigui Bros" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Luigui Bros</li>
+                                <li>Nacionalidad: Italiana</li>
+                                <li>Edad: 13 años</li>
+                                <li>Lugar de Desaparicion: Vaticano, Roma</li>
+                                <li>Color de Ojos: Marrones</li>
+                                <li>Color de Pelo: Negro</li>
+                                <li>Tipo de Pelo: Rizado</li>
+                                <li>Mide: 1,38</li>
+                                <li>Peso: 32 kilos</li>
+                                <li>Sexo: Hombre</li>
+                                <li>Constitucion fisica: Normal</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/melissanuñez.jpg" alt="Melissa Nuñez" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Melissa Nuñez</li>
+                                <li>Nacionalidad: Mexicana</li>
+                                <li>Edad: 9 años</li>
+                                <li>Lugar de Desaparicion: Ciudad de Mexico</li>
+                                <li>Color de Ojos: Marrones</li>
+                                <li>Color de Pelo: Castaño oscuro</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,20</li>
+                                <li>Peso: 25 kilos</li>
+                                <li>Sexo: Mujer</li>
+                                <li>Constitucion fisica: Delgada</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/odethbalboa.jpg" alt="Odeth Balboa" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Odeth Balboa</li>
+                                <li>Nacionalidad:Inglesa</li>
+                                <li>Edad: 15 años</li>
+                                <li>Lugar de Desaparicion: MArbella</li>
+                                <li>Color de Ojos: Azules</li>
+                                <li>Color de Pelo: Rubio</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,55</li>
+                                <li>Peso: 45 kilos</li>
+                                <li>Sexo: Mujer</li>
+                                <li>Constitucion fisica: Normal</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/olivermanzano.jpg" alt="Oliver Manzano"
+                                    class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Oliver Manzano</li>
+                                <li>Nacionalidad: Española</li>
+                                <li>Edad: 8 años</li>
+                                <li>Lugar de Desaparicion: Sevilla</li>
+                                <li>Color de Ojos: Marrones</li>
+                                <li>Color de Pelo: Castaño</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,25</li>
+                                <li>Peso: 22 kilos</li>
+                                <li>Sexo: Hombre</li>
+                                <li>Constitucion fisica: Delgada</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/robertomosquera.jpg" alt="Roberto Mosquera"
+                                    class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Roberto Mosquera</li>
+                                <li>Nacionalidad: Peruana</li>
+                                <li>Edad: 13 años</li>
+                                <li>Lugar de Desaparicion: Tokio,Japon</li>
+                                <li>Color de Ojos: Marrones</li>
+                                <li>Color de Pelo: Castaño oscuro</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,28</li>
+                                <li>Peso: 27 kilos</li>
+                                <li>Sexo: Hombre</li>
+                                <li>Constitucion fisica: Delgada</li>
+                            </ul>
+                        </div>
+                        <div class="niños">
+                            <ul>
+                                <img src="desaparecidos/timoteonarvaez.jpg" alt="Timoteo Narvaez"
+                                    class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Timoteo Narvaez</li>
+                                <li>Nacionalidad: Ecuatoriana</li>
+                                <li>Edad: 10 años</li>
+                                <li>Lugar de Desaparicion: Quito</li>
+                                <li>Color de Ojos: Negros</li>
+                                <li>Color de Pelo: Negro</li>
+                                <li>Tipo de Pelo: Liso</li>
+                                <li>Mide: 1,37</li>
+                                <li>Peso: 33 kilos</li>
+                                <li>Sexo: Hombre</li>
+                                <li>Constitucion fisica: Normal</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="adultos">
+             <div class="adultos">
+                <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)"> Adultos</button>
+                        <div class="faq-answer" style="display: none;">
+                        <ul>
+                            <img src="desaparecidos/Angela.jpg" alt="Angela Martinez" class="img-desaparecidos">
+                            <li>Nombre y Apellidos: Angela Martinez</li>
+                            <li>Nacionalidad: Española</li>
+                            <li>Edad: 35 años</li>
+                            <li>Vista última vez en: Madrid</li>
+                            <li>Descripción: Cabello castaño, ojos marrones, contextura media, 1,65 m de altura.</li>
+                        </ul>
+                        <ul>
+                            <img src="desaparecidos/Federico.jpg" alt="Federico Garcia" class="img-desaparecidos">
+                            <li>Nombre y Apellidos: Federico Garcia</li>
+                            <li>Nacionalidad: Española</li>
+                            <li>Edad: 45 años</li>
+                            <li>Visto última vez en: Barcelona</li>
+                            <li>Descripción: Cabello corto negro, barba, complexión robusta, 1,80 m de altura.</li>
+                        </ul>
+                        <ul>
+                            <img src="desaparecidos/arya.jpg" alt="Arya" class="img-desaparecidos">
+                            <li>Nombre y Apellidos: Arya Fernández</li>
+                            <li>Nacionalidad: Española</li>
+                            <li>Edad: 29 años</li>
+                            <li>Vista última vez en: Madrid</li>
+                            <li>Descripción: Cabello largo y liso color negro, ojos verdes, piel clara, 1,70 m de
+                                altura, llevaba chaqueta roja.</li>
+                        </ul>
+                        <ul>
+                            <img src="desaparecidos/carmen.jpg" alt="Carmen" class="img-desaparecidos">
+                            <li>Nombre y Apellidos: Carmen López</li>
+                            <li>Nacionalidad: Española</li>
+                            <li>Edad: 38 años</li>
+                            <li>Vista última vez en: Asturias</li>
+                            <li>Descripción: Cabello rubio rizado, ojos azules, complexión delgada, 1,60 m de altura,
+                                vestía pantalón vaquero y suéter azul.</li>
+                        </ul>
+                        <ul>
+                            <img src="desaparecidos/guillermo.jpg" alt="Guillermo" class="img-desaparecidos">
+                            <li>Nombre y Apellidos: Guillermo Torres</li>
+                            <li>Nacionalidad: Española</li>
+                            <li>Edad: 41 años</li>
+                            <li>Visto última vez en: Barcelona</li>
+                            <li>Descripción: Cabello castaño corto, ojos marrones, complexión atlética, 1,78 m de
+                                altura, llevaba mochila negra.</li>
+                        </ul>
+                        <ul>
+                            <img src="desaparecidos/fiorela.jpg" alt="Fiorela" class="img-desaparecidos">
+                            <li>Nombre y Apellidos: Fiorela Gómez</li>
+                            <li>Nacionalidad: Española</li>
+                            <li>Edad: 33 años</li>
+                            <li>Vista última vez en: Sevilla</li>
+                            <li>Descripción: Cabello pelirrojo, ojos verdes, piel clara, 1,68 m de altura, vestía
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="mayores65">
-            <h4>Mayores</h4>
-            <ul>
-                <li>Ejemplo: Pedro Ruiz, 78 años, nacionalidad colombiana, desaparecido en Valencia.</li>
-                <!-- Agrega aquí los casos de mayores -->
-            </ul>
+        </div>    
+            <div class="mayores65">
+                        <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)"> Mayores </button>
+                        <div class="faq-answer" style="display: none;">
+                        <div class="tercera edad">
+                            <ul>
+                                <img src="desaparecidos/agueda.jpg" alt="Agueda" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Agueda Fernández</li>
+                                <li>Nacionalidad: Española</li>
+                                <li>Edad: 72 años</li>
+                                <li>Vista última vez en: Portugal</li>
+                                <li>Descripción: Cabello canoso, ojos marrones, complexión delgada, 1,58 m de altura,
+                                    vestía abrigo gris y bufanda azul.</li>
+                            </ul>
+                            <ul>
+                                <img src="desaparecidos/amanciocruz.jpg" alt="Elderly man named Amacio Cruz with white hair and green eyes, wearing a brown hat and holding a cane, standing outdoors in a calm and neutral setting" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Amacio Cruz</li>
+                                <li>Nacionalidad: Italiana</li>
+                                <li>Edad: 75 años</li>
+                                <li>Vista última vez en: Italia</li>
+                                <li>Descripción: Cabello blanco, ojos verdes, complexión media, 1,70 m de altura,
+                                    llevaba sombrero marrón y bastón.</li>
+                            </ul>
+                            <ul>
+                                <img src="desaparecidos/genarorodriguez.jpg" alt="Genaro Rodriguez"
+                                    class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Genaro Rodriguez</li>
+                                <li>Nacionalidad: Inglesa</li>
+                                <li>Edad: 80 años</li>
+                                <li>Vista última vez en: Inglaterra</li>
+                                <li>Descripción: Cabello gris, ojos azules, complexión robusta, 1,75 m de altura, vestía
+                                    chaqueta azul marino y pantalón beige.</li>
+                            </ul>
+                            <ul>
+                                <img src="desaparecidos/josefinapig.jpg" alt="Josefina Pig" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Josefina Pig</li>
+                                <li>Nacionalidad: Española</li>
+                                <li>Edad: 77 años</li>
+                                <li>Vista última vez en: Granada</li>
+                                <li>Descripción: Cabello corto y blanco, ojos marrones, complexión baja, 1,55 m de
+                                    altura, llevaba bolso rojo y gafas.</li>
+                            </ul>
+                            <ul>
+                                <img src="desaparecidos/mafalda.jpg" alt="Mafalda" class="img-desaparecidos">
+                                <li>Nombre y Apellidos: Mafalda Gómez</li>
+                                <li>Nacionalidad: Española</li>
+                                <li>Edad: 81 años</li>
+                                <li>Vista última vez en: Galicia</li>
+                                <li>Descripción: Cabello blanco rizado, ojos verdes, complexión delgada, 1,60 m de
+                                    altura, vestía falda azul y chaqueta verde.</li>
+                            </ul>
+                        </div>
+            </div>
+            <div class="cajabuscador">
+                <h5>¿Has visto a alguien?</h5>
+                <p>Si tienes información sobre alguna de estas personas, por favor contacta a la policía.</p>
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+            </div>
         </div>
     </div>
-    </div>
+    </main>
+    <script>
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+    <footer>
+    </body>
+                <footer>
+                    <div class="indicefinal">
+                        <div class="cajafinal">
+                            <b> Inicio </b>
+                            <ul>
+                                <li><a href="">Dni y Pasaporte</a></li>
+                                <li><a href="#">Permisos de viaje</a></li>
+                                <li><a href="#">Extranjeria</a></li>
+                                <li><a href="#">Antecedentes</a></li>
+                            </ul>
+                        </div>
 
-    <div class="cajabuscador">
-        <h3>¿Has visto a alguien?</h3>
-        <p>Si tienes información sobre alguna de estas personas, por favor contacta a la policía.</p>
-        <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
-    </div>
+                        <div class="cajafinal">
+                            <b> Denuncias </b>
+                            <ul>
+                                <li> <a href="CO_Denuncias.html">Denuncias</a> </li>
+                                <li> <a href="CO_Desaparecidos.html"> Desaparecidos</a> </li>
+                                <li> <a href="CO_Buscados.html">Buscados</a> </li>
+                                <li><a href="CO_Ciberseguridad.html">Ciberseguridad </a> </li>
+                            </ul>
+                        </div>
+
+                        <div class="cajafinal">
+                            <b> Tu Policia</b>
+                            <ul>
+                                <li><a href="">Conocenos</a></li>
+                                <li><a href="#">Quiero ser Policia</a></li>
+                                <li><a href="#">Adopta un K9</a></li>
+                            </ul>
+                        </div>
+                        <div class="cajafinal">
+                            <b> Emergencias </b>
+                            <ul>
+                                <li><a href="#">Protocolos</a></li>
+                                <li><a href="">Atencion Auxilio</a></li>
+                                <li><a href="#">Guardia Civil</a></li>
+                                <li><a href="#">Samur</a></li>
+                                <li><a href="#">Antidisturbios</a></li>
+                                <li><a href="#">Bomberos</a></li>
+                                <li><a href="#">Radiopatrullas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="subfooter">
+                        <p><b>© 2025 DIRECCION GENERAL DE COMISERIA COLON | Proteccion de Datos | Aviso Legal </b></p>
+
+                        <b>SIGUENOS!</b>
+                        <div class="redes">
+                            <ul class="redes">
+                                <li><a href="https://www.facebook.com/" target="_blank"><img
+                                            src="C:\Users\DEBBIE\Documents\CO_MISARIA\imagenes\facebook.jpg" alt="Facebook"></a></li>
+                                <li><a href="https://X.com/" target="_blank"><img src="C:\Users\DEBBIE\Documents\CO_MISARIA\imagenes\x.png"
+                                            alt="X"></a></li>
+                                <li><a href="https://www.instagram.com/" target="_blank"><img
+                                            src="/CO_MISARIA/imagenes/instagram.jpg" alt="Instagram"></a></li>
+                                <li><a href="https://www.youtube.com/" target="_blank"><img
+                                            src="/CO_MISARIA/imagenes/youtube.jpg" alt="YouTube"></a></li>
+                                <li><a href="https://www.tiktok.com/" target="_blank"><img
+                                            src="/CO_MISARIA/imagenes/tiktok.jpg" alt="TikTok"></a></li>
+                                <li><a href="https://www.whatsapp.com/" target="_blank"><img
+                                            src="/CO_MISARIA/imagenes/whatsapp.jpg" alt="WhatsApp"></a></li>
+                                <li><a href="https://www.telegram.com" target="_blank"><img
+                                            src="/CO_MISARIA/imagenes/telegram.jpg" alt="Telegram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+                <div style="position: fixed; bottom: 50px; right: 20px; z-index: 1000;">
+                </footer>
+                <div style="position: fixed; bottom: 50px; right: 20px; z-index: 1000;">
+                    <button onclick="scrollUp()" style="background:none; border:none; cursor:pointer;">
+                        <img src="/CO_MISARIA/imagenes/iconos png/scrollup.png" alt="subir"
+                            style="width:40px; height:40px;">
+                    </button>
+                </div>
+                <script>
+                    function scrollUp() {
+                        // Desplazamiento suave hacia arriba
+                        window.scrollBy({
+                            top: -window.scrollY, // Cantidad de píxeles hacia arriba
+                            behavior: 'auto' // Desplazamiento suave
+                        });
+                    }
+                </script>
+                <input name="animation" type="hidden">
 </body>
-<footer>
-    <div class="indicefinal">
-        <div class="cajafinal">
-            <b> Inicio </b>
-            <ul>
-                <li><a href="">Dni y Pasaporte</a></li>
-                <li><a href="#">Permisos de viaje</a></li>
-                <li><a href="#">Extranjeria</a></li>
-                <li><a href="#">Antecedentes</a></li>
-            </ul>
-        </div>
-
-        <div class="cajafinal">
-            <b> Denuncias </b>
-            <ul>
-                <li> <a href="CO_Denuncias.html">Denuncias</a> </li>
-                <li> <a href="CO_Desaparecidos.html"> Desaparecidos</a> </li>
-                <li> <a href="CO_Buscados.html">Buscados</a> </li>
-                <li><a href="CO_Ciberseguridad.html">Ciberseguridad </a> </li>
-            </ul>
-        </div>
-
-        <div class="cajafinal">
-            <b> Tu Policia</b>
-            <ul>
-                <li><a href="">Conocenos</a></li>
-                <li><a href="#">Quiero ser Policia</a></li>
-                <li><a href="#">Adopta un K9</a></li>
-            </ul>
-        </div>
-        <div class="cajafinal">
-            <b> Emergencias </b>
-            <ul>
-                <li><a href="#">Protocolos</a></li>
-                <li><a href="">Atencion Auxilio</a></li>
-                <li><a href="#">Guardia Civil</a></li>
-                <li><a href="#">Samur</a></li>
-                <li><a href="#">Antidisturbios</a></li>
-                <li><a href="#">Bomberos</a></li>
-                <li><a href="#">Radiopatrullas</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="subfooter">
-        <p><b>© 2025 DIRECCION GENERAL DE COMISERIA COLON | Proteccion de Datos | Aviso Legal </b></p>
-
-     <b>SIGUENOS!</b>
-        <div class="redes">
-            <ul class="redes">
-                <li><a href="https://www.facebook.com/" target="_blank"><img src="/CO_MISARIA/imagenes/facebook.jpg"
-                            alt="Facebook"></a></li>
-                <li><a href="https://X.com/" target="_blank"><img src="/CO_MISARIA/imagenes/x.png" alt="X"></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><img src="/CO_MISARIA/imagenes/instagram.jpg"
-                            alt="Instagram"></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><img src="/CO_MISARIA/imagenes/youtube.jpg"
-                            alt="YouTube"></a></li>
-                <li><a href="https://www.tiktok.com/" target="_blank"><img src="/CO_MISARIA/imagenes/tiktok.jpg"
-                            alt="TikTok"></a></li>
-                <li><a href="https://www.whatsapp.com/" target="_blank"><img src="/CO_MISARIA/imagenes/whatsapp.jpg"
-                            alt="WhatsApp"></a></li>
-                <li><a href="https://www.telegram.com" target="_blank"><img src="/CO_MISARIA/imagenes/telegram.jpg"
-                            alt="Telegram"></a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-<div style="position: fixed; bottom: 50px; right: 20px; z-index: 1000;">
-    <button onclick="scrollUp()" style="background:none; border:none; cursor:pointer;">
-        <img src="/CO_MISARIA/imagenes/iconos png/scrollup.png" alt="subir" style="width:40px; height:40px;">
-    </button>
-</div>
-<script>
-    function scrollUp() {
-        // Desplazamiento suave hacia arriba
-        window.scrollBy({
-            top: -window.scrollY, // Cantidad de píxeles hacia arriba
-            behavior: 'auto' // Desplazamiento suave
-        });
-    }
-</script>
-<input name="animation" type="hidden">
-
 </html>
