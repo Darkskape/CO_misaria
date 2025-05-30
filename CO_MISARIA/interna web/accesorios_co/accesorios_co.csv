@@ -1,0 +1,15 @@
+id.accesorios,denominacion,cantidad,activos,reparacion,peticion,eliminar
+01,Linterna,100,85,5,10,5
+02,Esposas,150,145,NULL,5,NULL
+03,Radio,50,49,1,NULL,NULL
+04,"Bateria radio",100,89,3,6,1
+05,"Chaleco antibalas",40,38,NULL,2,NULL
+06,Navaja,80,60,NULL,20,NULL
+07,"Guantes (caja)",300,200,NULL,80,20
+08,"Guantes (anticorte)",45,40,NULL,NULL,5
+09,Ariete,3,2,1,NULL,NULL
+10,Escudos,60,50,7,3,NULL
+11,Cascos,60,45,13,2,NULL
+12,"Cinta policial (rollo)",300,295,NULL,5,NULL
+13,"Cadenas de puas",7,7,NULL,NULL,NULL
+14,"Chaleco anticorte",40,30,NULL,5,5
