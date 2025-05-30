@@ -1,0 +1,101 @@
+id.arma,id.user,fecha.altaarma,tipo.arma,tipo.municionprimaria,tipo.municionsegundaria,fecha.ultimomantenimiento
+001,022,2005-02-01,Personal,.45,NULL,2025-03-05
+002,017,2005-04-01,Personal,9mm,NULL,2025-03-01
+003,016,2005-04-01,Personal,.45,NULL,2025-03-01
+004,015,2005-06-01,Personal,9mm,NULL,2025-03-25
+005,014,2005-06-01,Personal,9mm,NULL,2025-05-15
+006,013,2005-10-01,Personal,9mm,NULL,2025-04-16
+007,012,2005-12-01,Personal,9mm,NULL,2025-05-27
+008,011,2006-06-01,Personal,9mm,NULL,2025-05-06
+009,010,2006-06-01,Personal,9mm,NULL,2025-05-29
+010,009,2006-06-01,Personal,9mm,NULL,2025-03-25
+011,008,2007-05-01,Personal,9mm,NULL,2025-04-04
+012,007,2007-05-01,Personal,9mm,NULL,2025-03-30
+013,006,2009-02-01,Personal,9mm,NULL,2025-04-28
+014,005,2009-02-01,Personal,9mm,NULL,2025-04-20
+015,004,2015-10-01,Personal,9mm,NULL,2025-05-16
+016,003,2017-12-01,Personal,9mm,NULL,2025-04-03
+017,002,2017-12-01,Personal,9mm,NULL,2025-05-30
+018,001,2017-12-01,Personal,9mm,NULL,2025-05-18
+019,018,2019-06-01,Personal,9mm,NULL,2025-05-09
+020,019,2021-07-01,Personal,9mm,NULL,2025-04-08
+021,020,2023-04-01,Personal,9mm,NULL,2025-03-25
+022,021,2024-05-01,Personal,9mm,NULL,2025-06-29
+023,001,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+024,002,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+025,003,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+026,004,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+027,005,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+028,006,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+029,007,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+030,008,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+031,009,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+032,010,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+033,011,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+034,012,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+035,013,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+036,014,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+037,015,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+038,016,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+039,017,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+040,018,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+041,019,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+042,020,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+043,021,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+044,022,2025-01-01,"Escopeta asalto",cartucho,goma,2025-01-01
+045,001,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+046,002,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+047,003,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+048,004,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+049,005,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+050,006,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+051,007,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+052,008,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+053,009,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+054,010,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+055,011,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+056,012,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+057,013,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+058,014,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+059,015,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+060,016,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+061,017,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+062,018,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+063,019,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+064,020,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+065,021,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+066,022,2023-06-15,"Fusil asalto","7,62",NULL,2025-03-15
+067,001,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+068,002,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+069,003,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+070,004,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+071,005,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+072,006,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+073,007,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+074,008,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+075,009,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+076,010,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+077,011,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+078,012,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+079,013,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+080,014,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+081,015,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+082,016,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+083,017,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+084,018,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+085,019,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+086,020,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+087,021,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+088,022,2024-03-01,"Pistola electrica","Cartucho electronico",NULL,2025-05-30
+089,001,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+090,002,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+091,003,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+092,004,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+093,005,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+094,006,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+095,007,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+096,008,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+097,009,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+098,010,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+099,011,2004-01-01,"Porra extensible",none,NULL,2025-05-30
+100,012,2004-01-01,"Porra extensible",none,NULL,2025-05-30
