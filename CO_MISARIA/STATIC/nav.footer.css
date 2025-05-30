@@ -546,6 +546,7 @@ input:not(:placeholder-shown)~.reset {
     text-align: left;
     font-weight: 200;
     padding: 10px 0px;
+    margin: 16px 0px;
 
 }
 
@@ -590,6 +591,8 @@ input:not(:placeholder-shown)~.reset {
     color: white;
     text-align: center;
     padding: 10px;
+    font-family: "Newsreader", serif;
+    font-size: 15px;
 
 
 }
