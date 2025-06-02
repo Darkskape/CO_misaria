@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="C:\Users\Kimberly\Documents\COMISARÍA\CSS\estilo_login.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <div class="login-container">
+
+
+        <img class="logo-area" src="../IMG/IMG_WEBPRIVADA/logo_userhome.png" alt="Logo Personal Comisaría">
+
+        <form>
+            <div class="celda">
+                <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="icon">
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                        stroke-linejoin="round" stroke-linecap="round">
+                    </path>
+                </svg>
+                <input class="input" type="text" id="num_tip" placeholder="Ingrese su nº TIP" required>
+            </div>
+
+            <div class="celda">
+                <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    class="icon">
+                    <path
+                        d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+                        stroke-linejoin="round" stroke-linecap="round">
+                    </path>
+                </svg>
+                <input class="input" type="password" id="password" placeholder="Contraseña" required>
+            </div>
+
+            <!--CAPTCHA PARA EL LOGIN-->
+            <div class="captcha-container">
+                <label class="captcha-frase" for="captcha">Escribe el siguiente texto:</label>
+                <span id="captchaPregunta"></span>
+                <input type="text" id="captchaRespuesta" name="captchaRespuesta" required>
+            </div>
+
+            <!--BOTONES ENVIAR/CANCELAR-->
+            <div class="botones">
+                <button class="enviar" type="submit">Enviar</button>
+                <button class="cancelar" onclick="window.history.back()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Generar una cadena aleatoria para el captcha
+        function generarCaptcha() {
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 8; i++) { // Genera una cadena de 8 caracteres
+                captcha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+            }
+            return captcha;
+        }
+
+        // Mostrar el captcha
+        const captchaPregunta = document.getElementById('captchaPregunta');
+        const captchaTexto = generarCaptcha();
+        captchaPregunta.textContent = captchaTexto;
+
+        // Validar el captcha al enviar el formulario
+        const registroForm = document.getElementById('registroForm');
+        registroForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const respuestaUsuario = document.getElementById('captchaRespuesta').value;
+            if (respuestaUsuario === captchaTexto) {
+                alert('Captcha correcto. Registro exitoso.');
+                // Aquí puedes enviar el formulario o realizar otras acciones
+            } else {
+                alert('Captcha incorrecto. Inténtalo de nuevo.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
