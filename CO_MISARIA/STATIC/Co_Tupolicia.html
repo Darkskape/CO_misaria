@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="Co_Tupolicia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="img/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="img/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='formulario_reportar.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="img/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="img/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+                <a href="#">Denuncias</a>
+                <a href="Co_Tupolicia.html">Tu policía</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+            <a href="#">Denuncias</a>
+            <a href="Co_Tupolicia.html">Tu policía</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+    <main>
+        <table>
+            <tr>
+                <td>
+                    <h3>Conócenos</h3>
+                    <a href="conocenos.html">Acércate y conoce más sobre nosotros. </a>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="historia.html">Historia de la policia</a></td>
+            </tr>
+            <tr>
+                <td><a href="uniforme.html">Historia de los uniformes</a></td>
+            </tr>
+            <tr>
+                <td><a href="himno.html">Himno</a></td>
+            </tr>
+            <tr>
+                <td><a href="webinfantil.html">Web infantil</a></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="celda-foto">
+                    <img src="img/policia.jpg" alt="Imagen de policia">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>¿Quieres ser Policía?</h3>
+                    <p>¿O trabajar en Seguridad Privada?<br>
+                    Consulta aquí las fechas de las oposiciones para las diferentes escalas de la Policía y empleo en
+                    Seguridad Privada.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="acceso_oposiciones.html">Acceso a oposiciones y convocatorias</a></td>
+            </tr>
+            <tr>
+                <td><a href="personal_no_policial.html">Personal no policial</a></td>
+            </tr>
+            <tr>
+                <td><a href="jefes_y_directores.html">Jefes y Directores de Seguridad</a></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td>
+                    <h3>Adopta un K-9</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Adopta uno de nuestros héroes de cuatro patas. La "vida laboral" de estos compañeros es de 8-9
+                        años.
+                        Dedican su juventud a prestar servicio, y cuando sus facutades merman y no pueden desempeñar sus
+                        funciones son jubilados.
+                        <br><br>
+                        También buscamos hogares para aquellos perros jóvenes que, tras ser adiestrados, no desarrollan
+                        las aptitudes necesarias para el trabajo y son descartados.
+                        <br><br>
+                        Si te interesa adoptar uno de nuestros héroes. 
+                    </p> 
+                    <button class="k9-button" onclick="location.href='https://www.adoptak9.es/'">PINCHA AQUÍ</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="celda-foto">
+                    <img src="img/k9.jpg" alt="Imagen de K-9">
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="#">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="#">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="#">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="#">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="#">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="#">Ciberseguridad</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_Tupolicia.html">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="acceso_oposiciones.html">Quiero ser Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="page_emergencias.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="page_emergencias.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="#">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="img/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="img/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="img/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="img/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="img/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="img/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav_footer.js"></script>
+</body>
+
+</html>

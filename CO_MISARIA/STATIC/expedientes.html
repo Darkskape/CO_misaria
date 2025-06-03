@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <!--hacer diferentes css para que se adapte a diferentes dispositivos-->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .buscador {
+            display: flex;
+            margin: 10%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            display: flex;
+            background-color: #f5f5f5;
+            border: 1px solid #c3c3c3;
+            overflow-x:scroll;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        label {
+            margin-left: 10px;
+        }
+        
+        input {
+            width: auto;
+            max-width: 220px;
+            height: auto;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1.5px solid lightgrey;
+            outline: none;
+            transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+            box-shadow: 0px 0px 20px -18px;
+        }
+
+        input:hover {
+            border: 2px solid rgba(0, 14, 120, 1);
+            box-shadow: 0px 0px 20px -17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buscador">
+        <form>
+            <div class="container">
+                <label>Nombre</label>
+                <input  type="text" id="nombre" name="text">
+            </div>
+
+            <div class="container">
+                <label>Apellidos</label>
+                <input  type="text" id="apellidos" name="text">
+            </div>
+
+            <div class="container">
+                <label>DNI</label>
+                <input  type="text" id="dni" name="text">
+            </div>
+
+            <div class="container">
+                <label>Fecha</label>
+                <input type="date" name="date">
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
