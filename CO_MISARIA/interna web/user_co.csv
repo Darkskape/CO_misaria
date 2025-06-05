@@ -1,5 +1,5 @@
 id_user,name,lastname,address,dni,telefono,email,n_support,password,cargo,foto
-001,juan,perez,"calle falsa 123",12345678H,123456789,juan.perez@comisaria.com,SUP001,password123,Subinspector,""C:\Users\TARDE\Desktop\Img\M01""
+001,juan,perez,calle falsa 123,12345678H,123456789,juan.perez@comisaria.com,SUP001,password123,Subinspector,""C:\Users\TARDE\Desktop\Img\M01""
 002,Maria,Gomez,"Av. siempre viva 742",234567891G,234567890,maria.gomez@comisaria.com,SUP002,clave456,Subinspector,""C:\Users\TARDE\Desktop\Img\F01""
 003,Carlos,Ramirez,"calle central 456",345678902T,345678901,carlos.ramirez@comisaria.com,SUP003,securepass789,Subinspector,""C:\Users\TARDE\Desktop\Img\M02""
 004,Laura,Fernandez,"Boulevard norte 101",456789015P,456789012,laura.fernandez@comisaria.com,SUP004,passlaura,Agente,""C:\Users\TARDE\Desktop\Img\F02""
