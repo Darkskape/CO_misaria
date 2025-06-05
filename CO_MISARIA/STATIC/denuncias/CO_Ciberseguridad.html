@@ -1,287 +1,489 @@
 <!DOCTYPE html>
 <html lang="es">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
-<link rel="stylesheet" href="style_denun.css">
-<title>Ciberseguridad</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="style_denun.css">
+    <link rel="stylesheet" href="navyfooter.css">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <title>Ciberseguridad</title>
 </head>
-
-<body>
     <nav>
+       <!-- Barra de navegación principal (logo + buscador + botones) -->
         <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
             <div class="logo">
-                <img src="https://www.policia.es/img/_logo.png" alt="logo">
+                <!--Logo desktop-->
+                <img src="C:\Users\DEBBIE\Documents\CO_MISARIA\STATIC\denuncias\new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\foto_logo2.png" class="logo-movil" alt="Policía">
             </div>
 
-            <div class="cajabuscar">
-                <form method="get" id="buscarform">
-                    <fieldset>
-                        <input type="text" id="s" value="" placeholder="Buscar" />
-                        <input class="button" type="submit" value="" />
-                        <i class="search"></i>
-                    </fieldset>
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </form>
+
+                <!-- Botón de contacto (desktop) -->
                 <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\iconos png\icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="C:\Users\Kimberly\Documents\COMISARÍA\IMG\iconos png\icon_menu.png" class="iconmenu"
+                        alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+                <a href="#">Denuncias</a>
+                <a href="#">Tu policía</a>
+                <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
             </div>
         </div>
-
+        <!-- Menú principal (desktop) -->
         <div class="navegacion_principal">
-            <a href="#"> Inicio </a>
-            <a href="#"> Trámites</a>
-            <a href="#"> Denuncias </a>
-            <a href="#"> Tu policia </a>
-            <a href="#"> Emergencias </a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\index_comisaria.html">Inicio</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">Trámites</a>
+            <a href="#">Denuncias</a>
+            <a href="#">Tu policía</a>
+            <a href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Emergencias</a>
         </div>
-<body>
-    <div class="ciberseguridad">
-        <h1> <center><br> ¿Qué es la ciberseguridad? <br> </center> </h1>
-    <p> Es la práctica de proteger equipos, redes, aplicaciones de software, sistemas críticos y datos de posibles
-        amenazas digitales. Las organizaciones tienen la responsabilidad de proteger los datos para mantener la
-        confianza del cliente y cumplir la normativa. Utilizan medidas y herramientas de ciberseguridad para
-        proteger los datos confidenciales del acceso no autorizado, así como para evitar interrupciones
-        en las operaciones empresariales debido a una actividad de red no deseada. Las organizaciones implementan la
-        ciberseguridad al optimizar la defensa digital entre las personas, los procesos y las tecnologías.</p>
+    </nav>
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+    <script src="C:\Users\Kimberly\Documents\COMISARÍA\JS\navyfooter.js"></script>
+<!-- nuevo nav y footer-->
+    <main>
+        <div class="banner">
+            <h1>Ciberseguridad</h1>
+        </div>
+    </main>
+  <div>
+    <button class="btndefineciberseguridad"><i class="animation"> ¿Qué es la ciberseguridad?</i></button>
+</div>
+<p id="definicion-ciber" style="display: none;">
+    Es la práctica de proteger equipos, redes, aplicaciones de software, sistemas críticos y datos de
+    posibles amenazas digitales. Las organizaciones tienen la responsabilidad de proteger los datos para mantener
+    la confianza del cliente y cumplir la normativa.
+    Utilizan medidas y herramientas de ciberseguridad para
+    proteger los datos confidenciales del acceso no autorizado, así como para evitar interrupciones
+    en las operaciones empresariales debido a una actividad de red no deseada. Las organizaciones
+    implementan la ciberseguridad al optimizar la defensa digital entre las personas, los procesos y las tecnologías.
+</p>
+<script>
+    document.querySelector('.btndefineciberseguridad').onclick = function() {
+        var p = document.getElementById('definicion-ciber');
+        p.style.display = (p.style.display === 'none') ? 'block' : 'none';
+    };
+</script>
 
+<div>
+    <button class="btndefineactuaciones"><i class="animation"> Actuaciones de ciberseguridad</i></button>
+</div>
+<div id="actuaciones-ciber" >
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item border-0">Amenazas, injurias, calumnias por correo electrónico, sms, tablones de anuncios, foros, newsgroups, web</li>
+        <li class="list-group-item border-0">Pornografía infantil. Protección al menor en el uso de las nuevas tecnologías.</li>
+        <li class="list-group-item border-0">Fraudes en el uso de las comunicaciones. Piratería de señales de televisión privada.</li>
+        <li class="list-group-item border-0">Fraudes en Internet. Estafas. Uso fraudulento de tarjetas de crédito. Fraudes en subastas. Comercio electrónico.</li>
+        <li class="list-group-item border-0">Seguridad lógica. Virus. Ataques de denegación de servicio. Sustracción de datos. Hacking. Descubrimiento y revelación de secreto. Suplantación de personalidad. Sustracción de cuentas de correo electrónico.</li>
+        <li class="list-group-item border-0">Piratería de programas de ordenador, de música y de productos cinematográficos.</li>
+    </ul>
+</div>
 
-    <div class="main-grid">
-        <!--pequeña introduccion para el ciudadano-->
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="ciberseguridad.png" alt="100px" style="width:500px;height:500px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h1>Seguridad de la información</h1>
-                        <p>La seguridad de la información protege los datos en tránsito y en reposo con un sistema
-                            sólido
-                            de almacenamiento y una transferencia de datos segura. Los desarrolladores usan medidas
-                            protectoras, como el cifrado y las copias de seguridad aisladas, para la resistencia
-                            operativa frente a posibles brechas de datos. En algunos casos, los desarrolladores usan AWS
-                            Nitro System para la confidencialidad del almacenamiento y la restricción del acceso de
-                            operadores.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<script>
+    document.querySelector('.btndefineciberseguridad').onclick = function() {
+        var p = document.getElementById('definicion-ciber');
+        p.style.display = (p.style.display === 'none') ? 'block' : 'none';
+    };
+    document.querySelector('.btndefineactuaciones').onclick = function() {
+        var div = document.getElementById('actuaciones-ciber');
+        div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+    };
+</script>
 
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="segurinube.png" alt="200px" style="width:500px;height:500px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h2>Seguridad en la nube</h2>
-                        <p>Describe las medidas que toma una organización para proteger los
-                            datos y las aplicaciones que se ejecutan en la nube. Es importante para reforzar la confianza del
-                            cliente, proteger las operaciones tolerantes a errores y cumplir con la normativa de la
-                            privacidad de datos en un entorno escalable. Una estrategia sólida de seguridad en la nube
-                            implica la responsabilidad compartida entre el proveedor de nube y la organización.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="seguriapp.png" alt="200px" style="width:500px;height:500px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Seguridad de aplicaciones</h3>
-                        <p>Logra un trabajo coordinado para fortalecer la protección de una aplicación frente a la
-                            manipulación no autorizada durante las etapas de diseño, desarrollo y prueba. Los
-                            programadores de software escriben códigos seguros para evitar errores que puedan aumentar
-                            los riesgos de seguridad.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="datos.png" alt="200px" style="width:500px;height:500px;">
-                        <div class="flip-card-back">
-                            <h4>Ciberseguridad de datos</h4>
-                            <p>La seguridad de los datos protege los datos en tránsito y en reposo con un sistema
-                                sólido de almacenamiento y una transferencia de datos segura. Los desarrolladores usan medidas
-                                protectoras, como el cifrado y las copias de seguridad aisladas, para la resistencia operativa frente
-                                a posibles brechas de datos. En algunos casos, los desarrolladores usan AWS Nitro System para la
-                                confidencialidad del almacenamiento y la restricción del acceso de operadores. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="segurired.png" alt="200px" style="width:500px;height:500px;">
-                    </div>  
-                    <div class="flip-card-back">
-                        <h5>Ciberseguridad de red</h5>
-                        <p> La seguridad de la red es una protección de ciberseguridad para los equipos y dispositivos
-                            conectados a una red. Los equipos de TI utilizan las tecnologías de seguridad de red, como los
-                            firewalls y el control de acceso a la red para regular el acceso de usuarios y administrar los permisos para
-                            recursos digitales específicos.</p>
-                    </div>
-                </div>      
-        </div>
-        </div>
-
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="endpoint.png" alt="360px" style="width:500px;height:500px;">
-                    </div>
-                <div class="flip-card-back">
-                    <h6>Ciberseguridad de endpoint</h6>
-                    <p> Conjunto de medidad que protegen los dispositivos d elos usuarios finales d eataques
-                        cibernéticos
-                        y amenazas. Los dispositivos de los usuarios finales son los puntos de acceso a la red
-                        corporativa y
-                        pueden ser vulnerables a ataques cibernéticos. La seguridad de endpoint protege estos
-                        dispositivos
-                        mediante la implementación de medidas de seguridad, como el cifrado, la autenticación y el
-                        control
-                        de acceso.</p>
-                        </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="movil.png" alt="200px" style="width:500px;height:500px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h7>Ciberseguridad móvil</h7>
-                        <p> Implica proteger teléfonos inteligentes, tabletas y computadoras portátiles de ciberamenazas
-                            como
-                            pérdida de datos, robo de credenciales, compromiso de cuentas, etc.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src="iot.png" alt="200px" style="width:500px;height:500px;">
-                    </div>
-                    <div class="flip-card-back">
-                        <h8>Seguridad de IoT</h8>
-                        <p> La seguridad de IoT protege los dispositivos y redes de IoT de ataques cibernéticos. Los
-                            dispositivos
-                            de IoT son vulnerables a ataques cibernéticos debido a su conectividad a Internet y su
-                            capacidad
-                            para recopilar y transmitir datos. La seguridad de IoT implica la implementación de medidas de
-                            seguridad, como el cifrado, la autenticación y el control de acceso.</p>
-                    </div>
-                </div>
-            </div>
-        </div>   
+<script>
+    document.querySelector('.btndefineciberseguridad').onclick = function() {
+        var p = document.getElementById('definicion-ciber');
+        p.style.display = (p.style.display === 'none') ? 'block' : 'none';
+    };
+    document.getElementById('btn-actuaciones').onclick = function() {
+        var div = document.getElementById('');
+        div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+    };
+</script>
         
-        <footer>
+            <h2>Tipos de ciberseguridad</h2>
+             <div class="main-grid">
+                    <!--pequeña introduccion para el ciudadano-->
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/ciberseguridad.png" alt="100px" style="width:500px; height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h1>Seguridad de la información</h1>
+                                    <p>La seguridad de la información protege los datos en tránsito y en reposo con un
+                                        sistema
+                                        sólido
+                                        de almacenamiento y una transferencia de datos segura. Los desarrolladores usan
+                                        medidas
+                                        protectoras, como el cifrado y las copias de seguridad aisladas, para la
+                                        resistencia
+                                        operativa frente a posibles brechas de datos. En algunos casos, los
+                                        desarrolladores usan AWS
+                                        Nitro System para la confidencialidad del almacenamiento y la restricción del
+                                        acceso de
+                                        operadores.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/segurinube.png" alt="200px" style="width:500px;height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Seguridad en la nube</h2>
+                                    <p>Describe las medidas que toma una organización para proteger los
+                                        datos y las aplicaciones que se ejecutan en la nube. Es importante para reforzar
+                                        la confianza del
+                                        cliente, proteger las operaciones tolerantes a errores y cumplir con la
+                                        normativa de la
+                                        privacidad de datos en un entorno escalable. Una estrategia sólida de seguridad
+                                        en la nube
+                                        implica la responsabilidad compartida entre el proveedor de nube y la
+                                        organización.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/seguriapp.png" alt="200px" style="width:500px;height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Seguridad de aplicaciones</h3>
+                                    <p>Logra un trabajo coordinado para fortalecer la protección de una aplicación
+                                        frente a la
+                                        manipulación no autorizada durante las etapas de diseño, desarrollo y prueba.
+                                        Los
+                                        programadores de software escriben códigos seguros para evitar errores que
+                                        puedan aumentar
+                                        los riesgos de seguridad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/datos.png" alt="200px" style="width:500px;height:500px;">
+                                    <div class="flip-card-back">
+                                        <h4>Ciberseguridad de datos</h4>
+                                        <p>La seguridad de los datos protege los datos en tránsito y en reposo con un
+                                            sistema
+                                            sólido de almacenamiento y una transferencia de datos segura. Los
+                                            desarrolladores usan medidas
+                                            protectoras, como el cifrado y las copias de seguridad aisladas, para la
+                                            resistencia operativa frente
+                                            a posibles brechas de datos. En algunos casos, los desarrolladores usan AWS
+                                            Nitro System para la
+                                            confidencialidad del almacenamiento y la restricción del acceso de
+                                            operadores. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/segurired.png" alt="200px" style="width:500px;height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h5>Ciberseguridad de red</h5>
+                                    <p> La seguridad de la red es una protección de ciberseguridad para los equipos y
+                                        dispositivos
+                                        conectados a una red. Los equipos de TI utilizan las tecnologías de seguridad de
+                                        red, como los
+                                        firewalls y el control de acceso a la red para regular el acceso de usuarios y
+                                        administrar los permisos para
+                                        recursos digitales específicos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+          <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/endpoint.png" alt="360px" style="width:500px;height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h6>Ciberseguridad de endpoint</h6>
+                                    <p> Conjunto de medidad que protegen los dispositivos d elos usuarios finales d
+                                        eataques
+                                        cibernéticos
+                                        y amenazas. Los dispositivos de los usuarios finales son los puntos de acceso a
+                                        la red
+                                        corporativa y
+                                        pueden ser vulnerables a ataques cibernéticos. La seguridad de endpoint protege
+                                        estos
+                                        dispositivos
+                                        mediante la implementación de medidas de seguridad, como el cifrado, la
+                                        autenticación y el
+                                        control
+                                        de acceso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/movil.png" alt="200px" style="width:500px;height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h7>Ciberseguridad móvil</h7>
+                                    <p> Implica proteger teléfonos inteligentes, tabletas y computadoras portátiles de
+                                        ciberamenazas
+                                        como
+                                        pérdida de datos, robo de credenciales, compromiso de cuentas, etc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="ciberseguridad/iot.png" alt="200px" style="width:500px;height:500px;">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h8>Seguridad de IoT</h8>
+                                    <p> La seguridad de IoT protege los dispositivos y redes de IoT de ataques
+                                        cibernéticos. Los
+                                        dispositivos
+                                        de IoT son vulnerables a ataques cibernéticos debido a su conectividad a
+                                        Internet y su
+                                        capacidad
+                                        para recopilar y transmitir datos. La seguridad de IoT implica la implementación
+                                        de medidas de
+                                        seguridad, como el cifrado, la autenticación y el control de acceso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </
+            <h2>Consejos de seguridad</h2>
+            <div class="faq-item">
+                <button class="faq-question"> En las redes sociales
+                    <button type="button" class="close display-2 py-1" 
+                    data-dismiss="alert" aria-label="Close" onclick="window.scrollTo({top: document.querySelector('.faq-item').offsetTop, behavior: 'smooth'});"
+                     style="position: absolute; top: 10px; right: 10px;"></button>
+                        <span aria-hidden="true"></span>
+                        <p>Mantén tu perfil privado, evite las contraseñas fáciles de adivinar.</p>
+                        <p> Utilice contraseñas “de calidad” (con letras, números y otros caracteres). Cámbielas
+                            periódicamente.</p>
+                        <p> No desestime las medidas de seguridad al elegir “la pregunta secreta”, puede que esté
+                            dejando una puerta abierta a sus cuentas de correo electrónico y perfiles sociales.</p>
+                        <p>  Actualice su sistema operativo según las recomendaciones del fabricante o distribución.</p>
+                        <p> Adquiera un buen producto antivirus y actualícelo con regularidad. Realice periódicamente copias
+                        de seguridad de su sistema.</p>
+
+
+                        <p> Nunca ofrezca datos personales por Internet, a menos que sea en sitios de total confianza.</p>
+                       <b> COMPRUEBE LOS CERTIFICADOS.</b> 
+                       <p>  No introducir el número de tarjeta en páginas de contenido sexual o pornográfico, en los que se
+                        solicita como pretexto, para comprobar la mayoría de edad. Extreme la precaución en los archivos
+                        que recibe en sesiones chat.</p>
+                        
+                    <p>Para evitar los fraudes telefónicos, controle sus facturas, compruebe los números a los que ha
+                        llamado, y que el gasto facturado se corresponde con las comunicaciones realizadas. Adopte las
+                        medidas necesarias, cuando le ofrecen “regalos” sustanciosos y, para recibirlos tiene que llamar
+                        por teléfono a prefijos de tarificación adicional.</p>
+
+                    <p>No facilite sus números de teléfono, tanto fijo como móvil, a personas desconocidas o en webs
+                        que no le ofrezcan confianza suficiente.</p>
+                     <p>Asista a su hijo/a menor en su navegación por Internet. Tutélelos como lo hace en cualquier otra
+                        actividad cotidiana.</p>
+
+                    <p>Hábleles de los peligros del chat, donde se pueden confundir, al chatear con supuestos amigos
+                        que no resultan tales, prestando especial atención a los contenidos sexuales. No les permita que
+                        envíen sus fotos o de su familia ni cualquier información sobre ellos y ellas, sin la
+                        autorización de sus padres.</p>
+                     <p>No les permita que envíen sus fotos o de su familia ni cualquier información sobre ellos y
+                        ellas, sin la autorización de sus padres.</p>
+
+                        Recuerde onsensue con su hija o hijo ciertas normas a seguir en Internet, compruebe que contenidos
+                        consideran ellos y ellas que son los adecuados para exponer y compartir en la red.</p>
+
+            </button>
+            </div>
+            <!-- Separador entre pares de cartas -->
+            
+            <div class="faq-item">
+                <button class="faq-question"> Enlaces de interés:</button>
+            <div class="faq-answer">
+                <p> <b>Enlaces de interés:</b></p>
+                    <b>
+                        <p><a href="https://www.aepd.es/" target="_blank">Oficina de Seguridad del Internauta </a></p>
+                        <p><a href="https://www.aepd.es/" target="_blank">Agencia Española de Protección de Datos</a></p>
+                        <p><a href="https://www.seguridadweb20.com/" target="_blank">Seguridad Web 20 .</a></p>
+                        <p><a href="https://www.chaval.es/" target="_blank">Chaval.es </a></p>
+                        <p><a href="https://www.pantallasamigas.net/" target="_blank">Pantallas Amigas. </a></p>
+                        <p><a href="https://www.conexioninversa.com/" target="_blank">Conexión Inversa.</a></p>
+                    </b>
+            </div>
+
+                    <b>Contacto:</b>
+                    Brigada Central de Investigación Tecnológica.
+                    Centro Policial de Canillas
+                    C/ Julián González Segador s/n
+                    28043 - Madrid
+                    <h4>
+                        <button class="modern-button" onclick="location.href='formulario_contacto.html'">
+                            Formulario de contacto
+                        </button>
+                    </h4>
+                    <path fill="currentColor" d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1
+                     0 512 0A256 256 0 1 0 0 256zM294.6 135.1c-4.2-4.5-10.1-7.1-16.3-7.1C266 128 256 138 256 150.3V208H160c-17.7 
+                     0-32 14.3-32 32v32c0 17.7 14.3 32 32 32h96v57.7c0 12.3 10 22.3 22.3 22.3c6.2 0 12.1-2.6 16.3-7.1l99.9-107.1c3
+                     .5-3.8 5.5-8.7 5.5-13.8s-2-10.1-5.5-13.8L294.6 135.1z"></path>
+
+    <footer>
             <div class="indicefinal">
                 <div class="cajafinal">
-                    <b> Inicio </b>
+                    <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_tramites.html">
+                        <h2 class="titulo-enlace">Trámites </h2>
+                    </a>
                     <ul>
-                        <li><a href="">Dni y Pasaporte</a></li>
-                        <li><a href="#">Permisos de viaje</a></li>
-                        <li><a href="#">Extranjeria</a></li>
-                        <li><a href="#">Antecedentes</a></li>
-                    </ul>
-                </div>
-    
-                <div class="cajafinal">
-                    <b> Denuncias </b>
-                    <ul>
-                        <li><a href="#">Informacion General</a></li>
-                        <li><a href="">Reportar</a></li>
-                        <li><a href="#">Desaparecidos</a></li>
-                        <li><a href="#">Buscados</a></li>
-                        <li><a href="#">Ciberseguridad</a></li>
-                    </ul>
-                </div>
-    
-                <div class="cajafinal">
-                    <b> Tu Policia</b>
-                    <ul>
-                        <li><a href="">Conocenos</a></li>
-                        <li><a href="#">Quiero ser Policia</a></li>
-                        <li><a href="#">Adopta un K9</a></li>
+                        <li><a class="enlace-pagina" href="">Dni y Pasaporte</a></li>
+                        <li><a class="enlace-pagina" href="#">Permisos de viaje</a></li>
+                        <li><a class="enlace-pagina" href="#">Extranjeria</a></li>
+                        <li><a class="enlace-pagina" href="#">Antecedentes</a></li>
                     </ul>
                 </div>
                 <div class="cajafinal">
-                    <b> Emergencias </b>
+                    <a class="enlace-pagina" href="#">
+                        <h2 class="titulo-enlace"> Denuncias </h2>
+                    </a>
                     <ul>
-                        <li><a href="#">Protocolos</a></li>
-                        <li><a href="">Atencion Auxilio</a></li>
-                        <li><a href="#">Guardia Civil</a></li>
-                        <li><a href="#">Samur</a></li>
-                        <li><a href="#">Antidisturbios</a></li>
-                        <li><a href="#">Bomberos</a></li>
-                        <li><a href="#">Radiopatrullas</a></li>
+                        <li><a class="enlace-pagina" href="">Reportar</a></li>
+                        <li><a class="enlace-pagina" href="#">Desaparecidos</a></li>
+                        <li><a class="enlace-pagina" href="#">Buscados</a></li>
+                        <li><a class="enlace-pagina" href="#">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="#">
+                        <h2 class="titulo-enlace"> Tu policía </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina" href="">Conócenos</a></li>
+                        <li><a class="enlace-pagina" href="#">Quiero ser Policia</a></li>
+                        <li><a class="enlace-pagina" href="#">Adopta un K9</a></li>
+                    </ul>
+                </div>
+                <div class="cajafinal">
+                    <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">
+                        <h2 class="titulo-enlace"> Emergencias </h2>
+                    </a>
+                    <ul>
+                        <li><a class="enlace-pagina"
+                                href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">Información</a>
+                        </li>
+                        <li><a class="enlace-pagina" href="#">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
             </div>
-     <p><b>© 2025 DIRECCION GENERAL DE COMISERIA | Proteccion de Datos | Aviso Legal </b></p>
-                    <b>SIGUENOS!</b>
-                        <div class="redes">
-                                    <ul class="redes">
-                                        <li><a href="https://www.facebook.com/" target="_blank"><img
-                                                    src="/imagenes/facebook.jpg" alt="Facebook"></a></li>
-                                        <li><a href="https://X.com/" target="_blank"><img src="/imagenes/x.png"
-                                                    alt="X"></a>
-                                        </li>
-                                        <li><a href="https://www.instagram.com/" target="_blank"><img
-                                                    src="/imagenes/instagram.jpg" alt="Instagram"></a></li>
-                                        <li><a href="https://www.youtube.com/" target="_blank"><img
-                                                    src="/imagenes/youtube.jpg" alt="YouTube"></a></li>
-                                        <li><a href="https://www.tiktok.com/" target="_blank"><img
-                                                    src="/imagenes/tiktok.jpg" alt="TikTok"></a></li>
-                                        <li><a href="https://www.whatsapp.com/" target="_blank"><img
-                                                    src="/imagenes/whatsapp.jpg" alt="WhatsApp"></a></li>
-                                        <li><a href="https://www.telegram.com" target="_blank"><img
-                                                    src="/imagenes/telegram.jpg" alt="Telegram"></a></li>
-                                    </ul>
-                                </div>
-                                  </div>
-        </div>
+            <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+            <div class="sub-footer">
+                <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="#">Protección
+                        de
+                        datos</a>
+                </span>
+                <div class="fila-redes">
+                    <p> Siguenos en: </p>
+                    <ul class="redes-sociales">
+                        <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                    src="img\facebook.png"
+                                    alt="Facebook"></a></li>
+                        <li><a href="https://x.com/policia" target="_blank"><img
+                                    src="img\x.png" alt="X"></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                    src="img\instagram.jpg"
+                                    alt="Instagram"></a></li>
+                        <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                                    src="C:\Users\\DEBBIE\Documents\CO_MISARIA\img\youtube.jpg"
+                                    alt="YouTube"></a></li>
+                        <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                                    src="C:\Users\DEBBIE\Documents\CO_MISARIA\img\tiktok.jpg"
+                                    alt="TikTok"></a></li>
+                        <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                    src="C:\Users\DEBBIE\Documents\CO_MISARIA\img\whatsapp.jpg"
+                                    alt="WhatsApp"></a></li>
+                        <li><a href="https://t.me/policianacional" target="_blank"><img
+                                    src="C:\Users\DEBBIE\Documents\CO_MISARIA\img\telegram.jpg"
+                                    alt="Telegram"></a></li>
+                    </ul>
+                </div>
+            </div>
     </footer>
-    </body>
-  <!--  footer tag -->
-        <!-- SCRIPT BOTÓN DE SCROLL UP-->
-
-	<script>
-        // Mostrar el botón cuando el usuario haga scroll hacia abajo
-        window.onscroll = function() {
-            var boton = document.getElementById("boton-arriba");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                boton.style.display = "block";  // Muestra el botón
-            } else {
-                boton.style.display = "none";   // Oculta el botón cuando se está en la parte superior
-            }
-        };
-
-        // Función para volver al principio de la página
-        function volverArriba() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    </script>
-	<!--BOTON SCROLL UP-->
-	<button id="boton-arriba" onclick="volverArriba()"><img src="iconos png\scrollup.png" alt="Volver arriba"></button>
-</footer>
 </html>
-
      
