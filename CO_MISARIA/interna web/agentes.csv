@@ -1,0 +1,11 @@
+"id_agente","nombre","rango","dni","telefono","estado","turno"
+"1","Juan Pérez","Teniente","12345678A","555-1234","activo","mañana"
+"2","María Gómez","Capitán","87654321B","555-5678","activo",
+"3","Carlos Ruiz","Sargento","11223344C","555-9101","inactivo","tarde"
+"4","Ana Martínez","Teniente","44332211D","555-1122","activo","mañana"
+"5","Luis Fernández","Capitán","55667788E","555-3344","activo",
+"6","Sofía López","Sargento","99887766F","555-5566","activo","tarde"
+"7","Miguel Torres","Teniente","66778899G","555-7788","inactivo","mañana"
+"8","Laura Sánchez","Capitán","33445566H","555-9900","activo",
+"9","Jorge Díaz","Sargento","22113344I","555-2233","activo","tarde"
+"10","Elena Morales","Teniente","77889900J","555-4455","activo","mañana"
