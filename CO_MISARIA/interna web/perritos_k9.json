@@ -1,0 +1,18 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"perritos_k9","database":"co_misaria","data":
+[
+{"id_user":"004","nombre":"Rex","id_canino":"1","edad":"7","ingreso":"2016-05-12","jubilacion":null,"motivo_jubilacion":null,"raza":"Pastor Alemán","peso":"32.50","años_activo":"7","especialidad":"Detección de narcóticos","estado_fisico":"Excelente"},
+{"id_user":"005","nombre":"Luna","id_canino":"2","edad":"5","ingreso":"2018-09-20","jubilacion":null,"motivo_jubilacion":null,"raza":"Labrador Retriever","peso":"28.00","años_activo":"5","especialidad":"Rescate en escombros","estado_fisico":"Muy bueno"},
+{"id_user":"006","nombre":"Max","id_canino":"3","edad":"9","ingreso":"2014-03-15","jubilacion":"2024-06-01","motivo_jubilacion":"Edad avanzada","raza":"Golden Retriever","peso":"30.20","años_activo":"9","especialidad":"Búsqueda de personas","estado_fisico":"Regular"},
+{"id_user":"007","nombre":"Bella","id_canino":"4","edad":"6","ingreso":"2017-11-30","jubilacion":null,"motivo_jubilacion":null,"raza":"Belgian Malinois","peso":"26.70","años_activo":"6","especialidad":"Explosivos","estado_fisico":"Excelente"},
+{"id_user":"008","nombre":"Rocky","id_canino":"5","edad":"8","ingreso":"2015-07-23","jubilacion":"2023-12-15","motivo_jubilacion":"Problemas de salud","raza":"Rottweiler","peso":"34.80","años_activo":"8","especialidad":"Control de disturbios","estado_fisico":"Regular"},
+{"id_user":"009","nombre":"Nina","id_canino":"6","edad":"4","ingreso":"2019-01-10","jubilacion":null,"motivo_jubilacion":null,"raza":"Border Collie","peso":"20.10","años_activo":"4","especialidad":"Detección de armas","estado_fisico":"Muy bueno"},
+{"id_user":"010","nombre":"Toby","id_canino":"7","edad":"10","ingreso":"2013-02-05","jubilacion":"2023-10-30","motivo_jubilacion":"Jubilación por edad","raza":"Doberman","peso":"31.40","años_activo":"10","especialidad":"Protección de perímetro","estado_fisico":"Aceptable"},
+{"id_user":"018","nombre":"Maya","id_canino":"8","edad":"3","ingreso":"2020-08-18","jubilacion":null,"motivo_jubilacion":null,"raza":"Springer Spaniel","peso":"24.30","años_activo":"3","especialidad":"Detección de drogas","estado_fisico":"Excelente"},
+{"id_user":"019","nombre":"Zeus","id_canino":"9","edad":"11","ingreso":"2012-06-22","jubilacion":"2023-09-01","motivo_jubilacion":"Lesión grave","raza":"Pastor Belga Laekenois","peso":"33.00","años_activo":"11","especialidad":"Explosivos","estado_fisico":"Bajo"},
+{"id_user":"020","nombre":"Kira","id_canino":"10","edad":"5","ingreso":"2018-12-05","jubilacion":null,"motivo_jubilacion":null,"raza":"Caniche estándar","peso":"23.50","años_activo":"5","especialidad":"Terapia y apoyo","estado_fisico":"Muy bueno"}
+]
+}
+]
