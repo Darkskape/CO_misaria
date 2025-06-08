@@ -1,0 +1,22 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"accesorios_co","database":"co_misaria","data":
+[
+{"id.accesorios":"01","denominacion":"Linterna","cantidad":"100","activos":"85","reparacion":"5","peticion":"10","eliminar":"5"},
+{"id.accesorios":"02","denominacion":"Esposas","cantidad":"150","activos":"145","reparacion":null,"peticion":"5","eliminar":null},
+{"id.accesorios":"03","denominacion":"Radio","cantidad":"50","activos":"49","reparacion":"1","peticion":null,"eliminar":null},
+{"id.accesorios":"04","denominacion":"Bateria radio","cantidad":"100","activos":"89","reparacion":"3","peticion":"6","eliminar":"1"},
+{"id.accesorios":"05","denominacion":"Chaleco antibalas","cantidad":"40","activos":"38","reparacion":null,"peticion":"2","eliminar":null},
+{"id.accesorios":"06","denominacion":"Navaja","cantidad":"80","activos":"60","reparacion":null,"peticion":"20","eliminar":null},
+{"id.accesorios":"07","denominacion":"Guantes (caja)","cantidad":"300","activos":"200","reparacion":null,"peticion":"80","eliminar":"20"},
+{"id.accesorios":"08","denominacion":"Guantes (anticorte)","cantidad":"45","activos":"40","reparacion":null,"peticion":null,"eliminar":"5"},
+{"id.accesorios":"09","denominacion":"Ariete","cantidad":"3","activos":"2","reparacion":"1","peticion":null,"eliminar":null},
+{"id.accesorios":"10","denominacion":"Escudos","cantidad":"60","activos":"50","reparacion":"7","peticion":"3","eliminar":null},
+{"id.accesorios":"11","denominacion":"Cascos","cantidad":"60","activos":"45","reparacion":"13","peticion":"2","eliminar":null},
+{"id.accesorios":"12","denominacion":"Cinta policial (rollo)","cantidad":"300","activos":"295","reparacion":null,"peticion":"5","eliminar":null},
+{"id.accesorios":"13","denominacion":"Cadenas de puas","cantidad":"7","activos":"7","reparacion":null,"peticion":null,"eliminar":null},
+{"id.accesorios":"14","denominacion":"Chaleco anticorte","cantidad":"40","activos":"30","reparacion":null,"peticion":"5","eliminar":"5"}
+]
+}
+]

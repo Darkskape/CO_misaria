@@ -1,0 +1,18 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"denunciante","database":"co_misaria","data":
+[
+{"id_denunciante":"1","nombre":"Ariel","apellidos":"Tritón","n_documento":"","telefono":"+34123456789","fecha_nacimiento":"1995-07-16","email":"ariel@oceania.com","nacionalidad":"Atlante","pais_domicilio":"España","provincia_domicilio":"Barcelona","nombre_padre":"Tritón","nombre_madre":"Atenea","pais_nacimiento":"España"},
+{"id_denunciante":"2","nombre":"Elsa","apellidos":"Arendelle","n_documento":"","telefono":"+34987654321","fecha_nacimiento":"1990-12-21","email":"elsa@arendelle.com","nacionalidad":"Noruega","pais_domicilio":"España","provincia_domicilio":"Madrid","nombre_padre":"Agnarr","nombre_madre":"Iduna","pais_nacimiento":"Arendelle"},
+{"id_denunciante":"3","nombre":"Woody","apellidos":"Pride","n_documento":"","telefono":"+34111222333","fecha_nacimiento":"1985-04-05","email":"woody@pixartoys.com","nacionalidad":"Estadounidense","pais_domicilio":"España","provincia_domicilio":"Valencia","nombre_padre":"Andy Sr.","nombre_madre":"Emily","pais_nacimiento":"Estados Unidos"},
+{"id_denunciante":"4","nombre":"Rapunzel","apellidos":"Corona","n_documento":"","telefono":"+34199887766","fecha_nacimiento":"1993-05-12","email":"rapunzel@reinosol.com","nacionalidad":"Alemana","pais_domicilio":"España","provincia_domicilio":"Sevilla","nombre_padre":"Frederic","nombre_madre":"Arianna","pais_nacimiento":"España"},
+{"id_denunciante":"5","nombre":"Buzz","apellidos":"Lightyear","n_documento":"","telefono":"+34001122334","fecha_nacimiento":"1980-06-30","email":"buzz@spacecommand.com","nacionalidad":"Estadounidense","pais_domicilio":"España","provincia_domicilio":"Zaragoza","nombre_padre":"Mr. Lightyear","nombre_madre":"Mrs. Lightyear","pais_nacimiento":"Estados Unidos"},
+{"id_denunciante":"6","nombre":"Bella","apellidos":"Francia","n_documento":"","telefono":"+34991122334","fecha_nacimiento":"1991-03-10","email":"bella@librosymas.com","nacionalidad":"Francesa","pais_domicilio":"España","provincia_domicilio":"Granada","nombre_padre":"Maurice","nombre_madre":"Camille","pais_nacimiento":"España"},
+{"id_denunciante":"7","nombre":"Moana","apellidos":"Waialiki","n_documento":"","telefono":"+34666555444","fecha_nacimiento":"1998-08-25","email":"moana@motunui.org","nacionalidad":"Polinesia","pais_domicilio":"España","provincia_domicilio":"Málaga","nombre_padre":"Tui","nombre_madre":"Sina","pais_nacimiento":"Motunui"},
+{"id_denunciante":"8","nombre":"Merida","apellidos":"Dunbroch","n_documento":"","telefono":"+34777666333","fecha_nacimiento":"1994-11-03","email":"merida@clanesescocia.com","nacionalidad":"Escocesa","pais_domicilio":"España","provincia_domicilio":"La Coruña","nombre_padre":"Fergus","nombre_madre":"Elinor","pais_nacimiento":"Escocia"},
+{"id_denunciante":"9","nombre":"Miguel","apellidos":"Rivera","n_documento":"","telefono":"+34554433221","fecha_nacimiento":"2006-10-30","email":"miguel@musicaeterna.mx","nacionalidad":"Mexicana","pais_domicilio":"España","provincia_domicilio":"Madrid","nombre_padre":"Enrique","nombre_madre":"Luisa","pais_nacimiento":"México"},
+{"id_denunciante":"10","nombre":"Tiana","apellidos":"Del Bayou","n_documento":"","telefono":"+34660077889","fecha_nacimiento":"1992-02-14","email":"tiana@neworleans.com","nacionalidad":"Estadounidense","pais_domicilio":"España","provincia_domicilio":"Alicante","nombre_padre":"James","nombre_madre":"Eudora","pais_nacimiento":"España"}
+]
+}
+]

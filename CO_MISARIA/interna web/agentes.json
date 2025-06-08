@@ -1,0 +1,18 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"agentes","database":"co_misaria","data":
+[
+{"id_agente":"1","nombre":"Juan Pérez","rango":"Teniente","dni":"12345678A","telefono":"555-1234","estado":"activo","turno":"mañana"},
+{"id_agente":"2","nombre":"María Gómez","rango":"Capitán","dni":"87654321B","telefono":"555-5678","estado":"activo","turno":""},
+{"id_agente":"3","nombre":"Carlos Ruiz","rango":"Sargento","dni":"11223344C","telefono":"555-9101","estado":"inactivo","turno":"tarde"},
+{"id_agente":"4","nombre":"Ana Martínez","rango":"Teniente","dni":"44332211D","telefono":"555-1122","estado":"activo","turno":"mañana"},
+{"id_agente":"5","nombre":"Luis Fernández","rango":"Capitán","dni":"55667788E","telefono":"555-3344","estado":"activo","turno":""},
+{"id_agente":"6","nombre":"Sofía López","rango":"Sargento","dni":"99887766F","telefono":"555-5566","estado":"activo","turno":"tarde"},
+{"id_agente":"7","nombre":"Miguel Torres","rango":"Teniente","dni":"66778899G","telefono":"555-7788","estado":"inactivo","turno":"mañana"},
+{"id_agente":"8","nombre":"Laura Sánchez","rango":"Capitán","dni":"33445566H","telefono":"555-9900","estado":"activo","turno":""},
+{"id_agente":"9","nombre":"Jorge Díaz","rango":"Sargento","dni":"22113344I","telefono":"555-2233","estado":"activo","turno":"tarde"},
+{"id_agente":"10","nombre":"Elena Morales","rango":"Teniente","dni":"77889900J","telefono":"555-4455","estado":"activo","turno":"mañana"}
+]
+}
+]

@@ -1,0 +1,13 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"combustible","database":"co_misaria","data":
+[
+{"id_combustible":"1","id_vehiculo":null,"fecha":"2025-05-01","cantidad_litros":"40.00","costo_total":"320.00","kilometraje":"120000","lugar_carga":"YPF - Avenida Libertad","observaciones":"Carga mensual"},
+{"id_combustible":"2","id_vehiculo":null,"fecha":"2025-05-08","cantidad_litros":"35.50","costo_total":"284.00","kilometraje":"120800","lugar_carga":"Shell - Ruta 5","observaciones":"Viaje corto"},
+{"id_combustible":"3","id_vehiculo":null,"fecha":"2025-05-15","cantidad_litros":"42.75","costo_total":"342.00","kilometraje":"121600","lugar_carga":"Repsol - Km 12","observaciones":"Repostaje completo"},
+{"id_combustible":"4","id_vehiculo":null,"fecha":"2025-05-22","cantidad_litros":"38.00","costo_total":"304.00","kilometraje":"122300","lugar_carga":"Galp - Calle 45","observaciones":"viaje corto"},
+{"id_combustible":"5","id_vehiculo":null,"fecha":"2025-05-29","cantidad_litros":"44.20","costo_total":"353.60","kilometraje":"123100","lugar_carga":"repsol - Ruta Nacional 8","observaciones":"Viaje laboral"}
+]
+}
+]
