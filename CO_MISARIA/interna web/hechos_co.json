@@ -1,0 +1,18 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"hechos_co","database":"co_misaria","data":
+[
+{"id_hecho":"1","provincia":"Barcelona","fecha_inicio":"2025-05-10","hora_inicio":"14:30:00","hora_fin":"15:15:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"Marina","numero":"23","piso":"2B","descripcion":"Sustrajeron un bolso en una cafetería; la víctima es Ariel Tritón."},
+{"id_hecho":"2","provincia":"Madrid","fecha_inicio":"2025-04-22","hora_inicio":"09:00:00","hora_fin":"09:45:00","naturaleza_hecho":"","tipo_via":"avenida","nombre_via":"Gran Vía","numero":"108","piso":"5A","descripcion":"Entrada forzada a la vivienda de Elsa Arendelle sin autorización."},
+{"id_hecho":"3","provincia":"Valencia","fecha_inicio":"2025-03-18","hora_inicio":"18:00:00","hora_fin":"18:30:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"Ruzafa","numero":"12","piso":"1C","descripcion":"Woody Pride denunció daños en la puerta de su domicilio."},
+{"id_hecho":"4","provincia":"Sevilla","fecha_inicio":"2025-06-01","hora_inicio":"11:15:00","hora_fin":"12:00:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"Betis","numero":"45","piso":"3D","descripcion":"Rapunzel Corona recibió amenazas verbales por parte de un desconocido."},
+{"id_hecho":"5","provincia":"Zaragoza","fecha_inicio":"2025-05-03","hora_inicio":"20:00:00","hora_fin":"20:45:00","naturaleza_hecho":"","tipo_via":"plaza","nombre_via":"Pilar","numero":"2","piso":"Bajo","descripcion":"Buzz Lightyear reportó la desaparición de su cartera durante un evento."},
+{"id_hecho":"6","provincia":"Granada","fecha_inicio":"2025-04-15","hora_inicio":"16:00:00","hora_fin":"16:30:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"Alhóndiga","numero":"19","piso":"4C","descripcion":"Bella Francia fue víctima de una estafa en la compra de libros online."},
+{"id_hecho":"7","provincia":"Málaga","fecha_inicio":"2025-05-21","hora_inicio":"10:30:00","hora_fin":"11:10:00","naturaleza_hecho":"","tipo_via":"avenida","nombre_via":"Pacífico","numero":"88","piso":"1A","descripcion":"Moana Waialiki fue insultada en la vía pública."},
+{"id_hecho":"8","provincia":"La Coruña","fecha_inicio":"2025-06-05","hora_inicio":"13:20:00","hora_fin":"14:00:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"Orillamar","numero":"33","piso":"Ático","descripcion":"Merida Dunbroch encontró pintadas ofensivas en su fachada."},
+{"id_hecho":"9","provincia":"Madrid","fecha_inicio":"2025-04-28","hora_inicio":"17:45:00","hora_fin":"18:30:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"Lavapiés","numero":"11","piso":"2D","descripcion":"Miguel Rivera estuvo involucrado en una pelea con otro menor."},
+{"id_hecho":"10","provincia":"Alicante","fecha_inicio":"2025-05-30","hora_inicio":"19:00:00","hora_fin":"19:50:00","naturaleza_hecho":"","tipo_via":"calle","nombre_via":"San Vicente","numero":"67","piso":"3B","descripcion":"Tiana Del Bayou denunció un trato discriminatorio en un restaurante."}
+]
+}
+]

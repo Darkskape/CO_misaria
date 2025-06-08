@@ -1,0 +1,18 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"denuncias_co","database":"co_misaria","data":
+[
+{"nombre":"Ariel","apellidos":"Tritón","n_documento":"DNI123456A","id_denuncia":"1001","provincia_denun":"Barcelona","tipo_denun":"Robo"},
+{"nombre":"Elsa","apellidos":"Arendelle","n_documento":"DNI654321B","id_denuncia":"1002","provincia_denun":"Madrid","tipo_denun":"Allanamiento"},
+{"nombre":"Woody","apellidos":"Pride","n_documento":"DNI789123C","id_denuncia":"1003","provincia_denun":"Valencia","tipo_denun":"Daños materiales"},
+{"nombre":"Rapunzel","apellidos":"Corona","n_documento":"DNI321987D","id_denuncia":"1004","provincia_denun":"Sevilla","tipo_denun":"Amenazas"},
+{"nombre":"Buzz","apellidos":"Lightyear","n_documento":"DNI456789E","id_denuncia":"1005","provincia_denun":"Zaragoza","tipo_denun":"Hurto"},
+{"nombre":"Bella","apellidos":"Francia","n_documento":"DNI112233F","id_denuncia":"1006","provincia_denun":"Granada","tipo_denun":"Estafa"},
+{"nombre":"Moana","apellidos":"Waialiki","n_documento":"DNI334455G","id_denuncia":"1007","provincia_denun":"Málaga","tipo_denun":"Violencia verbal"},
+{"nombre":"Merida","apellidos":"Dunbroch","n_documento":"DNI556677H","id_denuncia":"1008","provincia_denun":"La Coruña","tipo_denun":"Vandalismo"},
+{"nombre":"Miguel","apellidos":"Rivera","n_documento":"DNI998877I","id_denuncia":"1009","provincia_denun":"Madrid","tipo_denun":"Pelea"},
+{"nombre":"Tiana","apellidos":"Del Bayou","n_documento":"DNI667788J","id_denuncia":"1010","provincia_denun":"Alicante","tipo_denun":"Discriminación"}
+]
+}
+]
