@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMISARIA</title>
     <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
-    <link rel="stylesheet" href="C:\Users\Kimberly\Documents\COMISARÍA\CSS\estilo_login.css">
+    <link rel="stylesheet" href="CSS\estilo_login.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
         rel="stylesheet">
@@ -22,9 +22,9 @@
     <div class="login-container">
 
 
-        <img class="logo-area" src="../IMG/IMG_WEBPRIVADA/logo_userhome.png" alt="Logo Personal Comisaría">
+        <img class="logo-area" src="IMG/IMG_WEBPRIVADA/logo_userhome.png" alt="Logo Personal Comisaría">
 
-        <form>
+        <form id="loginForm">
             <div class="celda">
                 <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                     class="icon">
@@ -33,7 +33,7 @@
                         stroke-linejoin="round" stroke-linecap="round">
                     </path>
                 </svg>
-                <input class="input" type="text" id="num_tip" placeholder="Ingrese su nº TIP" required>
+                <input class="input" type="text" id="n_support" placeholder="Ingrese su nº TIP" required>
             </div>
 
             <div class="celda">
@@ -49,11 +49,17 @@
 
             <!--CAPTCHA PARA EL LOGIN-->
             <div class="captcha-container">
+                <label class="captcha-frase" for="captchaRespuesta">Escribe el siguiente texto:</label>
+                <span id="captchaPregunta"></span>
+                <input type="text" id="captchaRespuesta" name="captchaRespuesta" required>
+            </div>
+            <!--
+            <div class="captcha-container">
                 <label class="captcha-frase" for="captcha">Escribe el siguiente texto:</label>
                 <span id="captchaPregunta"></span>
                 <input type="text" id="captchaRespuesta" name="captchaRespuesta" required>
             </div>
-
+-->
             <!--BOTONES ENVIAR/CANCELAR-->
             <div class="botones">
                 <button class="enviar" type="submit">Enviar</button>
@@ -63,6 +69,7 @@
     </div>
 
     <script>
+
         // Generar una cadena aleatoria para el captcha
         function generarCaptcha() {
             const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -78,18 +85,57 @@
         const captchaTexto = generarCaptcha();
         captchaPregunta.textContent = captchaTexto;
 
-        // Validar el captcha al enviar el formulario
-        const registroForm = document.getElementById('registroForm');
-        registroForm.addEventListener('submit', function (e) {
+        //SCRIPT PARA ENLAZAR BASE DATOS CON LOGIN 
+
+
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', async function (e) {
             e.preventDefault();
+
             const respuestaUsuario = document.getElementById('captchaRespuesta').value;
-            if (respuestaUsuario === captchaTexto) {
-                alert('Captcha correcto. Registro exitoso.');
-                // Aquí puedes enviar el formulario o realizar otras acciones
-            } else {
+            if (respuestaUsuario !== captchaTexto) {
                 alert('Captcha incorrecto. Inténtalo de nuevo.');
+                return;
+            }
+            console.log("captchacorrecto")
+
+
+            const tip = document.getElementById('n_support').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const res = await fetch("usuarios_convertidos.json");
+                const usuarios = await res.json();
+
+                const usuarioValido = usuarios.find(usuario =>
+                    usuario.n_support === tip && usuario.password === password
+                );
+                console.log("revisionpassword")
+
+                if (usuarioValido) {
+                    localStorage.setItem("usuarioNombre", usuarioValido.name);
+                    localStorage.setItem("usuarioCargo", usuarioValido.cargo);
+
+                    alert("¡Login correcto!");
+
+                    if (usuarioValido.cargo === "Agente") {
+                        window.location.href = "CO_index_interno_empleado.html";
+                    } else {
+                        window.location.href = "CO_index_interno_adinterna.html";
+                    }
+
+                    console.log("login")
+                } else {
+                    alert("TIP o contraseña incorrectos.");
+                }
+            } catch (err) {
+                console.error("Error cargando JSON:", err);
+                alert("Error al verificar los datos.");
             }
         });
+
+
+
     </script>
 
 </body>
