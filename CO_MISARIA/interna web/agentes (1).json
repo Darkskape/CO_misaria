@@ -1,0 +1,33 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"agentes","database":"co_misaria","data":
+[
+{"id_agente":"1","nombre":"Juan Pérez","rango":"Teniente","dni":"12345678A","telefono":"555-1234","estado":"activo","turno":"mañana","id_user":null,"n_support":null},
+{"id_agente":"2","nombre":"María Gómez","rango":"Capitán","dni":"87654321B","telefono":"555-5678","estado":"activo","turno":"","id_user":null,"n_support":null},
+{"id_agente":"3","nombre":"Carlos Ruiz","rango":"Sargento","dni":"11223344C","telefono":"555-9101","estado":"inactivo","turno":"tarde","id_user":null,"n_support":null},
+{"id_agente":"4","nombre":"Ana Martínez","rango":"Teniente","dni":"44332211D","telefono":"555-1122","estado":"activo","turno":"mañana","id_user":null,"n_support":null},
+{"id_agente":"5","nombre":"Luis Fernández","rango":"Capitán","dni":"55667788E","telefono":"555-3344","estado":"activo","turno":"","id_user":null,"n_support":null},
+{"id_agente":"6","nombre":"Sofía López","rango":"Sargento","dni":"99887766F","telefono":"555-5566","estado":"activo","turno":"tarde","id_user":null,"n_support":null},
+{"id_agente":"7","nombre":"Miguel Torres","rango":"Teniente","dni":"66778899G","telefono":"555-7788","estado":"inactivo","turno":"mañana","id_user":null,"n_support":null},
+{"id_agente":"8","nombre":"Laura Sánchez","rango":"Capitán","dni":"33445566H","telefono":"555-9900","estado":"activo","turno":"","id_user":null,"n_support":null},
+{"id_agente":"9","nombre":"Jorge Díaz","rango":"Sargento","dni":"22113344I","telefono":"555-2233","estado":"activo","turno":"tarde","id_user":null,"n_support":null},
+{"id_agente":"10","nombre":"Elena Morales","rango":"Teniente","dni":"77889900J","telefono":"555-4455","estado":"activo","turno":"mañana","id_user":null,"n_support":null},
+{"id_agente":"11","nombre":"Laura","rango":null,"dni":null,"telefono":null,"estado":null,"turno":"mañana","id_user":"004","n_support":"SUP004"},
+{"id_agente":"12","nombre":"Luis","rango":"Agente","dni":"567890123K","telefono":"567890123","estado":null,"turno":"mañana","id_user":"005","n_support":"SUP005"},
+{"id_agente":"13","nombre":"Daniel","rango":"Agente","dni":"57489016L","telefono":"569831704","estado":null,"turno":"tarde","id_user":"006","n_support":"SUP006"},
+{"id_agente":"14","nombre":"Sergio","rango":"Agente","dni":"60020366A","telefono":"697183465","estado":null,"turno":"tarde","id_user":"007","n_support":"SUP007"},
+{"id_agente":"15","nombre":"Ivan","rango":"Agente","dni":"45890234N","telefono":"916273890","estado":null,"turno":"mañana","id_user":"008","n_support":"SUP008"},
+{"id_agente":"16","nombre":"Alejandro","rango":"Agente","dni":"10911053G","telefono":"678091123","estado":null,"turno":"tarde","id_user":"009","n_support":"SUP009"},
+{"id_agente":"17","nombre":"Luis","rango":"Agente","dni":"29004568A","telefono":"600745353","estado":null,"turno":"mañana","id_user":"010","n_support":"SUP010"},
+{"id_agente":"18","nombre":"Adolfo","rango":"Agente","dni":"80947626S","telefono":"654356892","estado":null,"turno":"tarde","id_user":"011","n_support":"SUP011"},
+{"id_agente":"19","nombre":"Soledad","rango":"Agente","dni":"78903578H","telefono":"689036535","estado":null,"turno":"tarde","id_user":"012","n_support":"SUP012"},
+{"id_agente":"20","nombre":"Geraldine","rango":"Agente","dni":"90657382P","telefono":"697832893","estado":null,"turno":"mañana","id_user":"013","n_support":"SUP013"},
+{"id_agente":"21","nombre":"Dolores","rango":"Agente","dni":"96874625Y","telefono":"682465900","estado":null,"turno":"","id_user":"014","n_support":"SUPO14"},
+{"id_agente":"22","nombre":"Rosita","rango":"Agente","dni":"48983246R","telefono":"689623157","estado":null,"turno":"","id_user":"018","n_support":"SUP018"},
+{"id_agente":"23","nombre":"Ana","rango":"Agente","dni":"65145568P","telefono":"65145568","estado":null,"turno":"tarde","id_user":"019","n_support":"SUP019"},
+{"id_agente":"24","nombre":"Rosa","rango":"Agente","dni":"45679012Z","telefono":"660958475","estado":null,"turno":"mañana","id_user":"020","n_support":"SUP020"},
+{"id_agente":"25","nombre":"Elena","rango":"Agente","dni":"46589901E","telefono":"610131022","estado":null,"turno":"mañana","id_user":"021","n_support":"SUP021"}
+]
+}
+]
