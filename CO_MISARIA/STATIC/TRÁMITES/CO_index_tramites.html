@@ -1,0 +1,586 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRÁMITES</title>
+
+    <link rel="stylesheet" href="CSS\estilo_tramites.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+     <nav>
+
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG\iconos png\icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG\iconos png\icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias">Denuncias</a>
+                <a href="CO_index_tupolicia">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias">Denuncias</a>
+            <a href="CO_index_tupolicia">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+    <main>
+
+        <div class="container-pagina">
+
+            <!--DESPLEGABLE DE SECCIONES (SUSTITUYE AL ASIDE EN VERSIÓN MOBILE)-->
+
+            <div class="secciones-version-mobile">
+                <div class="boton-secciones" onclick="toggleSecciones()">SECCIONES</div>
+                <ul class="oculto" id="lista-secciones">
+                    <li class="seccion-movil"><a href="#DNI-Y-PASAPORTE">DNI y Pasaporte</a></li>
+                    <li class="seccion-movil"><a href="#EXTRANJERIA">Extranjería</a></li>
+                    <li class="seccion-movil"><a href="#PERMISOS-VIAJE">Permisos de viaje</a></li>
+                    <li class="seccion-movil"><a href="#ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+
+            </div>
+
+            <!-- ASIDE (SOLO DESKTOP VERSION)-->
+            <aside class="columna-izq">
+
+                <ul class="lista-aside">
+                    <h2 class="titulo-secciones"> SECCIONES</h2>
+                    <li class="li-aside"> <a href="#DNI-Y-PASAPORTE"> DNI y Pasaporte </a></li>
+                    <li class="li-aside"> <a href="#EXTRANJERIA"> Extranjería </a></li>
+                    <li class="li-aside"> <a href="#PERMISOS-VIAJE"> Permisos de viaje </a></li>
+                    <li class="li-aside"> <a href="#ANTECEDENTES"> Antecedentes </a></li>
+
+                </ul>
+
+            </aside>
+
+
+            <div class="contenido-principal">
+
+                <!--CITA PREVIA DNI PASAPORTE-->
+                <section class="apartado" id="DNI-Y-PASAPORTE">
+
+                    <h2 class="titulo-apartado"> Cita previa DNI y/o Pasaporte </h2>
+                    <p> Para la obtención o la renovación de su DNI y/o Pasaporte, deberá pedir cita previa a través del
+                        portal
+                        <a class="enlace-citaprevia" href="https://www.citapreviadnie.es"> www.citapreviadnie.es </a>.
+                        Recuerde acudir a su cita a
+                        tiempo y consultar la documentación necesaria para realizar dicho trámite.
+                    </p>
+
+                    <div class="barra-desplegable">
+                        <div class="cabecera" id="toggle">
+                            <span>Localizador de tasas</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+
+                        <div class="contenido" id="contenido">
+
+                            <ul class="listado-secundario">
+
+                                <li>Una <b> fotografía reciente en color del rostro </b> de la persona solicitante,
+                                    tamaño 32x26 milímetros,
+                                    con fondo uniforme, blanco y liso, tomada de frente con la cabeza
+                                    totalmente descubierta y sin gafas de cristales oscuros o cualquier otra prenda que
+                                    pueda impedir o dificultar la identificación de la persona.</li>
+
+                                <li>El <b>DNI anterior</b> (en caso de pérdida o sustracción se requerirá denuncia
+                                    previa o
+                                    comunicación de tal incidencia a la Unidad de Documentación).En caso de cambio de
+                                    domicilio, respecto del que figure en el Documento anterior, <b> Certificado o
+                                        volante
+                                        de empadronamiento del Ayuntamiento </b> donde la persona solicitante tenga su
+                                    domicilio,
+                                    expedido con una antelación máxima de tres meses a la fecha de la solicitud del DNI.
+                                </li>
+                                <li>Pago de la tasa de renovación. </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--DNI ELECTRÓNICO-->
+
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>DNI electrónico</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+
+                        <div class="contenido" id="contenido1">
+                            <p>Puedes obtener tu DNI electrónico en cualquier Oficina de Expedición (normalmente
+                                situadas en las Comisarías de Policía), a través del sistema de cita previa en el
+                                teléfono 902 247 364, o a través de la web <a class="enlace-citaprevia"
+                                    href="www.citapreviadnie.es">
+                                    www.citapreviadnie.es </a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!--EXTRANJERÍA + CUADRICULA-->
+
+                <section class="apartado" id="EXTRANJERIA">
+
+                    <h2 class="titulo-apartado"> Extranjería </h2>
+
+                    <p>En estas páginas encontrarás toda la información sobre los trámites de documentación de
+                        ciudadanos comunitarios, extranjeros, apátridas, asilo y refugio y sobre los procedimientos
+                        administrativos.</p>
+
+                    <div class="cuadricula">
+                        <ul>
+                            <li class="cuadricula">
+                                <img class="icono normal" src="IMG\iconos png\trabajoazul.png">
+                                <!--IMAGEN INICIAL+ IMAGEN AL HACER HOVER-->
+                                <img class="icono hover" src="IMG\iconos png\trabajo.png"><br> <a
+                                    href="CO_index_tramites_renovacionresicendiaytrabajo.html">Renovación
+                                    de residencia y/o trabajo</a>
+                            </li>
+
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/estudianteazul.png">
+                                <img class="icono hover" src="IMG\iconos png/estudiante.png"><br><a
+                                    href="CO_index_tramites_tarjetaestudiante.html">Tarjeta
+                                    de estudiante</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/avionazul.png">
+                                <img class="icono hover" src="IMG\iconos png/avion.png"><br><a
+                                    href="CO_index_tramite_autorizacionregreso.html">Autorización
+                                    de regreso</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/tarjetacasaazul.png">
+                                <img class="icono hover" src="IMG\iconos png/tarjetacasa.png"><br><a
+                                    href="CO_index_tramites_tarjetaresidenciafamiliar.html">Tarjeta
+                                    de residencia familiar</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/maletaazul.png">
+                                <img class="icono hover" src="IMG\iconos png/maleta.png"><br><a
+                                    href="CO_index_tramites_prorrogacortaduracion.html">Prórroga
+                                    de estancia de corta duración</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/NIE azul.png">
+                                <img class="icono hover" src="IMG\iconos png/NIE.png"><br><a
+                                    href="CO_index_tramites_nie.html">Asignación de NIE</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/casaazul.png">
+                                <img class="icono hover" src="IMG\iconos png/casa.png"><br><a
+                                    href="CO_index_tramites_certificadoresidente.html">Certificado
+                                    de residente</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png/cartainvitacionazul.png">
+                                <img class="icono hover" src="IMG\iconos png/cartainvitacion.png"><br>
+                                <a href="CO_index_ tramites_expedicioncartainvitacion.html">Expedición de carta de
+                                    invitación</a>
+                            </li>
+                            <li>
+                                <img class="icono normal" src="IMG\iconos png\icon_apatriaazul.png">
+                                <img class="icono hover" src="IMG\iconos png\icon_apatriablanco.png"><br><a
+                                    href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/extranjeria/formulario_solicitud_apatrida_rellenable.pdf"
+                                    target="_blank">Solicitud de Estatuto de Apátrida</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--PERMISOS DE VIAJE-->
+                <section class="apartado" id="PERMISOS-VIAJE">
+
+                    <h2 class="titulo-apartado"> Permisos de viaje</h2>
+                    <p> Solicita de manera sencilla tu permiso de viaje. Recuerda traer todos los documentos necesarios
+                        para la solicitud. </p>
+
+                    <!--CÓMO SOLICITAR PERMISO-->
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>Cómo solicitar permiso</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido"> <!--CONTENIDO DEL DESPLEGABLE-->
+                            <p>Le informamos que actualmente, para solicitar cualquier tipo de permiso de viaje, se debe
+                                realizar de manera presencial en la comisaría de policía más cercana a su domicilio.</p>
+                            <h3> SOLICITUD PARA MENORES DE EDAD</h3>
+                            <p> Para la solicitud de Permiso de Viaje para uno o varios menores, consulte la guía
+                                específica. <a class="enlace-citaprevia" href="#"> Guía de trámite del Permiso de viaje
+                                    de menores.</a></p>
+                            <p>Recordarle que el permiso de viaje es <strong> exclusivamente para menores españoles
+                                    residentes en España que viajen fuera del territorio nacional no
+                                    acompañados</strong> de cualquiera de sus progenitores o tutores.
+                                Únicamente es <strong>obligatoria</strong> la comparecencia de uno de los progenitores o
+                                representantes legales en dependencias policiales, pero sí es necesario el
+                                consentimiento de los dos.
+                            </p>
+                            <h3>CUANDO NO ES NECESARIA LA AUTORIZACIÓN</h3>
+                            <ul class="listado-secundario">
+                                <li> Si el menor <strong>viaja en compañía de cualquiera de sus representantes
+                                    </strong>legales (progenitores o tutor/es).</li>
+                                <li>No procede para los menores que <strong>>entren en España o para los menores
+                                        españoles que residan habitualmente fuera</strong> del territorio nacional.</li>
+                                <li>Los menores<strong> extranjeros que residan en España</strong> se regirán por lo
+                                    dispuesto en su legislación nacional Tampoco es necesaria para los menores
+                                    extranjeros que se hallen de visita o en tránsito en España.</li>
+                                <li><strong>NO ES OBJETO DE LA AUTORIZACIÓN PRESENTARLA A LAS COMPAÑÍAS DE
+                                        TRANSPORTE,</strong> sino que es para presentarla en los pasos fronterizos
+                                    (Reglamento UE 2016/399, anexo VII, apartado 6.3).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--DOCUMENTACIÓN NECESARIA-->
+
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>Documentación necesaria</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido">
+                            <ul class="listado-secundario">
+                                <li>D.N.I. / Pasaporte de la persona que va a comparecer en dependencias policiales.
+                                </li>
+                                <li>Documento en vigor (D.N.I. / Pasaporte) con el que acreditar la identidad del menor.
+                                </li>
+                                <li>La documentación adicional que necesite aportar a la Autorización con el objeto de
+                                    acreditar la patria potestad, tal como un poder notarial, Libro de familia,
+                                    documento acreditativo de representación, documento acreditativo de familia
+                                    monoparental, etc...</li>
+                                <li>Tenga en cuenta que el funcionario que expide la Autorización podrá valorar la
+                                    presentación de cualquier medio válido en derecho con el objeto de acreditar la
+                                    declaración y el contenido de los documentos que la acompañen.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--FORMULARIOS-->
+
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>Formularios</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido">
+                            <ul class="listado-secundario">
+                                <li><a class="enlace-citaprevia"
+                                        href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/ciudadanos/guia_tramite_permiso_viaje_menores.pdf">Guía
+                                        de trámite del Permiso de viaje de
+                                        menores</a></li>
+                                <li><a class="enlace-citaprevia"
+                                        href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/ciudadanos/declaracion_permiso_viaje_menores.pdf">Formulario
+                                        de declaración de permiso de viaje
+                                        para menores</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!--ANTECEDENTES POLICIALES-->
+
+                <section class="apartado" id="ANTECEDENTES">
+                    <h2 class="titulo-apartado"> Antecedentes policiales </h2>
+                    <p>El artículo 18.4 de la Constitución Española reconoce el derecho fundamental a la protección de
+                        datos personales. El presente procedimiento tiene por objeto dar a conocer el mecanismo, en el
+                        ámbito del Ministerio del Interior, para el ejercicio de los derechos que la legislación vigente
+                        otorga a los ciudadanos.
+
+                        Los derechos que se relacionan a continuación son de carácter personalísimo e independiente, de
+                        tal forma que el ejercicio de uno no
+                        es requisito para el ejercicio del otro, estando regulados en la Ley Orgánica 7/2021, de 26 de
+                        mayo, de protección de datos personales tratados para fines de prevención, detección,
+                        investigación y enjuiciamiento de infracciones penales y de ejecución de sanciones penales.
+                        El ejercicio por el afectado de sus derechos será gratuito.
+                    </p>
+
+
+                    <!--barra procedimiento general-->
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>Procedimiento general</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido">
+                            <p>El ejercicio de los derechos de acceso y supresión de antecedentes policiales deberá
+                                llevarse a
+                                cabo mediante solicitud dirigida al responsable del fichero para la gestión de
+                                antecedentes de
+                                las personas de interés policial (PERPOL), que contendrá
+                                :</p>
+                            <ul class="listado-secundario">
+                                <li>Nombre y apellidos de la persona interesada. </li>
+                                <li>Identificación del medio electrónico, o en su defecto, lugar físico en que desea
+                                    que se practique la notificación (pudiéndose aportar dirección de correo electrónico
+                                    para recibir aviso del envío o puesta a disposición de la notificación). </li>
+                                <li>Hechos, razones y petición en que se concrete, con toda claridad, la solicitud,
+                                    con la aportación, en su caso, de los documentos acreditativos de la petición
+                                    que formula.</li>
+                                <li>Lugar y fecha.</li>
+                                <li>Firma de la persona solicitante o acreditación de la autenticidad de su voluntad
+                                    expresada por cualquier medio.</li>
+                                <li>Órgano, centro o unidad administrativa a la que se dirige.</li>
+                                <li>En el caso de que la solicitud no reúna los requisitos especificados, se
+                                    solicitará la subsanación de los mismos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--barra formas de ejercitar los derechos-->
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>Formas de ejercitar los derechos</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido">
+                            <p>La solicitud junto con la documentación que debe acompañarla deberá ser presentada, en el
+                                ámbito del Cuerpo Nacional de Policía, en cualquier Comisaría de la Policía Nacional o a
+                                través de los medios y formas establecidas en el artículo 16.4 de la Ley 39/2015, de 1
+                                de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas
+                                (registro electrónico, oficinas de Correos, representaciones diplomáticas u oficinas
+                                consulares de España en el extranjero, oficinas de asistencia en materia de registros,
+                                cualquier otro que establezcan las disposiciones vigentes).</p>
+
+                        </div>
+                    </div>
+
+                    <!--barra: Actuación mediante representante-->
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span>Actuación mediante representante</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido">
+                            <p>Podrán ejercitarse los derechos mediante:</p>
+                            <ul class="listado-secundario">
+                                <li>Representante legal, cuando el afectado se encuentre en situación de incapacidad o
+                                    minoría de edad que le imposibilite el ejercicio personal de estos derechos, en cuyo
+                                    caso será necesario la acreditación de tal condición.</li>
+                                <li>Representante voluntario, expresamente designado para el ejercicio del derecho. En
+                                    este caso, deberá constar claramente acreditada la identidad del representado y la
+                                    representación conferida por aquél. </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--barra: Comunicación con el solicitante-->
+                    <div class="barra-desplegable">
+                        <div class="cabecera">
+                            <span> Comunicación con el solicitante</span>
+                            <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                        </div>
+                        <div class="contenido">
+                            <p>Se realizará a través de la Dependencia Policial más próxima al domicilio que se indicó
+                                en la solicitud a efectos de notificación.</p>
+
+                        </div>
+                    </div>
+
+                    <h2 class="titulo-apartado"> Trámites de antecedentes </h2>
+                    <div class="antecedentes">
+
+                        <div class="tipo-antecedente">
+                            <img class="icono-antecedente" src="IMG\iconos png\icon_accesoazul.png">
+                            <a href="CO_index_tramites_derechodeacceso.html">
+                                Derecho de acceso
+                            </a>
+                        </div>
+
+                        <div class="tipo-antecedente">
+                            <img class="icono-antecedente" src="IMG\iconos png\icon_supresionazul.png">
+                            <a href="CO_index_tramites_derechodesupresion.html">
+                                Derecho de supresión
+                            </a>
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+            </div>
+
+
+    </main>
+
+    <!--BOTON SCROLL UP-->
+
+    <a href="#" id="scrollToTopBtn">
+        <img src="IMG\iconos png\scrollup.png" alt="Subir">
+    </a>
+
+    <footer>
+
+
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#DNI-Y-PASAPORTE">Dni
+                            y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#PERMISOS-VIAJE">Permisos
+                            de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#EXTRANJERIA">Extranjería</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#ANTECEDENTES">Antecedentes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_contacto_formulario.html">Reportar</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                            Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html#PREGUNTAS-FRECUENTES">Preguntas
+                            frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a
+                    href="FILES\Proteccion_de_datos.pdf" target="_blank">Protección
+                    de
+                    datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Síguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="IMG\REDES SOCIALES\facebook.jpg" alt="Facebook"></a></li>
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG\REDES SOCIALES\x.png" alt="X"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG\REDES SOCIALES\instagram.jpg" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                                src="IMG\REDES SOCIALES\youtube.jpg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                                src="IMG\REDES SOCIALES\tiktok.jpg" alt="TikTok"></a></li>
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG\REDES SOCIALES\whatsapp.jpg" alt="WhatsApp"></a></li>
+                    <li><a href="https://t.me/policianacional" target="_blank"><img
+                                src="IMG\REDES SOCIALES\telegram.jpg" alt="Telegram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS\Tramites.js"></script>
+
+</body>
+
+</html>
