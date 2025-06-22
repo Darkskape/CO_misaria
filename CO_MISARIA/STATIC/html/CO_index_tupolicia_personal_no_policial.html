@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="CSS/CO_nav_footer.css">
+    <link rel="stylesheet" href="CSS/CO_index_tupolicia_personal_no_policial.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index_comisaria.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias.html">Denuncias</a>
+                <a href="CO_index_tupolicia.html">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index_comisaria.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias.html">Denuncias</a>
+            <a href="CO_index_tupolicia.html">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+    <main>
+        <section>
+            <h2>PERSONAL NO POLICIAL</h2>
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span>
+                        <h4>Resolución definitiva de admitidos y excluidos (B.O.E.)</h4>
+                    </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <a href="https://www.boe.es/boe/dias/2022/07/29/pdfs/BOE-A-2022-12673.pdf" target="_blank">
+                        Resolución de 26 de julio de 2022, de la Secretaría de Estado de Función Pública, por la
+                        que se aprueba la relación definitiva de admitidos y excluidos del proceso selectivo para
+                        ingreso, por el sistema general de acceso libre libre y promoción interna, como personal laboral
+                        fijo en los grupos profesionales M3, M2, M1, E2 y E1 sujetos al IV Convenio colectivo único para
+                        el personal de la Administración General del Estado, en el Ministerio del Interior, convocado
+                        por Resolución de 29 de marzo de 2022
+                    </a>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span>
+                        <h4>Resolución definitiva de aspirantes admitidos</h4>
+                    </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <a href="https://policia.es/miscelanea/procesos_selectivos/personal_laboral/2022/relacion_definitiva_admitidos_interior.pdf"
+                        target="_blank">
+                        RELACIÓN DEFINITIVA DE ASPIRANTES ADMITIDOS AL PROCESO SELECTIVO PARA INGRESO, POR ACCESO LIBRE
+                        Y PROMOCIÓN INTERNA, COMO PERSONAL LABORAL FIJO EN LOS GRUPOS PROFESIONALES M3, M2, M1, E2 y E1
+                        EN EL MINISTERIO DEL INTERIOR, SUJETOS AL IV CONVENIO ÚNICO PARA EL PERSONAL LABORAL DE LA
+                        ADMINISTRACIÓN GENERAL DEL ESTADO
+                    </a>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span>
+                        <h4>Resolución de admitidos y exccluidos provisionales</h4>
+                    </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <a href="https://www.boe.es/boe/dias/2022/06/23/pdfs/BOE-A-2022-10365.pdf" target="_blank">
+                        Resolución de 18 de junio de 2022, de la Secretaría de Estado de Función Pública, por la que se
+                        aprueba la relación provisional de admitidos y excluidos y se anuncia fecha, hora y lugar de
+                        celebración del primer ejercicio de la fase de oposición del proceso selectivo para ingreso, por
+                        el sistema general de acceso libre y promoción interna, como personal laboral fijo en los grupos
+                        profesionales M3, M2, M1, E2 y E1 sujetos del IV Convenio colectivo único para el personal
+                        laboral de la Administración General del Estado, en el Ministerio del Interior, convocado por
+                        Resolución de 29 de marzo de 2022.
+                    </a>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span>
+                        <h4>Resolución provisional de admitidos</h4>
+                    </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <a href="https://policia.es/miscelanea/procesos_selectivos/personal_laboral/2022/Relaci%C3%B3n_Provisional_Admitidos_INTERIOR.PDF"
+                        target="_blank">
+                        RELACIÓN PROVISIONAL DE ASPIRANTES ADMITIDOS AL PROCESO SELECTIVO PARA INGRESO, POR ACCESO LIBRE
+                        Y PROMOCIÓN INTERNA, COMO PERSONAL LABORAL FIJO EN LOS GRUPOS PROFESIONALES M3/M2/M1/E2/E1 EN EL
+                        MINISTERIO DEL INTERIOR, SUJETOS AL IV CONVENIO ÚNICO PARA EL PERSONAL LABORAL DE LA
+                        ADMINISTRACIÓN GENERAL DEL ESTADO.
+                    </a>
+                </div>
+            </article>
+
+            <article class="barra-desplegable">
+                <div class="cabecera" id="toggle">
+                    <span>
+                        <h4>Designación del Tribunal calificador</h4>
+                    </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+
+                <div class="contenido" id="contenido">
+                    <a href="https://policia.es/miscelanea/procesos_selectivos/personal_laboral/2022/Designacion_Tribunal_INTERIOR.PDF"
+                        target="_blank">
+                        TRIBUNAL CALIFICADOR DEL PROCESO SELECTIVO PARA INGRESO, POR ACCESO LIBRE Y PROMOCIÓN INTERNA,
+                        COMO PERSONAL LABORAL FIJO EN LOS GRUPOS PROFESIONALES M3-M2-M1-E2-E1 EN EL MINISTERIO DEL
+                        INTERIOR.
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #DNI-Y-PASAPORTE">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #PERMISOS-VIAJE">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #EXTRANJERIA">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_denuncias.html">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_contacto_formulario.html">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_index_tupolicia.html">
+                <h2 class="titulo-enlace"> Tu policía </h2>
+            </a>
+            <ul>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                        Policia</a></li>
+                <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a></li>
+            </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_emergenicas.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina"
+                            href="CO_index_emergenicas.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html #PREGUNTAS-FRECUENTES">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="FILES/CO_proteccion_de_datos.pdf">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="IMG/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="IMG/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="IMG/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="img/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="JS/CO_nav_footer.js"></script>
+    <script src="JS/CO_index_tupolicia_conocenos.js"></script>
+
+</body>
+
+</html>

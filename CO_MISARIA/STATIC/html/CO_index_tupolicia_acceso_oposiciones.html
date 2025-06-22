@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="CSS/CO_nav_footer.css">
+    <link rel="stylesheet" href="CSS/CO_index_tupolicia_acceso_oposiciones.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index_comisaria.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias.html">Denuncias</a>
+                <a href="CO_index_tupolicia.html">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index_comisaria.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias.html">Denuncias</a>
+            <a href="CO_index_tupolicia.html">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+    <main>
+        <section>
+            <h2>ACCESO A OPOSICIONES Y CONVOCATORIAS</h2>
+        </section>
+        <section>
+            <div class="oposiciones">
+                <div class="oposiciones-details">
+                    <h3>Policía Nacional Escala Básica y Escala Ejecutiva</h3>
+                    <p>
+                        Sede División de Formación y Perfeccionamiento, Plaza Carabanchel nº5, Madrid (9:00 a 14:00
+                        horas)<br>
+                        procesos.dfp@policia.es<br>
+                        Teléfono de Atención al público<br>
+                        913227600 / 913227612
+                    </p>
+                </div>
+                <button class="oposiciones-button"
+                    onclick="location.href='CO_index_tupolicia_acceso_oposiciones_policia.html'">Más
+                    información</button>
+            </div>
+
+            <div class="oposiciones">
+                <div class="oposiciones-details">
+                    <h3>Procesos Selectivos Seguridad Privada</h3>
+                    <p>
+                        Sede División de Formación y Perfeccionamiento, Plaza Carabanchel nº5, Madrid (9:00 a 14:00
+                        horas)
+                        procesos.dfp@policia.es<br>
+                        Teléfono de Atención al público<br>
+                        913227600 / 913227612<br>
+                    </p>
+                </div>
+                <button class="oposiciones-button"
+                    onclick="location.href='CO_index_tupolicia_acceso_oposiciones_seguridad.html'">Más
+                    información</button>
+            </div>
+
+            <div class="oposiciones">
+                <div class="oposiciones-details">
+                    <h3>Procesos Selectivos Facultativos y Técnicos</h3>
+                    <p>
+                        Sede División de Personal, Avenida Pío XII nº 50, Madrid (7:30 a 14:30 horas)
+                        dp.concursos@policia.es<br>
+                        Teléfono de Atención al público<br>
+                        913227830 / 913227831<br>
+                    </p>
+                </div>
+                <button class="oposiciones-button"
+                    onclick="location.href='CO_index_tupolicia_acceso_oposiciones_facultativos.html'">Más
+                    información</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>NOTICIAS</h2>
+        </section>
+
+        <section>
+            <div class="carousel-wrapper">
+                <button class="carousel-arrow">&#10094;</button>
+
+                <div class="carousel-container">
+                    <div class="carousel-track">
+
+                        <div class="carousel-item"><!--Noticia 1-->
+                            <div class="color_seguridad_privada">
+                                <h3>Seguridad Privada</h3>
+                            </div>
+                            <div class="contenido_noticia">
+                                <h5>27/05/2025</h5>
+                                <h4>02/2025 LISTADO DE PERSONAS ADMITIDAS Y EXCLUIDAS DEFINITIVA</h4>
+                                <p>
+                                    Acuerdo de 21 de mayo de 2025 del tribunal calificador por el que se hace pública
+                                    las
+                                    listas definitivas de personas admitidas y excluidas en la convocatoria 02/2025 de
+                                    pruebas de selección para vigilante de seguridad y su especialidad de vigilante de
+                                    explosivos y escolta privado.
+                                </p>
+                                <a href="https://www.policia.es/portalaspirantes/documents/33934/0/ACUERDO+LISTA+DEFINITIVA+EXCLUIDOS+2-25.pdf/6d857a00-3dbd-26e6-177f-4951b91aa925?t=1748344839891"
+                                    target="_blank">
+                                    <button class="noticia_button">VER DOCUMENTO PDF</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item"><!--Noticia 2-->
+                            <div class="color_policia_nacional">
+                                <h3>Policía Nacional</h3>
+                            </div>
+                            <div class="contenido_noticia">
+                                <h5>22/05/2025</h5>
+                                <h4>¡ATENCIÓN, OPOSITORES DE LA BAS42!</h4>
+                                <p>
+                                    Desde la División de Formación y Perfeccionamiento SE INFORMA que el día 25 de
+                                    octubre
+                                    tendrá lugar exclusivamente la realización del examen de conocimientos y del test
+                                    psicotécnico.<br>
+                                    Aquel personal opositor que supere el cuestionario de preguntas, será convocado para
+                                    la
+                                    realización de las pruebas físicas.
+                                    Aquellos aspirantes que sean declarados aptos en las pruebas físicas, serán
+                                    convocados a
+                                    la realización del cuestionario de información biográfica y del test de
+                                    personalidad.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item"><!--Noticia 3-->
+                            <div class="color_policia_nacional">
+                                <h3>Policía Nacional</h3>
+                            </div>
+                            <div class="contenido_noticia">
+                                <h5>20/05/2025</h5>
+                                <h4>¡ATENCIÓN, OPOSITORES DE LA BAS42!</h4>
+                                <p>
+                                    Desde la División de Formación y Perfeccionamiento, y en relación con la próxima
+                                    convocatoria de ingreso a la Escala Básica de la Policía Nacional, se comunica a
+                                    todo el
+                                    personal opositor que la realización de la primera prueba (exámenes escritos) se
+                                    llevará
+                                    a cabo el día 25 de octubre de 2025, salvo causa sobrevenida.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item"><!--Noticia 4-->
+                            <div class="color_policia_nacional">
+                                <h3>Policía Nacional</h3>
+                            </div>
+                            <div class="contenido_noticia">
+                                <h5>28/04/2025</h5>
+                                <h4>EB - SOLICITUD APLAZAMEINTO DÍA 29 CON MOTIVO DEL APAGÓN </h4>
+                                <p>
+                                    ¡Atención opositores!<br>
+
+                                    Si debido al apagón no puedes asistir a la División de Formación y Perfeccionamiento
+                                    el
+                                    martes día 29 de abril para tu entrevista personal y reconocimiento médico, puedes
+                                    solicitar el aplazamiento de las pruebas enviando un correo electrónico a
+                                    ASISTENCIASPROCEOS.DFP@POLICIA.ES, indicando tu nombre completo, número de opositor
+                                    y
+                                    teléfono de contacto, finalizando el plazo el miércoles día 30 de abril a las 23:59
+                                    horas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item"><!--Noticia 5-->
+                            <div class="color_facultativos_y_tecnicos">
+                                <h3>Facultativos y Técnicos</h3>
+                            </div>
+                            <div class="contenido_noticia">
+                                <h5>01/04/2025</h5>
+                                <h4>CITACIÓN PARA INTERPRETACIÓN DE OBRAS DE MÚSICA </h4>
+                                <p>
+                                    Una vez publicada en el B.O.E. Nº70 de 22/02/2025, la Resolución de 7 de marzo de
+                                    2025,
+                                    de la Dirección General de la Policía.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item"><!--Noticia 6-->
+                            <div class="color_policia_nacional">
+                                <h3>Policía Nacional</h3>
+                            </div>
+                            <div class="contenido_noticia">
+                                <h5>12/06/2025</h5>
+                                <h4>EJECUCIONES DE SENTENCIA </h4>
+                                <p>
+                                    Aquellos opositores que por ejecución de sentencia estén pendientes de conocer el
+                                    resultado, podrán acceder al mismo de forma individualizada a través del Portal del
+                                    Aspirante a partir del 17 de junio de 2025.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-arrow">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #DNI-Y-PASAPORTE">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #PERMISOS-VIAJE">Permisos de viaje</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #EXTRANJERIA">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_denuncias.html">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_contacto_formulario.html">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_index_tupolicia.html">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                            Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_emergenicas.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_emergenicas.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html #PREGUNTAS-FRECUENTES">Preguntas
+                            frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="FILES/CO_proteccion_de_datos.pdf">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="IMG/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="IMG/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="IMG/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="IMG/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="JS/CO_nav_footer.js"></script>
+    <script src="JS/CO_index_tupolicia_acceso_oposiciones.js"> </script>
+</body>
+
+</html>

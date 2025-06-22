@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="CSS/CO_nav_footer.css">
+    <link rel="stylesheet" href="CSS/CO_index_contacto_formulario.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index_comisaria.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias.html">Denuncias</a>
+                <a href="CO_index_tupolicia.html">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index_comisaria.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias.html">Denuncias</a>
+            <a href="CO_index_tupolicia.html">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+    <main>
+        <!-----BOTON PARA VOLVER ATRÁS----->
+        <button class="atras" onclick="window.history.back()"> ← Volver </button>
+
+        <button class="atras-movil" onclick="window.history.back()">
+            <img src="IMG/icon_back.png" alt="Volver atrás">
+        </button>
+
+        <section>
+            <article>
+                <h5>¿Está sucediendo un crimen en este momento? ¿Sigue el sospechoso en la escena, hay alguien
+                    gravemente herido o en peligro inmediato?</h5>
+                <p class="llamar">Llame al 091</p>
+            </article>
+            <article>
+                <h1>BIENVENIDO AL "SERVICIO DE DENUNCIAS A TRAVÉS DE INTERNET COMISARIA DE COLON</h1>
+                <h5>
+                    "HECHOS NO DENUNCIABLES A TRAVÉS DE LA OFICINA VIRTUAL DE DENUNCIAS DEL CUERPO NACIONAL DE
+                    POLICÍA"
+                </h5>
+                <ul>
+                    <li>Si el hecho que pretende denunciar se ha producido con VIOLENCIA FISÍCA O INTIMIDACIÓN.</li>
+                    <li>Si el AUTOR/ES del hecho es o son CONOCIDO/S o podría reconocerlo/s físicamente.</li>
+                    <li>Si tiene constancia de la existencia de TESTIGO/S que pudieran haber presenciado el delito.</li>
+                    <li> Si es MENOR DE EDAD.</li>
+                    <li>
+                        Si el delito se está cometiendo de manera "IN FRAGANTI" en ese momento, lo debe comunicar de
+                        inmediato a través de los números de teléfonos: 091 o 112.
+                    </li>
+                    <li>*Tampoco puede denunciar a través de este medio aquellos hechos de NATURALEZA VIOLENTA O SEXUAL.
+                    </li>
+                </ul>
+            </article>
+
+            <article>
+                <h1>LEA DETENIDAMENTE ANTES DE CUMPLIMENTAR EL FORMULARIO</h1>
+                <ul>
+                    <li>
+                        El uso de este procedimiento es únicamente válido para interponer denuncias ante el CUERPO
+                        NACIONAL DE POLICÍA.
+                    </li>
+                    <li>
+                        Lea detenidamente las instrucciones antes de comenzar, en cada pestaña del formulario-denuncia
+                        encontrará un botón de ayuda que le facilitará la elaboración de la denuncia.
+                    </li>
+                    <li>
+                        Siga los pasos que le indica el programa para cumplimentar su denuncia, los campos que van EN
+                        NEGRITA son campos obligatorios.
+                    </li>
+                    <li>Haga uso del botón de ayuda en caso de duda.</li>
+                    <li>
+                        Una vez cumplimentada la denuncia, el sistema generará un número de referencia, tome nota de
+                        este número y entréguelo en comisaría cuando vaya a firmar su denuncia.
+                    </li>
+                    <li>
+                        Deberá proceder a firmar su denuncia en la Comisaria que usted haya designado lo antes posible y
+                        nunca más tarde de 72 horas.
+                    </li>
+                    <li>La denuncia carecerá de validez jurídica si no ha sido firmada en Comisaría por el denunciante.
+                    </li>
+                    <li>
+                        Recuerde que, en principio y salvo necesidades del servicio, las denuncias tramitadas a través
+                        de Internet tienen preferencia.
+                    </li>
+                </ul>
+
+                <p><b>AVISO LEGAL</b></p>
+                <p>
+                    El denunciante es informado de la obligación legal que tiene de decir la verdad (Art.433 de L.E.Cr.)
+                    y de la posible responsabilidad penal en la que puede incurrir en caso de acusar o imputar
+                    falsamente a una persona una infracción penal o con temerario desprecio hacia la verdad (Art. 456 de
+                    Código Penal), simular ser responsable o víctima de una infracción penal (Art.457 de Código Penal),
+                    o faltar a la verdad en su testimonio (Art.458 de Código Penal).
+                </p>
+                <p> Ley de Protección de datos: La información personal (datos de filiación) consignada al formular la
+                    denuncia por este procedimiento, solo podrá ser utilizada para las finalidades propias de la
+                    administración e investigación policial. El fichero al que se incorpore, está sometido a lo
+                    establecido por la Ley Orgánica 15/1999, de 13 de diciembre sobre Protección de Datos de Carácter
+                    Personal.
+                </p>
+                <p>
+                    <i>*Requieren un tratamiento singularizado en Comisaría y conllevan una atención directa, inmediata,
+                        especializada y personalizada a la víctima.
+                    </i>
+                </p>
+
+                <p>Gracias por su colaboración.</p>
+            </article>
+        </section>
+
+        <section>
+            <h1>Formulario de Registro de Denuncia </h1>
+            <!-- Formulario -->
+            <form action="#" method="POST" class="denunciar">
+                <fieldset>
+                    <legend>Denuncia</legend>
+
+                    <label>Seleccione el tipo de denuncia</label>
+                    <select id="ciudad" name="ciudad">
+                        <option value="al">Pérdida o extravío de documentos y/o efectos</option>
+                        <option value="alb">Sustracción de documentos y/o efectos </option>
+                        <option>Recuperación de documentos y/o efectos </option>
+                        <option>Sustracción de vehículo</option>
+                        <option>Recuperación de vehículo</option>
+                        <option>Sustracción en interior de vehículo</option>
+                        <option>Sustracción en domicilio y/o establecimiento</option>
+                    </select>
+
+                    <label for="lugar de Nacimiento">Seleccione la Provincia en la que desea realizar la
+                        denuncia:</label>
+                    <select id="ciudad" name="ciudad">
+                        <option value="al">Álava</option>
+                        <option value="alb"> Albacete</option>
+                        <option value="ali"> Alicante - Comunidad Valenciana </option>
+                        <option value="alme"> Almería - Andalucía </option>
+                        <option value="ast"> Asturias - Principado de Asturias </option>
+                        <option value="av"> Ávila - Castilla y León </option>
+                        <option value="bada"> Badajoz - Extremadura </option>
+                        <option value="barc"> Barcelona - Cataluña (Catalunya)</option>
+                        <option value="bil"> Bilbao - País Vasco (Euskadi) </option>
+                        <option value="burg"> Burgos - Castilla y León </option>
+                        <option value="cace"> Cáceres - Extremadura </option>
+                        <option value="cadi"> Cádiz - Andalucía </option>
+                        <option value="cant"> Cantabria - Cantabria </option>
+                        <option value="cast"> Castellón de la Plana - Comunidad Valenciana </option>
+                        <option value="ceuta"> Ceuta - Ciudad Autónoma de Ceuta </option>
+                        <option value="ciuda"> Ciudad Real - Castilla-La Mancha </option>
+                        <option value="cord"> Córdoba - Andalucía </option>
+                        <option value="cuen"> Cuenca - Castilla-La Mancha </option>
+                        <option value="gir"> Girona - Cataluña (Catalunya)</option>
+                        <option value="gran"> Granada - Andalucía </option>
+                        <option value="guad"> Guadalajara - Castilla-La Mancha </option>
+                        <option value="guip"> Gipuzkoa - País Vasco (Euskadi) </option>
+                        <option value="huelva"> Huelva - Andalucía </option>
+                        <option value="hues"> Huesca - Aragón </option>
+                        <option value="jae"> Jaén - Andalucía </option>
+                        <option value="la"> La Rioja - La Rioja </option>
+                        <option value="las"> Las Palmas - Canarias </option>
+                        <option value="le"> León - Castilla y León </option>
+                        <option value="ler"> Lleida - Cataluña (Catalunya)</option>
+                        <option value="lu">Lugo - Galicia </option>
+                        <option value="madr"> Madrid - Comunidad de Madrid </option>
+                        <option value="mal"> Málaga - Andalucía </option>
+                        <option value="mayo"> Melilla - Ciudad Autónoma de Melilla </option>
+                        <option value="meri"> Mérida - Extremadura </option>
+                        <option value="mur"> Murcia - Región de Murcia </option>
+                        <option value="nav"> Navarra - Comunidad Foral de Navarra </option>
+                        <option value="our"> Ourense - Galicia </option>
+                        <option value="palen">Palencia - Castilla y León</option>
+                        <option value="palm">Las Palmas - Canarias</option>
+                        <option value="pon">Pontevedra - Galicia</option>
+                        <option value="sala"> Salamanca - Castilla y León </option>
+                        <option value="santene"> Santa Cruz de Tenerife - Canarias </option>
+                        <option value="sego"> Segovia - Castilla y León </option>
+                        <option value="sevi"> Sevilla - Andalucía </option>
+                        <option value="sori">Soria - Castilla y León </option>
+                        <option value="tarra"> Tarragona - Cataluña</option>
+                        <option value="teru"> Teruel - Aragón</option>
+                        <option value="tole"> Toledo - Castilla-La Mancha </option>
+                        <option value="valen">Valencia - Comunidad Valenciana (Comunitat Valenciana) </option>
+                        <option value="valla">Valladolid - Castilla y León </option>
+                        <option value="vizca">Vizcaya (Bizkaia) - País Vasco (Euskadi) </option>
+                        <option value="zamo"> Zamora - Castilla y León</option>
+                        <option value="zara"> Zaragoza - Aragón</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Denunciante</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese tu nombre" required>
+
+                    <label for="nombre">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese tus apellidos" required>
+
+                    <label for="Tipo_documento"></label>
+                    <select id="documento" name="documento">
+                        <option value="dni">Documento Nacional de Identidad</option>
+                        <option value="resi">Permiso de Residencia </option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="carta_nac">Carta Nacional de Identidad </option>
+                        <option value="carne">Carné Profesional</option>
+                        <option value="permiso_cond">Permiso de Conducción </option>
+                        <option value="marino">Tarjeta de Marino Mercante</option>
+                        <option value="otros">Otro Documento de Identidad </option>
+                        <option value="desconoce">Se Desconoce</option>
+                        <option value="indoc">Indocumentado </option>
+                        <option value="tarj_extr">Tarjeta de Identificación de Extranjero Española</option>
+                    </select>
+
+                    <label for="nºdni">Número de documento:</label>
+                    <input type="text" id="nºdni" name="mºdni" placeholder="Ingrese su DNI" required>
+
+                    <label for="Tipo_documento"></label>
+                    <select id="documento" name="documento">
+                        <option value="masc">Masculino</option>
+                        <option value="fem">Femenino</option>
+                    </select>
+
+                    <!-- Teléfono -->
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto">
+
+                    <!-- Fecha con mes desplegado -->
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+
+                    <!-- Correo electrónico -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese tu correo" required>
+
+                    <!--Nacionalidad-->
+                    <label>Nacionalidad</label>
+                    <select>
+                        <option value="afg">AFGANISTAN</option>
+                        <option value="alb">ALBANIA</option>
+                        <option value="alem">ALEMANIA</option>
+                        <option value="amer">AMERICA</option>
+                        <option value="and">ANDORRA</option>
+                        <option value="ang">ANGOLA</option>
+                        <option value="antbar">ANTIGUA BARBUDA</option>
+                        <option value="antneer">ANTILLAS NEERLANDESAS</option>
+                        <option value="apat">APATRIDA</option>
+                        <option value="arabias">ARABIA SAUDITA</option>
+                        <option value="arg">ARGELIA</option>
+                        <option value="argen">ARGENTINA</option>
+                        <option value="arm">ARMENIA</option>
+                        <option value="aruba">ARUBA</option>
+                        <option value="aispac">ASOCIACION ISLAS PACIFICO</option>
+                        <option value="aust">AUSTRALIA</option>
+                        <option value="austria">AUSTRIA</option>
+                        <option value="azer">AZERBAYAN</option>
+                        <option value="bahamas">BAHAMAS</option>
+                        <option value="bahr">BAHREIN</option>
+                        <option value="bang">BANGLADESH</option>
+                        <option value="barb">BARBADOS</option>
+                        <option value="belg">BELGICA</option>
+                        <option value="beli">BELICE</option>
+                        <option value="bhu">BHUTAN</option>
+                        <option value="biel">BIELORRUSIA</option>
+                        <option value="bol">BOLIVIA</option>
+                        <option value="bos">BOSNIA HERZEGOVINA</option>
+                        <option value="bost">BOTSWANA</option>
+                        <option value="bra">BRASIL</option>
+                        <option value="brun">BRUNEI</option>
+                        <option value="bul">BULGARIA</option>
+                        <option value="burk">BURKINA FASO</option>
+                        <option value="bur">BURUNDI</option>
+                        <option value="cv">CABO VERDE</option>
+                        <option value="camb">CAMBOYA</option>
+                        <option value="cam">CAMERUN</option>
+                        <option value="can">CANADA</option>
+                        <option value="chad">CHAD</option>
+                        <option value="chile">CHILE</option>
+                        <option value="chi">CHINA</option>
+                        <option value="chip">CHIPRE</option>
+                        <option value="cisk">CISKEI</option>
+                        <option value="col">COLOMBIA</option>
+                        <option value="com">COMORES</option>
+                        <option value="cn">COREA NORTE</option>
+                        <option value="cs">COREA SUR</option>
+                        <option value="cm">COSTA MARFIL</option>
+                        <option value="cr">COSTA RICA</option>
+                        <option value="cro">CROACIA</option>
+                        <option value="cub">CUBA</option>
+                        <option value="cur">CURAÇAO</option>
+                        <option value="din">DINAMARCA</option>
+                        <option value="djib">DJIBOUTI</option>
+                        <option value="dom">DOMINICA</option>
+                        <option value="ecu">ECUADOR</option>
+                        <option value="egt">EGIPTO</option>
+                        <option value="emara">EMIRATOS ARABES UNIDOS</option>
+                        <option value="eri">ERITREA</option>
+                        <option value="eslov">ESLOVAQUIA</option>
+                        <option value="eslo">ESLOVENIA</option>
+                        <option value="esp" selected>ESPAÑA</option>
+                        <option value="eefm">ESTADOS FEDERADOS MICRONESIA</option>
+                        <option value="eeuu">ESTADOS UNIDOS AMERICA</option>
+                        <option value="est">ESTONIA</option>
+                        <option value="eti">ETIOPIA</option>
+                        <option value="fer">FERNANDO POO</option>
+                        <option value="fidji">FIDJI</option>
+                        <option value="fil">FILIPINAS</option>
+                        <option value="fin">FINLANDIA</option>
+                        <option value="fran">FRANCIA</option>
+                        <option value="gab">GABON</option>
+                        <option value="gam">GAMBIA</option>
+                        <option value="gre">GEORGIA</option>
+                        <option value="ghana">GHANA</option>
+                        <option value="gre">GRECIA</option>
+                        <option value="guat">GUATEMALA</option>
+                        <option value="gui">GUINEA</option>
+                        <option value="guibi">GUINEA BISSAU</option>
+                        <option value="guiec">GUINEA ECUATORIAL</option>
+                        <option value="guy">GUYANA</option>
+                        <option value="hai">HAITI</option>
+                        <option value="hon">HONDURAS</option>
+                        <option value="hong">HONG KONG BRITANICO</option>
+                        <option value="hun">HUNGRIA</option>
+                        <option value="ifni">IFNI</option>
+                        <option value="india">INDIA</option>
+                        <option value="ind">INDONESIA</option>
+                        <option value="irak">IRAK</option>
+                        <option value="iran">IRAN</option>
+                        <option value="irl">IRLANDA</option>
+                        <option value="isl">ISLANDIA</option>
+                        <option value="imn">ISLAS MARIANAS NORTE</option>
+                        <option value="im">ISLAS MARSHALL</option>
+                        <option value="ip">ISLAS PACIFICO</option>
+                        <option value="is">ISLAS SALOMON</option>
+                        <option value="is">ISRAEL</option>
+                        <option value="it">ITALIA</option>
+                        <option value="jam">JAMAICA</option>
+                        <option value="jap">JAPON</option>
+                        <option value="jor">JORDANIA</option>
+                        <option value="kaza">KAZAJSTAN</option>
+                        <option value="ken">KENIA</option>
+                        <option value="kirg">KIRGUISTAN</option>
+                        <option value="kir">KIRIBATI</option>
+                        <option value="kuw">KUWAIT</option>
+                        <option value="laos">LAOS</option>
+                        <option value="337">LESOTHO</option>
+                        <option value="let">LETONIA</option>
+                        <option value="liba">LIBANO</option>
+                        <option value="libe">LIBERIA</option>
+                        <option value="lib">LIBIA</option>
+                        <option value="lie">LIECHTENSTEIN</option>
+                        <option value="lit">LITUANIA</option>
+                        <option value="lux">LUXEMBURGO</option>
+                        <option value="macao">MACAO</option>
+                        <option value="mac">MACEDONIA</option>
+                        <option value="mad">MADAGASCAR</option>
+                        <option value="mala">MALASIA</option>
+                        <option value="mald">MALDIVAS</option>
+                        <option value="mal">MALI</option>
+                        <option value="malt">MALTA</option>
+                        <option value="marr">MARRUECOS</option>
+                        <option value="mau">MAURICIO</option>
+                        <option value="maurit">MAURITANIA</option>
+                        <option value="mex">MEXICO</option>
+                        <option value="mol">MOLDAVIA</option>
+                        <option value="mon">MONACO</option>
+                        <option value="mong">MONGOLIA</option>
+                        <option value="mont">MONTENEGRO</option>
+                        <option value="moz">MOZAMBIQUE</option>
+                        <option value="mya">MYANMAR</option>
+                        <option value="nami">NAMIBIA</option>
+                        <option value="nau">NAURU</option>
+                        <option value="nep">NEPAL</option>
+                        <option value="nica">NICARAGUA</option>
+                        <option value="niger">NIGER</option>
+                        <option value="nig">NIGERIA</option>
+                        <option value="nor">NORUEGA</option>
+                        <option value="nz">NUEVA ZELANDA</option>
+                        <option value="oman">OMAN</option>
+                        <option value="pb">PAISES BAJOS</option>
+                        <option value="pak">PAKISTAN</option>
+                        <option value="pal">PALESTINA</option>
+                        <option value="pan">PANAMA</option>
+                        <option value="papua">PAPUA NUEVA GUINEA</option>
+                        <option value="para">PARAGUAY</option>
+                        <option value="per">PERU</option>
+                        <option value="pol">POLONIA</option>
+                        <option value="port">PORTUGAL</option>
+                        <option value="pr">PUERTO RICO</option>
+                        <option value="qa">QATAR</option>
+                        <option value="ru">REINO UNIDO</option>
+                        <option value="repcen">REPUBLICA CENTROAFRICANA</option>
+                        <option value="repche">REPUBLICA CHECA</option>
+                        <option value="repcon">REPUBLICA CONGO</option>
+                        <option value="repdom">REPUBLICA DOMINICANA</option>
+                        <option value="repgr">REPUBLICA GRANADA</option>
+                        <option value="rio">RIO MUNI</option>
+                        <option value="rua">RUANDA</option>
+                        <option value="rum">RUMANIA</option>
+                        <option value="ru">RUSIA</option>
+                        <option value="saha">SAHARA</option>
+                        <option value="stki">SAINT KITTS NEVIS</option>
+                        <option value="sal">SALVADOR</option>
+                        <option value="sam">SAMOA OCCIDENTAL</option>
+                        <option value="smar">SAN MARINO</option>
+                        <option value="smart">SAN MARTIN</option>
+                        <option value="svic">SAN VICENTE GRANADINAS</option>
+                        <option value="stlu">SANTA LUCIA</option>
+                        <option value="stse">SANTA SEDE</option>
+                        <option value="stt">SANTO TOME PRINCIPE</option>
+                        <option value="sen">SENEGAL</option>
+                        <option value="ser">SERBIA</option>
+                        <option value="sey">SEYCHELLES</option>
+                        <option value="sier">SIERRA LEONA</option>
+                        <option value="sin">SINGAPUR</option>
+                        <option value="sir">SIRIA</option>
+                        <option value="som">SOMALIA</option>
+                        <option value="sre">SRI LANKA</option>
+                        <option value="suda">SUDAFRICA</option>
+                        <option value="sud">SUDAN</option>
+                        <option value="sue">SUECIA</option>
+                        <option value="sui">SUIZA</option>
+                        <option value="suri">SURINAM</option>
+                        <option value="swal">SWAZILANDIA</option>
+                        <option value="tai">TAIWAN CHINA</option>
+                        <option value="tanz">TANZANIA</option>
+                        <option value="tayi">TAYIKISTAN</option>
+                        <option value="thai">THAILANDIA</option>
+                        <option value="tim">TIMOR ORIENTAL</option>
+                        <option value="tog">TOGO</option>
+                        <option value="ton">TONGA</option>
+                        <option value="tran">TRANSKEI</option>
+                        <option value="trin">TRINIDAD TOBAGO</option>
+                        <option value="tun">TUNEZ</option>
+                        <option value="turk">TURKMENISTAN</option>
+                        <option value="turq">TURQUIA</option>
+                        <option value="tuv">TUVALU</option>
+                        <option value="ucr">UCRANIA</option>
+                        <option value="urg">UGANDA</option>
+                        <option value="uru">URUGUAY</option>
+                        <option value="uzbe">UZBEKISTAN</option>
+                        <option value="van">VANUATU</option>
+                        <option value="ven">VENEZUELA</option>
+                        <option value="viet">VIETNAM</option>
+                        <option value="yr">YEMEN</option>
+                        <option value="zam">ZAMBIA</option>
+                        <option value="zim">ZIMBABWE</option>
+                    </select>
+
+                    <!--País de domicilio-->
+                    <label>País de domicilio</label>
+                    <select>
+                        <option value="afg">AFGANISTAN</option>
+                        <option value="alb">ALBANIA</option>
+                        <option value="alem">ALEMANIA</option>
+                        <option value="amer">AMERICA</option>
+                        <option value="and">ANDORRA</option>
+                        <option value="ang">ANGOLA</option>
+                        <option value="antbar">ANTIGUA BARBUDA</option>
+                        <option value="antneer">ANTILLAS NEERLANDESAS</option>
+                        <option value="apat">APATRIDA</option>
+                        <option value="arabias">ARABIA SAUDITA</option>
+                        <option value="arg">ARGELIA</option>
+                        <option value="argen">ARGENTINA</option>
+                        <option value="arm">ARMENIA</option>
+                        <option value="aruba">ARUBA</option>
+                        <option value="aispac">ASOCIACION ISLAS PACIFICO</option>
+                        <option value="aust">AUSTRALIA</option>
+                        <option value="austria">AUSTRIA</option>
+                        <option value="azer">AZERBAYAN</option>
+                        <option value="bahamas">BAHAMAS</option>
+                        <option value="bahr">BAHREIN</option>
+                        <option value="bang">BANGLADESH</option>
+                        <option value="barb">BARBADOS</option>
+                        <option value="belg">BELGICA</option>
+                        <option value="beli">BELICE</option>
+                        <option value="bhu">BHUTAN</option>
+                        <option value="biel">BIELORRUSIA</option>
+                        <option value="bol">BOLIVIA</option>
+                        <option value="bos">BOSNIA HERZEGOVINA</option>
+                        <option value="bost">BOTSWANA</option>
+                        <option value="bra">BRASIL</option>
+                        <option value="brun">BRUNEI</option>
+                        <option value="bul">BULGARIA</option>
+                        <option value="burk">BURKINA FASO</option>
+                        <option value="bur">BURUNDI</option>
+                        <option value="cv">CABO VERDE</option>
+                        <option value="camb">CAMBOYA</option>
+                        <option value="cam">CAMERUN</option>
+                        <option value="can">CANADA</option>
+                        <option value="chad">CHAD</option>
+                        <option value="chile">CHILE</option>
+                        <option value="chi">CHINA</option>
+                        <option value="chip">CHIPRE</option>
+                        <option value="cisk">CISKEI</option>
+                        <option value="col">COLOMBIA</option>
+                        <option value="com">COMORES</option>
+                        <option value="cn">COREA NORTE</option>
+                        <option value="cs">COREA SUR</option>
+                        <option value="cm">COSTA MARFIL</option>
+                        <option value="cr">COSTA RICA</option>
+                        <option value="cro">CROACIA</option>
+                        <option value="cub">CUBA</option>
+                        <option value="cur">CURAÇAO</option>
+                        <option value="din">DINAMARCA</option>
+                        <option value="djib">DJIBOUTI</option>
+                        <option value="dom">DOMINICA</option>
+                        <option value="ecu">ECUADOR</option>
+                        <option value="egt">EGIPTO</option>
+                        <option value="emara">EMIRATOS ARABES UNIDOS</option>
+                        <option value="eri">ERITREA</option>
+                        <option value="eslov">ESLOVAQUIA</option>
+                        <option value="eslo">ESLOVENIA</option>
+                        <option value="esp" selected>ESPAÑA</option>
+                        <option value="eefm">ESTADOS FEDERADOS MICRONESIA</option>
+                        <option value="eeuu">ESTADOS UNIDOS AMERICA</option>
+                        <option value="est">ESTONIA</option>
+                        <option value="eti">ETIOPIA</option>
+                        <option value="fer">FERNANDO POO</option>
+                        <option value="fidji">FIDJI</option>
+                        <option value="fil">FILIPINAS</option>
+                        <option value="fin">FINLANDIA</option>
+                        <option value="fran">FRANCIA</option>
+                        <option value="gab">GABON</option>
+                        <option value="gam">GAMBIA</option>
+                        <option value="gre">GEORGIA</option>
+                        <option value="ghana">GHANA</option>
+                        <option value="gre">GRECIA</option>
+                        <option value="guat">GUATEMALA</option>
+                        <option value="gui">GUINEA</option>
+                        <option value="guibi">GUINEA BISSAU</option>
+                        <option value="guiec">GUINEA ECUATORIAL</option>
+                        <option value="guy">GUYANA</option>
+                        <option value="hai">HAITI</option>
+                        <option value="hon">HONDURAS</option>
+                        <option value="hong">HONG KONG BRITANICO</option>
+                        <option value="hun">HUNGRIA</option>
+                        <option value="ifni">IFNI</option>
+                        <option value="india">INDIA</option>
+                        <option value="ind">INDONESIA</option>
+                        <option value="irak">IRAK</option>
+                        <option value="iran">IRAN</option>
+                        <option value="irl">IRLANDA</option>
+                        <option value="isl">ISLANDIA</option>
+                        <option value="imn">ISLAS MARIANAS NORTE</option>
+                        <option value="im">ISLAS MARSHALL</option>
+                        <option value="ip">ISLAS PACIFICO</option>
+                        <option value="is">ISLAS SALOMON</option>
+                        <option value="is">ISRAEL</option>
+                        <option value="it">ITALIA</option>
+                        <option value="jam">JAMAICA</option>
+                        <option value="jap">JAPON</option>
+                        <option value="jor">JORDANIA</option>
+                        <option value="kaza">KAZAJSTAN</option>
+                        <option value="ken">KENIA</option>
+                        <option value="kirg">KIRGUISTAN</option>
+                        <option value="kir">KIRIBATI</option>
+                        <option value="kuw">KUWAIT</option>
+                        <option value="laos">LAOS</option>
+                        <option value="337">LESOTHO</option>
+                        <option value="let">LETONIA</option>
+                        <option value="liba">LIBANO</option>
+                        <option value="libe">LIBERIA</option>
+                        <option value="lib">LIBIA</option>
+                        <option value="lie">LIECHTENSTEIN</option>
+                        <option value="lit">LITUANIA</option>
+                        <option value="lux">LUXEMBURGO</option>
+                        <option value="macao">MACAO</option>
+                        <option value="mac">MACEDONIA</option>
+                        <option value="mad">MADAGASCAR</option>
+                        <option value="mala">MALASIA</option>
+                        <option value="mald">MALDIVAS</option>
+                        <option value="mal">MALI</option>
+                        <option value="malt">MALTA</option>
+                        <option value="marr">MARRUECOS</option>
+                        <option value="mau">MAURICIO</option>
+                        <option value="maurit">MAURITANIA</option>
+                        <option value="mex">MEXICO</option>
+                        <option value="mol">MOLDAVIA</option>
+                        <option value="mon">MONACO</option>
+                        <option value="mong">MONGOLIA</option>
+                        <option value="mont">MONTENEGRO</option>
+                        <option value="moz">MOZAMBIQUE</option>
+                        <option value="mya">MYANMAR</option>
+                        <option value="nami">NAMIBIA</option>
+                        <option value="nau">NAURU</option>
+                        <option value="nep">NEPAL</option>
+                        <option value="nica">NICARAGUA</option>
+                        <option value="niger">NIGER</option>
+                        <option value="nig">NIGERIA</option>
+                        <option value="nor">NORUEGA</option>
+                        <option value="nz">NUEVA ZELANDA</option>
+                        <option value="oman">OMAN</option>
+                        <option value="pb">PAISES BAJOS</option>
+                        <option value="pak">PAKISTAN</option>
+                        <option value="pal">PALESTINA</option>
+                        <option value="pan">PANAMA</option>
+                        <option value="papua">PAPUA NUEVA GUINEA</option>
+                        <option value="para">PARAGUAY</option>
+                        <option value="per">PERU</option>
+                        <option value="pol">POLONIA</option>
+                        <option value="port">PORTUGAL</option>
+                        <option value="pr">PUERTO RICO</option>
+                        <option value="qa">QATAR</option>
+                        <option value="ru">REINO UNIDO</option>
+                        <option value="repcen">REPUBLICA CENTROAFRICANA</option>
+                        <option value="repche">REPUBLICA CHECA</option>
+                        <option value="repcon">REPUBLICA CONGO</option>
+                        <option value="repdom">REPUBLICA DOMINICANA</option>
+                        <option value="repgr">REPUBLICA GRANADA</option>
+                        <option value="rio">RIO MUNI</option>
+                        <option value="rua">RUANDA</option>
+                        <option value="rum">RUMANIA</option>
+                        <option value="ru">RUSIA</option>
+                        <option value="saha">SAHARA</option>
+                        <option value="stki">SAINT KITTS NEVIS</option>
+                        <option value="sal">SALVADOR</option>
+                        <option value="sam">SAMOA OCCIDENTAL</option>
+                        <option value="smar">SAN MARINO</option>
+                        <option value="smart">SAN MARTIN</option>
+                        <option value="svic">SAN VICENTE GRANADINAS</option>
+                        <option value="stlu">SANTA LUCIA</option>
+                        <option value="stse">SANTA SEDE</option>
+                        <option value="stt">SANTO TOME PRINCIPE</option>
+                        <option value="sen">SENEGAL</option>
+                        <option value="ser">SERBIA</option>
+                        <option value="sey">SEYCHELLES</option>
+                        <option value="sier">SIERRA LEONA</option>
+                        <option value="sin">SINGAPUR</option>
+                        <option value="sir">SIRIA</option>
+                        <option value="som">SOMALIA</option>
+                        <option value="sre">SRI LANKA</option>
+                        <option value="suda">SUDAFRICA</option>
+                        <option value="sud">SUDAN</option>
+                        <option value="sue">SUECIA</option>
+                        <option value="sui">SUIZA</option>
+                        <option value="suri">SURINAM</option>
+                        <option value="swal">SWAZILANDIA</option>
+                        <option value="tai">TAIWAN CHINA</option>
+                        <option value="tanz">TANZANIA</option>
+                        <option value="tayi">TAYIKISTAN</option>
+                        <option value="thai">THAILANDIA</option>
+                        <option value="tim">TIMOR ORIENTAL</option>
+                        <option value="tog">TOGO</option>
+                        <option value="ton">TONGA</option>
+                        <option value="tran">TRANSKEI</option>
+                        <option value="trin">TRINIDAD TOBAGO</option>
+                        <option value="tun">TUNEZ</option>
+                        <option value="turk">TURKMENISTAN</option>
+                        <option value="turq">TURQUIA</option>
+                        <option value="tuv">TUVALU</option>
+                        <option value="ucr">UCRANIA</option>
+                        <option value="urg">UGANDA</option>
+                        <option value="uru">URUGUAY</option>
+                        <option value="uzbe">UZBEKISTAN</option>
+                        <option value="van">VANUATU</option>
+                        <option value="ven">VENEZUELA</option>
+                        <option value="viet">VIETNAM</option>
+                        <option value="yr">YEMEN</option>
+                        <option value="zam">ZAMBIA</option>
+                        <option value="zim">ZIMBABWE</option>
+                    </select>
+
+                    <!-- Solo debe aparecer si se selecciona España -->
+                    <label for="lugar de Nacimiento">Provincia de domicilio:</label>
+                    <select id="ciudad" name="ciudad">
+                        <option value="al">Álava</option>
+                        <option value="alb"> Albacete</option>
+                        <option value="ali"> Alicante - Comunidad Valenciana </option>
+                        <option value="alme"> Almería - Andalucía </option>
+                        <option value="ast"> Asturias - Principado de Asturias </option>
+                        <option value="av"> Ávila - Castilla y León </option>
+                        <option value="bada"> Badajoz - Extremadura </option>
+                        <option value="barc"> Barcelona - Cataluña (Catalunya)</option>
+                        <option value="bil"> Bilbao - País Vasco (Euskadi) </option>
+                        <option value="burg"> Burgos - Castilla y León </option>
+                        <option value="cace"> Cáceres - Extremadura </option>
+                        <option value="cadi"> Cádiz - Andalucía </option>
+                        <option value="cant"> Cantabria - Cantabria </option>
+                        <option value="cast"> Castellón de la Plana - Comunidad Valenciana </option>
+                        <option value="ceuta"> Ceuta - Ciudad Autónoma de Ceuta </option>
+                        <option value="ciuda"> Ciudad Real - Castilla-La Mancha </option>
+                        <option value="cord"> Córdoba - Andalucía </option>
+                        <option value="cuen"> Cuenca - Castilla-La Mancha </option>
+                        <option value="gir"> Girona - Cataluña (Catalunya)</option>
+                        <option value="gran"> Granada - Andalucía </option>
+                        <option value="guad"> Guadalajara - Castilla-La Mancha </option>
+                        <option value="guip"> Gipuzkoa - País Vasco (Euskadi) </option>
+                        <option value="huelva"> Huelva - Andalucía </option>
+                        <option value="hues"> Huesca - Aragón </option>
+                        <option value="jae"> Jaén - Andalucía </option>
+                        <option value="la"> La Rioja - La Rioja </option>
+                        <option value="las"> Las Palmas - Canarias </option>
+                        <option value="le"> León - Castilla y León </option>
+                        <option value="ler"> Lleida - Cataluña (Catalunya)</option>
+                        <option value="lu">Lugo - Galicia </option>
+                        <option value="madr"> Madrid - Comunidad de Madrid </option>
+                        <option value="mal"> Málaga - Andalucía </option>
+                        <option value="mayo"> Melilla - Ciudad Autónoma de Melilla </option>
+                        <option value="meri"> Mérida - Extremadura </option>
+                        <option value="mur"> Murcia - Región de Murcia </option>
+                        <option value="nav"> Navarra - Comunidad Foral de Navarra </option>
+                        <option value="our"> Ourense - Galicia </option>
+                        <option value="palen">Palencia - Castilla y León</option>
+                        <option value="palm">Las Palmas - Canarias</option>
+                        <option value="pon">Pontevedra - Galicia</option>
+                        <option value="sala"> Salamanca - Castilla y León </option>
+                        <option value="santene"> Santa Cruz de Tenerife - Canarias </option>
+                        <option value="sego"> Segovia - Castilla y León </option>
+                        <option value="sevi"> Sevilla - Andalucía </option>
+                        <option value="sori">Soria - Castilla y León </option>
+                        <option value="tarra"> Tarragona - Cataluña</option>
+                        <option value="teru"> Teruel - Aragón</option>
+                        <option value="tole"> Toledo - Castilla-La Mancha </option>
+                        <option value="valen">Valencia - Comunidad Valenciana (Comunitat Valenciana) </option>
+                        <option value="valla">Valladolid - Castilla y León </option>
+                        <option value="vizca">Vizcaya (Bizkaia) - País Vasco (Euskadi) </option>
+                        <option value="zamo"> Zamora - Castilla y León</option>
+                        <option value="zara"> Zaragoza - Aragón</option>
+                    </select>
+
+                    <label for="nombre">Nombre de los padres:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese tu nombre" required>
+
+                    <!--País de nacimiento-->
+                    <label>País de nacimiento</label>
+                    <select>
+                        <option value="afg">AFGANISTAN</option>
+                        <option value="alb">ALBANIA</option>
+                        <option value="alem">ALEMANIA</option>
+                        <option value="amer">AMERICA</option>
+                        <option value="and">ANDORRA</option>
+                        <option value="ang">ANGOLA</option>
+                        <option value="antbar">ANTIGUA BARBUDA</option>
+                        <option value="antneer">ANTILLAS NEERLANDESAS</option>
+                        <option value="apat">APATRIDA</option>
+                        <option value="arabias">ARABIA SAUDITA</option>
+                        <option value="arg">ARGELIA</option>
+                        <option value="argen">ARGENTINA</option>
+                        <option value="arm">ARMENIA</option>
+                        <option value="aruba">ARUBA</option>
+                        <option value="aispac">ASOCIACION ISLAS PACIFICO</option>
+                        <option value="aust">AUSTRALIA</option>
+                        <option value="austria">AUSTRIA</option>
+                        <option value="azer">AZERBAYAN</option>
+                        <option value="bahamas">BAHAMAS</option>
+                        <option value="bahr">BAHREIN</option>
+                        <option value="bang">BANGLADESH</option>
+                        <option value="barb">BARBADOS</option>
+                        <option value="belg">BELGICA</option>
+                        <option value="beli">BELICE</option>
+                        <option value="bhu">BHUTAN</option>
+                        <option value="biel">BIELORRUSIA</option>
+                        <option value="bol">BOLIVIA</option>
+                        <option value="bos">BOSNIA HERZEGOVINA</option>
+                        <option value="bost">BOTSWANA</option>
+                        <option value="bra">BRASIL</option>
+                        <option value="brun">BRUNEI</option>
+                        <option value="bul">BULGARIA</option>
+                        <option value="burk">BURKINA FASO</option>
+                        <option value="bur">BURUNDI</option>
+                        <option value="cv">CABO VERDE</option>
+                        <option value="camb">CAMBOYA</option>
+                        <option value="cam">CAMERUN</option>
+                        <option value="can">CANADA</option>
+                        <option value="chad">CHAD</option>
+                        <option value="chile">CHILE</option>
+                        <option value="chi">CHINA</option>
+                        <option value="chip">CHIPRE</option>
+                        <option value="cisk">CISKEI</option>
+                        <option value="col">COLOMBIA</option>
+                        <option value="com">COMORES</option>
+                        <option value="cn">COREA NORTE</option>
+                        <option value="cs">COREA SUR</option>
+                        <option value="cm">COSTA MARFIL</option>
+                        <option value="cr">COSTA RICA</option>
+                        <option value="cro">CROACIA</option>
+                        <option value="cub">CUBA</option>
+                        <option value="cur">CURAÇAO</option>
+                        <option value="din">DINAMARCA</option>
+                        <option value="djib">DJIBOUTI</option>
+                        <option value="dom">DOMINICA</option>
+                        <option value="ecu">ECUADOR</option>
+                        <option value="egt">EGIPTO</option>
+                        <option value="emara">EMIRATOS ARABES UNIDOS</option>
+                        <option value="eri">ERITREA</option>
+                        <option value="eslov">ESLOVAQUIA</option>
+                        <option value="eslo">ESLOVENIA</option>
+                        <option value="esp" selected>ESPAÑA</option>
+                        <option value="eefm">ESTADOS FEDERADOS MICRONESIA</option>
+                        <option value="eeuu">ESTADOS UNIDOS AMERICA</option>
+                        <option value="est">ESTONIA</option>
+                        <option value="eti">ETIOPIA</option>
+                        <option value="fer">FERNANDO POO</option>
+                        <option value="fidji">FIDJI</option>
+                        <option value="fil">FILIPINAS</option>
+                        <option value="fin">FINLANDIA</option>
+                        <option value="fran">FRANCIA</option>
+                        <option value="gab">GABON</option>
+                        <option value="gam">GAMBIA</option>
+                        <option value="gre">GEORGIA</option>
+                        <option value="ghana">GHANA</option>
+                        <option value="gre">GRECIA</option>
+                        <option value="guat">GUATEMALA</option>
+                        <option value="gui">GUINEA</option>
+                        <option value="guibi">GUINEA BISSAU</option>
+                        <option value="guiec">GUINEA ECUATORIAL</option>
+                        <option value="guy">GUYANA</option>
+                        <option value="hai">HAITI</option>
+                        <option value="hon">HONDURAS</option>
+                        <option value="hong">HONG KONG BRITANICO</option>
+                        <option value="hun">HUNGRIA</option>
+                        <option value="ifni">IFNI</option>
+                        <option value="india">INDIA</option>
+                        <option value="ind">INDONESIA</option>
+                        <option value="irak">IRAK</option>
+                        <option value="iran">IRAN</option>
+                        <option value="irl">IRLANDA</option>
+                        <option value="isl">ISLANDIA</option>
+                        <option value="imn">ISLAS MARIANAS NORTE</option>
+                        <option value="im">ISLAS MARSHALL</option>
+                        <option value="ip">ISLAS PACIFICO</option>
+                        <option value="is">ISLAS SALOMON</option>
+                        <option value="is">ISRAEL</option>
+                        <option value="it">ITALIA</option>
+                        <option value="jam">JAMAICA</option>
+                        <option value="jap">JAPON</option>
+                        <option value="jor">JORDANIA</option>
+                        <option value="kaza">KAZAJSTAN</option>
+                        <option value="ken">KENIA</option>
+                        <option value="kirg">KIRGUISTAN</option>
+                        <option value="kir">KIRIBATI</option>
+                        <option value="kuw">KUWAIT</option>
+                        <option value="laos">LAOS</option>
+                        <option value="337">LESOTHO</option>
+                        <option value="let">LETONIA</option>
+                        <option value="liba">LIBANO</option>
+                        <option value="libe">LIBERIA</option>
+                        <option value="lib">LIBIA</option>
+                        <option value="lie">LIECHTENSTEIN</option>
+                        <option value="lit">LITUANIA</option>
+                        <option value="lux">LUXEMBURGO</option>
+                        <option value="macao">MACAO</option>
+                        <option value="mac">MACEDONIA</option>
+                        <option value="mad">MADAGASCAR</option>
+                        <option value="mala">MALASIA</option>
+                        <option value="mald">MALDIVAS</option>
+                        <option value="mal">MALI</option>
+                        <option value="malt">MALTA</option>
+                        <option value="marr">MARRUECOS</option>
+                        <option value="mau">MAURICIO</option>
+                        <option value="maurit">MAURITANIA</option>
+                        <option value="mex">MEXICO</option>
+                        <option value="mol">MOLDAVIA</option>
+                        <option value="mon">MONACO</option>
+                        <option value="mong">MONGOLIA</option>
+                        <option value="mont">MONTENEGRO</option>
+                        <option value="moz">MOZAMBIQUE</option>
+                        <option value="mya">MYANMAR</option>
+                        <option value="nami">NAMIBIA</option>
+                        <option value="nau">NAURU</option>
+                        <option value="nep">NEPAL</option>
+                        <option value="nica">NICARAGUA</option>
+                        <option value="niger">NIGER</option>
+                        <option value="nig">NIGERIA</option>
+                        <option value="nor">NORUEGA</option>
+                        <option value="nz">NUEVA ZELANDA</option>
+                        <option value="oman">OMAN</option>
+                        <option value="pb">PAISES BAJOS</option>
+                        <option value="pak">PAKISTAN</option>
+                        <option value="pal">PALESTINA</option>
+                        <option value="pan">PANAMA</option>
+                        <option value="papua">PAPUA NUEVA GUINEA</option>
+                        <option value="para">PARAGUAY</option>
+                        <option value="per">PERU</option>
+                        <option value="pol">POLONIA</option>
+                        <option value="port">PORTUGAL</option>
+                        <option value="pr">PUERTO RICO</option>
+                        <option value="qa">QATAR</option>
+                        <option value="ru">REINO UNIDO</option>
+                        <option value="repcen">REPUBLICA CENTROAFRICANA</option>
+                        <option value="repche">REPUBLICA CHECA</option>
+                        <option value="repcon">REPUBLICA CONGO</option>
+                        <option value="repdom">REPUBLICA DOMINICANA</option>
+                        <option value="repgr">REPUBLICA GRANADA</option>
+                        <option value="rio">RIO MUNI</option>
+                        <option value="rua">RUANDA</option>
+                        <option value="rum">RUMANIA</option>
+                        <option value="ru">RUSIA</option>
+                        <option value="saha">SAHARA</option>
+                        <option value="stki">SAINT KITTS NEVIS</option>
+                        <option value="sal">SALVADOR</option>
+                        <option value="sam">SAMOA OCCIDENTAL</option>
+                        <option value="smar">SAN MARINO</option>
+                        <option value="smart">SAN MARTIN</option>
+                        <option value="svic">SAN VICENTE GRANADINAS</option>
+                        <option value="stlu">SANTA LUCIA</option>
+                        <option value="stse">SANTA SEDE</option>
+                        <option value="stt">SANTO TOME PRINCIPE</option>
+                        <option value="sen">SENEGAL</option>
+                        <option value="ser">SERBIA</option>
+                        <option value="sey">SEYCHELLES</option>
+                        <option value="sier">SIERRA LEONA</option>
+                        <option value="sin">SINGAPUR</option>
+                        <option value="sir">SIRIA</option>
+                        <option value="som">SOMALIA</option>
+                        <option value="sre">SRI LANKA</option>
+                        <option value="suda">SUDAFRICA</option>
+                        <option value="sud">SUDAN</option>
+                        <option value="sue">SUECIA</option>
+                        <option value="sui">SUIZA</option>
+                        <option value="suri">SURINAM</option>
+                        <option value="swal">SWAZILANDIA</option>
+                        <option value="tai">TAIWAN CHINA</option>
+                        <option value="tanz">TANZANIA</option>
+                        <option value="tayi">TAYIKISTAN</option>
+                        <option value="thai">THAILANDIA</option>
+                        <option value="tim">TIMOR ORIENTAL</option>
+                        <option value="tog">TOGO</option>
+                        <option value="ton">TONGA</option>
+                        <option value="tran">TRANSKEI</option>
+                        <option value="trin">TRINIDAD TOBAGO</option>
+                        <option value="tun">TUNEZ</option>
+                        <option value="turk">TURKMENISTAN</option>
+                        <option value="turq">TURQUIA</option>
+                        <option value="tuv">TUVALU</option>
+                        <option value="ucr">UCRANIA</option>
+                        <option value="urg">UGANDA</option>
+                        <option value="uru">URUGUAY</option>
+                        <option value="uzbe">UZBEKISTAN</option>
+                        <option value="van">VANUATU</option>
+                        <option value="ven">VENEZUELA</option>
+                        <option value="viet">VIETNAM</option>
+                        <option value="yr">YEMEN</option>
+                        <option value="zam">ZAMBIA</option>
+                        <option value="zim">ZIMBABWE</option>
+                    </select>
+
+                    <!-- Solo debe aparecer si se selecciona España -->
+                    <label for="lugar de Nacimiento">Provincia de nacimiento:</label>
+                    <select id="ciudad" name="ciudad">
+                        <option value="al">Álava</option>
+                        <option value="alb"> Albacete</option>
+                        <option value="ali"> Alicante - Comunidad Valenciana </option>
+                        <option value="alme"> Almería - Andalucía </option>
+                        <option value="ast"> Asturias - Principado de Asturias </option>
+                        <option value="av"> Ávila - Castilla y León </option>
+                        <option value="bada"> Badajoz - Extremadura </option>
+                        <option value="barc"> Barcelona - Cataluña (Catalunya)</option>
+                        <option value="bil"> Bilbao - País Vasco (Euskadi) </option>
+                        <option value="burg"> Burgos - Castilla y León </option>
+                        <option value="cace"> Cáceres - Extremadura </option>
+                        <option value="cadi"> Cádiz - Andalucía </option>
+                        <option value="cant"> Cantabria - Cantabria </option>
+                        <option value="cast"> Castellón de la Plana - Comunidad Valenciana </option>
+                        <option value="ceuta"> Ceuta - Ciudad Autónoma de Ceuta </option>
+                        <option value="ciuda"> Ciudad Real - Castilla-La Mancha </option>
+                        <option value="cord"> Córdoba - Andalucía </option>
+                        <option value="cuen"> Cuenca - Castilla-La Mancha </option>
+                        <option value="gir"> Girona - Cataluña (Catalunya)</option>
+                        <option value="gran"> Granada - Andalucía </option>
+                        <option value="guad"> Guadalajara - Castilla-La Mancha </option>
+                        <option value="guip"> Gipuzkoa - País Vasco (Euskadi) </option>
+                        <option value="huelva"> Huelva - Andalucía </option>
+                        <option value="hues"> Huesca - Aragón </option>
+                        <option value="jae"> Jaén - Andalucía </option>
+                        <option value="la"> La Rioja - La Rioja </option>
+                        <option value="las"> Las Palmas - Canarias </option>
+                        <option value="le"> León - Castilla y León </option>
+                        <option value="ler"> Lleida - Cataluña (Catalunya)</option>
+                        <option value="lu">Lugo - Galicia </option>
+                        <option value="madr"> Madrid - Comunidad de Madrid </option>
+                        <option value="mal"> Málaga - Andalucía </option>
+                        <option value="mayo"> Melilla - Ciudad Autónoma de Melilla </option>
+                        <option value="meri"> Mérida - Extremadura </option>
+                        <option value="mur"> Murcia - Región de Murcia </option>
+                        <option value="nav"> Navarra - Comunidad Foral de Navarra </option>
+                        <option value="our"> Ourense - Galicia </option>
+                        <option value="palen">Palencia - Castilla y León</option>
+                        <option value="palm">Las Palmas - Canarias</option>
+                        <option value="pon">Pontevedra - Galicia</option>
+                        <option value="sala"> Salamanca - Castilla y León </option>
+                        <option value="santene"> Santa Cruz de Tenerife - Canarias </option>
+                        <option value="sego"> Segovia - Castilla y León </option>
+                        <option value="sevi"> Sevilla - Andalucía </option>
+                        <option value="sori">Soria - Castilla y León </option>
+                        <option value="tarra"> Tarragona - Cataluña</option>
+                        <option value="teru"> Teruel - Aragón</option>
+                        <option value="tole"> Toledo - Castilla-La Mancha </option>
+                        <option value="valen">Valencia - Comunidad Valenciana (Comunitat Valenciana) </option>
+                        <option value="valla">Valladolid - Castilla y León </option>
+                        <option value="vizca">Vizcaya (Bizkaia) - País Vasco (Euskadi) </option>
+                        <option value="zamo"> Zamora - Castilla y León</option>
+                        <option value="zara"> Zaragoza - Aragón</option>
+                    </select>
+
+                    <!-- Área de texto -->
+                    <label for="domicilio">Domicilio:</label>
+                    <textarea id="domicilio" name="comentarios" rows="2"
+                        placeholder="Escribe tu domicilio..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Hechos</legend>
+
+                    <label for="lugar de Nacimiento">Provincia:</label>
+                    <select id="ciudad" name="ciudad">
+                        <option value="al">Álava</option>
+                        <option value="alb"> Albacete</option>
+                        <option value="ali"> Alicante - Comunidad Valenciana </option>
+                        <option value="alme"> Almería - Andalucía </option>
+                        <option value="ast"> Asturias - Principado de Asturias </option>
+                        <option value="av"> Ávila - Castilla y León </option>
+                        <option value="bada"> Badajoz - Extremadura </option>
+                        <option value="barc"> Barcelona - Cataluña (Catalunya)</option>
+                        <option value="bil"> Bilbao - País Vasco (Euskadi) </option>
+                        <option value="burg"> Burgos - Castilla y León </option>
+                        <option value="cace"> Cáceres - Extremadura </option>
+                        <option value="cadi"> Cádiz - Andalucía </option>
+                        <option value="cant"> Cantabria - Cantabria </option>
+                        <option value="cast"> Castellón de la Plana - Comunidad Valenciana </option>
+                        <option value="ceuta"> Ceuta - Ciudad Autónoma de Ceuta </option>
+                        <option value="ciuda"> Ciudad Real - Castilla-La Mancha </option>
+                        <option value="cord"> Córdoba - Andalucía </option>
+                        <option value="cuen"> Cuenca - Castilla-La Mancha </option>
+                        <option value="gir"> Girona - Cataluña (Catalunya)</option>
+                        <option value="gran"> Granada - Andalucía </option>
+                        <option value="guad"> Guadalajara - Castilla-La Mancha </option>
+                        <option value="guip"> Gipuzkoa - País Vasco (Euskadi) </option>
+                        <option value="huelva"> Huelva - Andalucía </option>
+                        <option value="hues"> Huesca - Aragón </option>
+                        <option value="jae"> Jaén - Andalucía </option>
+                        <option value="la"> La Rioja - La Rioja </option>
+                        <option value="las"> Las Palmas - Canarias </option>
+                        <option value="le"> León - Castilla y León </option>
+                        <option value="ler"> Lleida - Cataluña (Catalunya)</option>
+                        <option value="lu">Lugo - Galicia </option>
+                        <option value="madr"> Madrid - Comunidad de Madrid </option>
+                        <option value="mal"> Málaga - Andalucía </option>
+                        <option value="mayo"> Melilla - Ciudad Autónoma de Melilla </option>
+                        <option value="meri"> Mérida - Extremadura </option>
+                        <option value="mur"> Murcia - Región de Murcia </option>
+                        <option value="nav"> Navarra - Comunidad Foral de Navarra </option>
+                        <option value="our"> Ourense - Galicia </option>
+                        <option value="palen">Palencia - Castilla y León</option>
+                        <option value="palm">Las Palmas - Canarias</option>
+                        <option value="pon">Pontevedra - Galicia</option>
+                        <option value="sala"> Salamanca - Castilla y León </option>
+                        <option value="santene"> Santa Cruz de Tenerife - Canarias </option>
+                        <option value="sego"> Segovia - Castilla y León </option>
+                        <option value="sevi"> Sevilla - Andalucía </option>
+                        <option value="sori">Soria - Castilla y León </option>
+                        <option value="tarra"> Tarragona - Cataluña</option>
+                        <option value="teru"> Teruel - Aragón</option>
+                        <option value="tole"> Toledo - Castilla-La Mancha </option>
+                        <option value="valen">Valencia - Comunidad Valenciana (Comunitat Valenciana) </option>
+                        <option value="valla">Valladolid - Castilla y León </option>
+                        <option value="vizca">Vizcaya (Bizkaia) - País Vasco (Euskadi) </option>
+                        <option value="zamo"> Zamora - Castilla y León</option>
+                        <option value="zara"> Zaragoza - Aragón</option>
+                    </select>
+
+                    <!-- Hora -->
+                    <label for="fehca">Fecha de inicio del hecho:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <!-- Hora -->
+                    <label for="hora">Hora de inicio del hecho:</label>
+                    <input type="time" id="hora" name="hora" required>
+
+                    <!-- Hora -->
+                    <label for="fehca">Fecha de fin del hecho:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <!-- Hora -->
+                    <label for="hora">Hora de fin del hecho:</label>
+                    <input type="time" id="hora" name="hora" required>
+
+                    <label>Naturaleza del hecho</label>
+                    <select>
+                        <option>ABIERTOS</option>
+                        <option>ESTABLECIMIENTOS</option>
+                        <option>INSTALACIONES</option>
+                        <option>MEIDOS DE TRANSPORTE</option>
+                        <option>OTRAS DEPENDENCIAS COMUNES/ANEXOS DE VIVIENDAS</option>
+                        <option>RECINTOS</option>
+                        <option>VÍAS DE COMUNICACIÓN</option>
+                        <option>VIVIENDAS</option>
+                    </select>
+
+                    <label for="tipo_via">Tipo de vía:</label>
+                    <select>
+                        <option>AUTOPISTA</option>
+                        <option>AVENIDA</option>
+                        <option>BARRIO</option>
+                        <option>BLOQUE</option>
+                        <option>CALLE</option>
+                        <option>CALLEJON</option>
+                        <option>CAMINO</option>
+                        <option>CARRETERA</option>
+                        <option>COLONIA</option>
+                        <option>EDIFICIO</option>
+                        <option>FINCA</option>
+                        <option>GLORIETA</option>
+                        <option>PAISAJE</option>
+                        <option>PASEO</option>
+                        <option>PLAZA</option>
+                        <option>POBLADO</option>
+                        <option>POLÍGONO</option>
+                        <option>TRAVESÍA</option>
+                        <option>URBANIZACIÓN</option>
+                    </select>
+
+                    <label>Nombre de la vía:</label>
+                    <input type="text" id="via" name="via" placeholder="" required>
+
+                    <label>Número:</label>
+                    <input type="number" id="num" name="num" min="1" max="200" required>
+
+                    <label>Piso:</label>
+                    <input type="text" id="piso" name="piso" placeholder="" required>
+
+                    <!-- Área de texto -->
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4"
+                        placeholder="Escribe tu domicilio..."></textarea>
+                </fieldset>
+
+                <!-- Botones -->
+                <button type="submit" class="submit">TRAMITAR DENUNCIA</button>
+            </form>
+        </section>
+
+        <section>
+            <button class="faq-question" onclick="toggleFaq(this)"> Mapa </button>
+            <div class="faq-answer">
+                <h4>Si deseas hacer una denuncia presencial, consulta aquí otras comisarias.</h4>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1cjirrYFSBJVvelsXT6UP9wVlOFPMBNI&ehbc=2E312F"
+                    width="640" height="480"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #DNI-Y-PASAPORTE">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #PERMISOS-VIAJE">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #EXTRANJERIA">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_denuncias.html">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_contacto_formulario.html">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_index_tupolicia.html">
+                <h2 class="titulo-enlace"> Tu policía </h2>
+            </a>
+            <ul>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                        Policia</a></li>
+                <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a></li>
+            </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_emergenicas.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina"
+                            href="CO_index_emergenicas.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html #PREGUNTAS-FRECUENTES">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="FILES/CO_proteccion_de_datos.pdf">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="IMG/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="IMG/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="IMG/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="IMG/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="JS/CO_nav_footer.js"></script>
+    <script src="JS/CO_index_denuncias.js"></script>
+
+</body>
+
+</html>

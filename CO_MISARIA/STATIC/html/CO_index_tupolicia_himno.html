@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="CSS/CO_nav_footer.css">
+    <link rel="stylesheet" href="CSS/CO_index_tupolicia_himno.css">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index_comisaria.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias.html">Denuncias</a>
+                <a href="CO_index_tupolicia.html">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index_comisaria.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias.html">Denuncias</a>
+            <a href="CO_index_tupolicia.html">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+    <main>
+        <section>
+            <h2>Himno de la policia</h2>
+            <p>
+                El Himno de la Policía Nacional se interpretará en el Día de la Policía, o en ocasiones de especial
+                relevancia cuando así se determine por la Dirección General de la Policía, conforme a las reglas
+                establecidas por la Resolución de 8 de julio de 2013, de la Dirección General de la Policía por la
+                que se aprueba el protocolo de actos institucionales de la Policía Nacional.
+            </p>
+            <p>
+                La actitud de respeto al Himno de la Policía Nacional de los asistentes a los actos en los que sea
+                interpretado se expresará, en el caso del personal uniformado de la Policía Nacional en posición de
+                firmes, poniéndose en pie el resto del personal no uniformado asistente.
+            </p>
+        </section>
+
+        <section class="audio">
+            <audio controls>
+                <source src="MP3/Himno.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </section>
+
+        <section class="letra">
+            <p>
+                Brilla en mis ojos luz serena de templanza<br>
+
+                Late en mi pecho firme el pulso del honor<br>
+
+                Tienden mis manos un apoyo sin distancias<br>
+
+                Corre en mi sangre como un rio la pasión<br>
+
+                Forjan mi espíritu la Ley y la Justicia<br>
+
+                Son el motivo de mi noble voluntad<br>
+
+                Surge el coraje como brisa que acaricia<br>
+
+                Para velar por el Derecho y la Verdad<br>
+
+                (Estribillo. Coro central)<br>
+
+                POLICIA NACIONAL<br>
+
+                Mi corazón no conoce el desaliento<br>
+
+                Tesón de hierro sostiene los cimientos<br>
+
+                De la Concordia, el Respeto y la Igualdad<br>
+
+                POLICIA NACIONAL<br>
+
+                Misión audaz para un mundo más seguro<br>
+
+                Labor tenaz en defensa del futuro<br>
+
+                De los Valores, y la Paz en Libertad<br>
+
+                Aura de júbilo cautiva mi semblante<br>
+
+                Siempre que afronto el Servicio y el Deber<br>
+
+                Mi pundonor se torna seña y baluarte<br>
+
+                Cuando es preciso al Ciudadano proteger<br>
+
+                Visto de España con orgullo su Bandera<br>
+
+                Doy por su bien hasta la vida sin dudar<br>
+
+                Con la Razón como horizonte y compañera<br>
+
+                El mal combato con valiente Lealtad<br>
+
+                (Estribillo. Coro central)<br>
+
+                POLICIA NACIONAL
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #DNI-Y-PASAPORTE">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #PERMISOS-VIAJE">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #EXTRANJERIA">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_denuncias.html">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_contacto_formulario.html">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_index_tupolicia.html">
+                <h2 class="titulo-enlace"> Tu policía </h2>
+            </a>
+            <ul>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                        Policia</a></li>
+                <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a></li>
+            </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_emergenicas.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina"
+                            href="CO_index_emergenicas.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html #PREGUNTAS-FRECUENTES">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="FILES/CO_proteccion_de_datos.pdf">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="IMG/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="IMG/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="IMG/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="IMG/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="JS/CO_nav_footer.js"></script>
+    <script src="JS/CO_index_tupolicia_conocenos.js"></script>
+
+</body>
+
+</html>
