@@ -1,0 +1,263 @@
+[
+    {
+        "Nombre":"Daniel",
+        "Apellido":"Ramirez",
+        "DNI":"10000002",
+        "Nº Expediente":"1012",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Sergio",
+        "Apellido":"Gomez",
+        "DNI":"10000003",
+        "Nº Expediente":"1023",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Cruella Devil",
+        "Apellido":"Devil",
+        "DNI":"10000004",
+        "Nº Expediente":"1024",
+        "Estado":"Vigente",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Erika Linares",
+        "Apellido":"Linares",
+        "DNI":"10000005",
+        "Nº Expediente":"1025",
+        "Estado":"Cancelado",
+        "Tipo":"Penal",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Garfio",
+        "Apellido":"Castillo",
+        "DNI":"10000006",
+        "Nº Expediente":"1026",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Gaston",
+        "Apellido":"Fernandez",
+        "DNI":"10000007",
+        "Nº Expediente":"1027",
+        "Estado":"En revisión",
+        "Tipo":"Penal",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Horacio",
+        "Apellido":"Martinez",
+        "DNI":"10000008",
+        "Nº Expediente":"1028",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Gaspar",
+        "Apellido":"Lopez",
+        "DNI":"10000009",
+        "Nº Expediente":"1029",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Jafar",
+        "Apellido":"Sanchez",
+        "DNI":"10000010",
+        "Nº Expediente":"1002",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Jorge",
+        "Apellido":"Diaz",
+        "DNI":"10000011",
+        "Nº Expediente":"1003",
+        "Estado":"Vigente",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Juez Claude de Frollo",
+        "Apellido":"De Frollo",
+        "DNI":"10000012",
+        "Nº Expediente":"1004",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Kakamora",
+        "Apellido":"Rojas",
+        "DNI":"10000013",
+        "Nº Expediente":"1005",
+        "Estado":"Vigente",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Sin Idientificacion",
+        "Apellido":"Por completar",
+        "DNI":"10000014",
+        "Nº Expediente":"1006",
+        "Estado":"Vigente",
+        "Tipo":"Penal",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Luna",
+        "Apellido":"Vargas",
+        "DNI":"10000015",
+        "Nº Expediente":"1007",
+        "Estado":"Vigente",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Madre Gothel",
+        "Apellido":"Del Campo",
+        "DNI":"10000016",
+        "Nº Expediente":"1008",
+        "Estado":"Vigente",
+        "Tipo":"Penal",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Malefica",
+        "Apellido":"Torres",
+        "DNI":"10000017",
+        "Nº Expediente":"1009",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Mario Perez",
+        "Apellido":"Perez",
+        "DNI":"10000018",
+        "Nº Expediente":"1010",
+        "Estado":"Vigente",
+        "Tipo":"Penal",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Minerva Hidalgo",
+        "Apellido":"Hidalgo",
+        "DNI":"10000019",
+        "Nº Expediente":"1011",
+        "Estado":"Cancelado",
+        "Tipo":"Penal",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Miroslav Zocha",
+        "Apellido":"Zocha",
+        "DNI":"10000020",
+        "Nº Expediente":"1013",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Pablo Rosales",
+        "Apellido":"Rosales",
+        "DNI":"10000021",
+        "Nº Expediente":"1014",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Principe Hans",
+        "Apellido":"Del Hielo",
+        "DNI":"10000022",
+        "Nº Expediente":"1015",
+        "Estado":"Cancelado",
+        "Tipo":"Administrativo",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Adolfo Dominguez",
+        "Apellido":"Dominguez",
+        "DNI":"10000023",
+        "Nº Expediente":"1016",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Scar",
+        "Apellido":"Mendoza",
+        "DNI":"10000024",
+        "Nº Expediente":"1017",
+        "Estado":"Vigente",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Sherekhan",
+        "Apellido":"Silva",
+        "DNI":"10000025",
+        "Nº Expediente":"1018",
+        "Estado":"Vigente",
+        "Tipo":"Administrativo",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Ulises Fernandez",
+        "Apellido":"Fernandez",
+        "DNI":"10000026",
+        "Nº Expediente":"1019",
+        "Estado":"Vigente",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Ursula",
+        "Apellido":"Morales",
+        "DNI":"10000027",
+        "Nº Expediente":"1020",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Ursula Marquez",
+        "Apellido":"Marquez",
+        "DNI":"10000028",
+        "Nº Expediente":"1021",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Vicente Flores",
+        "Apellido":"Flores",
+        "DNI":"10000029",
+        "Nº Expediente":"1022",
+        "Estado":"En revisión",
+        "Tipo":"Judicial",
+        "Observaciones":"Por completar"
+    },
+    {
+        "Nombre":"Carlota Magdalenas",
+        "Apellido":"Magdalenas",
+        "DNI":"00234598",
+        "Nº Expediente":"1001",
+        "Estado":"En revisión",
+        "Tipo":"Administrativo",
+        "Observaciones":"Por completar"
+    }
+]
