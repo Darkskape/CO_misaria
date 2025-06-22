@@ -1,0 +1,368 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px 10%;
+}
+
+h2 {
+    font-size: 35px;
+    font-family: "DM Serif Text", serif;
+    line-height: 1.1;
+    margin: 50px 0 40px;
+}
+
+h3 {
+    font-size: 27px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.distintivos h3::before {
+    content: "■";
+    color: #ff0000;
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+h5 {
+    font-size: 22px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #ff0000;
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 25px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
+p,
+li{
+    font-size: 20px;
+    font-family: "Newsreader", serif;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+/*ASIDES*/
+aside {
+    margin: 50px 10%;
+    display: flex;
+}
+
+.izquierda {
+    display: flex;
+    width: 65%;
+    float: left;
+    text-align: left;
+    margin: 0;
+}
+
+.izquierda ul {
+    list-style-position: inside;
+    width: 70%;
+}
+
+.izquierda ul li {
+    padding: 10px 0px;
+    text-align: left;
+}
+
+hr {
+    border: 2px rgba(0, 14, 120, 1);
+    background-color: rgba(0, 14, 120, 1);
+    height: 2px;
+    width: 100%;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    float: right;
+    text-align: left;
+    margin: 0;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.derecha h3{
+    text-align: center;
+    margin: 27px 10%;
+}
+
+.derecha p{
+    margin: 10px 0;
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+.derecha hr{
+    border: 2px #ccc;
+    background-color: #ccc;
+    height: 2px;
+    width: 90%;
+    margin: 0;
+}
+
+.derecha a{
+    width: 100%;
+}
+
+.derecha a:hover{
+    text-decoration: none;
+}
+
+.aside_info{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    padding: 15px 20px;
+    gap: 15px;
+}
+
+.aside_info a{
+    color: #000e78;
+    padding: 10px 25px;
+    font-family: Verdana;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+}
+
+.aside_info img{
+    width: auto;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.icono_hover {
+    display: none;
+}
+
+/* CUANDO SE HACE HOVER CAMBIA COLOR DE IMG*/
+.aside_info:hover .icono_normal {
+    display: none;
+}
+
+/* SE DEJA DE HACER HOVER VUELVE A ESTAR COMO ANTES*/
+.aside_info:hover .icono_hover {
+    display: inline;
+}
+
+.aside_info:hover, .aside_info a:hover{
+    background-color: #868686;
+    color: white;
+    cursor: pointer;
+}
+
+.derecha a:last-of-type:hover .aside_info{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*INICIO DE ORIGEN */
+.origen {
+    background-image: url('img/conocenos1.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 50px 0;
+}
+
+.origen h2,
+.origen p {
+    width: 60%;
+    color: white;
+    margin: 50px 10% 40px;
+}
+
+.origen p {
+    margin: 10px 10%;
+}
+
+.origen p:last-child {
+    margin-bottom: 50px;
+}
+
+/* INICIO COMPETENCIAS */
+.competencias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.competencia li {
+    list-style-type: none;
+    margin: 15px 0;
+}
+
+/*INICIO NORMAATIVA*/
+.normativa {
+    background-color: rgba(0, 14, 120, 1);
+    margin: 50px 0;
+}
+
+.normativa h2,
+.normativa h5 {
+    padding: 0px 10%;
+}
+
+.normativa ul {
+    padding: 0 15%;
+}
+
+.normativa li,
+.normativa a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.normativa a:hover {
+    text-decoration: underline;
+}
+
+/* INICIO DE ESTRUCTURA */
+.barra-desplegable {
+    border: 2px solid rgba(0, 14, 120, 1);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* Cabecera con flecha a la derecha */
+.cabecera {
+    background-color: rgba(0, 14, 120, 1);
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+/* Flecha a la derecha */
+.flecha {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.barra-desplegable.flecha {
+    transform: rotate(90deg);
+}
+
+/* Contenido oculto al inicio */
+.contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: #f5f5f5;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.contenido h5 {
+    color: black;
+}
+
+/* Estado ABIERTO: contenido visible y flecha abajo */
+
+/*subcontenido*/
+.barra-desplegable-subcontenido {
+    border: 2px solid rgba(0, 14, 120, 1);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: 50px;
+}
+
+.subcabecera {
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.estructura img {
+    width: 100%;
+    height: auto;
+    margin: 50px 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cajafinal li {
+    line-height: 1.1;
+}
+
+@media (max-width: 900px) {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    aside {
+        flex-direction: column;
+    }
+
+    .izquierda,
+    .derecha {
+        width: 100%;
+    }
+
+    .derecha {
+        margin-top: 40px;
+    }
+
+    .competencias {
+        grid-template-columns: 1fr;
+    }
+
+    .barra-desplegable-subcontenido {
+        margin-left: 20px;
+    }
+}

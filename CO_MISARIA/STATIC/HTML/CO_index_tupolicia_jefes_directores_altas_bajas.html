@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="CSS/CO_nav_footer.css">
+    <link rel="stylesheet" href="CSS/CO_index_tupolicia_jefes_directores_habilitacion_personal.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index_comisaria.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias.html">Denuncias</a>
+                <a href="CO_index_tupolicia.html">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index_comisaria.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias.html">Denuncias</a>
+            <a href="CO_index_tupolicia.html">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+    <main>
+        <div class="contenido_principal">
+            <section>
+                <h2>ALTAS Y BAJAS DE JEFES DE SEGURIDAD Y DELEGACIÓN DE FUNCIONES DE JEFES.</h2>
+                <p>
+                    Comunicación de las novedades y variaciones habidas en puestos de trabajo de Jefes de Seguridad y
+                    las delegaciones de funciones de éstos.
+                </p>
+            </section>
+
+            <section class="desplegables">
+                <article class="barra-desplegable">
+                    <div class="cabecera" id="toggle">
+                        <span>
+                            <h4>Requisitos y condiciones</h4>
+                        </span>
+                        <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                    </div>
+
+                    <div class="contenido" id="contenido">
+                        <p>Comunicaciones relativas a altas y bajas de Jefes de Seguridad y sus delegaciones.</p>
+                        <p>Clases y tipologías</p>
+                        <ul class="lista">
+                            <li>Altas y bajas laborales de Jefes de Seguridad.</li>
+                            <li>Delegación de funciones de Jefes de Seguridad.</li>
+                        </ul>
+                        <p>¿Quiénes son los interesados?</p>
+                        <ul class="lista">
+                            <li>Delegaciones: personal de seguridad privada o pública (artº 99 del Reglamento).</li>
+                            <li>
+                                Jefes: personal habilitado que cumpla los requisitos de los artículos 53 y 54 del
+                                Reglamento.
+                            </li>
+                        </ul>
+                        <p>Periodo de validez Indefinido</p>
+                    </div>
+                </article>
+
+                <article class="barra-desplegable">
+                    <div class="cabecera" id="toggle">
+                        <span>
+                            <h4>Cómo realizar el trámite</h4>
+                        </span>
+                        <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                    </div>
+
+                    <div class="contenido" id="contenido">
+                        <p>Presencial</p>
+                        <ul class="lista">
+                            <li>
+                                Delegaciones: mediante escrito del jefe respectivo. Jefes: a instancia de la entidad o
+                                empresa de seguridad respectiva.
+                            </li>
+                            <li>
+                                Personalmente en la Unidad Central de Seguridad Privada o en las Unidades Territoriales
+                                de Seguridad Privada.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="barra-desplegable">
+                    <div class="cabecera" id="toggle">
+                        <span>
+                            <h4>Documentación</h4>
+                        </span>
+                        <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                    </div>
+
+                    <div class="contenido" id="contenido">
+                        <div class="parrafo">
+                            <h5>Datos básicos del procedimiento:</h5>
+                            <p>Forma de iniciación: A solicitud del interesado o de oficio.</p>
+                            <p>Tipo de procedimiento: Autorizaciones, Licencias y Concesiones.</p>
+                            <p>Materia del procedimiento: ACTIVIDAD ADMINISTRATIVA.</p>
+                            <p>Resolución del procedimiento:</p>
+                            <ul class="lista">
+                                <li>Órganos competentes para resolver este procedimiento:
+                                    <ul>
+                                        <li>El Comisario, Jefe de la Unidad Central de Seguridad Privada.</li>
+                                    </ul>
+                                </li>
+                                <li>La resolución del procedimiento sí pone fin a la vía administrativa.</li>
+                                <li>
+                                    Efecto de la falta de resolución en este plazo: Desestimatorio (inicio a solicitud
+                                    del interesado).
+                                </li>
+                                <li>Normativas que regulan el silencio administrativo:
+                                    <a href="https://www.boe.es/eli/es/l/2000/12/29/14"target="_blank">
+                                        LEY 14/2000. de 29 de diciembre, de Medidas Fiscales, Administrativas y de Orden
+                                        Social.
+                                    </a>
+                                </li>
+                            </ul>
+                            <p>Recursos que se pueden interponer:</p>
+                            <ul class="lista">
+                                <li>Alzada
+                                    <ul>
+                                        <li>Órgano que resuelve el recurso:
+                                            <ul>
+                                                <li>Superior jerárquico.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Plazo de interposición del recurso: 1 meses.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h5>Normativa</h5>
+                            <div class="normativa">
+                                <a href="https://www.boe.es/eli/es/l/2014/04/04/5/con"target="_blank">
+                                    LEY 5/2014, de 4 abril, de Seguridad Privada.
+                                </a>
+                                <a href="https://www.boe.es/eli/es/rd/1994/12/09/2364"target="_blank">
+                                    REAL DECRETO 2364/1994, de 9 de diciembre, por el que se aprueba el Reglamento de
+                                    Seguridad Privada.
+                                </a>
+                                <p>Código del procedimiento: 994899</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <article class="tramites">
+                    <h4>TRAMITAR</h4>
+                    <hr>
+                    <h5>Presencial</h5>
+                    <p>
+                        Personalmente en la Unidad Central de Seguridad Privada o en las Unidades Territoriales de
+                        Seguridad Privada.
+                    </p>
+                </article>
+
+                <article class="tramites">
+                    <h4>MODELOS DE FORMULARIOS</h4>
+                    <hr>
+                    <a href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/seguridad_privada/994894.pdf"target="_blank">
+                        Altas, modificaciones y bajas de departamentos de seguridad, directores de seguridad y
+                        delegados.
+                    </a>
+                </article>
+            </section>
+        </div>
+
+        <aside>
+            <h3><a href="CO_index_tupolicia_jefes_directores.html">
+                    TRÁMITES DE SEGURIDAD PRIVADA
+                </a>
+            </h3>
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_habilitacion_personal.html">
+                    <p>Habilitación del personal de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_renovacion_canje_tip.html">
+                    <p>Renovación y canje de la TIP</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_altas_modificaciones_bajas.html">
+                    <p>
+                        Departamentos de seguridad. Altas y bajas de directores y jefes de seguridad y
+                        delegación de funciones de ambos
+                    </p>
+                </a>
+            </div>
+
+            <div class="menu_aside_color">
+                <a href="CO_index_tupolicia_jefes_directores_altas_bajas.html">
+                    <p>Altas y bajas de jefes de seguridad y delegación de funciones de jefes</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_cursos_ds.html">
+                    <p>Cursos de director de seguridad y de detective privado</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_centros_formacion.html">
+                    <p>Centros de formación de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_empresas_delegaciones.html">
+                    <p>Empresas de seguridad privada y sus delegaciones</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_despachos_detectives.html">
+                    <p>Despachos de detectives y sucursales de detectives. Altas y bajas de detectives dependientes</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_proteccion_personal.html">
+                    <p>Servicios de protección personal</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_ss_prestado_vigilantes.html">
+                    <p>Servicios de seguridad prestado por vigilantes de seguridd con armas (a nivel supraprovincial)
+                    </p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_centrales_alarmas.html">
+                    <p>Centrales de alarmas de uso propio (nivel supraprovincial)</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_certificados_materia.html">
+                    <p>Certificados en materia de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_acreditacion_profesorado.html">
+                    <p>Acreditación del profesorado en centros de formación del personal de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_tasas_sp.html">
+                    <p>Tasas de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/seguridad_privada/fabricantes_dist_expl_n.pdf"
+                    target="_blank">
+                    <p>Fabricantes de placas de vigilantes de seguridad y de explosivos</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/seguridad_privada/contrato_serv_seg.pdf"
+                    target="_blank">
+                    <p>Contrato de arrendamiento de servicio de seguridad</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_cancelacion_perdida_habilitacion.html">
+                    <p>Cancelación o pérdida de la habilitación del personal de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_revocacion_autorizacion.html">
+                    <p>Revocación de autorización de centro de formación de seguridad privada</p>
+                </a>
+            </div>
+
+            <div class="menu_aside">
+                <a href="CO_index_tupolicia_jefes_directores_revocacion_autorizacion_es.html">
+                    <p>Revocación de autorización de empresas de seguridad</p>
+                </a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #DNI-Y-PASAPORTE">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #PERMISOS-VIAJE">Permisos de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #EXTRANJERIA">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_denuncias.html">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_contacto_formulario.html">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_index_tupolicia.html">
+                <h2 class="titulo-enlace"> Tu policía </h2>
+            </a>
+            <ul>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                        Policia</a></li>
+                <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a></li>
+            </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_emergenicas.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina"
+                            href="CO_index_emergenicas.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html #PREGUNTAS-FRECUENTES">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="FILES/CO_proteccion_de_datos.pdf">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="IMG/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="IMG/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="IMG/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="img/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="JS/CO_nav_footer.js"></script>
+    <script src="JS/CO_index_tupolicia_conocenos.js"></script>
+</body>
+
+</html>

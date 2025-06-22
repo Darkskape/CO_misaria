@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMISARIA</title>
+    <link rel="icon" type="CO_MISARIA\comisaria.ico" href="comisaria.ico">
+    <link rel="stylesheet" href="CSS/CO_nav_footer.css">
+    <link rel="stylesheet" href="CSS/CO_index_denuncias_ciberseguridad.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="img/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="img/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto"
+                    onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="img/icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="img/icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index_comisaria.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias.html">Denuncias</a>
+                <a href="CO_index_tupolicia.html">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index_comisaria.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias.html">Denuncias</a>
+            <a href="CO_index_tupolicia.html">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+    <main>
+        <div class="banner">
+            <h1>Ciberseguridad</h1>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <h4>¿Qué es la
+                    ciberseguridad?</h4>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Es la práctica de proteger equipos, redes, aplicaciones de software, sistemas críticos y datos de
+                    posibles amenazas digitales. Las organizaciones tienen la responsabilidad de proteger los datos para
+                    mantener la confianza del cliente y cumplir la normativa.
+                    Utilizan medidas y herramientas de ciberseguridad para proteger los datos confidenciales del acceso
+                    no
+                    autorizado, así como para evitar interrupciones en las operaciones empresariales debido a una
+                    actividad
+                    de red no deseada. Las organizaciones implementan la ciberseguridad al optimizar la defensa digital
+                    entre
+                    las personas, los procesos y las tecnologías.
+                </p>
+                </article>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <h4>Actuaciones de
+                    ciberseguridad</h4>
+            </button>
+            <div class="faq-answer">
+                <ul>
+                    <li>Amenazas, injurias, calumnias por correo electrónico, sms, tablones
+                        de anuncios, foros, newsgroups, web</li>
+                    <li>Pornografía infantil. Protección al menor en el uso de las nuevas
+                        tecnologías.</li>
+                    <li>Fraudes en el uso de las comunicaciones. Piratería de señales de
+                        televisión privada.</li>
+                    <li>Fraudes en Internet. Estafas. Uso fraudulento de tarjetas de
+                        crédito.
+                        Fraudes en subastas. Comercio electrónico.</li>
+                    <li>Seguridad lógica. Virus. Ataques de denegación de servicio.
+                        Sustracción
+                        de datos. Hacking. Descubrimiento y revelación de secreto. Suplantación de personalidad.
+                        Sustracción
+                        de
+                        cuentas de correo electrónico.</li>
+                    <li>Piratería de programas de ordenador, de música y de productos
+                        cinematográficos.</li>
+                </ul>
+                </article>
+            </div>
+        </div>
+
+        <section>
+            <h1>Tipos de ciberseguridad</h1>
+            <div class="main-grid">
+                <!--pequeña introduccion para el ciudadano-->
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/ciberseguridad.png" alt="100px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Seguridad de la información</h4>
+                            <p>La seguridad de la información protege los datos en tránsito y en reposo con un
+                                sistema
+                                sólido
+                                de almacenamiento y una transferencia de datos segura. Los desarrolladores usan
+                                medidas
+                                protectoras, como el cifrado y las copias de seguridad aisladas, para la
+                                resistencia
+                                operativa frente a posibles brechas de datos. En algunos casos, los
+                                desarrolladores usan AWS
+                                Nitro System para la confidencialidad del almacenamiento y la restricción del
+                                acceso de
+                                operadores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/segurinube.png" alt="200px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Seguridad en la nube</h4>
+                            <p>Describe las medidas que toma una organización para proteger los
+                                datos y las aplicaciones que se ejecutan en la nube. Es importante para reforzar
+                                la confianza del
+                                cliente, proteger las operaciones tolerantes a errores y cumplir con la
+                                normativa de la
+                                privacidad de datos en un entorno escalable. Una estrategia sólida de seguridad
+                                en la nube
+                                implica la responsabilidad compartida entre el proveedor de nube y la
+                                organización.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/seguriapp.png" alt="200px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Seguridad de aplicaciones</h4>
+                            <p>Logra un trabajo coordinado para fortalecer la protección de una aplicación
+                                frente a la
+                                manipulación no autorizada durante las etapas de diseño, desarrollo y prueba.
+                                Los
+                                programadores de software escriben códigos seguros para evitar errores que
+                                puedan aumentar
+                                los riesgos de seguridad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/datos.png" alt="200px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Ciberseguridad de datos</h4>
+                            <p>La seguridad de los datos protege los datos en tránsito y en reposo con un
+                                sistema
+                                sólido de almacenamiento y una transferencia de datos segura. Los
+                                desarrolladores usan medidas
+                                protectoras, como el cifrado y las copias de seguridad aisladas, para la
+                                resistencia operativa frente
+                                a posibles brechas de datos. En algunos casos, los desarrolladores usan AWS
+                                Nitro System para la
+                                confidencialidad del almacenamiento y la restricción del acceso de
+                                operadores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/segurired.png" alt="200px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Ciberseguridad de red</h4>
+                            <p> La seguridad de la red es una protección de ciberseguridad para los equipos y
+                                dispositivos
+                                conectados a una red. Los equipos de TI utilizan las tecnologías de seguridad de
+                                red, como los
+                                firewalls y el control de acceso a la red para regular el acceso de usuarios y
+                                administrar los permisos para
+                                recursos digitales específicos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/endpoint.png" alt="360px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Ciberseguridad de endpoint</h4>
+                            <p> Conjunto de medidad que protegen los dispositivos d elos usuarios finales d
+                                eataques
+                                cibernéticos
+                                y amenazas. Los dispositivos de los usuarios finales son los puntos de acceso a
+                                la red
+                                corporativa y
+                                pueden ser vulnerables a ataques cibernéticos. La seguridad de endpoint protege
+                                estos
+                                dispositivos
+                                mediante la implementación de medidas de seguridad, como el cifrado, la
+                                autenticación y el
+                                control
+                                de acceso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/movil.png" alt="200px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Ciberseguridad móvil</h4>
+                            <p> Implica proteger teléfonos inteligentes, tabletas y computadoras portátiles de
+                                ciberamenazas
+                                como
+                                pérdida de datos, robo de credenciales, compromiso de cuentas, etc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="IMG/iot.png" alt="200px">
+                        </div>
+
+                        <div class="card-back">
+                            <h4>Seguridad de IoT</h4>
+                            <p> La seguridad de IoT protege los dispositivos y redes de IoT de ataques
+                                cibernéticos. Los
+                                dispositivos
+                                de IoT son vulnerables a ataques cibernéticos debido a su conectividad a
+                                Internet y su
+                                capacidad
+                                para recopilar y transmitir datos. La seguridad de IoT implica la implementación
+                                de medidas de
+                                seguridad, como el cifrado, la autenticación y el control de acceso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <h4>Consejos de seguridad en las redes sociales</h4>
+            </button>
+            <div class="faq-answer">
+                <ul>
+                    <li>Mantén tu perfil privado, evite las contraseñas fáciles de adivinar.</li>
+                    <li> Utilice contraseñas “de calidad” (con letras, números y otros caracteres). Cámbielas
+                        periódicamente.</li>
+                    <li> No desestime las medidas de seguridad al elegir “la pregunta secreta”, puede que esté
+                        dejando una puerta abierta a sus cuentas de correo electrónico y perfiles sociales.</li>
+                    <li> Actualice su sistema operativo según las recomendaciones del fabricante o distribución.</li>
+                    <li> Adquiera un buen producto antivirus y actualícelo con regularidad. Realice periódicamente
+                        copias
+                        de seguridad de su sistema.
+                    </li>
+                    <li> Nunca ofrezca datos personales por Internet, a menos que sea en sitios de total confianza.</li>
+                </ul>
+
+                <h5><b> COMPRUEBE LOS CERTIFICADOS.</b></h5>
+                <p> No introducir el número de tarjeta en páginas de contenido sexual o pornográfico, en los que se
+                    solicita como pretexto, para comprobar la mayoría de edad. Extreme la precaución en los archivos
+                    que recibe en sesiones chat.</p>
+
+                <p>Para evitar los fraudes telefónicos, controle sus facturas, compruebe los números a los que ha
+                    llamado, y que el gasto facturado se corresponde con las comunicaciones realizadas. Adopte las
+                    medidas necesarias, cuando le ofrecen “regalos” sustanciosos y, para recibirlos tiene que llamar
+                    por teléfono a prefijos de tarificación adicional.</p>
+
+                <p>No facilite sus números de teléfono, tanto fijo como móvil, a personas desconocidas o en webs
+                    que no le ofrezcan confianza suficiente.</p>
+                <p>Asista a su hijo/a menor en su navegación por Internet. Tutélelos como lo hace en cualquier otra
+                    actividad cotidiana.</p>
+
+                <p>Hábleles de los peligros del chat, donde se pueden confundir, al chatear con supuestos amigos
+                    que no resultan tales, prestando especial atención a los contenidos sexuales. No les permita que
+                    envíen sus fotos o de su familia ni cualquier información sobre ellos y ellas, sin la
+                    autorización de sus padres.</p>
+                <p>No les permita que envíen sus fotos o de su familia ni cualquier información sobre ellos y
+                    ellas, sin la autorización de sus padres.
+                </p>
+                <p>Recuerde concensure con su hija o hijo ciertas normas a seguir en Internet, compruebe que contenidos
+                    consideran ellos y ellas que son los adecuados para exponer y compartir en la red.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                <h4>Enlaces de interés:</h4>
+            </button>
+            <div class="faq-answer">
+                <p><a href="https://www.aepd.es/" target="_blank">Oficina de Seguridad del Internauta </a></p>
+                <p><a href="https://www.aepd.es/" target="_blank">Agencia Española de Protección de Datos</a>
+                </p>
+                <p><a href="https://www.seguridadweb20.com/" target="_blank">Seguridad Web 20 .</a></p>
+                <p><a href="https://www.chaval.es/" target="_blank">Chaval.es </a></p>
+                <p><a href="https://www.pantallasamigas.net/" target="_blank">Pantallas Amigas. </a></p>
+                <p><a href="https://www.conexioninversa.com/" target="_blank">Conexión Inversa.</a></p>
+
+            </div>
+        </div>
+
+        <div class="contacto">
+            <h4>Contacto:</h4>
+            <p>Brigada Central de Investigación Tecnológica.</p>
+            <p>Centro Policial de Canillas</p>
+            <p>C/ Julián González Segador s/n 28043 - Madrid</p>
+            
+            <button class="boton-contacto"
+                    onclick="location.href='CO_index_contacto_formulario.html'">Contacto</button>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #DNI-Y-PASAPORTE">Dni y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #PERMISOS-VIAJE">Permisos de viaje</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #EXTRANJERIA">Extranjeria</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html #ANTECEDENTES">Antecedentes</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_denuncias.html">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_contacto_formulario.html">Reportar</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a></li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="Co_index_tupolicia.html">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                            Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a></li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_emergenicas.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_emergenicas.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html #PREGUNTAS-FRECUENTES">Preguntas
+                            frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a href="FILES/CO_proteccion_de_datos.pdf">Protección
+                    de datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Siguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="img/facebook.jpg" alt="Facebook"></a>
+                    </li>
+
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG/x.png" alt="X"></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG/instagram.jpg" alt="Instagram"></a>
+                    </li>
+
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img src="IMG/youtube.jpg"
+                                alt="YouTube"></a>
+                    </li>
+
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img src="IMG/tiktok.jpg"
+                                alt="TikTok"></a>
+                    </li>
+
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG/whatsapp.jpg" alt="WhatsApp"></a>
+                    </li>
+
+                    <li><a href="https://t.me/policianacional" target="_blank"><img src="IMG/telegram.jpg"
+                                alt="Telegram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!--BOTON SCROLL UP-->
+    <button id="boton-arriba" onclick="volverArriba()"><img src="IMG/scrollup.png" alt="Volver arriba"></button>
+
+    <script src="JS/CO_nav_footer.js"></script>
+    <script src="JS/CO_index_denuncias_ciberseguridad.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+/*MISMO CSS PARA acceso_oposiciones_policia.html, acceso_oposiciones_seguridad.html, acceso_oposiciones_facultativos.html*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    margin: 50px 10%;
+}
+
+h2{
+    font-size: 35px;
+    font-family: "DM Serif Text", serif;
+    line-height: 1.1;
+    margin: 30px 0 40px;
+}
+
+h4 {
+    font-size: 25px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 27px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.contactoh3::before {
+    content: "■";
+    color: #ff0000;
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+
+h5 {
+    font-size: 22px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0;
+}
+
+p {
+    font-size: 20px;
+    font-family: "Newsreader", serif;
+    color: #868686;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: 20px;
+    font-family: "Newsreader", serif;
+    line-height: 1.3;
+}
+
+.tramites {
+    background-color: #f5f5f5;
+    border: 1px solid #c3c6ce;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    margin: 0 5%;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+
+.tramites:hover {
+    background-color: #D0D0D0;
+    cursor: pointer;
+}
+
+article {
+    background-color: #f5f5f5;
+    border: 2px solid #c3c6ce;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.contacto{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contacto article img {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.contacto article{
+    text-align: center;
+}
+
+hr{
+    border: 1px #999999;
+    background-color: #999999;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contacto h4 {
+    margin: 20px 0;
+}
+
+.caja-final li{
+    line-height: 1.1;
+}
+
+.copy-final a {
+    font-size: 15px;
+    font-family: "Newsreader", serif;
+    line-height: 1.3;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+
+    h2{
+        font-size: 30px;
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto article img {
+        width: 10%;
+        height: auto;
+    }
+
+    .tramites{
+        margin-left: 0;
+    }
+}
