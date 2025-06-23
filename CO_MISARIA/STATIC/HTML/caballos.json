@@ -1,0 +1,30 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"co_misaria"},
+{"type":"table","name":"caballos_co","database":"co_misaria","data":
+[
+{"id_caballo":"1","id_user":"001","nombre":"Relámpago","edad":"5","ingreso":"2021-03-15","jubilacion":null,"raza":"Pura raza española","peso":"500.50","años":"3"},
+{"id_caballo":"2","id_user":"002","nombre":"Tormenta","edad":"7","ingreso":"2019-06-20","jubilacion":null,"raza":"Árabe","peso":"480.00","años":"5"},
+{"id_caballo":"3","id_user":"003","nombre":"Centella","edad":"8","ingreso":"2018-04-10","jubilacion":null,"raza":"Inglesa","peso":"510.75","años":"6"},
+{"id_caballo":"4","id_user":"004","nombre":"Fuego","edad":"6","ingreso":"2020-01-05","jubilacion":null,"raza":"Árabe","peso":"495.30","años":"4"},
+{"id_caballo":"5","id_user":"005","nombre":"Trueno","edad":"9","ingreso":"2017-09-12","jubilacion":"2025-09-12","raza":"Pura raza española","peso":"520.00","años":"8"},
+{"id_caballo":"6","id_user":"006","nombre":"Sombra","edad":"4","ingreso":"2022-05-18","jubilacion":null,"raza":"Inglesa","peso":"470.00","años":"2"},
+{"id_caballo":"7","id_user":"007","nombre":"Aurora","edad":"10","ingreso":"2016-07-22","jubilacion":"2024-07-22","raza":"Árabe","peso":"530.20","años":"9"},
+{"id_caballo":"8","id_user":"008","nombre":"Galán","edad":"5","ingreso":"2021-08-30","jubilacion":null,"raza":"Pura raza española","peso":"505.00","años":"3"},
+{"id_caballo":"9","id_user":"009","nombre":"Halcón","edad":"7","ingreso":"2019-02-14","jubilacion":null,"raza":"Inglesa","peso":"490.75","años":"5"},
+{"id_caballo":"10","id_user":"010","nombre":"Pegaso","edad":"8","ingreso":"2018-11-03","jubilacion":null,"raza":"Pura raza española","peso":"515.40","años":"6"},
+{"id_caballo":"11","id_user":"011","nombre":"Titán","edad":"6","ingreso":"2020-10-09","jubilacion":null,"raza":"Árabe","peso":"500.00","años":"4"},
+{"id_caballo":"12","id_user":"012","nombre":"Rayo","edad":"9","ingreso":"2017-03-25","jubilacion":"2025-03-25","raza":"Inglesa","peso":"520.90","años":"8"},
+{"id_caballo":"13","id_user":"013","nombre":"Bruma","edad":"4","ingreso":"2022-01-17","jubilacion":null,"raza":"Pura raza española","peso":"485.60","años":"2"},
+{"id_caballo":"14","id_user":"014","nombre":"Sol","edad":"5","ingreso":"2021-06-01","jubilacion":null,"raza":"Árabe","peso":"495.80","años":"3"},
+{"id_caballo":"15","id_user":"015","nombre":"Cometa","edad":"7","ingreso":"2019-09-14","jubilacion":null,"raza":"Inglesa","peso":"510.30","años":"5"},
+{"id_caballo":"16","id_user":"016","nombre":"Viento","edad":"8","ingreso":"2018-05-29","jubilacion":null,"raza":"Pura raza española","peso":"500.00","años":"6"},
+{"id_caballo":"17","id_user":"017","nombre":"Estrella","edad":"6","ingreso":"2020-12-12","jubilacion":null,"raza":"Árabe","peso":"490.50","años":"4"},
+{"id_caballo":"18","id_user":"018","nombre":"Bravo","edad":"10","ingreso":"2016-11-07","jubilacion":"2024-11-07","raza":"Inglesa","peso":"530.00","años":"9"},
+{"id_caballo":"19","id_user":"019","nombre":"Torbellino","edad":"5","ingreso":"2021-04-23","jubilacion":null,"raza":"Pura raza española","peso":"505.70","años":"3"},
+{"id_caballo":"20","id_user":"020","nombre":"Fantasma","edad":"7","ingreso":"2019-08-16","jubilacion":null,"raza":"Árabe","peso":"495.00","años":"5"},
+{"id_caballo":"21","id_user":"021","nombre":"Huracán","edad":"8","ingreso":"2018-02-08","jubilacion":null,"raza":"Inglesa","peso":"515.90","años":"6"},
+{"id_caballo":"22","id_user":"022","nombre":"Lucero","edad":"6","ingreso":"2020-09-19","jubilacion":null,"raza":"Pura raza española","peso":"500.25","años":"4"}
+]
+}
+]
