@@ -58,14 +58,41 @@ function toggleContent(clickedElement) {
     const resultadosDesktop = document.getElementById('resultados-desktop');
     const resetDesktop = document.querySelector('.form .reset');
 
-    // --- Trámites ---
+    // --- LISTADO EDITABLE (OPCIONES DEL BUSCADOR) ---
     const tramites = [
-        { nombre: "Denuncias por robo", url: "#" },
-        { nombre: "Solicitud de pasaporte", url: "#" },
-        { nombre: "Renovación del DNI", url: "#" },
-        { nombre: "Antecedentes penales", url: "#" },
-        { nombre: "Permiso de armas", url: "#" }
-    ];
+    { nombre: "Tasas de extranjería", url: "CO_index_tramites_tasasextranjería.html" },
+    { nombre: "Certificado de residente", url: "CO_index_tramites_certificadoresidente.html" },
+    { nombre: "Renovación del DNI", url: "CO_index_tramites.html#DNI-Y-PASAPORTE" },
+    { nombre: "Tarjeta de estudiante", url: "CO_index_tramites_tarjetaestudiante.html" },
+    { nombre: "Teléfono de emergencias", url: "CO_index_emergencias.html" },
+    { nombre: "Adopta un K-9", url: "CO_index_tupolicia.html" },
+    { nombre: "Origen", url: "CO_index_tupolicia_conocenos.html" },
+    { nombre: "Competencias", url: "CO_index_tupolicia_conocenos.html" },
+    { nombre: "Normativa", url: "CO_index_tupolicia_conocenos.html" },
+    { nombre: "Estructura", url: "CO_index_tupolicia_conocenos.html" },
+    { nombre: "Distintivos de cargos y divisas", url: "CO_index_tupolicia_conocenos.html" },
+    { nombre: "Historia de la policia", url: "CO_index_tupolicia_historia.html" },
+    { nombre: "Historia del uniforme", url: "CO_index_tupolicia_uniforme.html" },
+    { nombre: "Himno", url: "CO_index_tupolicia_himno.html" },
+    { nombre: "Web infantil", url: "CO_index_tupolicia_webinfantil.html" },
+    { nombre: "Dibujos", url: "CO_index_tupolicia_webinfantil.html" },
+    { nombre: "Juegos", url: "CO_index_tupolicia_webinfantil.html" },
+    { nombre: "Acceso a oposiciones y convocatorias", url: "CO_index_tupolicia_acceso_oposiciones.html" },
+    { nombre: "Noticias de acceso a oposiciones", url: "CO_index_tupolicia_acceso_oposiciones.html" },
+    { nombre: " Procesos de selección a la Policia Nacional", url: "CO_index_tupolicia_acceso_oposiciones_policia.html" },
+    { nombre: "Procesos selectivos seguridad privada", url: "CO_index_tupolicia_acceso_oposiciones_seguridad.html" },
+    { nombre: "Procesos selectivos facultativos y técnicos", url: "CO_index_tupolicia_acceso_oposiciones_facultativos.html" },
+    { nombre: "Personal no policial ", url: "CO_index_tupolicia_personal_no_policial.html" },
+    { nombre: "Trámites de seguridad privada", url: "CO_index_tupolicia_jefes_y_directorres.html" },
+    { nombre: "Denuncias", url: "CO_index_denuncias.html" },
+    { nombre: "Mapa", url: "#CO_index_denuncias.html" },
+    { nombre: "Denuncia", url: "CO_index_contacto_formulario.html" },
+    { nombre: "Desaparecidos", url: "CO_index_denuncias_desaparecidos.html" },
+    { nombre: "Buscados", url: "CO_index_denuncias_buscados.html" },
+    { nombre: "Ciberseguridad", url: "CO_index_denuncias_ciberseguridad.html" },
+];
+
+
 
     // --- Mostrar/ocultar buscador móvil al hacer clic en la lupa ---
     abrirBuscador.addEventListener("click", () => {
