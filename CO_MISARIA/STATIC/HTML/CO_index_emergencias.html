@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emergencias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/CO_index_emergencias.css">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+     <nav>
+
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG\iconos png\icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG\iconos png\icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias">Denuncias</a>
+                <a href="CO_index_tupolicia">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias">Denuncias</a>
+            <a href="CO_index_tupolicia">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>   
+
+    <main>
+        <div class="inicio" style="background-image: url('IMG/emergencias1.jpg');">
+            <div class="tabla-numeros">
+                <table class="tabla-numeros">
+                    <tr>
+                        <th colspan="2">
+                            <h2>Teléfonos importantes </h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td> 112 </td>
+                        <td> Teléfono prioritario y general de emergencia para toda la Unión Europea. </td>
+                    </tr>
+                    <tr>
+                        <td> 091</td>
+                        <td> Policía Nacional. Para situaciones que requieran intervención policial.</td>
+                    </tr>
+                    <tr>
+                        <td> 061</td>
+                        <td> Emergencias Sanitarias. Contacta con los servicios de atención médica urgente.</td>
+                    </tr>
+                    <tr>
+                        <td> 062</td>
+                        <td> Guardia Civil. Disponible para atender emergencias y movilizar los recursos necesarios</td>
+                    </tr>
+
+                    <tr>
+                        <th colspan="2"> Todos los teléfonos mostrados son completamente gratuitos y disponibles 24h.
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="contenido">
+            <div class="desplegable">
+                <aside class="menu-departamentos">
+                    <div class="departamento" id="policia"><a href="#" data-id="policia"> Policía Nacional</a></div>
+                    <div class="departamento" id="bomberos"><a href="#" data-id="bomberos"> Bomberos </a></div>
+                    <div class="departamento" id="samur"><a href="#" data-id="samur"> Samur </a></div>
+                    <div class="departamento" id="guardia-civil"><a href="#" data-id="guardiacivil"> Guardia Civil</a>
+                    </div>
+
+                </aside>
+                <div class="informacion">
+
+                    <div class="info_policia bloque activo">
+                        <h2>POLICÍA NACIONAL</h2>
+                        <span class="numero"> Teléfono al que llamar: 112</span><br>
+                        <img src="IMG/EMERGENCIAS/emergencias2.jpg"
+                            alt="Policía Nacional">
+                        <p>La Policía Nacional es el cuerpo de seguridad del Estado encargado de la protección de los
+                            ciudadanos y el mantenimiento del orden público. Su misión es garantizar la seguridad y la
+                            convivencia pacífica en la sociedad.</p>
+                        <table class="tabla-servicios">
+                            <tr>
+                                <th> Servicios principales</th>
+
+                            </tr>
+                            <tr>
+                                <td> Prevención de delitos y vigilancia de calles, eventos y zonas públicas.</td>
+                            </tr>
+                            <tr>
+                                <td> Respuesta ante altercados, robos, agresiones y situaciones de peligro.</td>
+                            </tr>
+                            <tr>
+                                <td>Protección de personalidades e instalaciones estratégicas.</td>
+                            </tr>
+                            <tr>
+                                <td> Cibercrimen: fraudes online, estafas, phishing, hacking, suplantación,etc.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Investigación de delitos cometidos por Internet y redes sociales.</td>
+                            </tr>
+                            <tr>
+                                <td> Protección de menores y violencia de género</td>
+                            </tr>
+
+                            <tr>
+                                <td> Investigación de delitos como homicidios, secuestros, agresiones, robos, etc.</td>
+                            </tr>
+                            <tr>
+                                <td> Apoyo a jueces y fiscales en investigaciones criminales.</td>
+                            </tr>
+                        </table>
+
+
+
+                    </div>
+
+                    <div class="info_bomberos bloque">
+                        <h2>BOMBEROS</h2>
+                        <span class="numero"> Teléfono al que llamar: 112</span>
+                        <img src="IMG\EMERGENCIAS\emergencias5.jpeg"
+                            alt="Bomberos">
+                        <p>Los bomberos son los encargados de combatir incendios y rescatar
+                            personas en situaciones de emergencia. Su labor es fundamental para
+                            garantizar la seguridad de la población.</p>
+
+                        <table class="tabla-servicios">
+                            <tr>
+                                <th> Servicios principales</th>
+
+                            </tr>
+                            <tr>
+                                <td> Extinción de incendios</td>
+                            </tr>
+                            <tr>
+                                <td> Rescates en accidentes de tráfico</td>
+                            </tr>
+                            <tr>
+                                <td>Emergencias químicas o biológicas</td>
+                            </tr>
+                            <tr>
+                                <td> Rescates en altura / estructuras colapsadas</td>
+                            </tr>
+                            <tr>
+                                <td> Inundaciones</td>
+                            </tr>
+                            <tr>
+                                <td> Prevención de incendios</td>
+                            </tr>
+
+                            <tr>
+                                <td> Inundaciones</td>
+                            </tr>
+                            <tr>
+                                <td> Atención a incendios forestales</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="info_samur bloque">
+                        <h2>SAMUR</h2>
+                        <span class="numero"> Teléfono al que llamar: 112</span>
+                        <img src="IMG\EMERGENCIAS\emergencias4.jpg" alt="Samur">
+                        <p>El Samur es el servicio de emergencias médicas de Madrid, encargado de proporcionar atención
+                            médica de urgencia y traslado a hospitales en situaciones críticas.</p>
+                        <table class="tabla-servicios">
+                            <tr>
+                                <th> Servicios principales</th>
+                            </tr>
+                            <tr>
+                                <td> Atención médica urgente en la vía pública.</td>
+                            </tr>
+                            <tr>
+                                <td> Soporte vital avanzado.</td>
+                            </tr>
+                            <tr>
+                                <td>Traslado a hospitales.</td>
+                            </tr>
+                            <tr>
+                                <td> Intervención en accidentes múltiples o catástrofes.</td>
+                            </tr>
+                            <tr>
+                                <td> Atención en eventos masivos.</td>
+                            </tr>
+                            <tr>
+                                <td> Coordinación con hospitales y cuerpos de seguridad.</td>
+                            </tr>
+
+                            <tr>
+                                <td> Apoyo psicológico inmediato.</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="info_guardiacivil bloque">
+                        <h2>GUARDIA CIVIL</h2>
+                        <span class="numero"> Teléfono al que llamar: 062</span>
+
+                        <img src="IMG\EMERGENCIAS\emergencias7.jpeg"
+                            alt="Guardia Civil">
+                        <p>El Samur es el servicio de emergencias médicas de Madrid, encargado de proporcionar atención
+                            médica de urgencia
+                            y traslado a hospitales en situaciones críticas.</p>
+
+                        <table class="tabla-servicios">
+                            <tr>
+                                <th> Servicios principales</th>
+                            </tr>
+                            <tr>
+                                <td> Seguridad ciudadana.</td>
+                            </tr>
+                            <tr>
+                                <td> Protección del medio ambiente (SEPRONA).</td>
+                            </tr>
+                            <tr>
+                                <td>Tráfico y accidentes en carreteras.</td>
+                            </tr>
+                            <tr>
+                                <td> Investigación criminal y ciberdelitos.</td>
+                            </tr>
+                            <tr>
+                                <td> Control de armas y explosivos.</td>
+                            </tr>
+                            <tr>
+                                <td>Protección ante violencia de género.</td>
+                            </tr>
+
+                            <tr>
+                                <td>Antiterrorismo.</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!--ASIDE DERECHO (PREGUNTAS FRE. + VIOLENCIA GÉNERO)-->
+            <aside class="columna-derecha">
+                <article class="violencia-genero">
+                    <h3> Si eres víctima de violencia de género, recuerda: </h3>
+                    <div class="info-genero">
+                        <img src="IMG\iconos png\icon_mobile.png">
+                        <p> 014 (solo llamadas)</p>
+                    </div>
+                    <div class="info-genero">
+                        <img src="IMG\iconos png\icon_whatsapp.png">
+                        <p> 682 508 507 (Whatsapp)</p>
+                    </div>
+                    <div class="info-genero">
+                        <img src="IMG\iconos png\icon_whatsapp.png">
+                        <p> 682 916 136 (Whatsapp)</p>
+                    </div>
+                    <hr>
+                    <button class="web-violencia"> <a href="https://violenciagenero.igualdad.gob.es/">Web oficial
+                        </a></button>
+                </article>
+                <article class="primeros-auxilios"
+                    onclick="window.location.href='https://cendocps.carm.es/documentacion/2024_guia-primeros-auxilios-web.pdf';">
+                    <img src="IMG\iconos png\icon_guia.png">
+                    <a href="https://cendocps.carm.es/documentacion/2024_guia-primeros-auxilios-web.pdf"> Guía de
+                        primeros auxilios </a>
+
+                </article>
+            </aside>
+        </div>
+
+        <section class="preguntas-fre" id="PREGUNTAS-FRECUENTES" style="background-image: url('IMG/EMERGENCIAS/emergencias9.png');">
+            <h2> Preguntas frecuentes</h2>
+
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span>¿Cuándo debo llamar al 112?</span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <p>
+                        Debes llamar al 112 solo en caso de emergencias que requieran asistencia inmediata de la
+                        policía,
+                        bomberos o servicios médicos. Por ejemplo: accidentes graves, incendios, delitos en curso o
+                        personas
+                        inconscientes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span>¿Qué información debo dar al operador del 112?</span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <p>
+                        Proporciona con calma:
+                    </p>
+                    <ul>
+                        <li>Tu ubicación exacta (calle, número, ciudad).</li>
+                        <li>Qué ha ocurrido.</li>
+                        <li>Cuántas personas están involucradas.</li>
+                        <li>Si hay heridos y su estado.</li>
+                        <li>Tu nombre y número de contacto.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span> ¿Qué pasa si llamo al 112 por error? </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <p>
+                        No cuelgues. Informa al operador de que fue un error. Las llamadas falsas o innecesarias pueden
+                        ralentizar la atención a
+                        verdaderas emergencias y, en algunos casos, conllevar sanciones.
+                    </p>
+
+                </div>
+            </div>
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span>¿Qué hago si presencio un accidente de tráfico?</span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <ul>
+                        <li>Asegura tu propia seguridad primero.</li>
+                        <li>Llama al 112 e informa de la ubicación exacta y número de vehículos/heridos.</li>
+                        <li>Si puedes, presta primeros auxilios básicos sin poner en riesgo tu vida.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span> ¿Puedo denunciar una desaparición de inmediato? </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <p>
+                        Sí. No es necesario esperar 24 horas. Si sospechas que alguien ha desaparecido,
+                        acude a la comisaría más cercana o llama al 112 si la situación es urgente.
+                    </p>
+
+                </div>
+            </div>
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span>¿Cómo puedo denunciar un caso de violencia doméstica?</span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <p>
+                        Puedes:
+                    </p>
+                    <ul>
+                        <li>Llamar al 112 si es una emergencia inmediata.</li>
+                        <li>Acudir a una comisaría.</li>
+                        <li>Llamar al 016 (gratuito y no deja rastro en la factura).
+                            Tu denuncia será tratada con confidencialidad y se te brindará
+                            protección si es necesario.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-desplegable">
+                <div class="cabecera">
+                    <span> ¿Puedo hacer una denuncia anónima? </span>
+                    <span class="flecha">&#9654;</span> <!-- Flecha abajo -->
+                </div>
+                <div class="contenido-pregunta">
+                    <p>
+                        Sí, puedes aportar información de forma anónima a través del teléfono, página web oficial o
+                        buzones ciudadanos. Sin embargo, una denuncia formal requiere tus datos para poder abrir una
+                        investigación.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+   <footer>
+
+
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#DNI-Y-PASAPORTE">Dni
+                            y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#PERMISOS-VIAJE">Permisos
+                            de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#EXTRANJERIA">Extranjería</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#ANTECEDENTES">Antecedentes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_contacto_formulario.html">Reportar</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                            Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html#PREGUNTAS-FRECUENTES">Preguntas
+                            frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a
+                    href="FILES\Proteccion_de_datos.pdf" target="_blank">Protección
+                    de
+                    datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Síguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="IMG\REDES SOCIALES\facebook.jpg" alt="Facebook"></a></li>
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG\REDES SOCIALES\x.png" alt="X"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG\REDES SOCIALES\instagram.jpg" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                                src="IMG\REDES SOCIALES\youtube.jpg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                                src="IMG\REDES SOCIALES\tiktok.jpg" alt="TikTok"></a></li>
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG\REDES SOCIALES\whatsapp.jpg" alt="WhatsApp"></a></li>
+                    <li><a href="https://t.me/policianacional" target="_blank"><img
+                                src="IMG\REDES SOCIALES\telegram.jpg" alt="Telegram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/CO_index_emergencias.js"></script>
+</body>
+
+</html>
