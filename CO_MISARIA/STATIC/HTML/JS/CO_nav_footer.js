@@ -21,12 +21,11 @@ const resetDesktop = document.querySelector('.form .reset');
 
 // --- Trámites ---
 const tramites = [
-    { nombre: "Denuncias por robo", url: "#" },
-    { nombre: "Solicitud de pasaporte", url: "#" },
-    { nombre: "Renovación del DNI", url: "#" },
-    { nombre: "Antecedentes penales", url: "#" },
-    { nombre: "Permiso de armas", url: "#" },
-    
+    { nombre: "Tasas de extranjería", url: "CO_index_tramites_tasasextranjería.html" },
+    { nombre: "Certificado de residente", url: "CO_index_tramites_certificadoresidente.html" },
+    { nombre: "Renovación del DNI", url: "CO_index_tramites.html#DNI-Y-PASAPORTE" },
+    { nombre: "Tarjeta de estudiante", url: "CO_index_tramites_tarjetaestudiante.html" },
+    { nombre: "Teléfono de emergencias", url: "CO_index_emergencias.html" },
     { nombre: "Adopta un K-9", url: "CO_index_tupolicia.html" },
     { nombre: "Origen", url: "CO_index_tupolicia_conocenos.html" },
     { nombre: "Competencias", url: "CO_index_tupolicia_conocenos.html" },
