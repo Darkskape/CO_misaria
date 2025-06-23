@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorización de Regreso</title>
+    <link rel="stylesheet" href="CSS/CO_index_tramites_autorizacionregreso.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
+        rel="stylesheet">
+
+<body id="top">
+     <nav>
+
+        <!-- Barra de navegación principal (logo + buscador + botones) -->
+        <div class="navegacion">
+
+            <!-- Logo: versión escritorio y móvil -->
+            <div class="logo">
+                <!--Logo desktop-->
+                <img src="IMG/new_logo.png" class="logo-desktop" alt="Policía">
+                <!--Logo mobile-->
+                <img src="IMG/foto_logo2.png" class="logo-movil" alt="Policía">
+            </div>
+
+            <!-- Buscador + Boton naranja CONTACTO-->
+            <div class="buscadoryboton">
+
+                <!-- Buscador (versión desktop) -->
+                <form class="form">
+                    <button>
+                        <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                            aria-labelledby="search">
+                            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <input id="buscadorInputDesktop" class="input" placeholder="Buscar..." required type="text">
+                    <button class="reset" type="reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </form>
+
+
+                <!-- Botón de contacto (desktop) -->
+                <button class="boton-contacto" onclick="location.href='contacto.html'">Contacto</button>
+
+                <!-- Íconos lupa y menú hamburguesa (mobile version) -->
+                <div class="lupa" id="abrirBuscador" onclick="toggleSearch()">
+                    <img src="IMG\iconos png\icon_searchwhite.png" alt="Buscar">
+                </div>
+
+                <div class="buscador-movil" id="buscadorMovil">
+                    <form class="form-buscador">
+                        <input class="input" id="buscadorInput" type="text" placeholder="Buscar..." />
+                        <button type="button" class="reset" id="cerrarBuscador">&times;</button>
+                    </form>
+                    <ul id="resultados"></ul>
+                </div>
+
+                <!--ICONO MENU HAMBURGUESA (MOBILE)-->
+                <div class="menu-movil">
+                    <img src="IMG\iconos png\icon_menu.png" class="iconmenu" alt="Menú" onclick="myFunction()">
+                </div>
+            </div>
+
+            <!-- Menú desplegable (mobile) -->
+            <div id="myLinks">
+                <a href="CO_index.html">Inicio</a>
+                <a href="CO_index_tramites.html">Trámites</a>
+                <a href="CO_index_denuncias">Denuncias</a>
+                <a href="CO_index_tupolicia">Tu policía</a>
+                <a href="CO_index_emergencias.html">Emergencias</a>
+            </div>
+        </div>
+
+        <!-- Menú principal (desktop) -->
+        <div class="navegacion_principal">
+            <a href="CO_index.html">Inicio</a>
+            <a href="CO_index_tramites.html">Trámites</a>
+            <a href="CO_index_denuncias">Denuncias</a>
+            <a href="CO_index_tupolicia">Tu policía</a>
+            <a href="CO_index_emergencias.html">Emergencias</a>
+        </div>
+    </nav>
+    <!-- NO mover de sitio, para que los resultados no tapen navegador -->
+    <ul id="resultados-desktop"></ul>
+
+
+
+
+
+
+    <!--CONTENIDO PRINCIPAL-->
+
+    <main>
+        <button class="atras" onclick="window.history.back()">
+            ← Volver </button>
+
+        <button class="atras-movil" onclick="window.history.back()">
+            <img src="IMG\iconos png\icon_back.png" alt="Volver atrás">
+        </button>
+        <!-- CONTENIDO PRINCIPAL + ASIDE DERECHO-->
+
+        <div class="container-principal">
+
+            <div class="informacion">
+                <h2 class="titulo-pagina"> Autorización de regreso</h2>
+                <p> Documento que se expide a la persona extranjera cuya autorización de residencia o de estancia de
+                    larga duración se encuentre en periodo de renovación o prórroga. Permite salir de España y retornar
+                    al territorio nacional dentro de un plazo de 90 días. </p>
+                <img src="IMG/tramite8.jpg">
+
+            </div>
+
+             <aside class="column-right">
+
+                <h3 class="titulo-aside"> DOCUMENTACIÓN RELACIONADA </h3>
+                <hr>
+                <div class="documento">
+                    <img class="icono-normal" src="IMG\iconos svg\1.svg"
+                        lt="Tasas">
+                    <img class="icono-hover" src="IMG\iconos svg\2.svg"
+                        alt="Tasas">
+                    <a href="CO_ index_tramites_tasasextranjería.html"> Tasas de
+                        extranjería </a>
+                </div>
+                <hr>
+
+                <div class="documento">
+                    <img class="icono-normal" src="IMG/iconos png/salidaazul.png"
+                        alt="Prohibición">
+                    <img class="icono-hover" src="IMG/iconos png/salidablanco.png"
+                        alt="Prohibición">
+                    <a href="https://www.inclusion.gob.es/documents/d/migraciones/ex18-formulario-inscripcion-en-el-rce-residencia-ciudadano-de-la-ue-1">
+                        Registro en la UE (Formulario EX18)</a>
+                </div>
+                <hr>
+
+                <div class="documento">
+                    <img class="icono-normal"
+                        src="IMG/iconos png/invitacionazul.png" alt="Invitación">
+                    <img class="icono-hover"
+                        src="IMG/iconos png/invitacionblanco.png"
+                        alt="Invitación">
+                    <a href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/extranjeria/carta_invitacion.pdf"> Documento
+                        Carta de Invitación </a>
+                </div>
+                <hr>
+                <div class="documento">
+                    <img class="icono-normal" src="IMG/iconos png/errorazul.png"
+                        alt="Sanción">
+                    <img class="icono-hover" src="IMG/iconos png/errorblanco.png"
+                        alt="Sanción">
+                    <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1992-26318">
+                        Sancionador de extranjeros</a>
+                </div>
+                <hr>
+                <div class="documento">
+                    <img class="icono-normal"
+                        src="IMG/iconos png/documentoazul.png" alt="Autorización">
+                    <img class="icono-hover"
+                        src="IMG/iconos png/documentoblanco.png"
+                        alt="Autorización">
+                    <a href="https://www.inclusion.gob.es/documents/d/migraciones/ex13-formulario-autorizacion-de-regreso-1">
+                        Autorización de regreso (Formulario EX13) </a>
+                </div>
+
+
+            </aside>
+        </div>
+
+        <div class="apartados-container">
+
+            <section class="apartado">
+
+                <h3> Requisitos </h3>
+
+                <div class="requisitos-secciones">
+                    <ul class="listado-requisitos">
+
+                        <li>A la persona extranjera cuya autorización de residencia o de estancia se encuentre en
+                            periodo de
+                            renovación o prórroga se le podrá expedir una autorización de regreso que le permita salir
+                            de
+                            España y retornar al territorio nacional, siempre que la persona solicitante acredite que ha
+                            iniciado los trámites de renovación o prórroga del título que le habilita para permanecer en
+                            España dentro del plazo legal fijado al efecto.</li>
+                        <hr class="separacion">
+                        <li> Igualmente, la persona titular de una tarjeta de identidad de extranjero en vigor podrá
+                            solicitar una autorización de regreso en caso de robo, extravío, destrucción o inutilización
+                            de aquélla, siempre que acredite haber presentado solicitud de duplicado de la tarjeta.</li>
+                        <hr class="separacion">
+                        <li>La autorización de regreso tendrá una vigencia no superior a noventa días desde la caducidad
+                            de la autorización de residencia o de estancia, si se solicita con anterioridad a dicha
+                            caducidad.</li>
+                        <hr class="separacion">
+                        <li>En caso de que se solicite en un momento posterior a la caducidad de la autorización de
+                            residencia o de estancia, la autorización de regreso tendrá una vigencia no superior a
+                            noventa días desde que sea concedida.</li>
+                        <hr class="separacion">
+                        <li>Cuando el viaje responda a una situación de necesidad, la autorización de regreso se
+                            tramitará con carácter preferente.</li>
+                        <hr class="separacion">
+                        <li>
+                            Cuando la persona extranjera acredite que el viaje responde a una situación de necesidad y
+                            concurran razones excepcionales, podrá expedirse la autorización de regreso referida en el
+                            apartado anterior, con una vigencia no superior a noventa días desde que se conceda la
+                            autorización de regreso, si se ha resuelto favorablemente la solicitud inicial de
+                            autorización de residencia o de autorización de estancia.
+                        </li>
+                        <hr class="separacion">
+                        <li> Autoridad competente
+                            <div class="sub-categoria">
+                                <p>La autorización de regreso será concedida por el Delegado o Subdelegado del Gobierno
+                                    competente, por el Comisario General de Extranjería y Fronteras o por las personas
+                                    titulares de las comisarías y puestos fronterizos del Cuerpo Nacional de Policía.
+                                </p>
+                            </div>
+                        </li>
+                        <hr class="separacion">
+                        <li> Periodo de validez
+                            <div class="sub-categoria">
+                                <p>Durante la validez de los noventa días de la autorización de regreso<b> no habrá
+                                        limitación de entradas y salidas con un único documento.</b>
+                                </p>
+                        </li>
+                        <hr class="separacion">
+                        <li> Autorización de regreso
+                            <div class="sub-categoria">
+                                <p>De conformidad con el derecho de la Unión Europea, la autorización de regreso <b>sólo
+                                        será válida para efectuar su entrada por los Pasos Fronterizos habilitados
+                                        españoles.</b>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--SECCIÓN TRAMITAR -->
+
+            <section class="apartado">
+                <h3> Tramitar </h3>
+                <div class="info-tramitar">
+                    <p>La solicitud junto con la documentación que debe acompañarla deberá ser presentada en
+                        cualquier <a class="enlace"
+                            href="https://mpt.gob.es/portal/delegaciones_gobierno/extranjeria/extranjeria_ddgg.html">Oficina
+                            de Extranjería</a> o Comisaría de Policía correspondientes.</p>
+                    <div class="texto-tabla">
+                        <h4>ESTE TRÁMITE SOLO SE PODRÁ SOLICITAR PRESENCIALMENTE</h4><br>
+                        <article class="tabla">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <h4> Documentación necesaria </h4>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li><a
+                                                    href="https://www.inclusion.gob.es/documents/d/migraciones/ex13-formulario-autorizacion-de-regreso-1">
+                                                    Modelo de Solicitud de autorización de regreso (Formulario EX13)
+                                                </a></li><br>
+                                            <li><a href="https://sede.policia.gob.es/Tasa790_012/">
+                                                    Justificante de pago de Tasa modelo 790 Código 012 </a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!--SECCION INFORMACION-->
+
+            <section class="apartado">
+                <h3> Información </h3>
+                <div class="informacion-seccion">
+                    <p>Datos básicos del procedimiento:</p>
+                    <article class="tabla-informacion">
+                        <table>
+                            <th> Resolución del procedimiento:</th>
+                            <tr>
+                                <td>
+                                    <ul class="lista-tabla">
+                                        <li>Órganos competentes para resolver este procedimiento: <b>Por competencia
+                                                propia
+                                            </b> (Delegado o Subdelegado del Gobierno competente, el Comisario General
+                                            de
+                                            Extranjería y Fronteras o los titulares de las comisarías y puestos
+                                            fronterizos
+                                            de Policía Nacional)</li>
+                                        <li>La resolución del procedimiento no pone fin a la vía administrativa.</li>
+                                        <li>Efecto de la falta de resolución en este plazo: Desestimatorio (inicio a
+                                            solicitud del interesado).
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </div>
+            </section>
+            <!--SECCIÓN: NORMATIVA-->
+            <section class="apartado">
+                <h3> Normativa </h3>
+                <ul class="normativa-seccion">
+                    <li><a class="enlace" href="https://www.boe.es/buscar/doc.php?id=BOE-A-2024-24099">Real Decreto
+                            1155/2024, de 19
+                            de noviembre, por el que se aprueba el Reglamento de la Ley Orgánica 4/2000, de 11 de enero,
+                            sobre derechos y libertades de los extranjeros en España y su integración social. </a></li>
+                    <li>Código del procedimiento: <b>994614 </li>
+                </ul>
+            </section>
+
+
+            <!--DOCUMENTOS DE INTERÉS (SUSTITUYE AL ASIDE)-->
+            <section class="apartado movil">
+                    <h3> Documentación relacionada </h3>
+                    <div class="documentos-interes">
+                        <article class="documento-movil">
+                            <img class="icono-movil"
+                                src="IMG\iconos png\icon_tasas.png" alt="Tasas">
+                            <a href="CO_ index_tramites_tasasextranjería.html">
+                                Tasas
+                                de
+                                extranjería </a>
+                        </article>
+                        <article class="documento-movil">
+                            <img class="icono-movil"
+                                src="IMG/iconos png/salidablanco.png"
+                                aria-atomic="Prohibición de entrada o salida" alt="Tasas">
+                            <a href="https://www.inclusion.gob.es/documents/d/migraciones/ex18-formulario-inscripcion-en-el-rce-residencia-ciudadano-de-la-ue-1">
+                               Registro en la UE (Formulario EX18) </a>
+                        </article>
+                        <article class="documento-movil">
+                            <img class="icono-movil"
+                                src="IMG/iconos png/invitacionblanco.png"
+                                alt="Carta de Invitación">
+                            <a href="https://sede.policia.gob.es/portalCiudadano/sede_electronica/extranjeria/carta_invitacion.pdf">
+                                Documento carta de invitación </a>
+                        </article>
+                        <article class="documento-movil">
+                            <img class="icono-movil"
+                                src="IMG/iconos png/documentoblanco.png"
+                                alt="Autorización">
+                            <a href="https://www.inclusion.gob.es/documents/d/migraciones/ex13-formulario-autorizacion-de-regreso-1">
+                                Autorización de regreso (Formulario EX13) </a>
+                        </article>
+                    </div>
+            </section>
+        </div>
+
+        </div>
+
+    </main>
+
+    <!--BOTON SCROLL UP-->
+
+    <a href="#" id="scrollToTopBtn">
+        <img src="IMG\iconos png\scrollup.png" alt="Subir">
+    </a>
+
+   <footer>
+
+
+        <div class="indicefinal">
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="CO_index_tramites.html">
+                    <h2 class="titulo-enlace">Trámites </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#DNI-Y-PASAPORTE">Dni
+                            y Pasaporte</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#PERMISOS-VIAJE">Permisos
+                            de viaje</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#EXTRANJERIA">Extranjería</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_tramites.html#ANTECEDENTES">Antecedentes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Denuncias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_contacto_formulario.html">Reportar</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_desaparecidos.html">Desaparecidos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_buscados.html">Buscados</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_denuncias_ciberseguridad.html">Ciberseguridad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="#">
+                    <h2 class="titulo-enlace"> Tu policía </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_conocenos.html">Conócenos</a></li>
+                    <li><a class="enlace-pagina" href="CO_index_tupolicia_acceso_oposiciones.html">Quiero ser
+                            Policia</a></li>
+                    <li><a class="enlace-pagina" href="https://www.adoptak9.es" target="_blank">Adopta un K9</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="cajafinal">
+                <a class="enlace-pagina" href="C:\Users\Kimberly\Documents\COMISARÍA\HTML\page_emergencias.html">
+                    <h2 class="titulo-enlace"> Emergencias </h2>
+                </a>
+                <ul>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html">Información</a>
+                    </li>
+                    <li><a class="enlace-pagina" href="CO_index_emergencias.html#PREGUNTAS-FRECUENTES">Preguntas
+                            frecuentes</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--SUBFOOTER: COPYRIGTH & REDES SOCIALES -->
+        <div class="sub-footer">
+            <span class="copy-final">© 2025 DIRECCIÓN GENERAL DE COMISERIA DE COLÓN |<a
+                    href="FILES\Proteccion_de_datos.pdf" target="_blank">Protección
+                    de
+                    datos</a>
+            </span>
+            <div class="fila-redes">
+                <p> Síguenos en: </p>
+                <ul class="redes-sociales">
+                    <li><a href="https://www.facebook.com/PoliciaNacional/?locale=es_ES/" target="_blank"><img
+                                src="IMG\REDES SOCIALES\facebook.jpg" alt="Facebook"></a></li>
+                    <li><a href="https://x.com/policia" target="_blank"><img src="IMG\REDES SOCIALES\x.png" alt="X"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/policianacional/?hl=es" target="_blank"><img
+                                src="IMG\REDES SOCIALES\instagram.jpg" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com//user/Policia" target="_blank"><img
+                                src="IMG\REDES SOCIALES\youtube.jpg" alt="YouTube"></a></li>
+                    <li><a href="https://www.tiktok.com/@policia" target="_blank"><img
+                                src="IMG\REDES SOCIALES\tiktok.jpg" alt="TikTok"></a></li>
+                    <li><a href="https://www.whatsapp.com/channel/0029VaDOvrN0wak2DtJeIe3C" target="_blank"><img
+                                src="IMG\REDES SOCIALES\whatsapp.jpg" alt="WhatsApp"></a></li>
+                    <li><a href="https://t.me/policianacional" target="_blank"><img
+                                src="IMG\REDES SOCIALES\telegram.jpg" alt="Telegram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/CO_index_tramites_Autorizacionregreso.js"></script>
+</body>
+
+
+</html>
