@@ -1,0 +1,260 @@
+[
+    {
+        "type": "header",
+        "version": "5.2.1",
+        "comment": "Export to JSON plugin for PHPMyAdmin"
+    },
+    {
+        "type": "database",
+        "name": "co_misaria"
+    },
+    {
+        "type": "table",
+        "name": "transportes",
+        "database": "co_misaria",
+        "data": [
+            {
+                "id_vehiculo": "1",
+                "matricula": "ABC1234",
+                "tipo_transporte": "Coche",
+                "modelo": "Focus",
+                "marca": "Ford",
+                "anio": "2018",
+                "estado": "Bueno",
+                "observaciones": "Revisión reciente",
+                "id_user": "001"
+            },
+            {
+                "id_vehiculo": "2",
+                "matricula": "XYZ5678",
+                "tipo_transporte": "Moto",
+                "modelo": "CBR500R",
+                "marca": "Honda",
+                "anio": "2020",
+                "estado": "Excelente",
+                "observaciones": "Poco uso",
+                "id_user": "002"
+            },
+            {
+                "id_vehiculo": "3",
+                "matricula": "LMN2345",
+                "tipo_transporte": "Coche",
+                "modelo": "Golf",
+                "marca": "Volkswagen",
+                "anio": "2017",
+                "estado": "Regular",
+                "observaciones": "Necesita cambio de aceite",
+                "id_user": "003"
+            },
+            {
+                "id_vehiculo": "4",
+                "matricula": "DEF6789",
+                "tipo_transporte": "Moto",
+                "modelo": "MT-07",
+                "marca": "Yamaha",
+                "anio": "2019",
+                "estado": "Bueno",
+                "observaciones": "Frenos revisados",
+                "id_user": "004"
+            },
+            {
+                "id_vehiculo": "5",
+                "matricula": "GHI3456",
+                "tipo_transporte": "Coche",
+                "modelo": "308",
+                "marca": "Peugeot",
+                "anio": "2015",
+                "estado": "Malo",
+                "observaciones": "Falla en la transmisión",
+                "id_user": "005"
+            },
+            {
+                "id_vehiculo": "6",
+                "matricula": "JKL7890",
+                "tipo_transporte": "Moto",
+                "modelo": "Duke 390",
+                "marca": "KTM",
+                "anio": "2021",
+                "estado": "Excelente",
+                "observaciones": "Mantenimiento al día",
+                "id_user": "006"
+            },
+            {
+                "id_vehiculo": "7",
+                "matricula": "MNO4567",
+                "tipo_transporte": "Coche",
+                "modelo": "Clio",
+                "marca": "Renault",
+                "anio": "2016",
+                "estado": "Bueno",
+                "observaciones": "Recién pintado",
+                "id_user": "007"
+            },
+            {
+                "id_vehiculo": "8",
+                "matricula": "PQR8901",
+                "tipo_transporte": "Moto",
+                "modelo": "GSX-S750",
+                "marca": "Suzuki",
+                "anio": "2018",
+                "estado": "Bueno",
+                "observaciones": "Neumáticos nuevos",
+                "id_user": "008"
+            },
+            {
+                "id_vehiculo": "9",
+                "matricula": "STU1235",
+                "tipo_transporte": "Coche",
+                "modelo": "Ibiza",
+                "marca": "SEAT",
+                "anio": "2014",
+                "estado": "Regular",
+                "observaciones": "Aire acondicionado dañado",
+                "id_user": "009"
+            },
+            {
+                "id_vehiculo": "10",
+                "matricula": "VWX5670",
+                "tipo_transporte": "Moto",
+                "modelo": "Bonneville",
+                "marca": "Triumph",
+                "anio": "2022",
+                "estado": "Excelente",
+                "observaciones": "Sin observaciones",
+                "id_user": "010"
+            },
+            {
+                "id_vehiculo": "11",
+                "matricula": "YZA6781",
+                "tipo_transporte": "Coche",
+                "modelo": "A3",
+                "marca": "Audi",
+                "anio": "2019",
+                "estado": "Bueno",
+                "observaciones": "Leve rayón en puerta",
+                "id_user": "011"
+            },
+            {
+                "id_vehiculo": "12",
+                "matricula": "BCD7892",
+                "tipo_transporte": "Moto",
+                "modelo": "R15 V4",
+                "marca": "Yamaha",
+                "anio": "2020",
+                "estado": "Excelente",
+                "observaciones": "Última revisión en mayo",
+                "id_user": "012"
+            },
+            {
+                "id_vehiculo": "13",
+                "matricula": "EFG8903",
+                "tipo_transporte": "Coche",
+                "modelo": "Civic",
+                "marca": "Honda",
+                "anio": "2015",
+                "estado": "Regular",
+                "observaciones": "Luces traseras fallan",
+                "id_user": "013"
+            },
+            {
+                "id_vehiculo": "14",
+                "matricula": "HIJ9014",
+                "tipo_transporte": "Moto",
+                "modelo": "Z650",
+                "marca": "Kawasaki",
+                "anio": "2021",
+                "estado": "Bueno",
+                "observaciones": "Cambio de aceite reciente",
+                "id_user": "014"
+            },
+            {
+                "id_vehiculo": "15",
+                "matricula": "KLM0125",
+                "tipo_transporte": "Coche",
+                "modelo": "Polo",
+                "marca": "Volkswagen",
+                "anio": "2017",
+                "estado": "Bueno",
+                "observaciones": "Revisión completa reciente",
+                "id_user": "015"
+            },
+            {
+                "id_vehiculo": "16",
+                "matricula": "NOP1236",
+                "tipo_transporte": "Moto",
+                "modelo": "Monster 797",
+                "marca": "Ducati",
+                "anio": "2019",
+                "estado": "Bueno",
+                "observaciones": "Pastillas de freno nuevas",
+                "id_user": "016"
+            },
+            {
+                "id_vehiculo": "17",
+                "matricula": "QRS2347",
+                "tipo_transporte": "Coche",
+                "modelo": "Yaris",
+                "marca": "Toyota",
+                "anio": "2016",
+                "estado": "Regular",
+                "observaciones": "Neumático trasero gastado",
+                "id_user": "017"
+            },
+            {
+                "id_vehiculo": "18",
+                "matricula": "TUV3458",
+                "tipo_transporte": "Moto",
+                "modelo": "CB500X",
+                "marca": "Honda",
+                "anio": "2018",
+                "estado": "Bueno",
+                "observaciones": "Sin observaciones",
+                "id_user": "018"
+            },
+            {
+                "id_vehiculo": "19",
+                "matricula": "WXY4569",
+                "tipo_transporte": "Coche",
+                "modelo": "Megane",
+                "marca": "Renault",
+                "anio": "2014",
+                "estado": "Malo",
+                "observaciones": "Motor con fugas",
+                "id_user": "019"
+            },
+            {
+                "id_vehiculo": "20",
+                "matricula": "ZAB5670",
+                "tipo_transporte": "Moto",
+                "modelo": "Versys 650",
+                "marca": "Kawasaki",
+                "anio": "2020",
+                "estado": "Excelente",
+                "observaciones": "Última revisión en junio",
+                "id_user": "020"
+            },
+            {
+                "id_vehiculo": "21",
+                "matricula": "CDE6781",
+                "tipo_transporte": "Coche",
+                "modelo": "500",
+                "marca": "Fiat",
+                "anio": "2017",
+                "estado": "Bueno",
+                "observaciones": "Interior bien conservado",
+                "id_user": "021"
+            },
+            {
+                "id_vehiculo": "22",
+                "matricula": "FGH7892",
+                "tipo_transporte": "Moto",
+                "modelo": "MT-09",
+                "marca": "Yamaha",
+                "anio": "2021",
+                "estado": "Excelente",
+                "observaciones": "Frenos recién cambiados",
+                "id_user": "022"
+            }
+        ]
+    }
+]
