@@ -3,7 +3,7 @@
 
 Este  proyecto  esta creado para el ciudadano y para facilitarle la gestión dentro de la comisaria a los trabajadores y administrativos .
 
-# Hola a todos somos Debbie,Jhuly,Kim y Andrés Diseñadores y Desarrolladores web de CO_MISARIA COLON .
+# Hola a todos somos Darkskape, Jhuly, Kim y Debbie Diseñadores y Desarrolladores web de CO_MISARIA COLON .
  
 ## Otras secciones del perfil de Github 
 👩‍💻 Estamos trabajando en dar mejor acceso al usuario.
@@ -16,10 +16,10 @@ Este  proyecto  esta creado para el ciudadano y para facilitarle la gestión den
 
 📫 Como contactarte con  nosotros : siguiendonos en Github 
 
+Darkskape
 Debbie93
 Jhuly826
 KiimGL
-Darkskape
 
 ⚡️ Dato curioso 
 La energía que tenemos es infinita así como la colaboración.
